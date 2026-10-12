@@ -1,34 +1,34 @@
-import { d as defineEventHandler, c as getRequestLocale, g as getQuery, o as orders, p as products, u as users, b as db, r as readBody, e as createError, ab as requireTrustedRequestOrigin, ac as ensurePromoMember, ad as getSiteLocaleConfig, ae as resolveRequestLocale, af as resolveCurrencyRate, ag as roundCurrencyAmount, ah as getMinimalCheckoutAdminConfig, ai as buildMinimalCheckoutBridgeMeta, aj as mergeMinimalCheckoutMeta, O as ORDER_PAY_STATUS, ak as prepareOrderMetaForInsert, al as ORDER_STATUS, a0 as createOrderAttribution, am as ensureTopupRecordForOrder, a1 as settlePaidTopup, _ as isMinimalCheckoutRelayOrder, a3 as fulfillMinimalCheckoutRelay, a4 as fulfillOrder, a5 as settlePromoCommission, a6 as emitEvent, J as getLocalizedSettingValue, K as sendEmail, s as setAuditMeta } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, c as getRequestLocale, g as getQuery, z as orders, p as products, u as users, b as db, r as readBody, e as createError, ap as requireTrustedRequestOrigin, aq as ensurePromoMember, ar as getSiteLocaleConfig, as as resolveRequestLocale, at as resolveCurrencyRate, au as roundCurrencyAmount, av as getMinimalCheckoutAdminConfig, aw as buildMinimalCheckoutBridgeMeta, ax as mergeMinimalCheckoutMeta, O as ORDER_PAY_STATUS, ay as prepareOrderMetaForInsert, ao as ORDER_STATUS, ac as createOrderAttribution, az as ensureTopupRecordForOrder, ad as settlePaidTopup, aa as isMinimalCheckoutRelayOrder, af as fulfillMinimalCheckoutRelay, ag as fulfillOrder, ah as settlePromoCommission, ai as emitEvent, U as getLocalizedSettingValue, V as sendEmail, s as setAuditMeta } from '../../../nitro/nitro.mjs';
 import { or, eq, and, ne, like, sql, count, desc } from 'drizzle-orm';
 import crypto from 'crypto';
 import { z } from 'zod';
+import 'node:crypto';
 import 'fs';
 import 'path';
+import 'node:path';
+import '@nuxthub/blob';
 import 'node:http';
 import 'node:https';
-import 'node:crypto';
 import 'node:events';
 import 'node:buffer';
 import 'node:fs';
-import 'node:path';
 import 'node:async_hooks';
 import 'postgres';
 import 'drizzle-orm/postgres-js';
 import 'drizzle-orm/d1';
-import '@libsql/client';
-import 'drizzle-orm/libsql';
+import 'node:module';
 import 'mysql2/promise';
 import 'drizzle-orm/mysql2';
 import 'drizzle-orm/pg-core';
 import 'drizzle-orm/sqlite-core';
 import 'drizzle-orm/mysql-core';
 import 'maxmind';
+import 'node:os';
 import 'node:url';
 import '@iconify/utils';
 import 'consola';
 import 'ioredis';
 import 'node:child_process';
-import 'node:os';
 import 'node:fs/promises';
 import 'node:dns/promises';
 import 'node:net';
@@ -118,18 +118,25 @@ const index = defineEventHandler(async (event) => {
       id: orders.id,
       amount: orders.amount,
       currency: orders.currency,
+      source: orders.source,
+      externalOrderId: orders.externalOrderId,
       status: orders.status,
       payStatus: orders.payStatus,
       contactEmail: orders.contactEmail,
       payMethod: orders.payMethod,
       tradeNo: orders.tradeNo,
       visitorId: orders.visitorId,
+      deliveryInfo: orders.deliveryInfo,
+      metaData: orders.metaData,
       createdAt: orders.createdAt,
+      paidAt: orders.paidAt,
       productName: products.name,
       productSlug: products.slug,
       productId: products.id,
       productImage: products.imageUrl,
       productType: products.type,
+      productPrice: products.price,
+      userId: orders.userId,
       userNickname: users.nickname,
       userEmail: users.email
     }).from(orders).leftJoin(products, eq(orders.productId, products.id)).leftJoin(users, eq(orders.userId, users.id));
@@ -261,7 +268,7 @@ const index = defineEventHandler(async (event) => {
     }
     const minimalCheckoutConfig = await getMinimalCheckoutAdminConfig();
     const configuredRechargeAmount = Number(productMetaData.recharge_amount || 0);
-    const rechargeAmount = configuredRechargeAmount > 0 ? configuredRechargeAmount : baseAmount;
+    const rechargeAmount = configuredRechargeAmount > 0 ? configuredRechargeAmount * quantity : baseAmount;
     const bridgeMeta = buildMinimalCheckoutBridgeMeta({
       externalOrderId: orderId,
       sourceProductId: product.id,
@@ -293,6 +300,8 @@ const index = defineEventHandler(async (event) => {
     const finalMetaData = mergeMinimalCheckoutMeta({
       ...body.metaData || {},
       ...productMetaData.plan_ids ? { plan_ids: productMetaData.plan_ids } : {},
+      // 卡密履约按 order_quantity 逐张认领,与前台结算同一个键
+      order_quantity: quantity,
       currencySnapshot
     }, bridgeMeta);
     const isPaid = body.payStatus === ORDER_PAY_STATUS.PAID;

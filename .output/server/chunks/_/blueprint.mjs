@@ -1,34 +1,34 @@
-import { cX as getPublishAggregatesForUser, cY as getListingPricingDefaultsByUser, cZ as rebuildProductAggregate, c_ as ensureProductVisionFactsForImages, c$ as shouldBlockImageGenerationForVision, d0 as hasChannelImageBlueprint, d1 as getListingAutomationByUser, d2 as customizeBlueprint, d3 as resolveChannelImageBlueprint, d4 as filterBlueprintPlanByEffectiveSkus, d5 as buildImageBlueprintPlan, d6 as buildListingBlueprintImageTaskSpecs, d7 as getChannelPromptEngine, d8 as resolveChannelPromptSnapshotForSelector, d9 as assertListingBlueprintImageTaskSpecs, da as listBlueprintTaskItems, db as completeBlueprintTaskItem, dc as settleListingBlueprintStep, dd as ensureBlueprintTaskItems, de as registerPlannedGenerationSlots, df as persistGeneratedImageWorkspace, dg as assertImageGenerationTaskSpec, dh as isTaskControlInterrupt, di as isGenerationTaskStateUnknown, dj as classifyGenerationError, dk as failBlueprintTaskItem, dl as startBlueprintTaskItem, dm as runProductImageGenerationTaskSpec, dn as updateBlueprintTaskItemStage, dp as enqueueIdempotentToolTask } from '../nitro/nitro.mjs';
+import { dN as getPublishAggregatesForUser, dO as getListingPricingDefaultsByUser, dP as rebuildProductAggregate, dQ as ensureProductVisionFactsForImages, dR as shouldBlockImageGenerationForVision, dS as hasChannelImageBlueprint, dT as getListingAutomationByUser, dU as customizeBlueprint, dV as resolveChannelImageBlueprint, dW as filterBlueprintPlanByEffectiveSkus, dX as buildImageBlueprintPlan, dY as buildListingBlueprintImageTaskSpecs, dZ as getChannelPromptEngine, d_ as resolveChannelPromptSnapshotForSelector, d$ as assertListingBlueprintImageTaskSpecs, e0 as listBlueprintTaskItems, e1 as completeBlueprintTaskItem, e2 as settleListingBlueprintStep, e3 as ensureBlueprintTaskItems, e4 as registerPlannedGenerationSlots, e5 as persistGeneratedImageWorkspace, e6 as assertImageGenerationTaskSpec, e7 as isTaskControlInterrupt, e8 as isGenerationTaskStateUnknown, e9 as classifyGenerationError, ea as failBlueprintTaskItem, eb as startBlueprintTaskItem, ec as runProductImageGenerationTaskSpec, ed as updateBlueprintTaskItemStage, ee as enqueueIdempotentToolTask } from '../nitro/nitro.mjs';
 import 'drizzle-orm';
+import 'node:crypto';
 import 'crypto';
 import 'fs';
 import 'path';
+import 'node:path';
+import '@nuxthub/blob';
 import 'node:http';
 import 'node:https';
-import 'node:crypto';
 import 'node:events';
 import 'node:buffer';
 import 'node:fs';
-import 'node:path';
 import 'node:async_hooks';
 import 'postgres';
 import 'drizzle-orm/postgres-js';
 import 'drizzle-orm/d1';
-import '@libsql/client';
-import 'drizzle-orm/libsql';
+import 'node:module';
 import 'mysql2/promise';
 import 'drizzle-orm/mysql2';
 import 'drizzle-orm/pg-core';
 import 'drizzle-orm/sqlite-core';
 import 'drizzle-orm/mysql-core';
 import 'maxmind';
+import 'node:os';
 import 'node:url';
+import 'zod';
 import '@iconify/utils';
 import 'consola';
 import 'ioredis';
-import 'zod';
 import 'node:child_process';
-import 'node:os';
 import 'node:fs/promises';
 import 'node:dns/promises';
 import 'node:net';
@@ -368,6 +368,15 @@ const resolveBlueprintImageTaskSpecsForProduct = async (userId, productId, chann
     });
     return {
       ...entry,
+      // 主题本地的 ChannelPromptSnapshot 把 channel / outputUsage /
+      // categoryProfileKey 放宽成 string，engine 的 ImageGenerationTaskSpec 要的
+      // 是收窄联合，所以直接铺进去会在返回值上炸 TS2322（报的是
+      // taskSpec.channelPromptSnapshot.selector.channel: string 不可赋给
+      // 'ozon' | 'wb'，跟 Object.freeze 的 Readonly 无关）。值域由本函数的
+      // channel: Channel 入参与 resolveChannelPromptSnapshotForSelector 的
+      // selector 保证；收口方式与 server/assets/image-task-spec.ts 同一处边界一致。
+      // 真正的根因是主题复制了一份宽松的 ChannelPromptSnapshot，应回归 engine 类型，
+      // 那是跨仓改动，这里先按既有约定收口。
       taskSpec: Object.freeze({ ...entry.taskSpec, channelPromptSnapshot })
     };
   }));

@@ -1,34 +1,34 @@
-import { d as defineEventHandler, g as getQuery, w as getConfiguredTimezone, x as getStartOfDayUtc, o as orders, b as db, O as ORDER_PAY_STATUS, y as buildLocaleCurrencyQuote, u as users, p as products, z as subscriptions, B as topups, q as aggregateOrderAccountingTotals, m as cards, C as resolveOrderCurrencyAmounts, D as getCurrentHour, E as getCurrencyTotal } from '../../../nitro/nitro.mjs';
-import { sql, eq, and, or, isNull, gt, inArray, desc } from 'drizzle-orm';
+import { d as defineEventHandler, g as getQuery, D as getConfiguredTimezone, E as getStartOfDayUtc, F as shiftZonedDay, z as orders, b as db, O as ORDER_PAY_STATUS, G as buildLocaleCurrencyQuote, u as users, p as products, H as subscriptions, I as topups, J as loadVisitorReport, K as getRequestHost, L as tickets, M as resolveOrderCurrencyAmounts, B as aggregateOrderAccountingTotals, N as getCurrencyTotal, m as cards, P as getCurrentHour } from '../../../nitro/nitro.mjs';
+import { and, gte, lt, eq, sql, or, isNull, gt, inArray, desc } from 'drizzle-orm';
+import 'node:crypto';
 import 'crypto';
 import 'fs';
 import 'path';
+import 'node:path';
+import '@nuxthub/blob';
 import 'node:http';
 import 'node:https';
-import 'node:crypto';
 import 'node:events';
 import 'node:buffer';
 import 'node:fs';
-import 'node:path';
 import 'node:async_hooks';
 import 'postgres';
 import 'drizzle-orm/postgres-js';
 import 'drizzle-orm/d1';
-import '@libsql/client';
-import 'drizzle-orm/libsql';
+import 'node:module';
 import 'mysql2/promise';
 import 'drizzle-orm/mysql2';
 import 'drizzle-orm/pg-core';
 import 'drizzle-orm/sqlite-core';
 import 'drizzle-orm/mysql-core';
 import 'maxmind';
+import 'node:os';
 import 'node:url';
+import 'zod';
 import '@iconify/utils';
 import 'consola';
 import 'ioredis';
-import 'zod';
 import 'node:child_process';
-import 'node:os';
 import 'node:fs/promises';
 import 'node:dns/promises';
 import 'node:net';
@@ -59,14 +59,16 @@ const dashboard_get = defineEventHandler(async (event) => {
   var _a, _b, _c, _d, _e, _f, _g, _h, _i;
   const query = getQuery(event);
   const range = String(query.range || "today");
-  const explicitDialect = (_a = process.env.DB_DIALECT) == null ? void 0 : _a.replace(/"/g, "").toLowerCase();
-  const connectionUrl = process.env.DATABASE_URL || process.env.MYSQL_URL || process.env.POSTGRES_URL || process.env.POSTGRESQL_URL || process.env.NUXT_DATABASE_URL || "";
-  const isPostgres = explicitDialect === "postgresql" || connectionUrl.startsWith("postgres://") || connectionUrl.startsWith("postgresql://");
-  const isMysql = explicitDialect === "mysql" || connectionUrl.startsWith("mysql://");
   const timezone = await getConfiguredTimezone();
   const now = /* @__PURE__ */ new Date();
   const startOfDay = getStartOfDayUtc(timezone);
-  const todayCondition = isPostgres ? sql`${orders.createdAt} >= ${startOfDay.iso}::timestamptz` : isMysql ? sql`${orders.createdAt} >= ${startOfDay.mysql}` : sql`${orders.createdAt} >= ${startOfDay.ms} OR (${orders.createdAt} < 1000000000000 AND ${orders.createdAt} >= ${startOfDay.sec})`;
+  let periodStart = new Date(startOfDay.ms);
+  if (range === "7d") {
+    periodStart = shiftZonedDay(new Date(startOfDay.ms), -6, timezone);
+  } else if (range === "30d") {
+    periodStart = shiftZonedDay(new Date(startOfDay.ms), -29, timezone);
+  }
+  const periodCondition = and(gte(orders.createdAt, periodStart), lt(orders.createdAt, now));
   const selectFields = {
     id: orders.id,
     amount: orders.amount,
@@ -76,11 +78,13 @@ const dashboard_get = defineEventHandler(async (event) => {
     status: orders.status,
     contactEmail: orders.contactEmail,
     payMethod: orders.payMethod,
-    createdAt: orders.createdAt
+    createdAt: orders.createdAt,
+    paidAt: orders.paidAt,
+    visitorId: orders.visitorId
   };
   const [
     rawPaidOrderRows,
-    rawTodayOrderRows,
+    rawPeriodOrderRows,
     totalOrderRows,
     baseQuote,
     totalUsersCount,
@@ -89,10 +93,12 @@ const dashboard_get = defineEventHandler(async (event) => {
     pendingFulfillmentsCount,
     pendingTopupsCount,
     recentOrdersResult,
-    keyProducts
+    keyProducts,
+    visitorReport,
+    pendingTicketsCount
   ] = await Promise.all([
     db.select(selectFields).from(orders).where(eq(orders.payStatus, ORDER_PAY_STATUS.PAID)),
-    db.select(selectFields).from(orders).where(todayCondition),
+    db.select(selectFields).from(orders).where(periodCondition),
     db.select({ count: sql`count(*)` }).from(orders),
     buildLocaleCurrencyQuote(0),
     db.select({ count: sql`count(*)` }).from(users),
@@ -105,19 +111,29 @@ const dashboard_get = defineEventHandler(async (event) => {
     db.select({ count: sql`count(*)` }).from(orders).where(and(eq(orders.payStatus, ORDER_PAY_STATUS.PAID), eq(orders.status, "pending"))),
     db.select({ count: sql`count(*)` }).from(topups).where(inArray(topups.status, ["paid", "crediting", "credit_failed", "review_required"])),
     db.select(selectFields).from(orders).orderBy(desc(orders.createdAt)).limit(6),
-    db.select({ id: products.id, name: products.name }).from(products).where(and(eq(products.type, "key"), eq(products.isActive, true)))
+    db.select({ id: products.id, name: products.name }).from(products).where(and(eq(products.type, "key"), eq(products.isActive, true))),
+    loadVisitorReport(periodStart, now, getRequestHost(event)),
+    db.select({ count: sql`count(*)` }).from(tickets).where(inArray(tickets.status, ["open", "in_progress"]))
   ]);
   const paidOrders = rawPaidOrderRows;
-  const todayOrderRows = rawTodayOrderRows;
-  const paidTodayOrders = todayOrderRows.filter((order) => order.payStatus === ORDER_PAY_STATUS.PAID);
+  const periodOrderRows = rawPeriodOrderRows;
+  const paidPeriodOrders = paidOrders.filter((order) => order.paidAt && order.paidAt >= periodStart && order.paidAt < now && resolveOrderCurrencyAmounts(order).paymentAmount > 0);
   const totalRevenueByCurrency = aggregateOrderAccountingTotals(paidOrders);
-  const todayRevenueByCurrency = aggregateOrderAccountingTotals(paidTodayOrders);
+  const periodRevenueByCurrency = aggregateOrderAccountingTotals(paidPeriodOrders);
   const baseCurrency = baseQuote.baseCurrency;
+  const periodVisitors = visitorReport.rows.length;
+  const periodIps = new Set(visitorReport.events.map((row) => row.ip)).size;
+  const periodPageViews = visitorReport.rows.reduce((sum, row) => sum + row.pageViews, 0);
+  const periodPaidVisitors = visitorReport.rows.filter((row) => row.paid > 0).length;
+  const periodRevenueAmount = getCurrencyTotal(periodRevenueByCurrency, baseCurrency);
+  const periodPaidOrdersCount = paidPeriodOrders.length;
+  const periodConversionRate = periodVisitors > 0 ? Number((periodPaidVisitors / periodVisitors * 100).toFixed(1)) : 0;
+  const periodAov = periodPaidOrdersCount > 0 ? Number((periodRevenueAmount / periodPaidOrdersCount).toFixed(2)) : 0;
   let lowStockCardsCount = 0;
   if (keyProducts.length > 0) {
     for (const kp of keyProducts) {
       const avail = await db.select({ count: sql`count(*)` }).from(cards).where(and(eq(cards.productId, kp.id), eq(cards.isUsed, false)));
-      const stock = Number(((_b = avail[0]) == null ? void 0 : _b.count) || 0);
+      const stock = Number(((_a = avail[0]) == null ? void 0 : _a.count) || 0);
       if (stock <= 3) {
         lowStockCardsCount++;
       }
@@ -130,32 +146,36 @@ const dashboard_get = defineEventHandler(async (event) => {
     const dayCount = range === "7d" ? 7 : 30;
     const dayKeys = [];
     for (let i = dayCount - 1; i >= 0; i--) {
-      const d = new Date(now.getTime() - i * 24 * 60 * 60 * 1e3);
+      const d = shiftZonedDay(new Date(startOfDay.ms), -i, timezone);
       dayKeys.push(getDateKeyInTimezone(d, timezone));
     }
     labels = dayKeys;
     ordersSeries = new Array(dayCount).fill(0);
     revenueSeries = new Array(dayCount).fill(0);
-    for (const order of paidOrders) {
-      const dKey = getDateKeyInTimezone(order.createdAt, timezone);
-      const idx = dayKeys.indexOf(dKey);
-      if (idx !== -1) {
-        ordersSeries[idx]++;
-        const amounts = resolveOrderCurrencyAmounts(order);
-        if (amounts.accountingCurrency === baseCurrency) {
-          revenueSeries[idx] = Number(((revenueSeries[idx] || 0) + amounts.accountingAmount).toFixed(2));
-        }
+    for (const order of periodOrderRows) {
+      const index = dayKeys.indexOf(getDateKeyInTimezone(order.createdAt, timezone));
+      if (index !== -1) ordersSeries[index] = (ordersSeries[index] || 0) + 1;
+    }
+    for (const order of paidPeriodOrders) {
+      const index = dayKeys.indexOf(getDateKeyInTimezone(order.paidAt, timezone));
+      if (index === -1) continue;
+      const amounts = resolveOrderCurrencyAmounts(order);
+      if (amounts.accountingCurrency === baseCurrency) {
+        revenueSeries[index] = Number(((revenueSeries[index] || 0) + amounts.accountingAmount).toFixed(2));
       }
     }
   } else {
     labels = Array.from({ length: 24 }, (_, index) => `${String(index).padStart(2, "0")}:00`);
     ordersSeries = new Array(24).fill(0);
     revenueSeries = new Array(24).fill(0);
-    for (const order of todayOrderRows) {
+    for (const order of periodOrderRows) {
       const hour = Number(getHourInTimezone(order.createdAt, timezone));
       if (!Number.isInteger(hour) || hour < 0 || hour > 23) continue;
       ordersSeries[hour] = (ordersSeries[hour] || 0) + 1;
-      if (order.payStatus !== ORDER_PAY_STATUS.PAID) continue;
+    }
+    for (const order of paidPeriodOrders) {
+      const hour = Number(getHourInTimezone(order.paidAt, timezone));
+      if (!Number.isInteger(hour) || hour < 0 || hour > 23) continue;
       const amounts = resolveOrderCurrencyAmounts(order);
       if (amounts.accountingCurrency === baseCurrency) {
         revenueSeries[hour] = Number(((revenueSeries[hour] || 0) + amounts.accountingAmount).toFixed(2));
@@ -181,18 +201,16 @@ const dashboard_get = defineEventHandler(async (event) => {
         type = meta.product_type;
       } else if ((meta == null ? void 0 : meta.is_subscription) || (meta == null ? void 0 : meta.subscription_id)) {
         type = "subscription";
-      } else if ((meta == null ? void 0 : meta.is_topup) || ((_c = order.id) == null ? void 0 : _c.startsWith("topup_"))) {
+      } else if ((meta == null ? void 0 : meta.is_topup) || ((_b = order.id) == null ? void 0 : _b.startsWith("topup_"))) {
         type = "topup";
       }
     } catch {
     }
-    if (!mixMap[type]) {
-      mixMap[type] = { count: 0, amount: 0 };
-    }
-    mixMap[type].count++;
+    const mix = mixMap[type] || (mixMap[type] = { count: 0, amount: 0 });
+    mix.count++;
     const amounts = resolveOrderCurrencyAmounts(order);
     if (amounts.accountingCurrency === baseCurrency) {
-      mixMap[type].amount = Number((mixMap[type].amount + amounts.accountingAmount).toFixed(2));
+      mix.amount = Number((mix.amount + amounts.accountingAmount).toFixed(2));
     }
   }
   const categoryMix = Object.entries(mixMap).map(([type, val]) => ({
@@ -202,21 +220,40 @@ const dashboard_get = defineEventHandler(async (event) => {
   }));
   return {
     stats: {
-      todayOrders: todayOrderRows.length,
-      todayRevenue: getCurrencyTotal(todayRevenueByCurrency, baseCurrency),
-      todayRevenueByCurrency,
-      totalOrders: Number(((_d = totalOrderRows[0]) == null ? void 0 : _d.count) || 0),
+      range,
+      periodOrders: periodOrderRows.length,
+      periodPaidOrders: periodPaidOrdersCount,
+      periodPaidVisitors,
+      periodRevenue: periodRevenueAmount,
+      periodRevenueByCurrency,
+      periodVisitors,
+      periodIps,
+      periodPageViews,
+      periodConversionRate,
+      periodAov,
+      // 保持 today 字段别名以向后兼容
+      todayOrders: periodOrderRows.length,
+      todayPaidOrders: periodPaidOrdersCount,
+      todayRevenue: periodRevenueAmount,
+      todayRevenueByCurrency: periodRevenueByCurrency,
+      todayVisitors: periodVisitors,
+      todayIps: periodIps,
+      todayPageViews: periodPageViews,
+      todayConversionRate: periodConversionRate,
+      todayAov: periodAov,
+      totalOrders: Number(((_c = totalOrderRows[0]) == null ? void 0 : _c.count) || 0),
       totalRevenue: getCurrencyTotal(totalRevenueByCurrency, baseCurrency),
       totalRevenueByCurrency,
-      totalUsers: Number(((_e = totalUsersCount[0]) == null ? void 0 : _e.count) || 0),
-      activeProducts: Number(((_f = totalProductsCount[0]) == null ? void 0 : _f.count) || 0),
-      activeSubscriptions: Number(((_g = activeSubscriptionsCount[0]) == null ? void 0 : _g.count) || 0),
+      totalUsers: Number(((_d = totalUsersCount[0]) == null ? void 0 : _d.count) || 0),
+      activeProducts: Number(((_e = totalProductsCount[0]) == null ? void 0 : _e.count) || 0),
+      activeSubscriptions: Number(((_f = activeSubscriptionsCount[0]) == null ? void 0 : _f.count) || 0),
       currency: baseCurrency
     },
     actionItems: {
-      pendingFulfillments: Number(((_h = pendingFulfillmentsCount[0]) == null ? void 0 : _h.count) || 0),
+      pendingFulfillments: Number(((_g = pendingFulfillmentsCount[0]) == null ? void 0 : _g.count) || 0),
       lowStockCards: lowStockCardsCount,
-      pendingTopups: Number(((_i = pendingTopupsCount[0]) == null ? void 0 : _i.count) || 0)
+      pendingTopups: Number(((_h = pendingTopupsCount[0]) == null ? void 0 : _h.count) || 0),
+      pendingTickets: Number(((_i = pendingTicketsCount[0]) == null ? void 0 : _i.count) || 0)
     },
     categoryMix,
     recentOrders: recentOrdersResult,

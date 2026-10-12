@@ -1,34 +1,34 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { d as defineEventHandler, e as createError, cD as setHeader, bR as getHeader, ce as setResponseStatus, cJ as sendStream } from '../../nitro/nitro.mjs';
+import { d as defineEventHandler, e as createError, d6 as setHeader, br as getHeader, cM as setResponseStatus, dj as sendStream } from '../../nitro/nitro.mjs';
+import { blob } from '@nuxthub/blob';
 import 'drizzle-orm';
+import 'node:crypto';
 import 'crypto';
 import 'fs';
 import 'path';
 import 'node:http';
 import 'node:https';
-import 'node:crypto';
 import 'node:events';
 import 'node:buffer';
 import 'node:async_hooks';
 import 'postgres';
 import 'drizzle-orm/postgres-js';
 import 'drizzle-orm/d1';
-import '@libsql/client';
-import 'drizzle-orm/libsql';
+import 'node:module';
 import 'mysql2/promise';
 import 'drizzle-orm/mysql2';
 import 'drizzle-orm/pg-core';
 import 'drizzle-orm/sqlite-core';
 import 'drizzle-orm/mysql-core';
 import 'maxmind';
+import 'node:os';
 import 'node:url';
+import 'zod';
 import '@iconify/utils';
 import 'consola';
 import 'ioredis';
-import 'zod';
 import 'node:child_process';
-import 'node:os';
 import 'node:fs/promises';
 import 'node:dns/promises';
 import 'node:net';
@@ -37,6 +37,7 @@ import '@adonisjs/hash/drivers/scrypt';
 
 const CONTENT_TYPES = {
   ".avif": "image/avif",
+  ".ico": "image/vnd.microsoft.icon",
   ".jpeg": "image/jpeg",
   ".jpg": "image/jpeg",
   ".m4v": "video/x-m4v",
@@ -81,6 +82,9 @@ const ____slug_ = defineEventHandler(async (event) => {
     }
     setHeader(event, "Content-Length", String(size));
     return sendStream(event, fs.createReadStream(filePath));
+  }
+  if (slug.startsWith("tickets/")) {
+    return blob.serve(event, `uploads/${slug}`);
   }
   throw createError({
     statusCode: 404,

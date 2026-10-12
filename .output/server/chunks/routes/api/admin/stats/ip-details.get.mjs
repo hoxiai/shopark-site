@@ -1,34 +1,34 @@
-import { d as defineEventHandler, c as getRequestLocale, g as getQuery, e as createError, w as getConfiguredTimezone, aX as parseStatsRange, aZ as visitorEvents, b as db, p as products, v as visitorProfiles, u as users, b2 as toIsoTimestampOrEpoch } from '../../../../nitro/nitro.mjs';
+import { d as defineEventHandler, c as getRequestLocale, g as getQuery, e as createError, D as getConfiguredTimezone, ba as parseStatsRange, bd as visitorEvents, b as db, p as products, J as loadVisitorReport, K as getRequestHost, u as users, bg as toIsoTimestampOrEpoch, bi as visitorSourceLabel } from '../../../../nitro/nitro.mjs';
 import { sql, eq, and, gte, lt, count, desc, inArray } from 'drizzle-orm';
+import 'node:crypto';
 import 'crypto';
 import 'fs';
 import 'path';
+import 'node:path';
+import '@nuxthub/blob';
 import 'node:http';
 import 'node:https';
-import 'node:crypto';
 import 'node:events';
 import 'node:buffer';
 import 'node:fs';
-import 'node:path';
 import 'node:async_hooks';
 import 'postgres';
 import 'drizzle-orm/postgres-js';
 import 'drizzle-orm/d1';
-import '@libsql/client';
-import 'drizzle-orm/libsql';
+import 'node:module';
 import 'mysql2/promise';
 import 'drizzle-orm/mysql2';
 import 'drizzle-orm/pg-core';
 import 'drizzle-orm/sqlite-core';
 import 'drizzle-orm/mysql-core';
 import 'maxmind';
+import 'node:os';
 import 'node:url';
+import 'zod';
 import '@iconify/utils';
 import 'consola';
 import 'ioredis';
-import 'zod';
 import 'node:child_process';
-import 'node:os';
 import 'node:fs/promises';
 import 'node:dns/promises';
 import 'node:net';
@@ -54,7 +54,7 @@ const ipDetails_get = defineEventHandler(async (event) => {
     lt(visitorEvents.createdAt, rangeEnd),
     ipCondition
   );
-  const [summaryRows, eventSummaryRows, visitorRows, contextRows, recentEvents] = await Promise.all([
+  const [summaryRows, eventSummaryRows, visitorRows, contextRows, recentEvents, report] = await Promise.all([
     db.select({
       totalEvents: count(),
       uniqueVisitors: sql`COUNT(DISTINCT ${visitorEvents.visitorId})`,
@@ -115,21 +115,13 @@ const ipDetails_get = defineEventHandler(async (event) => {
       productId: visitorEvents.productId,
       productName: products.name,
       createdAt: visitorEvents.createdAt
-    }).from(visitorEvents).leftJoin(products, eq(visitorEvents.productId, products.id)).where(eventFilter).orderBy(desc(visitorEvents.createdAt)).limit(100)
+    }).from(visitorEvents).leftJoin(products, eq(visitorEvents.productId, products.id)).where(eventFilter).orderBy(desc(visitorEvents.createdAt)).limit(100),
+    loadVisitorReport(rangeStart, rangeEnd, getRequestHost(event))
   ]);
-  const visitorIds = visitorRows.map((item) => item.visitorId);
-  const userIds = visitorRows.map((item) => item.userId).filter(Boolean);
-  const [profiles, userRows] = await Promise.all([
-    visitorIds.length ? db.select().from(visitorProfiles).where(inArray(visitorProfiles.visitorId, visitorIds)) : [],
-    userIds.length ? db.select({
-      id: users.id,
-      email: users.email,
-      nickname: users.nickname,
-      status: users.status,
-      createdAt: users.createdAt
-    }).from(users).where(inArray(users.id, userIds)) : []
-  ]);
-  const profileMap = new Map(profiles.map((item) => [item.visitorId, item]));
+  const userIds = visitorRows.flatMap((item) => item.userId ? [item.userId] : []);
+  const userRows = userIds.length ? await db.select({ id: users.id, email: users.email, nickname: users.nickname, status: users.status, createdAt: users.createdAt }).from(users).where(inArray(users.id, userIds)) : [];
+  const reportMap = new Map(report.rows.map((row) => [row.visitorId, row]));
+  const ipVisitors = report.rows.filter((row) => row.events.some((item) => isLocal ? item.ip === null : item.ip === ip));
   const userMap = new Map(userRows.map((item) => [item.id, item]));
   const eventSummary = Object.fromEntries(
     eventSummaryRows.map((item) => [item.eventName, Number(item.value || 0)])
@@ -145,21 +137,21 @@ const ipDetails_get = defineEventHandler(async (event) => {
       pageViews: eventSummary.page_view || 0,
       productViews: eventSummary.product_view || 0,
       checkouts: eventSummary.begin_checkout || 0,
-      paid: eventSummary.order_paid || 0,
+      paid: ipVisitors.reduce((sum, row) => sum + row.paid, 0),
       auth: eventSummary.auth || 0,
       firstSeenAt: toIsoTimestampOrEpoch(summary.firstSeenAt),
       lastSeenAt: toIsoTimestampOrEpoch(summary.lastSeenAt)
     },
     visitors: visitorRows.map((item) => {
-      const profile = profileMap.get(item.visitorId);
+      const row = reportMap.get(item.visitorId);
       const user = item.userId ? userMap.get(item.userId) : null;
       return {
         ...item,
         eventCount: Number(item.eventCount || 0),
         firstSeenAt: toIsoTimestampOrEpoch(item.firstSeenAt),
         lastSeenAt: toIsoTimestampOrEpoch(item.lastSeenAt),
-        firstTouch: (profile == null ? void 0 : profile.firstCampaign) || (profile == null ? void 0 : profile.firstSource) || (profile == null ? void 0 : profile.firstSourceType) || "direct",
-        lastTouch: (profile == null ? void 0 : profile.lastCampaign) || (profile == null ? void 0 : profile.lastSource) || (profile == null ? void 0 : profile.lastSourceType) || "direct",
+        firstTouch: visitorSourceLabel((row == null ? void 0 : row.first) || { sourceType: "direct", source: "direct", medium: null, campaign: null}),
+        lastTouch: visitorSourceLabel((row == null ? void 0 : row.last) || { sourceType: "direct", source: "direct", medium: null, campaign: null}),
         user: user ? { ...user, createdAt: toIsoTimestampOrEpoch(user.createdAt) } : null
       };
     }),

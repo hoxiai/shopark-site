@@ -1,34 +1,34 @@
-import { d as defineEventHandler, c as getRequestLocale, g as getQuery, w as getConfiguredTimezone, aX as parseStatsRange, b0 as clampStatsPage, b1 as clampStatsPageSize, aZ as visitorEvents, b as db, b2 as toIsoTimestampOrEpoch } from '../../../../nitro/nitro.mjs';
+import { d as defineEventHandler, c as getRequestLocale, g as getQuery, D as getConfiguredTimezone, ba as parseStatsRange, be as clampStatsPage, bf as clampStatsPageSize, bd as visitorEvents, b as db, bg as toIsoTimestampOrEpoch, bh as formatSourceBrand } from '../../../../nitro/nitro.mjs';
 import { and, gte, lt, sql, count, desc } from 'drizzle-orm';
+import 'node:crypto';
 import 'crypto';
 import 'fs';
 import 'path';
+import 'node:path';
+import '@nuxthub/blob';
 import 'node:http';
 import 'node:https';
-import 'node:crypto';
 import 'node:events';
 import 'node:buffer';
 import 'node:fs';
-import 'node:path';
 import 'node:async_hooks';
 import 'postgres';
 import 'drizzle-orm/postgres-js';
 import 'drizzle-orm/d1';
-import '@libsql/client';
-import 'drizzle-orm/libsql';
+import 'node:module';
 import 'mysql2/promise';
 import 'drizzle-orm/mysql2';
 import 'drizzle-orm/pg-core';
 import 'drizzle-orm/sqlite-core';
 import 'drizzle-orm/mysql-core';
 import 'maxmind';
+import 'node:os';
 import 'node:url';
+import 'zod';
 import '@iconify/utils';
 import 'consola';
 import 'ioredis';
-import 'zod';
 import 'node:child_process';
-import 'node:os';
 import 'node:fs/promises';
 import 'node:dns/promises';
 import 'node:net';
@@ -36,6 +36,7 @@ import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
 
 const events_get = defineEventHandler(async (event) => {
+  var _a;
   const locale = getRequestLocale(event);
   const unknownLabel = locale === "zh" ? "\u672A\u77E5" : "Unknown";
   const query = getQuery(event);
@@ -45,10 +46,11 @@ const events_get = defineEventHandler(async (event) => {
   const pageSize = clampStatsPageSize(query.pageSize, 20);
   const offset = (page - 1) * pageSize;
   const timeFilter = and(gte(visitorEvents.createdAt, rangeStart), lt(visitorEvents.createdAt, rangeEnd));
-  const [{ value: totalItems }] = await db.select({
+  const totalRows = await db.select({
     value: sql`COUNT(DISTINCT ${visitorEvents.ip})
         + COALESCE(MAX(CASE WHEN ${visitorEvents.ip} IS NULL THEN 1 ELSE 0 END), 0)`
   }).from(visitorEvents).where(timeFilter);
+  const totalItems = ((_a = totalRows[0]) == null ? void 0 : _a.value) || 0;
   const items = await db.select({
     ip: visitorEvents.ip,
     visitCount: count(),
@@ -59,6 +61,10 @@ const events_get = defineEventHandler(async (event) => {
     country: sql`MAX(${visitorEvents.country})`,
     region: sql`MAX(${visitorEvents.region})`,
     city: sql`MAX(${visitorEvents.city})`,
+    sourceType: sql`MAX(${visitorEvents.sourceType})`,
+    source: sql`MAX(${visitorEvents.source})`,
+    campaign: sql`MAX(${visitorEvents.campaign})`,
+    referrer: sql`MAX(${visitorEvents.referrer})`,
     deviceType: sql`MAX(${visitorEvents.deviceType})`,
     browser: sql`MAX(${visitorEvents.browser})`,
     os: sql`MAX(${visitorEvents.os})`,
@@ -86,6 +92,10 @@ const events_get = defineEventHandler(async (event) => {
       registeredUserCount: Number(item.registeredUserCount || 0),
       visitCount: item.visitCount,
       isRegistered: !!item.userId,
+      sourceType: item.sourceType || "direct",
+      source: formatSourceBrand(item.source, item.sourceType) || (item.sourceType === "direct" ? locale === "zh" ? "\u76F4\u63A5\u8BBF\u95EE" : "Direct" : item.referrer || unknownLabel),
+      campaign: item.campaign || null,
+      referrer: item.referrer || null,
       country: item.country || unknownLabel,
       region: item.region || null,
       city: item.city || null,

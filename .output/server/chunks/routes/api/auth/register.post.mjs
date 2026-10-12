@@ -1,34 +1,34 @@
-import { d as defineEventHandler, ab as requireTrustedRequestOrigin, c as getRequestLocale, r as readBody, bH as mergePromoTracking, bI as capturePromoTracking, bJ as readPromoTracking, e as createError, bh as validateEmail, b as db, u as users, j as hashPassword, ac as ensurePromoMember, bK as bindInviteRelation, bL as requestPromoAgentJoin, a6 as emitEvent, bB as issueWebSession, bm as trackVisitorEvent, bC as ensureVisitorId, bg as userTokens, bk as EMAIL_VERIFY_TOKEN_NAME, J as getLocalizedSettingValue, K as sendEmail } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, ap as requireTrustedRequestOrigin, c as getRequestLocale, r as readBody, c5 as mergePromoTracking, c6 as capturePromoTracking, c7 as readPromoTracking, e as createError, bC as validateEmail, b as db, u as users, j as hashPassword, aq as ensurePromoMember, c8 as bindInviteRelation, c9 as requestPromoAgentJoin, ai as emitEvent, ca as promoAgentRelations, cb as promoInviteRelations, aH as promoMembers, b$ as issueWebSession, bK as trackVisitorEvent, c0 as ensureVisitorId, bB as userTokens, bF as EMAIL_VERIFY_TOKEN_NAME, U as getLocalizedSettingValue, V as sendEmail } from '../../../nitro/nitro.mjs';
 import { eq } from 'drizzle-orm';
+import 'node:crypto';
 import 'crypto';
 import 'fs';
 import 'path';
+import 'node:path';
+import '@nuxthub/blob';
 import 'node:http';
 import 'node:https';
-import 'node:crypto';
 import 'node:events';
 import 'node:buffer';
 import 'node:fs';
-import 'node:path';
 import 'node:async_hooks';
 import 'postgres';
 import 'drizzle-orm/postgres-js';
 import 'drizzle-orm/d1';
-import '@libsql/client';
-import 'drizzle-orm/libsql';
+import 'node:module';
 import 'mysql2/promise';
 import 'drizzle-orm/mysql2';
 import 'drizzle-orm/pg-core';
 import 'drizzle-orm/sqlite-core';
 import 'drizzle-orm/mysql-core';
 import 'maxmind';
+import 'node:os';
 import 'node:url';
+import 'zod';
 import '@iconify/utils';
 import 'consola';
 import 'ioredis';
-import 'zod';
 import 'node:child_process';
-import 'node:os';
 import 'node:fs/promises';
 import 'node:dns/promises';
 import 'node:net';
@@ -109,6 +109,9 @@ const register_post = defineEventHandler(async (event) => {
   } catch (err) {
     console.error("[Register] user.registered sync rule failed, rolling back user:", err);
     try {
+      await db.delete(promoAgentRelations).where(eq(promoAgentRelations.agentUserId, user.id));
+      await db.delete(promoInviteRelations).where(eq(promoInviteRelations.inviteeUserId, user.id));
+      await db.delete(promoMembers).where(eq(promoMembers.userId, user.id));
       await db.delete(users).where(eq(users.id, user.id));
     } catch (cleanupErr) {
       console.error("[Register] Failed to rollback user after sync rule failure:", cleanupErr);

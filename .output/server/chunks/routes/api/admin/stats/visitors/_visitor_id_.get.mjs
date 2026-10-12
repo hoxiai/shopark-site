@@ -1,34 +1,34 @@
-import { d as defineEventHandler, c as getRequestLocale, f as getRouterParam, e as createError, b as db, v as visitorProfiles, u as users, o as orders, aZ as visitorEvents, p as products, t as toIsoTimestamp } from '../../../../../nitro/nitro.mjs';
-import { eq, or, count, desc } from 'drizzle-orm';
+import { d as defineEventHandler, c as getRequestLocale, f as getRouterParam, e as createError, b as db, C as visitorProfiles, u as users, z as orders, bd as visitorEvents, p as products, t as toIsoTimestamp } from '../../../../../nitro/nitro.mjs';
+import { eq, or, count, and, gt, desc } from 'drizzle-orm';
+import 'node:crypto';
 import 'crypto';
 import 'fs';
 import 'path';
+import 'node:path';
+import '@nuxthub/blob';
 import 'node:http';
 import 'node:https';
-import 'node:crypto';
 import 'node:events';
 import 'node:buffer';
 import 'node:fs';
-import 'node:path';
 import 'node:async_hooks';
 import 'postgres';
 import 'drizzle-orm/postgres-js';
 import 'drizzle-orm/d1';
-import '@libsql/client';
-import 'drizzle-orm/libsql';
+import 'node:module';
 import 'mysql2/promise';
 import 'drizzle-orm/mysql2';
 import 'drizzle-orm/pg-core';
 import 'drizzle-orm/sqlite-core';
 import 'drizzle-orm/mysql-core';
 import 'maxmind';
+import 'node:os';
 import 'node:url';
+import 'zod';
 import '@iconify/utils';
 import 'consola';
 import 'ioredis';
-import 'zod';
 import 'node:child_process';
-import 'node:os';
 import 'node:fs/promises';
 import 'node:dns/promises';
 import 'node:net';
@@ -36,7 +36,7 @@ import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
 
 const _visitor_id__get = defineEventHandler(async (event) => {
-  var _a, _b;
+  var _a, _b, _c;
   const locale = getRequestLocale(event);
   const visitorId = String(getRouterParam(event, "visitor_id") || "").trim();
   if (!visitorId || visitorId.length > 500) {
@@ -66,10 +66,15 @@ const _visitor_id__get = defineEventHandler(async (event) => {
     eq(orders.visitorId, visitorId),
     eq(orders.userId, profile.userId)
   ) : eq(orders.visitorId, visitorId);
-  const [eventCountRows, eventSummaryRows, orderCountRows, recentEvents, relatedOrders] = await Promise.all([
+  const [eventCountRows, eventSummaryRows, orderCountRows, paidOrderCountRows, recentEvents, relatedOrders] = await Promise.all([
     db.select({ value: count() }).from(visitorEvents).where(eq(visitorEvents.visitorId, visitorId)),
     db.select({ eventName: visitorEvents.eventName, value: count() }).from(visitorEvents).where(eq(visitorEvents.visitorId, visitorId)).groupBy(visitorEvents.eventName),
     db.select({ value: count() }).from(orders).where(relatedOrderCondition),
+    db.select({ value: count() }).from(orders).where(and(
+      relatedOrderCondition,
+      eq(orders.payStatus, "paid"),
+      gt(orders.amount, 0)
+    )),
     db.select({
       id: visitorEvents.id,
       eventName: visitorEvents.eventName,
@@ -134,9 +139,9 @@ const _visitor_id__get = defineEventHandler(async (event) => {
       pageViews: eventSummary.page_view || 0,
       productViews: eventSummary.product_view || 0,
       checkouts: eventSummary.begin_checkout || 0,
-      paid: eventSummary.order_paid || 0,
+      paid: Number(((_b = paidOrderCountRows[0]) == null ? void 0 : _b.value) || 0),
       auth: eventSummary.auth || 0,
-      orders: Number(((_b = orderCountRows[0]) == null ? void 0 : _b.value) || 0)
+      orders: Number(((_c = orderCountRows[0]) == null ? void 0 : _c.value) || 0)
     },
     orders: relatedOrders.map((order) => ({
       ...order,

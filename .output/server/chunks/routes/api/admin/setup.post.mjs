@@ -1,34 +1,34 @@
-import { d as defineEventHandler, c as getRequestLocale, N as resolveClientIp, P as checkIpRateLimit, e as createError, b as db, h as admins, r as readBody, j as hashPassword, V as recordOperationFromEvent } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, c as getRequestLocale, Y as resolveClientIp, Z as checkIpRateLimit, e as createError, b as db, h as admins, r as readBody, j as hashPassword, b9 as isUniqueViolation, a3 as recordOperationFromEvent } from '../../../nitro/nitro.mjs';
 import 'drizzle-orm';
+import 'node:crypto';
 import 'crypto';
 import 'fs';
 import 'path';
+import 'node:path';
+import '@nuxthub/blob';
 import 'node:http';
 import 'node:https';
-import 'node:crypto';
 import 'node:events';
 import 'node:buffer';
 import 'node:fs';
-import 'node:path';
 import 'node:async_hooks';
 import 'postgres';
 import 'drizzle-orm/postgres-js';
 import 'drizzle-orm/d1';
-import '@libsql/client';
-import 'drizzle-orm/libsql';
+import 'node:module';
 import 'mysql2/promise';
 import 'drizzle-orm/mysql2';
 import 'drizzle-orm/pg-core';
 import 'drizzle-orm/sqlite-core';
 import 'drizzle-orm/mysql-core';
 import 'maxmind';
+import 'node:os';
 import 'node:url';
+import 'zod';
 import '@iconify/utils';
 import 'consola';
 import 'ioredis';
-import 'zod';
 import 'node:child_process';
-import 'node:os';
 import 'node:fs/promises';
 import 'node:dns/promises';
 import 'node:net';
@@ -48,15 +48,6 @@ function isStrongPassword(pw) {
   const commonWeak = /* @__PURE__ */ new Set(["1234567890", "password12", "admin12345", "qwerty1234", "0987654321"]);
   if (commonWeak.has(pw.toLowerCase())) return { ok: false, reason: "common_password" };
   return { ok: true };
-}
-function isUniqueViolation(err) {
-  if (!err) return false;
-  const msg = err.message || "";
-  const code = err.code || "";
-  const lower = msg.toLowerCase();
-  return /unique.*constraint/.test(lower) || /duplicate.*(entry|key|column)/.test(lower) || /sqlite_constraint_unique/.test(lower) || code === "23505" || // PostgreSQL
-  code === "ER_DUP_ENTRY" || // MySQL
-  code === "SQLITE_CONSTRAINT_UNIQUE";
 }
 const setup_post = defineEventHandler(async (event) => {
   var _a, _b, _c;
