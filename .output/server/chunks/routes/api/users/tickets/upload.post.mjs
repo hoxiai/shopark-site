@@ -1,4 +1,4 @@
-import { d as defineEventHandler, c4 as requireUserSession, e as createError, bw as uploadTicketAttachment } from '../../../../nitro/nitro.mjs';
+import { d as defineEventHandler, c5 as requireUserSession, e as createError, bx as uploadTicketAttachment } from '../../../../nitro/nitro.mjs';
 import 'drizzle-orm';
 import 'node:crypto';
 import 'crypto';

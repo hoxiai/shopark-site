@@ -1,1 +1,0 @@
-import{u as o}from"./DDae_rJO.js";const u=()=>{const{copy:n}=o();return{payStatusLabel:e=>{const r=n.value.orders.payStatus;return e in r?r[e]:e||r.pending},payStatusColor:e=>e==="paid"||e==="delivered"?"success":e==="failed"||e==="expired"?"error":e==="cancelled"||e==="refunded"?"neutral":"warning",isPaid:e=>e==="paid"||e==="delivered"}};export{u};

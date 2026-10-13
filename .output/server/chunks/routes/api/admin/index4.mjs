@@ -1,4 +1,4 @@
-import { d as defineEventHandler, g as getQuery, p as products, b as db, r as readBody, e as createError, c as getRequestLocale } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, g as getQuery, p as products, b as db, r as readBody, e as createError, c as getRequestLocale, aI as normalizeProductLocalePrices } from '../../../nitro/nitro.mjs';
 import { or, like, sql, and, count, desc } from 'drizzle-orm';
 import 'node:crypto';
 import 'crypto';
@@ -120,7 +120,7 @@ const index = defineEventHandler(async (event) => {
       insertData.slug = insertData.name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)+/g, "");
     }
     insertData.imageUrls = normalizeImageUrls(insertData.imageUrls);
-    insertData.metaData = normalizeMetaData(insertData.metaData);
+    insertData.metaData = await normalizeProductLocalePrices(normalizeMetaData(insertData.metaData));
     if (insertData.status) {
       insertData.isActive = insertData.status !== "inactive";
     } else if (insertData.isActive !== void 0) {

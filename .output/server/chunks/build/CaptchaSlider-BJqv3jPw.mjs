@@ -1,4 +1,4 @@
-import { u as useI18n, n as _sfc_main$C, _ as _sfc_main$R } from './server.mjs';
+import { u as useI18n, n as _sfc_main$C, _ as _sfc_main$S } from './server.mjs';
 import { defineComponent, ref, computed, watch, mergeProps, isRef, unref, withCtx, createVNode, toDisplayString, openBlock, createBlock, createCommentVNode, createTextVNode, useSSRContext } from 'vue';
 import { ssrRenderComponent, ssrInterpolate, ssrRenderAttr, ssrIncludeBooleanAttr, ssrRenderStyle } from 'vue/server-renderer';
 
@@ -133,7 +133,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     });
     return (_ctx, _push, _parent, _attrs) => {
       const _component_UModal = _sfc_main$C;
-      const _component_UIcon = _sfc_main$R;
+      const _component_UIcon = _sfc_main$S;
       _push(ssrRenderComponent(_component_UModal, mergeProps({
         open: unref(isOpen),
         "onUpdate:open": ($event) => isRef(isOpen) ? isOpen.value = $event : null,

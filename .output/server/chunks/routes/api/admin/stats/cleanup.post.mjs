@@ -1,4 +1,4 @@
-import { d as defineEventHandler, r as readBody, b as db, be as visitorEvents } from '../../../../nitro/nitro.mjs';
+import { d as defineEventHandler, r as readBody, b as db, bf as visitorEvents } from '../../../../nitro/nitro.mjs';
 import { lt } from 'drizzle-orm';
 import 'node:crypto';
 import 'crypto';

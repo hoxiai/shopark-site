@@ -1,4 +1,4 @@
-import { d as defineEventHandler, c as getRequestLocale, f as getRouterParam, e as createError, b as db, p as products, r as readBody, s as setAuditMeta } from '../../../../nitro/nitro.mjs';
+import { d as defineEventHandler, c as getRequestLocale, f as getRouterParam, e as createError, b as db, p as products, r as readBody, aI as normalizeProductLocalePrices, s as setAuditMeta } from '../../../../nitro/nitro.mjs';
 import { eq } from 'drizzle-orm';
 import 'node:crypto';
 import 'crypto';
@@ -104,7 +104,7 @@ const _id_ = defineEventHandler(async (event) => {
       updateData.slug = updateData.name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)+/g, "");
     }
     updateData.imageUrls = normalizeImageUrls(updateData.imageUrls);
-    updateData.metaData = normalizeMetaData(updateData.metaData);
+    updateData.metaData = await normalizeProductLocalePrices(normalizeMetaData(updateData.metaData));
     if (updateData.status) {
       updateData.isActive = updateData.status !== "inactive";
     } else if (updateData.isActive !== void 0) {

@@ -1,4 +1,4 @@
-import { n as _sfc_main$C, i as _sfc_main$M } from './server.mjs';
+import { n as _sfc_main$C, i as _sfc_main$N } from './server.mjs';
 import { defineComponent, computed, ref, mergeProps, withCtx, createVNode, toDisplayString, renderSlot, openBlock, createBlock, createCommentVNode, useSSRContext } from 'vue';
 import { ssrRenderComponent, ssrRenderClass, ssrInterpolate, ssrRenderSlot } from 'vue/server-renderer';
 
@@ -23,7 +23,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     const isFullscreen = ref((_a = props.defaultFullscreen) != null ? _a : true);
     return (_ctx, _push, _parent, _attrs) => {
       const _component_UModal = _sfc_main$C;
-      const _component_UButton = _sfc_main$M;
+      const _component_UButton = _sfc_main$N;
       _push(ssrRenderComponent(_component_UModal, mergeProps({
         open: isOpen.value,
         "onUpdate:open": ($event) => isOpen.value = $event,

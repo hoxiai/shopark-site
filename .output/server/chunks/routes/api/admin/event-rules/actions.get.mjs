@@ -67,11 +67,30 @@ const actions_get = defineEventHandler(async (event) => {
     description: action.description,
     supportedEvents: [action.event]
   }));
+  const events = [
+    {
+      key: "user.registered",
+      label: isZh ? "\u7528\u6237\u6CE8\u518C\u6210\u529F" : "User Registered"
+    },
+    {
+      key: "order.paid",
+      label: isZh ? "\u8BA2\u5355\u652F\u4ED8\u6210\u529F" : "Order Paid"
+    },
+    {
+      key: "subscription.revoked",
+      label: isZh ? "\u8BA2\u9605\u64A4\u9500 / \u6743\u76CA\u56DE\u6536" : "Subscription Revoked"
+    },
+    {
+      key: "subscription.apply",
+      label: isZh ? "\u8BA2\u9605\u751F\u6548" : "Subscription Activated"
+    }
+  ];
   return {
     code: 0,
     data: {
       systemActions,
-      themeActions
+      themeActions,
+      events
     }
   };
 });

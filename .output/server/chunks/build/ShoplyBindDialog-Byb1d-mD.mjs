@@ -1,4 +1,4 @@
-import { u as useI18n, d as useFormatTime, n as _sfc_main$C, _ as _sfc_main$R, i as _sfc_main$M, a as _sfc_main$t, b as _sfc_main$s, v as _sfc_main$l, B as _sfc_main$i } from './server.mjs';
+import { u as useI18n, d as useFormatTime, n as _sfc_main$C, _ as _sfc_main$S, i as _sfc_main$N, a as _sfc_main$t, b as _sfc_main$s, v as _sfc_main$l, B as _sfc_main$i } from './server.mjs';
 import { defineComponent, useModel, computed, ref, watch, mergeProps, withCtx, unref, createTextVNode, toDisplayString, createVNode, openBlock, createBlock, Fragment, createCommentVNode, withModifiers, renderList, mergeModels, useSSRContext } from 'vue';
 import { ssrRenderComponent, ssrInterpolate, ssrRenderList, ssrRenderClass } from 'vue/server-renderer';
 import { f as formatCopy } from './useShoplyConsole-2rVhyTbW.mjs';
@@ -399,8 +399,8 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     };
     return (_ctx, _push, _parent, _attrs) => {
       const _component_UModal = _sfc_main$C;
-      const _component_UIcon = _sfc_main$R;
-      const _component_UButton = _sfc_main$M;
+      const _component_UIcon = _sfc_main$S;
+      const _component_UButton = _sfc_main$N;
       const _component_UFormField = _sfc_main$t;
       const _component_UInput = _sfc_main$s;
       const _component_UAlert = _sfc_main$l;

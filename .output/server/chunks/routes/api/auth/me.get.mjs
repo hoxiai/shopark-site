@@ -1,4 +1,4 @@
-import { d as defineEventHandler, c4 as requireUserSession, b as db, u as users, c5 as overwriteSessionUser } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, c5 as requireUserSession, b as db, u as users, c6 as overwriteSessionUser } from '../../../nitro/nitro.mjs';
 import { eq } from 'drizzle-orm';
 import 'node:crypto';
 import 'crypto';
