@@ -1,4 +1,4 @@
-import { d as defineEventHandler, r as readBody, dd as getThemePackageDescriptor } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, r as readBody, de as getThemePackageDescriptor } from '../../../nitro/nitro.mjs';
 import 'drizzle-orm';
 import 'node:crypto';
 import 'crypto';

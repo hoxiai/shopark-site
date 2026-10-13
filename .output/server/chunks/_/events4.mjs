@@ -1,5 +1,5 @@
 import { eq } from 'drizzle-orm';
-import { b as db, p as products, dL as readShoplyPlanMeta, dM as pushShoplyLicense } from '../nitro/nitro.mjs';
+import { b as db, p as products, dM as readShoplyPlanMeta, dN as pushShoplyLicense } from '../nitro/nitro.mjs';
 import 'node:crypto';
 import 'crypto';
 import 'fs';

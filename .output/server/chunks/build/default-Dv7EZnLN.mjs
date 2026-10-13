@@ -10,7 +10,7 @@ import { u as useShoplyAuthLinks } from './useShoplyAuthLinks-CNxPcIoY.mjs';
 import { u as useShoplyConsoleCopy } from './useShoplyConsole-2rVhyTbW.mjs';
 import { u as useShoplySiteName } from './useShoplySiteName-LipV6hw_.mjs';
 import { u as useShoplyLogo } from './useShoplyLogo-Ck6X-KKS.mjs';
-import { eG as localeDomainUrl } from '../nitro/nitro.mjs';
+import { eH as localeDomainUrl } from '../nitro/nitro.mjs';
 import '@iconify/vue';
 import '@iconify/utils/lib/css/icon';
 import 'perfect-debounce';

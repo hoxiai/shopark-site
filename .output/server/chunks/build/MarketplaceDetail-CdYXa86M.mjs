@@ -2,7 +2,7 @@ import { D as useLocaleRouter, U as useLocaleCurrency, E as useRoute, u as useI1
 import { defineComponent, computed, ref, mergeProps, unref, withCtx, createTextVNode, toDisplayString, createVNode, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent, ssrInterpolate, ssrRenderList, ssrRenderClass, ssrRenderAttr } from 'vue/server-renderer';
 import MarketplaceVisual from './MarketplaceVisual-Cr5WaubP.mjs';
-import { el as SEO_LOCALE_LANGUAGE } from '../nitro/nitro.mjs';
+import { em as SEO_LOCALE_LANGUAGE } from '../nitro/nitro.mjs';
 import 'vue-router';
 import '@iconify/vue';
 import '@iconify/utils/lib/css/icon';

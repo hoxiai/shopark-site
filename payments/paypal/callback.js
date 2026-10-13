@@ -26,6 +26,7 @@ try {
   const unit = remoteOrder.purchase_units?.[0];
   if (remoteOrder.purchase_units?.length !== 1 || unit?.reference_id !== orderId
     || String(unit.amount?.currency_code) !== String(localOrder.currency)
+    || !Number.isFinite(Number(unit.amount?.value))
     || Math.abs(Number(unit.amount?.value) - Number(localOrder.amount)) > 0.001) return reject();
   if (remoteOrder.status === 'APPROVED') {
     const captureRes = await fetch(`${apiBase}/v2/checkout/orders/${encodeURIComponent(gatewayOrderId)}/capture`, {

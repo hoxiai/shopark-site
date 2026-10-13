@@ -111,7 +111,7 @@ window.startPayPalCheckout = async function() {
     }
 
     // 将顶层窗口跳转到 PayPal 支付页面
-    window.top.location.href = res.paymentUrl;
+    window.top.location.href = res.data.paymentUrl;
 
   } catch (error) {
     console.error("PayPal checkout error:", error);

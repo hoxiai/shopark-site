@@ -1,4 +1,4 @@
-import { dk as buildAssetsURL } from '../nitro/nitro.mjs';
+import { dl as buildAssetsURL } from '../nitro/nitro.mjs';
 
 const casesBanner = "" + buildAssetsURL("cases-banner.7QlgNE2v.png");
 

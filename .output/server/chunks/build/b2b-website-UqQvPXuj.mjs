@@ -1,4 +1,4 @@
-import { dk as buildAssetsURL } from '../nitro/nitro.mjs';
+import { dl as buildAssetsURL } from '../nitro/nitro.mjs';
 import { u as useI18n, bf as useSeoMeta, _ as _sfc_main$R, L as __nuxt_component_3$3 } from './server.mjs';
 import ShoplyLeadForm from './ShoplyLeadForm-12rK7weU.mjs';
 import { defineComponent, computed, ref, mergeProps, unref, withCtx, createVNode, toDisplayString, useSSRContext } from 'vue';

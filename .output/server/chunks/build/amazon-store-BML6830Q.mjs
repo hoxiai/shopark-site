@@ -1,4 +1,4 @@
-import { dk as buildAssetsURL } from '../nitro/nitro.mjs';
+import { dl as buildAssetsURL } from '../nitro/nitro.mjs';
 import { r as useSettings, u as useI18n, bf as useSeoMeta, _ as _sfc_main$R } from './server.mjs';
 import __nuxt_component_2 from './ShoplyConsultDialog-BkiMWPem.mjs';
 import { defineComponent, computed, ref, unref, isRef, useSSRContext } from 'vue';

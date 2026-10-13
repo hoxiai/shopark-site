@@ -1,4 +1,4 @@
-import { d as defineEventHandler, bG as proxyExternalRequest } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, bH as proxyExternalRequest } from '../../../nitro/nitro.mjs';
 import 'drizzle-orm';
 import 'node:crypto';
 import 'crypto';

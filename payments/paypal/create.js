@@ -28,6 +28,12 @@ const planId =
   config.plan_id ||
   "";
 
+// APay renews through its own invoices. Gateway subscriptions need a separate
+// transaction-to-renewal-invoice integration before they can be enabled.
+if (paymentType === "subscription") {
+  return { ok: false, message: "PayPal recurring billing is not configured; pay the APay renewal invoice instead" };
+}
+
 if (!clientId || !clientSecret) {
   return {
     ok: false,

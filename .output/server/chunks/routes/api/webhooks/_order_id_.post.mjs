@@ -1,4 +1,4 @@
-import { d as defineEventHandler, d6 as setHeader, c as getRequestLocale, f as getRouterParam, d7 as readRawBody, r as readBody, g as getQuery, cH as getRequestHeaders, bW as logger, e as createError, b as db, z as orders, aB as paymentMethods, d8 as executeCallbackScript, cM as setResponseStatus, d9 as markOrderPaid, O as ORDER_PAY_STATUS, ao as ORDER_STATUS, cs as getAffectedRows, da as markTopupPaymentFailed, aj as cancelPromoCommission, ak as revokeSubscriptionForOrder, al as refundTopup } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, d7 as setHeader, c as getRequestLocale, f as getRouterParam, d8 as readRawBody, r as readBody, g as getQuery, cI as getRequestHeaders, bX as logger, e as createError, b as db, z as orders, aC as paymentMethods, d9 as executeCallbackScript, cN as setResponseStatus, da as markOrderPaid, O as ORDER_PAY_STATUS, ap as ORDER_STATUS, ct as getAffectedRows, db as markTopupPaymentFailed, aj as cancelPromoCommission, ak as revokeSubscriptionForOrder, al as refundTopup, am as sendMinimalCheckoutRefundNotification } from '../../../nitro/nitro.mjs';
 import { eq, and, inArray, ne } from 'drizzle-orm';
 import fs from 'fs';
 import path from 'path';
@@ -181,12 +181,6 @@ const postHandler = defineEventHandler(async (event) => {
       const existingOrders2 = await db.select().from(orders).where(eq(orders.id, result.orderId));
       if (existingOrders2.length > 0) {
         const order2 = existingOrders2[0];
-        const verifiedPayload2 = { ...payload, order: {
-          id: order2.id,
-          amount: order2.amount,
-          currency: order2.currency,
-          tradeNo: order2.tradeNo
-        } };
         if (result.status === "paid") {
           const marked = await markOrderPaid({
             orderId: result.orderId,
@@ -243,6 +237,12 @@ const postHandler = defineEventHandler(async (event) => {
             }
             if (result.status === "refunded" && order2.userId) {
               await refundTopup(result.orderId).catch((err) => console.error("[Webhook] refundTopup failed:", err));
+            }
+            if (result.status === "refunded" && wasCharged) {
+              const notification = await sendMinimalCheckoutRefundNotification({ ...order2, payStatus: "refunded" });
+              if (!notification.skipped && !notification.delivered) {
+                throw new Error("Refund relay notification failed; gateway retry required");
+              }
             }
           }
         }

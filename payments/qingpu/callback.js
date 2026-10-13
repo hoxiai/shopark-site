@@ -44,7 +44,12 @@ if (expectedSignature !== signature) {
   };
 }
 
-if (eventName !== "minimal.checkout.paid") {
+// The event header is outside the signed body; it must agree with that body.
+if (eventName !== String(body.event || "")) {
+  return { isSignValid: false, orderId: String(payload.urlOrderId || ""), status: "failed", responseBody: "fail: event mismatch" };
+}
+
+if (!["minimal.checkout.paid", "minimal.checkout.refunded"].includes(eventName)) {
   return {
     isSignValid: false,
     orderId: String(payload.urlOrderId || "").trim(),
@@ -66,10 +71,19 @@ if (!orderId || (payload.urlOrderId && String(payload.urlOrderId).trim() !== ord
   };
 }
 
+const amount = Number(data.sourceAmount ?? data.amount);
+const currency = String(data.sourceCurrency || data.currency || "").toUpperCase();
+if (!Number.isFinite(amount) || amount < 0
+  || (eventName === "minimal.checkout.refunded" && data.payStatus !== "refunded")
+  || (payload.order && (Math.abs(amount - Number(payload.order.amount)) > 0.001 || currency !== String(payload.order.currency).toUpperCase()))) {
+  return { isSignValid: false, orderId, status: "failed", responseBody: "fail: refund/payment facts mismatch" };
+}
+
 return {
   isSignValid: true,
   orderId,
   tradeNo: data.tradeNo ? String(data.tradeNo) : (data.orderId ? String(data.orderId) : undefined),
-  status: "paid",
+  status: eventName === "minimal.checkout.refunded" ? "refunded" : "paid",
+  amount,
   responseBody: "success",
 };

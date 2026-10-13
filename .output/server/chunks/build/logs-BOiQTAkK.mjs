@@ -2,7 +2,7 @@ import { _ as _sfc_main$5 } from './Tabs-k7loUcsJ.mjs';
 import { u as useI18n, E as useRoute, d as useFormatTime, f as useAdminPermissions, e as useToast, q as useConfirm, x as usePagination, y as useFetch, i as _sfc_main$M, b as _sfc_main$s, Q as PageRequestError, j as _sfc_main$p, k as _sfc_main$I, n as _sfc_main$C, R as _sfc_main$k, _ as _sfc_main$R, S as __nuxt_component_0$1, z as _sfc_main$v } from './server.mjs';
 import { defineComponent, ref, computed, mergeProps, unref, withCtx, createTextVNode, toDisplayString, createVNode, openBlock, createBlock, createCommentVNode, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrInterpolate, ssrRenderComponent, ssrRenderTeleport, ssrRenderAttr, ssrRenderClass, ssrRenderSlot } from 'vue/server-renderer';
-import { er as errorData, eq as errorRecord } from '../nitro/nitro.mjs';
+import { es as errorData, er as errorRecord } from '../nitro/nitro.mjs';
 import { _ as _sfc_main$6 } from './SelectMenu-B9-RVY1c.mjs';
 import './TabsTrigger-CTFtEt9w.mjs';
 import 'vue-router';

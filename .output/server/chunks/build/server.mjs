@@ -1,6 +1,6 @@
 import process from 'node:process';globalThis._importMeta_=globalThis._importMeta_||{url:"file:///_entry.js",env:process.env};import * as vue from 'vue';
 import { useSlots, useId as useId$1, useAttrs, computed, unref, mergeProps, withCtx, openBlock, createBlock, createVNode, resolveDynamicComponent, renderSlot, createTextVNode, toDisplayString as toDisplayString$1, createCommentVNode, hasInjectionContext, inject, defineComponent, h, watchPostEffect, createElementBlock, normalizeStyle, ref, watch, provide, getCurrentInstance, nextTick, watchEffect, reactive, toRefs, mergeDefaults, shallowRef, toValue, Fragment, renderList, useModel, mergeModels, customRef, markRaw, toRef as toRef$1, camelize as camelize$1, Teleport, toHandlerKey, useTemplateRef, getCurrentScope, onScopeDispose, shallowReadonly, cloneVNode, isRef, normalizeProps, guardReactiveProps, readonly, toHandlers, withKeys, withModifiers, resolveComponent, onServerPrefetch, Comment, defineAsyncComponent, withAsyncContext, resolveDirective, createElementVNode, effectScope, useSSRContext, toRaw, shallowReactive, Suspense, createApp, Text, onErrorCaptured, isReadonly, isShallow, isReactive } from 'vue';
-import { ef as serialize, cM as setResponseStatus$1, eg as getRequestURL, eh as defu, ei as isEqual$1, ej as getErrorRequestId, e as createError$1, ek as resolveActiveTheme, el as SEO_LOCALE_LANGUAGE, em as upperFirst, en as defuFn, eo as appendResponseHeader, ep as parse$1, ci as getRequestHeader, eq as errorRecord, er as errorData, es as resolveLocalizedSetting, et as sanitizeStatusCode, cH as getRequestHeaders, eu as getContext, ev as setCookie, cw as getCookie, ew as deleteCookie, ex as $fetch$1, ey as baseURL, ez as hash, eA as createHooks, eB as executeAsync, eC as normalizeSiteOrigin, eD as stripLocalePrefix$1, dh as classifySeoRoute, dg as seoRouteRegistry, eE as localePathForSeo, eF as safeJsonLd, eG as localeDomainUrl, eH as getRequestProtocol, eI as themeHostConfigs } from '../nitro/nitro.mjs';
+import { eg as serialize, cN as setResponseStatus$1, eh as getRequestURL, ei as defu, ej as isEqual$1, ek as getErrorRequestId, e as createError$1, el as resolveActiveTheme, em as SEO_LOCALE_LANGUAGE, en as upperFirst, eo as defuFn, ep as appendResponseHeader, eq as parse$1, cj as getRequestHeader, er as errorRecord, es as errorData, et as resolveLocalizedSetting, eu as sanitizeStatusCode, cI as getRequestHeaders, ev as getContext, ew as setCookie, cx as getCookie, ex as deleteCookie, ey as $fetch$1, ez as baseURL, eA as hash, eB as createHooks, eC as executeAsync, eD as normalizeSiteOrigin, eE as stripLocalePrefix$1, di as classifySeoRoute, dh as seoRouteRegistry, eF as localePathForSeo, eG as safeJsonLd, eH as localeDomainUrl, eI as getRequestProtocol, eJ as themeHostConfigs } from '../nitro/nitro.mjs';
 import { useRoute as useRoute$1, useRouter as useRouter$1, RouterView, isNavigationFailure, createMemoryHistory, createRouter, START_LOCATION } from 'vue-router';
 import { Icon, getIcon, loadIcon as loadIcon$1, _api, addAPIProvider, setCustomIconsLoader } from '@iconify/vue';
 import { getIconCSS } from '@iconify/utils/lib/css/icon';
@@ -952,13 +952,28 @@ const _routes = [
     component: () => import('./_...slug_-CurRm57W.mjs')
   },
   {
+    name: "user-plugins-slug___zh___default",
+    path: "/user/plugins/:slug(.*)*",
+    component: () => import('./_...slug_-CurRm57W.mjs')
+  },
+  {
     name: "user-plugins-slug___zh",
     path: "/zh/user/plugins/:slug(.*)*",
     component: () => import('./_...slug_-CurRm57W.mjs')
   },
   {
+    name: "user-plugins-slug___zh-HK___default",
+    path: "/user/plugins/:slug(.*)*",
+    component: () => import('./_...slug_-CurRm57W.mjs')
+  },
+  {
     name: "user-plugins-slug___zh-HK",
     path: "/zh-HK/user/plugins/:slug(.*)*",
+    component: () => import('./_...slug_-CurRm57W.mjs')
+  },
+  {
+    name: "user-plugins-slug___ru___default",
+    path: "/user/plugins/:slug(.*)*",
     component: () => import('./_...slug_-CurRm57W.mjs')
   },
   {
@@ -1051,14 +1066,32 @@ const _routes = [
     component: () => import('./setup-DI5ER4dw.mjs')
   },
   {
+    name: "admin-setup___zh___default",
+    path: "/admin/setup",
+    meta: __nuxt_page_meta$5 || {},
+    component: () => import('./setup-DI5ER4dw.mjs')
+  },
+  {
     name: "admin-setup___zh",
     path: "/zh/admin/setup",
     meta: __nuxt_page_meta$5 || {},
     component: () => import('./setup-DI5ER4dw.mjs')
   },
   {
+    name: "admin-setup___zh-HK___default",
+    path: "/admin/setup",
+    meta: __nuxt_page_meta$5 || {},
+    component: () => import('./setup-DI5ER4dw.mjs')
+  },
+  {
     name: "admin-setup___zh-HK",
     path: "/zh-HK/admin/setup",
+    meta: __nuxt_page_meta$5 || {},
+    component: () => import('./setup-DI5ER4dw.mjs')
+  },
+  {
+    name: "admin-setup___ru___default",
+    path: "/admin/setup",
     meta: __nuxt_page_meta$5 || {},
     component: () => import('./setup-DI5ER4dw.mjs')
   },
@@ -1104,13 +1137,28 @@ const _routes = [
     component: () => import('./_...slug_-CFD-cGuh.mjs')
   },
   {
+    name: "slug___zh___default",
+    path: "/:slug(.*)*",
+    component: () => import('./_...slug_-CFD-cGuh.mjs')
+  },
+  {
     name: "slug___zh",
     path: "/zh/:slug(.*)*",
     component: () => import('./_...slug_-CFD-cGuh.mjs')
   },
   {
+    name: "slug___zh-HK___default",
+    path: "/:slug(.*)*",
+    component: () => import('./_...slug_-CFD-cGuh.mjs')
+  },
+  {
     name: "slug___zh-HK",
     path: "/zh-HK/:slug(.*)*",
+    component: () => import('./_...slug_-CFD-cGuh.mjs')
+  },
+  {
+    name: "slug___ru___default",
+    path: "/:slug(.*)*",
     component: () => import('./_...slug_-CFD-cGuh.mjs')
   },
   {
@@ -5578,7 +5626,7 @@ const cfg0 = defineAppConfig({
   }
 });
 const inlineConfig = {
-  "appVersion": "1.1.1",
+  "appVersion": "1.1.3",
   "nuxt": {},
   "ui": {
     "colors": {
@@ -14664,7 +14712,17 @@ const normalizedLocales = [
       }
     ],
     name: "English",
-    language: "en-US"
+    language: "en-US",
+    domains: [
+      "iqingpu.com",
+      "www.iqingpu.com",
+      "runshoply.com",
+      "www.runshoply.com"
+    ],
+    defaultForDomains: [
+      "runshoply.com",
+      "www.runshoply.com"
+    ]
   },
   {
     code: "zh",
@@ -14680,7 +14738,17 @@ const normalizedLocales = [
       }
     ],
     name: "简体中文",
-    language: "zh-CN"
+    language: "zh-CN",
+    domains: [
+      "iqingpu.com",
+      "www.iqingpu.com",
+      "runshoply.com",
+      "www.runshoply.com"
+    ],
+    defaultForDomains: [
+      "iqingpu.com",
+      "www.iqingpu.com"
+    ]
   },
   {
     code: "zh-HK",
@@ -14696,7 +14764,14 @@ const normalizedLocales = [
       }
     ],
     name: "香港繁體",
-    language: "zh-HK"
+    language: "zh-HK",
+    domains: [
+      "iqingpu.com",
+      "www.iqingpu.com",
+      "runshoply.com",
+      "www.runshoply.com"
+    ],
+    defaultForDomains: []
   },
   {
     code: "ru",
@@ -14712,7 +14787,14 @@ const normalizedLocales = [
       }
     ],
     name: "Русский",
-    language: "ru-RU"
+    language: "ru-RU",
+    domains: [
+      "iqingpu.com",
+      "www.iqingpu.com",
+      "runshoply.com",
+      "www.runshoply.com"
+    ],
+    defaultForDomains: []
   }
 ];
 const NUXT_I18N_MODULE_ID = "@nuxtjs/i18n";

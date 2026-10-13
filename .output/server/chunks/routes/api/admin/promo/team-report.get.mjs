@@ -1,4 +1,4 @@
-import { d as defineEventHandler, g as getQuery, aW as getMasterAgentTeamReport } from '../../../../nitro/nitro.mjs';
+import { d as defineEventHandler, g as getQuery, aX as getMasterAgentTeamReport } from '../../../../nitro/nitro.mjs';
 import 'drizzle-orm';
 import 'node:crypto';
 import 'crypto';
