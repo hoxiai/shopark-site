@@ -29,6 +29,8 @@ import '@iconify/utils';
 import 'consola';
 import 'ioredis';
 import 'node:child_process';
+import 'process';
+import 'buffer';
 import 'node:fs/promises';
 import 'node:dns/promises';
 import 'node:net';
@@ -71,3 +73,4 @@ const me_get = defineEventHandler(async (event) => {
 });
 
 export { me_get as default };
+//# sourceMappingURL=me.get.mjs.map

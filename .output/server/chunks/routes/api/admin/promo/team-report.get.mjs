@@ -29,6 +29,8 @@ import '@iconify/utils';
 import 'consola';
 import 'ioredis';
 import 'node:child_process';
+import 'process';
+import 'buffer';
 import 'node:fs/promises';
 import 'node:dns/promises';
 import 'node:net';
@@ -53,3 +55,4 @@ const teamReport_get = defineEventHandler(async (event) => {
 });
 
 export { teamReport_get as default };
+//# sourceMappingURL=team-report.get.mjs.map

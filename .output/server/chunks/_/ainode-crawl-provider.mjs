@@ -30,6 +30,8 @@ import '@iconify/utils';
 import 'consola';
 import 'ioredis';
 import 'node:child_process';
+import 'process';
+import 'buffer';
 import 'node:fs/promises';
 import 'node:dns/promises';
 import 'node:net';
@@ -245,3 +247,4 @@ registerCollectProvider({
     return { ok: true, input };
   }
 });
+//# sourceMappingURL=ainode-crawl-provider.mjs.map

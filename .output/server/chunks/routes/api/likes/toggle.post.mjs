@@ -29,6 +29,8 @@ import '@iconify/utils';
 import 'consola';
 import 'ioredis';
 import 'node:child_process';
+import 'process';
+import 'buffer';
 import 'node:fs/promises';
 import 'node:dns/promises';
 import 'node:net';
@@ -103,3 +105,4 @@ const toggle_post = defineEventHandler(async (event) => {
 });
 
 export { toggle_post as default };
+//# sourceMappingURL=toggle.post.mjs.map

@@ -1,1 +1,0 @@
-import{D as o,n as r}from"./iDjQ6Egf.js";import{i as n,aJ as c,aa as s,ae as i}from"./CR314bR6.js";import"./CZtJs-jz.js";import"./CfYFMnge.js";const d=n({__name:"pricing",async setup(p){let e,a;const{localePath:t}=o();return[e,a]=c(()=>r(t("/page/pricing"),{replace:!0})),await e,a(),(_,m)=>(i(),s("div"))}});export{d as default};

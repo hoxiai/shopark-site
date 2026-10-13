@@ -29,6 +29,8 @@ import '@iconify/utils';
 import 'consola';
 import 'ioredis';
 import 'node:child_process';
+import 'process';
+import 'buffer';
 import 'node:fs/promises';
 import 'node:dns/promises';
 import 'node:net';
@@ -64,3 +66,4 @@ const checkEmail_get = defineEventHandler(async (event) => {
 });
 
 export { checkEmail_get as default };
+//# sourceMappingURL=check-email.get.mjs.map

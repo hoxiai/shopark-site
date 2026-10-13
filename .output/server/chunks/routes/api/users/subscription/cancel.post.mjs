@@ -29,6 +29,8 @@ import '@iconify/utils';
 import 'consola';
 import 'ioredis';
 import 'node:child_process';
+import 'process';
+import 'buffer';
 import 'node:fs/promises';
 import 'node:dns/promises';
 import 'node:net';
@@ -70,3 +72,4 @@ const cancel_post = defineEventHandler(async (event) => {
 });
 
 export { cancel_post as default };
+//# sourceMappingURL=cancel.post.mjs.map

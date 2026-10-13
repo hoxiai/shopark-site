@@ -29,6 +29,8 @@ import '@iconify/utils';
 import 'consola';
 import 'ioredis';
 import 'node:child_process';
+import 'process';
+import 'buffer';
 import 'node:fs/promises';
 import 'node:dns/promises';
 import 'node:net';
@@ -98,6 +100,12 @@ const postHandler = defineEventHandler(async (event) => {
       throw new Error(`Order ${urlOrderId} not found`);
     }
     const order = existingOrders[0];
+    const verifiedPayload = { ...payload, order: {
+      id: order.id,
+      amount: order.amount,
+      currency: order.currency,
+      tradeNo: order.tradeNo
+    } };
     const payMethod = order.payMethod;
     if (!payMethod) {
       throw new Error(`Order ${urlOrderId} does not have a payment method assigned`);
@@ -147,7 +155,7 @@ const postHandler = defineEventHandler(async (event) => {
         console.warn("Failed to read local config.json for", realMethodCode);
       }
     }
-    const result = await executeCallbackScript(callbackScript, payload, configJson);
+    const result = await executeCallbackScript(callbackScript, verifiedPayload, configJson);
     await logger.info(`Webhook processed for ${realMethodCode}`, {
       source: "webhook",
       details: { urlOrderId, payload: logPayload, result }
@@ -173,6 +181,12 @@ const postHandler = defineEventHandler(async (event) => {
       const existingOrders2 = await db.select().from(orders).where(eq(orders.id, result.orderId));
       if (existingOrders2.length > 0) {
         const order2 = existingOrders2[0];
+        const verifiedPayload2 = { ...payload, order: {
+          id: order2.id,
+          amount: order2.amount,
+          currency: order2.currency,
+          tradeNo: order2.tradeNo
+        } };
         if (result.status === "paid") {
           const marked = await markOrderPaid({
             orderId: result.orderId,
@@ -256,3 +270,4 @@ const postHandler = defineEventHandler(async (event) => {
 });
 
 export { postHandler as default };
+//# sourceMappingURL=_order_id_.post.mjs.map

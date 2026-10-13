@@ -29,6 +29,8 @@ import '@iconify/utils';
 import 'consola';
 import 'ioredis';
 import 'node:child_process';
+import 'process';
+import 'buffer';
 import 'node:fs/promises';
 import 'node:dns/promises';
 import 'node:net';
@@ -75,3 +77,4 @@ const delete_delete = defineEventHandler(async (event) => {
 });
 
 export { delete_delete as default };
+//# sourceMappingURL=delete.delete.mjs.map

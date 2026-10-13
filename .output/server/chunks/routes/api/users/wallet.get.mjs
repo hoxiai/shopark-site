@@ -29,6 +29,8 @@ import '@iconify/utils';
 import 'consola';
 import 'ioredis';
 import 'node:child_process';
+import 'process';
+import 'buffer';
 import 'node:fs/promises';
 import 'node:dns/promises';
 import 'node:net';
@@ -102,3 +104,4 @@ const wallet_get = defineEventHandler(async (event) => {
 });
 
 export { wallet_get as default };
+//# sourceMappingURL=wallet.get.mjs.map

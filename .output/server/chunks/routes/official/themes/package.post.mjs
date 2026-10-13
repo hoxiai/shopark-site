@@ -29,6 +29,8 @@ import '@iconify/utils';
 import 'consola';
 import 'ioredis';
 import 'node:child_process';
+import 'process';
+import 'buffer';
 import 'node:fs/promises';
 import 'node:dns/promises';
 import 'node:net';
@@ -62,3 +64,4 @@ const package_post = defineEventHandler(async (event) => {
 });
 
 export { package_post as default };
+//# sourceMappingURL=package.post.mjs.map

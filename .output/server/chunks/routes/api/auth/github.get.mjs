@@ -29,6 +29,8 @@ import '@iconify/utils';
 import 'consola';
 import 'ioredis';
 import 'node:child_process';
+import 'process';
+import 'buffer';
 import 'node:fs/promises';
 import 'node:dns/promises';
 import 'node:net';
@@ -77,3 +79,4 @@ const github_get = defineOAuthGitHubEventHandler({
 });
 
 export { github_get as default };
+//# sourceMappingURL=github.get.mjs.map

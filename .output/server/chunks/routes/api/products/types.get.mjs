@@ -29,6 +29,8 @@ import '@iconify/utils';
 import 'consola';
 import 'ioredis';
 import 'node:child_process';
+import 'process';
+import 'buffer';
 import 'node:fs/promises';
 import 'node:dns/promises';
 import 'node:net';
@@ -52,3 +54,4 @@ const types_get = defineCachedEventHandler(async (event) => {
 });
 
 export { types_get as default };
+//# sourceMappingURL=types.get.mjs.map

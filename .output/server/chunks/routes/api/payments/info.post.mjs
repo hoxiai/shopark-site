@@ -29,6 +29,8 @@ import '@iconify/utils';
 import 'consola';
 import 'ioredis';
 import 'node:child_process';
+import 'process';
+import 'buffer';
 import 'node:fs/promises';
 import 'node:dns/promises';
 import 'node:net';
@@ -63,9 +65,7 @@ const info_post = defineEventHandler(async (event) => {
     order = await lockLegacyPendingOrderCurrency(order, requestLocale);
     let activeMethods = (await db.select().from(paymentMethods).where(eq(paymentMethods.isActive, true))).map((method) => applyLocalPaymentPluginDefaults({ ...method }));
     const localeFilteredMethods = activeMethods.filter((method) => isPaymentMethodAvailableForLocale(method, requestLocale, localeConfig));
-    if (localeFilteredMethods.length > 0) {
-      activeMethods = localeFilteredMethods;
-    }
+    activeMethods = localeFilteredMethods;
     if (activeMethods.length === 0) {
       return { code: 1, message: messages.noActiveMethods };
     }
@@ -150,3 +150,4 @@ const info_post = defineEventHandler(async (event) => {
 });
 
 export { info_post as default };
+//# sourceMappingURL=info.post.mjs.map

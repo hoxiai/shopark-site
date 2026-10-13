@@ -29,6 +29,8 @@ import '@iconify/utils';
 import 'consola';
 import 'ioredis';
 import 'node:child_process';
+import 'process';
+import 'buffer';
 import 'node:fs/promises';
 import 'node:dns/promises';
 import 'node:net';
@@ -73,3 +75,4 @@ const profile_put = defineEventHandler(async (event) => {
 });
 
 export { profile_put as default };
+//# sourceMappingURL=profile.put.mjs.map

@@ -29,6 +29,8 @@ import '@iconify/utils';
 import 'consola';
 import 'ioredis';
 import 'node:child_process';
+import 'process';
+import 'buffer';
 import 'node:fs/promises';
 import 'node:dns/promises';
 import 'node:net';
@@ -104,3 +106,4 @@ function getThemeEventRules() {
 }
 
 export { getThemeEventRules };
+//# sourceMappingURL=events4.mjs.map

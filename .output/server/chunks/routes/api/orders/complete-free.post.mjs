@@ -29,6 +29,8 @@ import '@iconify/utils';
 import 'consola';
 import 'ioredis';
 import 'node:child_process';
+import 'process';
+import 'buffer';
 import 'node:fs/promises';
 import 'node:dns/promises';
 import 'node:net';
@@ -38,3 +40,4 @@ import '@adonisjs/hash/drivers/scrypt';
 const completeFree_post = createFreeOrderCompletionHandler();
 
 export { completeFree_post as default };
+//# sourceMappingURL=complete-free.post.mjs.map

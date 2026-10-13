@@ -5,3 +5,4 @@ const defaultStyles_B6fxqo3S = [
 ];
 
 export { defaultStyles_B6fxqo3S as default };
+//# sourceMappingURL=default-styles.B6fxqo3S.mjs.map

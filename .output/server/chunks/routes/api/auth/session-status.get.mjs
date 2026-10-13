@@ -29,6 +29,8 @@ import '@iconify/utils';
 import 'consola';
 import 'ioredis';
 import 'node:child_process';
+import 'process';
+import 'buffer';
 import 'node:fs/promises';
 import 'node:dns/promises';
 import 'node:net';
@@ -44,3 +46,4 @@ const sessionStatus_get = defineEventHandler(async (event) => {
 });
 
 export { sessionStatus_get as default };
+//# sourceMappingURL=session-status.get.mjs.map

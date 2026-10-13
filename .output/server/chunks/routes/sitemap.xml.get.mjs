@@ -29,6 +29,8 @@ import '@iconify/utils';
 import 'consola';
 import 'ioredis';
 import 'node:child_process';
+import 'process';
+import 'buffer';
 import 'node:fs/promises';
 import 'node:dns/promises';
 import 'node:net';
@@ -37,10 +39,10 @@ import '@adonisjs/hash/drivers/scrypt';
 
 const sitemap_xml_get = defineEventHandler(async (event) => {
   try {
-    const { origin, theme, locales, defaultLocale } = await resolveServerSeoContext(event);
+    const { origin, theme, locales, defaultLocale, seoOptions } = await resolveServerSeoContext(event);
     if (!origin) throw new Error("settings.site_url must be a valid absolute HTTP(S) origin");
     const entries = (await collectSitemapEntries(seoRouteRegistry.core, seoRouteRegistry.themes[theme], theme)).filter((entry) => classifySeoRoute(seoRouteRegistry, theme, entry.path).kind === "public");
-    const xml = renderSitemapXml(entries, origin, locales, defaultLocale);
+    const xml = renderSitemapXml(entries, origin, locales, defaultLocale, seoOptions);
     setHeader(event, "content-type", "application/xml; charset=utf-8");
     setHeader(event, "cache-control", "public, max-age=300, stale-while-revalidate=3600");
     return xml;
@@ -51,3 +53,4 @@ const sitemap_xml_get = defineEventHandler(async (event) => {
 });
 
 export { sitemap_xml_get as default };
+//# sourceMappingURL=sitemap.xml.get.mjs.map

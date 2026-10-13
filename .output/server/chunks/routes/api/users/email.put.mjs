@@ -29,6 +29,8 @@ import '@iconify/utils';
 import 'consola';
 import 'ioredis';
 import 'node:child_process';
+import 'process';
+import 'buffer';
 import 'node:fs/promises';
 import 'node:dns/promises';
 import 'node:net';
@@ -137,3 +139,4 @@ const email_put = defineEventHandler(async (event) => {
 });
 
 export { email_put as default };
+//# sourceMappingURL=email.put.mjs.map

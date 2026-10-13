@@ -29,6 +29,8 @@ import '@iconify/utils';
 import 'consola';
 import 'ioredis';
 import 'node:child_process';
+import 'process';
+import 'buffer';
 import 'node:fs/promises';
 import 'node:dns/promises';
 import 'node:net';
@@ -122,3 +124,4 @@ const image_get = defineEventHandler(async (event) => {
 });
 
 export { image_get as default };
+//# sourceMappingURL=image.get.mjs.map

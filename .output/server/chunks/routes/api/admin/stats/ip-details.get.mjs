@@ -29,6 +29,8 @@ import '@iconify/utils';
 import 'consola';
 import 'ioredis';
 import 'node:child_process';
+import 'process';
+import 'buffer';
 import 'node:fs/promises';
 import 'node:dns/promises';
 import 'node:net';
@@ -169,3 +171,4 @@ const ipDetails_get = defineEventHandler(async (event) => {
 });
 
 export { ipDetails_get as default };
+//# sourceMappingURL=ip-details.get.mjs.map

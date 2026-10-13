@@ -29,6 +29,8 @@ import '@iconify/utils';
 import 'consola';
 import 'ioredis';
 import 'node:child_process';
+import 'process';
+import 'buffer';
 import 'node:fs/promises';
 import 'node:dns/promises';
 import 'node:net';
@@ -59,3 +61,4 @@ const status_patch = defineEventHandler(async (event) => {
 });
 
 export { status_patch as default };
+//# sourceMappingURL=status.patch.mjs.map

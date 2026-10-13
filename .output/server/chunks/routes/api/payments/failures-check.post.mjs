@@ -29,6 +29,8 @@ import '@iconify/utils';
 import 'consola';
 import 'ioredis';
 import 'node:child_process';
+import 'process';
+import 'buffer';
 import 'node:fs/promises';
 import 'node:dns/promises';
 import 'node:net';
@@ -76,3 +78,4 @@ const failuresCheck_post = defineEventHandler(async (event) => {
 });
 
 export { failuresCheck_post as default };
+//# sourceMappingURL=failures-check.post.mjs.map

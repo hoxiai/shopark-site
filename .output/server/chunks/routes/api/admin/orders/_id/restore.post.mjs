@@ -29,6 +29,8 @@ import '@iconify/utils';
 import 'consola';
 import 'ioredis';
 import 'node:child_process';
+import 'process';
+import 'buffer';
 import 'node:fs/promises';
 import 'node:dns/promises';
 import 'node:net';
@@ -99,3 +101,4 @@ const restore_post = defineEventHandler(async (event) => {
 });
 
 export { restore_post as default };
+//# sourceMappingURL=restore.post.mjs.map

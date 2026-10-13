@@ -29,6 +29,8 @@ import '@iconify/utils';
 import 'consola';
 import 'ioredis';
 import 'node:child_process';
+import 'process';
+import 'buffer';
 import 'node:fs/promises';
 import 'node:dns/promises';
 import 'node:net';
@@ -58,3 +60,4 @@ const google_get = defineOAuthGoogleEventHandler({
 });
 
 export { google_get as default };
+//# sourceMappingURL=google.get.mjs.map

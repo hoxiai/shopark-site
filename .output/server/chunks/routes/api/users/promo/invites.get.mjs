@@ -29,6 +29,8 @@ import '@iconify/utils';
 import 'consola';
 import 'ioredis';
 import 'node:child_process';
+import 'process';
+import 'buffer';
 import 'node:fs/promises';
 import 'node:dns/promises';
 import 'node:net';
@@ -46,3 +48,4 @@ const invites_get = defineEventHandler(async (event) => {
 });
 
 export { invites_get as default };
+//# sourceMappingURL=invites.get.mjs.map

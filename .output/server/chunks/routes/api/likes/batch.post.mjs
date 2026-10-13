@@ -29,6 +29,8 @@ import '@iconify/utils';
 import 'consola';
 import 'ioredis';
 import 'node:child_process';
+import 'process';
+import 'buffer';
 import 'node:fs/promises';
 import 'node:dns/promises';
 import 'node:net';
@@ -90,3 +92,4 @@ const batch_post = defineEventHandler(async (event) => {
 });
 
 export { batch_post as default };
+//# sourceMappingURL=batch.post.mjs.map

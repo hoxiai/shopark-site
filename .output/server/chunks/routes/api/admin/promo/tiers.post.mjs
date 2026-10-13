@@ -29,6 +29,8 @@ import '@iconify/utils';
 import 'consola';
 import 'ioredis';
 import 'node:child_process';
+import 'process';
+import 'buffer';
 import 'node:fs/promises';
 import 'node:dns/promises';
 import 'node:net';
@@ -66,3 +68,4 @@ const tiers_post = defineEventHandler(async (event) => {
 });
 
 export { tiers_post as default };
+//# sourceMappingURL=tiers.post.mjs.map

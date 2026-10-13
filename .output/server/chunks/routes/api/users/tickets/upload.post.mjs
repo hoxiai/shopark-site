@@ -29,6 +29,8 @@ import '@iconify/utils';
 import 'consola';
 import 'ioredis';
 import 'node:child_process';
+import 'process';
+import 'buffer';
 import 'node:fs/promises';
 import 'node:dns/promises';
 import 'node:net';
@@ -42,3 +44,4 @@ const upload_post = defineEventHandler(async (event) => {
 });
 
 export { upload_post as default };
+//# sourceMappingURL=upload.post.mjs.map

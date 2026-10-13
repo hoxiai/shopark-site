@@ -37,3 +37,4 @@ _sfc_main.setup = (props, ctx) => {
 const __nuxt_component_0 = Object.assign(_sfc_main, { __name: "ShoplyConsoleHeader" });
 
 export { __nuxt_component_0 as default };
+//# sourceMappingURL=ShoplyConsoleHeader-DroiRVCS.mjs.map

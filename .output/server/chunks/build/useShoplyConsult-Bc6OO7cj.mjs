@@ -18,3 +18,4 @@ const useShoplyConsult = () => {
 };
 
 export { useShoplyConsult as u };
+//# sourceMappingURL=useShoplyConsult-Bc6OO7cj.mjs.map

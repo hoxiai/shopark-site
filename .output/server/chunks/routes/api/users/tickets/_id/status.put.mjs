@@ -29,6 +29,8 @@ import '@iconify/utils';
 import 'consola';
 import 'ioredis';
 import 'node:child_process';
+import 'process';
+import 'buffer';
 import 'node:fs/promises';
 import 'node:dns/promises';
 import 'node:net';
@@ -80,3 +82,4 @@ const status_put = defineEventHandler(async (event) => {
 });
 
 export { status_put as default };
+//# sourceMappingURL=status.put.mjs.map

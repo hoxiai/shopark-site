@@ -29,6 +29,8 @@ import '@iconify/utils';
 import 'consola';
 import 'ioredis';
 import 'node:child_process';
+import 'process';
+import 'buffer';
 import 'node:fs/promises';
 import 'node:dns/promises';
 import 'node:net';
@@ -141,3 +143,4 @@ const login_post = defineEventHandler(async (event) => {
 });
 
 export { login_post as default };
+//# sourceMappingURL=login.post.mjs.map

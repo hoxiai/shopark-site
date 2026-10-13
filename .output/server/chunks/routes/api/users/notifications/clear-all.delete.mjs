@@ -29,6 +29,8 @@ import '@iconify/utils';
 import 'consola';
 import 'ioredis';
 import 'node:child_process';
+import 'process';
+import 'buffer';
 import 'node:fs/promises';
 import 'node:dns/promises';
 import 'node:net';
@@ -56,3 +58,4 @@ const clearAll_delete = defineEventHandler(async (event) => {
 });
 
 export { clearAll_delete as default };
+//# sourceMappingURL=clear-all.delete.mjs.map
