@@ -1,5 +1,5 @@
 import { eq } from 'drizzle-orm';
-import { b as db, p as products, dR as readShoplyPlanMeta, dS as pushShoplyLicense } from '../nitro/nitro.mjs';
+import { dR as getShoplyPartnerConnection, b as db, u as users, dS as resolveShoplyEntitlement, dT as syncShoplyLicense, p as products, dU as readShoplyPlanMeta } from '../nitro/nitro.mjs';
 import 'node:crypto';
 import 'crypto';
 import 'fs';
@@ -36,6 +36,25 @@ import 'node:dns/promises';
 import 'node:net';
 import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
+
+async function pushShoplyLicense(userId, options) {
+  if (!getShoplyPartnerConnection()) return { skipped: true, reason: "not_configured" };
+  const rows = await db.select({
+    id: users.id,
+    email: users.email,
+    nickname: users.nickname,
+    avatarUrl: users.avatarUrl
+  }).from(users).where(eq(users.id, userId)).limit(1);
+  const user = rows[0];
+  if (!user) return { skipped: true, reason: "user_not_found" };
+  const entitlement = await resolveShoplyEntitlement(userId);
+  const result = await syncShoplyLicense({
+    id: Number(user.id),
+    nickname: String(user.nickname || String(user.email || "").split("@")[0] || ""),
+    avatarUrl: String(user.avatarUrl || "")
+  }, entitlement.license, { ...options, ensure: options.ensure === "paid" ? entitlement.source === "subscription" : options.ensure });
+  return { skipped: false, ...result };
+}
 
 function getThemeEventRules() {
   return [

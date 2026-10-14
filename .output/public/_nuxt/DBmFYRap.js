@@ -1,0 +1,1 @@
+import{F as o,n as s}from"./BheXLGwY.js";import{i as n,aJ as r,aa as c,ag as i}from"./BbmMkH88.js";import"./BLIcvORX.js";import"./CfYFMnge.js";const h=n({__name:"solutions",async setup(p){let e,t;const{localePath:a}=o();return[e,t]=r(()=>s(a("/solutions"),{replace:!0})),await e,t(),(_,l)=>(i(),c("div"))}});export{h as default};

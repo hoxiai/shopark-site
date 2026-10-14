@@ -1,6 +1,6 @@
 import process from 'node:process';globalThis._importMeta_=globalThis._importMeta_||{url:"file:///_entry.js",env:process.env};import * as vue from 'vue';
 import { defineComponent, ref, renderSlot, useSlots, useId as useId$1, useAttrs, computed, unref, mergeProps, withCtx, openBlock, createBlock, createVNode, resolveDynamicComponent, createTextVNode, toDisplayString as toDisplayString$1, createCommentVNode, hasInjectionContext, inject, h, watchPostEffect, createElementBlock, normalizeStyle, watch, provide, shallowRef, toValue, getCurrentInstance, nextTick, watchEffect, reactive, toRefs, Fragment, renderList, useModel, mergeModels, customRef, mergeDefaults, markRaw, toRef as toRef$1, camelize as camelize$1, Teleport, toHandlerKey, useTemplateRef, getCurrentScope, onScopeDispose, shallowReadonly, cloneVNode, isRef, normalizeProps, guardReactiveProps, readonly, toHandlers, withKeys, withModifiers, resolveComponent, onServerPrefetch, Comment, defineAsyncComponent, withAsyncContext, resolveDirective, createElementVNode, effectScope, useSSRContext, toRaw, shallowReactive, Suspense, createApp, Text, onErrorCaptured, isReadonly, isShallow, isReactive } from 'vue';
-import { el as serialize, em as createPricingContext, cS as setResponseStatus$1, en as getRequestURL, eo as defu, ep as isEqual$1, eq as getErrorRequestId, e as createError$1, er as resolveActiveTheme, es as SEO_LOCALE_LANGUAGE, et as upperFirst, cs as quoteProductPrice, eu as defuFn, ev as appendResponseHeader, ew as parse$1, ck as getRequestHeader, ex as errorRecord, ey as errorData, ez as resolveLocalizedSetting, eA as sanitizeStatusCode, eB as getContext, eC as setCookie, cC as getCookie, eD as deleteCookie, cN as getRequestHeaders, eE as $fetch$1, eF as baseURL, eG as hash, eH as createHooks, eI as executeAsync, eJ as normalizeSiteOrigin, eK as stripLocalePrefix$1, dn as classifySeoRoute, dm as seoRouteRegistry, eL as localePathForSeo, eM as safeJsonLd, eN as localeDomainUrl, eO as getRequestProtocol, eP as themeHostConfigs } from '../nitro/nitro.mjs';
+import { en as serialize, eo as createPricingContext, cS as setResponseStatus$1, ep as getRequestURL, eq as defu, er as isEqual$1, es as getErrorRequestId, e as createError$1, et as resolveActiveTheme, eu as SEO_LOCALE_LANGUAGE, ev as upperFirst, cs as quoteProductPrice, ew as defuFn, ex as appendResponseHeader, ey as parse$1, ck as getRequestHeader, ez as errorRecord, eA as errorData, eB as resolveLocalizedSetting, eC as sanitizeStatusCode, eD as getContext, eE as setCookie, cC as getCookie, eF as deleteCookie, cN as getRequestHeaders, eG as $fetch$1, eH as baseURL, eI as hash, eJ as createHooks, eK as executeAsync, eL as normalizeSiteOrigin, eM as stripLocalePrefix$1, dn as classifySeoRoute, dm as seoRouteRegistry, eN as localePathForSeo, eO as safeJsonLd, eP as localeDomainUrl, eQ as getRequestProtocol, eR as themeHostConfigs } from '../nitro/nitro.mjs';
 import { useRoute as useRoute$1, useRouter as useRouter$1, RouterView, isNavigationFailure, createMemoryHistory, createRouter, START_LOCATION } from 'vue-router';
 import { Icon, getIcon, loadIcon as loadIcon$1, _api, addAPIProvider, setCustomIconsLoader } from '@iconify/vue';
 import { getIconCSS } from '@iconify/utils/lib/css/icon';
@@ -884,13 +884,13 @@ const _routes = [
     name: "admin-posts-create",
     path: "/admin/posts/create",
     meta: __nuxt_page_meta$t || {},
-    component: () => import('./create-DePwTcGk.mjs')
+    component: () => import('./create-CuTDy53V.mjs')
   },
   {
     name: "admin-products-create",
     path: "/admin/products/create",
     meta: __nuxt_page_meta$s || {},
-    component: () => import('./create-D92RN5mP.mjs')
+    component: () => import('./create-DY0uh6i5.mjs')
   },
   {
     name: "admin-settings-authorization",
@@ -926,13 +926,13 @@ const _routes = [
     name: "admin-posts-id",
     path: "/admin/posts/:id()",
     meta: __nuxt_page_meta$m || {},
-    component: () => import('./_id_-I8Jnd7Qo.mjs')
+    component: () => import('./_id_-Dg9fgKqZ.mjs')
   },
   {
     name: "admin-products-id",
     path: "/admin/products/:id()",
     meta: __nuxt_page_meta$l || {},
-    component: () => import('./_id_-BpOpXNf3.mjs')
+    component: () => import('./_id_-DAvQ1tyZ.mjs')
   },
   {
     name: "admin-extensions-slug",
@@ -948,32 +948,17 @@ const _routes = [
   },
   {
     name: "user-plugins-slug___en",
-    path: "/user/plugins/:slug(.*)*",
-    component: () => import('./_...slug_-D8rbZovd.mjs')
-  },
-  {
-    name: "user-plugins-slug___zh___default",
-    path: "/user/plugins/:slug(.*)*",
+    path: "/en/user/plugins/:slug(.*)*",
     component: () => import('./_...slug_-D8rbZovd.mjs')
   },
   {
     name: "user-plugins-slug___zh",
-    path: "/zh/user/plugins/:slug(.*)*",
-    component: () => import('./_...slug_-D8rbZovd.mjs')
-  },
-  {
-    name: "user-plugins-slug___zh-HK___default",
     path: "/user/plugins/:slug(.*)*",
     component: () => import('./_...slug_-D8rbZovd.mjs')
   },
   {
     name: "user-plugins-slug___zh-HK",
     path: "/zh-HK/user/plugins/:slug(.*)*",
-    component: () => import('./_...slug_-D8rbZovd.mjs')
-  },
-  {
-    name: "user-plugins-slug___ru___default",
-    path: "/user/plugins/:slug(.*)*",
     component: () => import('./_...slug_-D8rbZovd.mjs')
   },
   {
@@ -1061,24 +1046,12 @@ const _routes = [
   },
   {
     name: "admin-setup___en",
-    path: "/admin/setup",
-    meta: __nuxt_page_meta$5 || {},
-    component: () => import('./setup-Cwb2wvWG.mjs')
-  },
-  {
-    name: "admin-setup___zh___default",
-    path: "/admin/setup",
+    path: "/en/admin/setup",
     meta: __nuxt_page_meta$5 || {},
     component: () => import('./setup-Cwb2wvWG.mjs')
   },
   {
     name: "admin-setup___zh",
-    path: "/zh/admin/setup",
-    meta: __nuxt_page_meta$5 || {},
-    component: () => import('./setup-Cwb2wvWG.mjs')
-  },
-  {
-    name: "admin-setup___zh-HK___default",
     path: "/admin/setup",
     meta: __nuxt_page_meta$5 || {},
     component: () => import('./setup-Cwb2wvWG.mjs')
@@ -1086,12 +1059,6 @@ const _routes = [
   {
     name: "admin-setup___zh-HK",
     path: "/zh-HK/admin/setup",
-    meta: __nuxt_page_meta$5 || {},
-    component: () => import('./setup-Cwb2wvWG.mjs')
-  },
-  {
-    name: "admin-setup___ru___default",
-    path: "/admin/setup",
     meta: __nuxt_page_meta$5 || {},
     component: () => import('./setup-Cwb2wvWG.mjs')
   },
@@ -1133,32 +1100,17 @@ const _routes = [
   },
   {
     name: "slug___en",
-    path: "/:slug(.*)*",
-    component: () => import('./_...slug_-B4bvgCIO.mjs')
-  },
-  {
-    name: "slug___zh___default",
-    path: "/:slug(.*)*",
+    path: "/en/:slug(.*)*",
     component: () => import('./_...slug_-B4bvgCIO.mjs')
   },
   {
     name: "slug___zh",
-    path: "/zh/:slug(.*)*",
-    component: () => import('./_...slug_-B4bvgCIO.mjs')
-  },
-  {
-    name: "slug___zh-HK___default",
     path: "/:slug(.*)*",
     component: () => import('./_...slug_-B4bvgCIO.mjs')
   },
   {
     name: "slug___zh-HK",
     path: "/zh-HK/:slug(.*)*",
-    component: () => import('./_...slug_-B4bvgCIO.mjs')
-  },
-  {
-    name: "slug___ru___default",
-    path: "/:slug(.*)*",
     component: () => import('./_...slug_-B4bvgCIO.mjs')
   },
   {
@@ -5626,7 +5578,7 @@ const cfg0 = defineAppConfig({
   }
 });
 const inlineConfig = {
-  "appVersion": "1.1.4",
+  "appVersion": "1.1.5",
   "nuxt": {},
   "ui": {
     "colors": {
@@ -5839,7 +5791,7 @@ defineComponent({
   }
 });
 const clientOnlySymbol = /* @__PURE__ */ Symbol.for("nuxt:client-only");
-const __nuxt_component_2$1 = defineComponent({
+const __nuxt_component_2$2 = defineComponent({
   name: "ClientOnly",
   inheritAttrs: false,
   props: ["fallback", "placeholder", "placeholderTag", "fallbackTag"],
@@ -14635,7 +14587,7 @@ const localeLoaders = {
     {
       key: "locale_site_46json_28d78c77",
       load: () => import(
-        './site-C3vRaYAS.mjs'
+        './site-CotAxWow.mjs'
         /* webpackChunkName: "locale_site_46json_28d78c77" */
       ),
       cache: true
@@ -14653,7 +14605,7 @@ const localeLoaders = {
     {
       key: "locale_site_46json_3077d684",
       load: () => import(
-        './site-CtYdvHz8.mjs'
+        './site-sEvoiAml.mjs'
         /* webpackChunkName: "locale_site_46json_3077d684" */
       ),
       cache: true
@@ -14671,7 +14623,7 @@ const localeLoaders = {
     {
       key: "locale_site_46json_3e67f01a",
       load: () => import(
-        './site-uAubCRn2.mjs'
+        './site-DmHw1A-e.mjs'
         /* webpackChunkName: "locale_site_46json_3e67f01a" */
       ),
       cache: true
@@ -14689,7 +14641,7 @@ const localeLoaders = {
     {
       key: "locale_site_46json_f65cc97e",
       load: () => import(
-        './site-DdBHAbq8.mjs'
+        './site-BqcLZsE4.mjs'
         /* webpackChunkName: "locale_site_46json_f65cc97e" */
       ),
       cache: true
@@ -14712,17 +14664,7 @@ const normalizedLocales = [
       }
     ],
     name: "English",
-    language: "en-US",
-    domains: [
-      "iqingpu.com",
-      "www.iqingpu.com",
-      "runshoply.com",
-      "www.runshoply.com"
-    ],
-    defaultForDomains: [
-      "runshoply.com",
-      "www.runshoply.com"
-    ]
+    language: "en-US"
   },
   {
     code: "zh",
@@ -14738,17 +14680,7 @@ const normalizedLocales = [
       }
     ],
     name: "简体中文",
-    language: "zh-CN",
-    domains: [
-      "iqingpu.com",
-      "www.iqingpu.com",
-      "runshoply.com",
-      "www.runshoply.com"
-    ],
-    defaultForDomains: [
-      "iqingpu.com",
-      "www.iqingpu.com"
-    ]
+    language: "zh-CN"
   },
   {
     code: "zh-HK",
@@ -14764,14 +14696,7 @@ const normalizedLocales = [
       }
     ],
     name: "香港繁體",
-    language: "zh-HK",
-    domains: [
-      "iqingpu.com",
-      "www.iqingpu.com",
-      "runshoply.com",
-      "www.runshoply.com"
-    ],
-    defaultForDomains: []
+    language: "zh-HK"
   },
   {
     code: "ru",
@@ -14787,14 +14712,7 @@ const normalizedLocales = [
       }
     ],
     name: "Русский",
-    language: "ru-RU",
-    domains: [
-      "iqingpu.com",
-      "www.iqingpu.com",
-      "runshoply.com",
-      "www.runshoply.com"
-    ],
-    defaultForDomains: []
+    language: "ru-RU"
   }
 ];
 const NUXT_I18N_MODULE_ID = "@nuxtjs/i18n";
@@ -17486,50 +17404,53 @@ const _sfc_main$H = /* @__PURE__ */ defineComponent({
     return (_ctx, _push, _parent, _attrs) => {
       const _component_UIcon = _sfc_main$S;
       const _component_UButton = _sfc_main$N;
-      _push(`<div${ssrRenderAttrs(mergeProps({ class: "relative overflow-hidden p-4 sm:p-6 lg:p-8 group" }, _attrs))} data-v-6c2bc662><div class="absolute -right-20 -top-20 w-64 h-64 bg-[#6d4cff]/5 rounded-full blur-[100px] pointer-events-none transition-colors duration-1000 group-hover:bg-[#6d4cff]/10" data-v-6c2bc662></div><div class="relative z-10 mb-6 flex items-center justify-between sm:mb-8 lg:mb-10" data-v-6c2bc662><div class="flex items-center gap-4" data-v-6c2bc662><div class="w-12 h-12 rounded-2xl bg-[#6d4cff]/10 flex items-center justify-center text-[#6d4cff] shadow-inner border border-[#6d4cff]/20 group-hover:rotate-12 transition-transform" data-v-6c2bc662>`);
+      _push(`<div${ssrRenderAttrs(mergeProps({
+        class: ["relative overflow-hidden group", __props.closable ? "p-3.5 sm:p-5" : "p-4 sm:p-6 lg:p-7"]
+      }, _attrs))} data-v-81ded1b1><div class="absolute -right-16 -top-16 w-48 h-48 bg-[#6d4cff]/5 rounded-full blur-[80px] pointer-events-none transition-colors duration-1000 group-hover:bg-[#6d4cff]/10" data-v-81ded1b1></div><div class="${ssrRenderClass([__props.closable ? "mb-3 sm:mb-4" : "mb-4 sm:mb-6", "relative z-10 flex items-center justify-between"])}" data-v-81ded1b1><div class="flex items-center gap-2.5 sm:gap-3" data-v-81ded1b1><div class="w-8 h-8 rounded-xl bg-[#6d4cff]/10 flex items-center justify-center text-[#6d4cff] shadow-xs border border-[#6d4cff]/20 transition-transform group-hover:rotate-6" data-v-81ded1b1>`);
       _push(ssrRenderComponent(_component_UIcon, {
         name: "ph:credit-card-duotone",
-        class: "w-6 h-6"
+        class: "w-4.5 h-4.5"
       }, null, _parent));
-      _push(`</div><h3 class="text-xl font-bold text-gray-900 dark:text-white tracking-tight sm:text-2xl" data-v-6c2bc662>${ssrInterpolate(_ctx.$t("site.payment.workspaceTitle"))}</h3></div>`);
+      _push(`</div><h3 class="text-base sm:text-lg font-bold text-gray-900 dark:text-white tracking-tight" data-v-81ded1b1>${ssrInterpolate(_ctx.$t("site.payment.workspaceTitle"))}</h3></div>`);
       if (__props.closable) {
         _push(ssrRenderComponent(_component_UButton, {
           color: "neutral",
           variant: "ghost",
           icon: "ph:x-bold",
-          class: "rounded-xl text-gray-400 dark:text-white/20 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/5 transition-colors",
+          size: "xs",
+          class: "rounded-lg text-gray-400 dark:text-white/30 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/5 transition-colors p-1",
           onClick: ($event) => _ctx.$emit("close")
         }, null, _parent));
       } else {
         _push(`<!---->`);
       }
-      _push(`</div><div class="grid gap-8 md:grid-cols-[240px,minmax(0,1fr)] relative z-10" data-v-6c2bc662><aside class="md:sticky md:top-6 self-start" data-v-6c2bc662><div class="bg-gray-50 dark:bg-black/40 rounded-[32px] p-6 border border-gray-100 dark:border-white/5 shadow-inner relative z-10 group/summary" data-v-6c2bc662><div class="flex justify-between items-end mb-4" data-v-6c2bc662><div data-v-6c2bc662><p class="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-400 dark:text-white/20 mb-2" data-v-6c2bc662>${ssrInterpolate(_ctx.$t("site.payment.workspaceTotalPayable"))}</p><p class="break-words text-4xl font-bold text-gray-900 dark:text-white group-hover/summary:scale-105 transition-transform origin-left sm:text-5xl" data-v-6c2bc662>${ssrInterpolate(formattedPayableAmount.value)}</p></div><div class="text-right" data-v-6c2bc662><p class="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-400 dark:text-white/20 mb-2" data-v-6c2bc662>${ssrInterpolate(_ctx.$t("site.payment.workspaceQuantity"))}</p><p class="text-xl font-bold text-gray-600 dark:text-white/60" data-v-6c2bc662>x${ssrInterpolate(__props.quantity)}</p></div></div>`);
+      _push(`</div><div class="${ssrRenderClass([__props.closable ? "gap-3.5 sm:gap-4 md:grid-cols-[190px,minmax(0,1fr)]" : "gap-5 md:grid-cols-[220px,minmax(0,1fr)]", "grid relative z-10"])}" data-v-81ded1b1><aside class="md:sticky md:top-4 self-start" data-v-81ded1b1><div class="bg-gray-50/90 dark:bg-black/30 rounded-2xl p-3 sm:p-3.5 border border-gray-100 dark:border-white/5 shadow-xs relative z-10 group/summary" data-v-81ded1b1><div class="flex justify-between items-end mb-2.5" data-v-81ded1b1><div data-v-81ded1b1><p class="text-[9px] font-semibold uppercase tracking-wider text-gray-400 dark:text-white/30 mb-0.5" data-v-81ded1b1>${ssrInterpolate(_ctx.$t("site.payment.workspaceTotalPayable"))}</p><p class="break-words text-xl sm:text-2xl font-extrabold text-gray-900 dark:text-white leading-tight group-hover/summary:scale-102 transition-transform origin-left" data-v-81ded1b1>${ssrInterpolate(formattedPayableAmount.value)}</p></div><div class="text-right shrink-0 ml-2" data-v-81ded1b1><p class="text-[9px] font-semibold uppercase tracking-wider text-gray-400 dark:text-white/30 mb-0.5" data-v-81ded1b1>${ssrInterpolate(_ctx.$t("site.payment.workspaceQuantity"))}</p><p class="text-xs sm:text-sm font-bold text-gray-600 dark:text-white/60" data-v-81ded1b1>x${ssrInterpolate(__props.quantity)}</p></div></div>`);
       if (orderDiscountDetails.value && orderDiscountDetails.value.discountBaseAmount > 0) {
-        _push(`<div class="mb-4 pt-3 border-t border-gray-200/60 dark:border-white/5 text-xs space-y-1" data-v-6c2bc662><div class="flex justify-between text-gray-400 dark:text-white/40" data-v-6c2bc662><span data-v-6c2bc662>${ssrInterpolate(_ctx.$t("site.payment.workspaceSubtotal"))}</span><span class="line-through" data-v-6c2bc662>${ssrInterpolate(formattedSubtotalAmount.value)}</span></div><div class="flex justify-between text-emerald-600 dark:text-emerald-400 font-medium" data-v-6c2bc662><span data-v-6c2bc662>${ssrInterpolate(_ctx.$t("site.payment.workspaceDiscount"))}</span><span data-v-6c2bc662>-${ssrInterpolate(formattedDiscountAmount.value)}</span></div></div>`);
+        _push(`<div class="mb-2 pt-1.5 border-t border-gray-200/60 dark:border-white/5 text-[11px] space-y-0.5" data-v-81ded1b1><div class="flex justify-between text-gray-400 dark:text-white/40" data-v-81ded1b1><span data-v-81ded1b1>${ssrInterpolate(_ctx.$t("site.payment.workspaceSubtotal"))}</span><span class="line-through" data-v-81ded1b1>${ssrInterpolate(formattedSubtotalAmount.value)}</span></div><div class="flex justify-between text-emerald-600 dark:text-emerald-400 font-medium" data-v-81ded1b1><span data-v-81ded1b1>${ssrInterpolate(_ctx.$t("site.payment.workspaceDiscount"))}</span><span data-v-81ded1b1>-${ssrInterpolate(formattedDiscountAmount.value)}</span></div></div>`);
       } else {
         _push(`<!---->`);
       }
       if (availablePaymentMethods.value.length > 1) {
-        _push(`<div class="h-px bg-gray-200 dark:bg-white/5 w-full" data-v-6c2bc662></div>`);
+        _push(`<div class="h-px bg-gray-200/60 dark:bg-white/5 w-full" data-v-81ded1b1></div>`);
       } else {
         _push(`<!---->`);
       }
       if (availablePaymentMethods.value.length > 1) {
-        _push(`<div class="mt-5" data-v-6c2bc662><label class="mb-3 ml-1 block text-[9px] font-bold uppercase tracking-[0.24em] text-gray-400 dark:text-white/20" data-v-6c2bc662>${ssrInterpolate(_ctx.$t("site.payment.workspaceSelectMethod"))}</label><div class="grid grid-cols-2 gap-2 md:grid-cols-1" data-v-6c2bc662><!--[-->`);
+        _push(`<div class="mt-2.5" data-v-81ded1b1><label class="mb-1.5 ml-0.5 block text-[9px] font-semibold uppercase tracking-wider text-gray-400 dark:text-white/30" data-v-81ded1b1>${ssrInterpolate(_ctx.$t("site.payment.workspaceSelectMethod"))}</label><div class="grid grid-cols-2 gap-1.5 md:grid-cols-1" data-v-81ded1b1><!--[-->`);
         ssrRenderList(availablePaymentMethods.value, (method) => {
           _push(`<button type="button" class="${ssrRenderClass([
-            "flex min-h-[42px] items-center justify-start gap-2 rounded-2xl border px-3 py-2.5 text-left text-[11px] font-bold leading-none transition-all duration-300",
-            selectedPaymentMethod.value === method.code ? "border-[#6d4cff] bg-[#6d4cff]/10 text-[#6d4cff] shadow-[0_10px_30px_rgba(109,76,255,0.16)]" : "border-gray-200 dark:border-white/5 bg-white dark:bg-black/20 text-gray-400 dark:text-white/40 hover:border-[#6d4cff]/50 hover:text-gray-900 dark:hover:text-white hover:bg-white dark:hover:bg-white/5"
-          ])}" data-v-6c2bc662>`);
+            "flex min-h-[34px] items-center justify-start gap-1.5 rounded-xl border px-2.5 py-1.5 text-left text-[11px] font-medium leading-none transition-all duration-200",
+            selectedPaymentMethod.value === method.code ? "border-[#6d4cff] bg-[#6d4cff]/10 text-[#6d4cff] shadow-[0_2px_8px_rgba(109,76,255,0.12)] font-semibold" : "border-gray-200/80 dark:border-white/5 bg-white dark:bg-black/20 text-gray-500 dark:text-white/50 hover:border-[#6d4cff]/50 hover:text-gray-900 dark:hover:text-white hover:bg-white dark:hover:bg-white/5"
+          ])}" data-v-81ded1b1>`);
           if (method.iconUrl) {
-            _push(`<img${ssrRenderAttr("src", method.iconUrl)}${ssrRenderAttr("alt", method.name)} class="h-4 w-4 shrink-0 rounded-sm bg-white/90 p-0.5 object-contain" data-v-6c2bc662>`);
+            _push(`<img${ssrRenderAttr("src", method.iconUrl)}${ssrRenderAttr("alt", method.name)} class="h-3.5 w-3.5 shrink-0 rounded-xs bg-white/90 p-0.5 object-contain" data-v-81ded1b1>`);
           } else {
             _push(ssrRenderComponent(_component_UIcon, {
               name: "ph:credit-card-bold",
-              class: "h-4 w-4 shrink-0"
+              class: "h-3.5 w-3.5 shrink-0"
             }, null, _parent));
           }
-          _push(`<span class="min-w-0 truncate" data-v-6c2bc662>${ssrInterpolate(method.name)}</span></button>`);
+          _push(`<span class="min-w-0 truncate" data-v-81ded1b1>${ssrInterpolate(method.name)}</span></button>`);
         });
         _push(`<!--]--></div></div>`);
       } else {
@@ -17537,52 +17458,52 @@ const _sfc_main$H = /* @__PURE__ */ defineComponent({
       }
       _push(`</div>`);
       if (availablePaymentMethods.value.length <= 1 && selectedPaymentMethod.value) {
-        _push(`<div class="mt-3 inline-flex max-w-full items-center gap-1.5 rounded-full bg-gray-100 px-3 py-1 text-[10px] font-medium text-gray-500 dark:bg-white/5 dark:text-white/40" data-v-6c2bc662>`);
+        _push(`<div class="mt-1.5 inline-flex max-w-full items-center gap-1 rounded-md bg-gray-100 dark:bg-white/5 px-2.5 py-0.5 text-[10px] font-medium text-gray-500 dark:text-white/40" data-v-81ded1b1>`);
         _push(ssrRenderComponent(_component_UIcon, {
           name: "ph:credit-card-bold",
-          class: "h-3.5 w-3.5 shrink-0"
+          class: "h-3 w-3 shrink-0"
         }, null, _parent));
-        _push(`<span class="min-w-0 truncate" data-v-6c2bc662>${ssrInterpolate(selectedMethodLabel.value)}</span></div>`);
+        _push(`<span class="min-w-0 truncate" data-v-81ded1b1>${ssrInterpolate(selectedMethodLabel.value)}</span></div>`);
       } else {
         _push(`<!---->`);
       }
-      _push(`</aside><div id="payment-info-container" class="min-h-[240px]" data-v-6c2bc662>`);
+      _push(`</aside><div id="payment-info-container" class="min-h-[140px] flex flex-col justify-center" data-v-81ded1b1>`);
       if (isFetchingPaymentInfo.value) {
-        _push(`<div class="flex flex-col items-center justify-center py-12 gap-4" data-v-6c2bc662>`);
+        _push(`<div class="flex flex-col items-center justify-center py-6 gap-2.5" data-v-81ded1b1>`);
         _push(ssrRenderComponent(_component_UIcon, {
           name: "ph:spinner-gap-bold",
-          class: "w-10 h-10 animate-spin text-[#6d4cff]"
+          class: "w-6 h-6 animate-spin text-[#6d4cff]"
         }, null, _parent));
-        _push(`<p class="text-[10px] font-bold uppercase tracking-widest text-gray-400 dark:text-white/20" data-v-6c2bc662>${ssrInterpolate(_ctx.$t("site.payment.workspaceInitialisingGateway"))}</p></div>`);
+        _push(`<p class="text-[9px] font-semibold uppercase tracking-widest text-gray-400 dark:text-white/30" data-v-81ded1b1>${ssrInterpolate(_ctx.$t("site.payment.workspaceInitialisingGateway"))}</p></div>`);
       } else if (!paymentInfoContent.value && !qrCodeImageUrl.value) {
-        _push(`<div class="text-center py-16 px-10 rounded-[32px] border border-dashed border-gray-200 dark:border-white/10" data-v-6c2bc662>`);
+        _push(`<div class="text-center py-8 px-4 rounded-2xl border border-dashed border-gray-200 dark:border-white/10" data-v-81ded1b1>`);
         _push(ssrRenderComponent(_component_UIcon, {
           name: "ph:warning-circle-duotone",
-          class: "w-12 h-12 text-gray-300 dark:text-white/10 mx-auto mb-4"
+          class: "w-7 h-7 text-gray-300 dark:text-white/20 mx-auto mb-1.5"
         }, null, _parent));
-        _push(`<p class="text-gray-400 dark:text-white/40 text-sm font-medium" data-v-6c2bc662>${ssrInterpolate(_ctx.$t("site.payment.workspaceNoMethods"))}</p></div>`);
+        _push(`<p class="text-gray-400 dark:text-white/40 text-xs font-medium" data-v-81ded1b1>${ssrInterpolate(_ctx.$t("site.payment.workspaceNoMethods"))}</p></div>`);
       } else if (hasQrAndContent.value) {
-        _push(`<div class="space-y-4" data-v-6c2bc662><div class="lg:hidden flex rounded-[20px] border border-gray-100 dark:border-white/8 bg-gray-50 dark:bg-black/20 p-1.5" data-v-6c2bc662><button type="button" class="${ssrRenderClass([activePanel.value === "qr" ? "bg-white dark:bg-white/10 text-[#6d4cff] dark:text-white shadow-sm" : "text-gray-400 dark:text-white/40 hover:text-gray-900 dark:hover:text-white", "flex-1 rounded-2xl px-3 py-2.5 text-xs font-bold tracking-[0.08em] transition-all"])}" data-v-6c2bc662>${ssrInterpolate(_ctx.$t("site.payment.workspaceScanToPay"))}</button><button type="button" class="${ssrRenderClass([activePanel.value === "details" ? "bg-white dark:bg-white/10 text-[#6d4cff] dark:text-white shadow-sm" : "text-gray-400 dark:text-white/40 hover:text-gray-900 dark:hover:text-white", "flex-1 rounded-2xl px-3 py-2.5 text-xs font-bold tracking-[0.08em] transition-all"])}" data-v-6c2bc662>${ssrInterpolate(selectedMethodLabel.value)}</button></div><div class="flex flex-col gap-5 lg:grid lg:grid-cols-[280px,minmax(0,1fr)]" data-v-6c2bc662><section class="${ssrRenderClass([{ "max-lg:hidden": activePanel.value !== "qr" }, "rounded-[28px] border border-gray-100 dark:border-white/10 bg-white dark:bg-black/30 p-6 shadow-inner"])}" data-v-6c2bc662><div class="flex flex-col items-center text-center" data-v-6c2bc662><p class="mb-3 text-[10px] font-bold uppercase tracking-[0.24em] text-gray-400 dark:text-white/20" data-v-6c2bc662>${ssrInterpolate(_ctx.$t("site.payment.workspaceScanToPay"))}</p><div class="rounded-[24px] bg-white p-4 shadow-sm ring-1 ring-gray-100" data-v-6c2bc662><img${ssrRenderAttr("src", qrCodeImageUrl.value)}${ssrRenderAttr("alt", _ctx.$t("site.payment.workspaceScanToPay"))} class="h-52 w-52 object-contain" data-v-6c2bc662></div><p class="mt-4 text-sm font-medium text-gray-700 dark:text-white/80" data-v-6c2bc662>${ssrInterpolate(qrCodeHint.value || _ctx.$t("site.payment.workspaceQrHint"))}</p>`);
+        _push(`<div class="space-y-2.5" data-v-81ded1b1><div class="md:hidden flex rounded-xl border border-gray-100 dark:border-white/8 bg-gray-50 dark:bg-black/20 p-1" data-v-81ded1b1><button type="button" class="${ssrRenderClass([activePanel.value === "qr" ? "bg-white dark:bg-white/10 text-[#6d4cff] dark:text-white shadow-xs font-semibold" : "text-gray-400 dark:text-white/40 hover:text-gray-900 dark:hover:text-white", "flex-1 rounded-lg px-2.5 py-1.5 text-xs font-medium tracking-wide transition-all"])}" data-v-81ded1b1>${ssrInterpolate(_ctx.$t("site.payment.workspaceScanToPay"))}</button><button type="button" class="${ssrRenderClass([activePanel.value === "details" ? "bg-white dark:bg-white/10 text-[#6d4cff] dark:text-white shadow-xs font-semibold" : "text-gray-400 dark:text-white/40 hover:text-gray-900 dark:hover:text-white", "flex-1 rounded-lg px-2.5 py-1.5 text-xs font-medium tracking-wide transition-all"])}" data-v-81ded1b1>${ssrInterpolate(selectedMethodLabel.value)}</button></div><div class="flex flex-col gap-2.5 md:grid md:grid-cols-[170px,minmax(0,1fr)]" data-v-81ded1b1><section class="${ssrRenderClass([{ "max-md:hidden": activePanel.value !== "qr" }, "rounded-2xl border border-gray-100 dark:border-white/10 bg-white dark:bg-black/30 p-2.5 shadow-xs"])}" data-v-81ded1b1><div class="flex flex-col items-center text-center" data-v-81ded1b1><p class="mb-1.5 text-[9px] font-semibold uppercase tracking-wider text-gray-400 dark:text-white/30" data-v-81ded1b1>${ssrInterpolate(_ctx.$t("site.payment.workspaceScanToPay"))}</p><div class="rounded-xl bg-white p-2 shadow-xs ring-1 ring-gray-100" data-v-81ded1b1><img${ssrRenderAttr("src", qrCodeImageUrl.value)}${ssrRenderAttr("alt", _ctx.$t("site.payment.workspaceScanToPay"))} class="h-32 w-32 object-contain" data-v-81ded1b1></div><p class="mt-1.5 text-[11px] font-medium text-gray-700 dark:text-white/80 leading-snug" data-v-81ded1b1>${ssrInterpolate(qrCodeHint.value || _ctx.$t("site.payment.workspaceQrHint"))}</p>`);
         if (qrCodeLink.value) {
-          _push(`<a${ssrRenderAttr("href", qrCodeLink.value)} target="_blank" rel="noopener noreferrer" class="mt-3 text-sm font-semibold text-[#6d4cff] transition-colors hover:text-[#5a3fe0]" data-v-6c2bc662>${ssrInterpolate(_ctx.$t("site.payment.workspaceOpenPaymentLink"))}</a>`);
+          _push(`<a${ssrRenderAttr("href", qrCodeLink.value)} target="_blank" rel="noopener noreferrer" class="mt-1 text-[11px] font-semibold text-[#6d4cff] transition-colors hover:text-[#5a3fe0]" data-v-81ded1b1>${ssrInterpolate(_ctx.$t("site.payment.workspaceOpenPaymentLink"))}</a>`);
         } else {
           _push(`<!---->`);
         }
-        _push(`</div></section><section class="${ssrRenderClass([{ "max-lg:hidden": activePanel.value !== "details" }, "rounded-[28px] border border-gray-100 dark:border-white/10 bg-white dark:bg-black/20 p-4 shadow-inner"])}" data-v-6c2bc662><div class="mb-3 flex items-center justify-between gap-3 px-2" data-v-6c2bc662><div class="min-w-0" data-v-6c2bc662><p class="text-[10px] font-bold uppercase tracking-[0.24em] text-gray-400 dark:text-white/20" data-v-6c2bc662>${ssrInterpolate(selectedMethodLabel.value)}</p></div></div><div class="payment-html-wrapper payment-html-panel w-full rounded-[24px] overflow-hidden" data-v-6c2bc662>${paymentInfoContent.value ?? ""}</div></section></div></div>`);
+        _push(`</div></section><section class="${ssrRenderClass([{ "max-md:hidden": activePanel.value !== "details" }, "rounded-2xl border border-gray-100 dark:border-white/10 bg-white dark:bg-black/20 p-2.5 shadow-xs"])}" data-v-81ded1b1><div class="mb-1.5 flex items-center justify-between gap-2 px-1" data-v-81ded1b1><div class="min-w-0" data-v-81ded1b1><p class="text-[9px] font-semibold uppercase tracking-wider text-gray-400 dark:text-white/30" data-v-81ded1b1>${ssrInterpolate(selectedMethodLabel.value)}</p></div></div><div class="payment-html-wrapper payment-html-panel w-full rounded-xl overflow-hidden" data-v-81ded1b1>${paymentInfoContent.value ?? ""}</div></section></div></div>`);
       } else if (qrCodeImageUrl.value) {
-        _push(`<div class="rounded-[28px] border border-gray-100 dark:border-white/10 bg-white dark:bg-black/30 p-6 shadow-inner" data-v-6c2bc662><div class="flex flex-col items-center text-center" data-v-6c2bc662><p class="mb-3 text-[10px] font-bold uppercase tracking-[0.24em] text-gray-400 dark:text-white/20" data-v-6c2bc662>${ssrInterpolate(_ctx.$t("site.payment.workspaceScanToPay"))}</p><div class="rounded-[24px] bg-white p-4 shadow-sm ring-1 ring-gray-100" data-v-6c2bc662><img${ssrRenderAttr("src", qrCodeImageUrl.value)}${ssrRenderAttr("alt", _ctx.$t("site.payment.workspaceScanToPay"))} class="h-52 w-52 object-contain" data-v-6c2bc662></div><p class="mt-4 text-sm font-medium text-gray-700 dark:text-white/80" data-v-6c2bc662>${ssrInterpolate(qrCodeHint.value || _ctx.$t("site.payment.workspaceQrHint"))}</p>`);
+        _push(`<div class="rounded-2xl border border-gray-100 dark:border-white/10 bg-white dark:bg-black/30 p-3.5 shadow-xs" data-v-81ded1b1><div class="flex flex-col items-center text-center" data-v-81ded1b1><p class="mb-1.5 text-[9px] font-semibold uppercase tracking-wider text-gray-400 dark:text-white/30" data-v-81ded1b1>${ssrInterpolate(_ctx.$t("site.payment.workspaceScanToPay"))}</p><div class="rounded-xl bg-white p-2.5 shadow-xs ring-1 ring-gray-100" data-v-81ded1b1><img${ssrRenderAttr("src", qrCodeImageUrl.value)}${ssrRenderAttr("alt", _ctx.$t("site.payment.workspaceScanToPay"))} class="h-36 w-36 object-contain" data-v-81ded1b1></div><p class="mt-2 text-xs font-medium text-gray-700 dark:text-white/80 leading-snug" data-v-81ded1b1>${ssrInterpolate(qrCodeHint.value || _ctx.$t("site.payment.workspaceQrHint"))}</p>`);
         if (qrCodeLink.value) {
-          _push(`<a${ssrRenderAttr("href", qrCodeLink.value)} target="_blank" rel="noopener noreferrer" class="mt-3 text-sm font-semibold text-[#6d4cff] transition-colors hover:text-[#5a3fe0]" data-v-6c2bc662>${ssrInterpolate(_ctx.$t("site.payment.workspaceOpenPaymentLink"))}</a>`);
+          _push(`<a${ssrRenderAttr("href", qrCodeLink.value)} target="_blank" rel="noopener noreferrer" class="mt-1.5 text-xs font-semibold text-[#6d4cff] transition-colors hover:text-[#5a3fe0]" data-v-81ded1b1>${ssrInterpolate(_ctx.$t("site.payment.workspaceOpenPaymentLink"))}</a>`);
         } else {
           _push(`<!---->`);
         }
         _push(`</div></div>`);
       } else if (paymentInfoContent.value) {
-        _push(`<div class="payment-html-wrapper payment-html-panel w-full rounded-[32px] overflow-hidden" data-v-6c2bc662>${paymentInfoContent.value ?? ""}</div>`);
+        _push(`<div class="payment-html-wrapper payment-html-panel w-full rounded-2xl overflow-hidden" data-v-81ded1b1>${paymentInfoContent.value ?? ""}</div>`);
       } else {
         _push(`<!---->`);
       }
-      _push(`</div></div><div class="relative z-10 mt-8 text-center" data-v-6c2bc662><p class="px-2 text-[10px] leading-5 text-gray-400 dark:text-white/18" data-v-6c2bc662>${ssrInterpolate(_ctx.$t("site.payment.workspaceSecurityHint"))}</p></div></div>`);
+      _push(`</div></div><div class="relative z-10 mt-3 sm:mt-4 text-center" data-v-81ded1b1><p class="px-2 text-[9px] sm:text-[10px] leading-4 text-gray-400 dark:text-white/30" data-v-81ded1b1>${ssrInterpolate(_ctx.$t("site.payment.workspaceSecurityHint"))}</p></div></div>`);
     };
   }
 });
@@ -17599,7 +17520,7 @@ _sfc_main$H.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/PaymentWorkspace.vue");
   return _sfc_setup$H ? _sfc_setup$H(props, ctx) : void 0;
 };
-const __nuxt_component_1$1 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$H, [["__scopeId", "data-v-6c2bc662"]]), { __name: "PaymentWorkspace" });
+const __nuxt_component_2$1 = /* @__PURE__ */ Object.assign(_export_sfc(_sfc_main$H, [["__scopeId", "data-v-81ded1b1"]]), { __name: "PaymentWorkspace" });
 const normalizeCurrencyCode = (value, fallback = "") => {
   const currency = String(value || "").trim().toUpperCase();
   return /^[A-Z]{3}$/.test(currency) ? currency : fallback;
@@ -17900,7 +17821,7 @@ const _sfc_main$G = /* @__PURE__ */ defineComponent({
       const _component_UButton = _sfc_main$N;
       const _component_UIcon = _sfc_main$S;
       const _component_UBadge = _sfc_main$I;
-      const _component_PaymentWorkspace = __nuxt_component_1$1;
+      const _component_PaymentWorkspace = __nuxt_component_2$1;
       _push(`<div${ssrRenderAttrs(mergeProps({ class: "min-h-screen bg-gray-50 dark:bg-[#050505] py-10 px-4 sm:px-6 lg:px-8 transition-colors" }, _attrs))}><div class="max-w-6xl mx-auto"><div class="mb-6">`);
       _push(ssrRenderComponent(_component_UButton, {
         color: "neutral",
@@ -19972,7 +19893,7 @@ const _sfc_main$B = /* @__PURE__ */ defineComponent({
     });
     return (_ctx, _push, _parent, _attrs) => {
       const _component_UModal = _sfc_main$C;
-      const _component_PaymentWorkspace = __nuxt_component_1$1;
+      const _component_PaymentWorkspace = __nuxt_component_2$1;
       _push(`<!--[-->`);
       ssrRenderSlot(_ctx.$slots, "trigger", {
         loading: unref(isCreatingOrder),
@@ -19983,7 +19904,7 @@ const _sfc_main$B = /* @__PURE__ */ defineComponent({
         "onUpdate:open": ($event) => isRef(isOrderModalOpen) ? isOrderModalOpen.value = $event : null,
         scrollable: "",
         ui: {
-          content: "w-[calc(100vw-1rem)] max-w-5xl sm:w-[calc(100vw-3rem)] bg-white dark:bg-[#1a1a1e] border border-gray-200 dark:border-white/10 rounded-2xl sm:rounded-[32px] shadow-2xl dark:shadow-[0_32px_80px_rgba(0,0,0,0.8)] overflow-hidden"
+          content: "w-[calc(100vw-1rem)] max-w-2xl sm:max-w-3xl sm:w-[calc(100vw-2rem)] bg-white dark:bg-[#1a1a1e] border border-gray-200 dark:border-white/10 rounded-2xl sm:rounded-3xl shadow-2xl dark:shadow-[0_24px_60px_rgba(0,0,0,0.8)] overflow-hidden"
         }
       }, {
         content: withCtx((_, _push2, _parent2, _scopeId) => {
@@ -20368,7 +20289,7 @@ const _sfc_main$y = /* @__PURE__ */ defineComponent({
       const _directive_motion_fade_visible = resolveDirective("motion-fade-visible");
       const _directive_motion_slide_visible_right = resolveDirective("motion-slide-visible-right");
       if (product.value) {
-        _push(`<div${ssrRenderAttrs(mergeProps({ class: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" }, _attrs))}><div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20"><div${ssrRenderAttrs(mergeProps({ class: "space-y-4" }, ssrGetDirectiveProps(_ctx, _directive_motion_fade_visible)))}><div class="aspect-[4/3] rounded-3xl overflow-hidden bg-gray-900 border border-gray-800 relative group">`);
+        _push(`<div${ssrRenderAttrs(mergeProps({ class: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" }, _attrs))}><div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20"><div${ssrRenderAttrs(mergeProps({ class: "space-y-4" }, ssrGetDirectiveProps(_ctx, _directive_motion_fade_visible)))}><div class="aspect-[4/3] rounded-3xl overflow-hidden bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 relative group">`);
         if (product.value.imageUrls && product.value.imageUrls.length > 0) {
           _push(ssrRenderComponent(_component_UCarousel, {
             items: product.value.imageUrls,
@@ -20399,11 +20320,11 @@ const _sfc_main$y = /* @__PURE__ */ defineComponent({
           _push(`<div class="w-full h-full flex items-center justify-center">`);
           _push(ssrRenderComponent(_component_UIcon, {
             name: "ph:image",
-            class: "w-20 h-20 text-gray-700"
+            class: "w-20 h-20 text-gray-400 dark:text-gray-700"
           }, null, _parent));
           _push(`</div>`);
         }
-        _push(`</div></div><div${ssrRenderAttrs(mergeProps({ class: "flex flex-col justify-center" }, ssrGetDirectiveProps(_ctx, _directive_motion_slide_visible_right)))}><div class="flex items-start justify-between gap-4 mb-6"><h1 class="text-4xl md:text-5xl font-bold text-white">${ssrInterpolate(product.value.name)}</h1>`);
+        _push(`</div></div><div${ssrRenderAttrs(mergeProps({ class: "flex flex-col justify-center" }, ssrGetDirectiveProps(_ctx, _directive_motion_slide_visible_right)))}><div class="flex items-start justify-between gap-4 mb-6"><h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">${ssrInterpolate(product.value.name)}</h1>`);
         _push(ssrRenderComponent(_component_LikeButton, {
           "target-type": "product",
           "target-id": product.value.slug || product.value.id,
@@ -20412,20 +20333,20 @@ const _sfc_main$y = /* @__PURE__ */ defineComponent({
           variant: "button",
           "auto-fetch": ""
         }, null, _parent));
-        _push(`</div><div class="border-l-4 border-purple-500 pl-4 mb-6"><div class="flex items-baseline gap-3 flex-wrap"><div class="text-4xl md:text-5xl font-bold text-white">${ssrInterpolate(unref(formatProductPrice)(product.value, 1, currentVolumeDiscount.value || 1))}</div>`);
+        _push(`</div><div class="border-l-4 border-purple-500 pl-4 mb-6"><div class="flex items-baseline gap-3 flex-wrap"><div class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">${ssrInterpolate(unref(formatProductPrice)(product.value, 1, currentVolumeDiscount.value || 1))}</div>`);
         if (originalPrice.value) {
-          _push(`<div class="text-xl md:text-2xl text-gray-500 line-through font-medium">${ssrInterpolate(unref(formatCurrencyAmount)(originalPrice.value, priceQuote.value?.currency))}</div>`);
+          _push(`<div class="text-xl md:text-2xl text-gray-400 dark:text-gray-500 line-through font-medium">${ssrInterpolate(unref(formatCurrencyAmount)(originalPrice.value, priceQuote.value?.currency))}</div>`);
         } else {
           _push(`<!---->`);
         }
         if (originalPrice.value) {
-          _push(`<span class="px-2 py-0.5 rounded text-xs font-bold bg-rose-500/20 text-rose-400 border border-rose-500/30">${ssrInterpolate(_ctx.$t("site.core.product.savePercent", { percent: Math.round((1 - (priceQuote.value?.unitPrice || 0) / originalPrice.value) * 100) }))}</span>`);
+          _push(`<span class="px-2 py-0.5 rounded text-xs font-bold bg-rose-500/10 dark:bg-rose-500/20 text-rose-600 dark:text-rose-400 border border-rose-500/20 dark:border-rose-500/30">${ssrInterpolate(_ctx.$t("site.core.product.savePercent", { percent: Math.round((1 - (priceQuote.value?.unitPrice || 0) / originalPrice.value) * 100) }))}</span>`);
         } else {
           _push(`<!---->`);
         }
         _push(`</div>`);
         if (currentVolumeDiscount.value) {
-          _push(`<p class="text-xs text-purple-400 mt-2 font-medium flex items-center gap-1">`);
+          _push(`<p class="text-xs text-purple-600 dark:text-purple-400 mt-2 font-medium flex items-center gap-1">`);
           _push(ssrRenderComponent(_component_UIcon, {
             name: "ph:check-circle-bold",
             class: "w-3.5 h-3.5"
@@ -20436,20 +20357,20 @@ const _sfc_main$y = /* @__PURE__ */ defineComponent({
         }
         _push(`</div>`);
         if (volumeDiscounts.value.length > 0) {
-          _push(`<div class="mb-6 p-4 rounded-2xl bg-purple-950/20 border border-purple-500/20"><div class="text-xs font-semibold uppercase tracking-wider text-purple-300 mb-2.5 flex items-center gap-1.5">`);
+          _push(`<div class="mb-6 p-4 rounded-2xl bg-purple-50/80 dark:bg-purple-950/20 border border-purple-200 dark:border-purple-500/20"><div class="text-xs font-semibold uppercase tracking-wider text-purple-700 dark:text-purple-300 mb-2.5 flex items-center gap-1.5">`);
           _push(ssrRenderComponent(_component_UIcon, {
             name: "ph:tag-bold",
-            class: "w-3.5 h-3.5 text-purple-400"
+            class: "w-3.5 h-3.5 text-purple-600 dark:text-purple-400"
           }, null, _parent));
           _push(` ${ssrInterpolate(_ctx.$t("site.core.product.volumeDiscountsTitle"))}</div><div class="grid grid-cols-2 sm:grid-cols-3 gap-2"><!--[-->`);
           ssrRenderList(volumeDiscounts.value, (tier) => {
-            _push(`<div class="${ssrRenderClass([quantity.value >= (tier.minQuantity || tier.min_quantity) ? "border-purple-500 bg-purple-500/15 text-white font-medium ring-1 ring-purple-500/50" : "border-gray-800 bg-gray-900/60 text-gray-400 hover:border-gray-700", "p-2.5 rounded-xl text-xs border transition-all cursor-pointer"])}"><div class="font-bold text-gray-200">≥ ${ssrInterpolate(tier.minQuantity || tier.min_quantity)} ${ssrInterpolate(_ctx.$t("site.core.product.units"))}</div><div class="text-purple-400 mt-0.5 font-medium">${ssrInterpolate(unref(formatProductPrice)(product.value, 1, tier.discountRate || tier.discount_rate))} <span class="text-[10px] text-purple-300/80">(-${ssrInterpolate(Math.round((1 - (tier.discountRate || tier.discount_rate)) * 100))}%)</span></div></div>`);
+            _push(`<div class="${ssrRenderClass([quantity.value >= (tier.minQuantity || tier.min_quantity) ? "border-purple-500 bg-purple-100 dark:bg-purple-500/15 text-purple-950 dark:text-white font-medium ring-1 ring-purple-500/50" : "border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900/60 text-gray-600 dark:text-gray-400 hover:border-gray-300 dark:hover:border-gray-700", "p-2.5 rounded-xl text-xs border transition-all cursor-pointer"])}"><div class="font-bold text-gray-800 dark:text-gray-200">≥ ${ssrInterpolate(tier.minQuantity || tier.min_quantity)} ${ssrInterpolate(_ctx.$t("site.core.product.units"))}</div><div class="text-purple-600 dark:text-purple-400 mt-0.5 font-medium">${ssrInterpolate(unref(formatProductPrice)(product.value, 1, tier.discountRate || tier.discount_rate))} <span class="text-[10px] text-purple-500 dark:text-purple-300/80">(-${ssrInterpolate(Math.round((1 - (tier.discountRate || tier.discount_rate)) * 100))}%)</span></div></div>`);
           });
           _push(`<!--]--></div></div>`);
         } else {
           _push(`<!---->`);
         }
-        _push(`<div class="flex items-center gap-4 mb-8"><div class="flex items-center border border-gray-700 rounded-lg overflow-hidden"><button class="px-4 py-2 hover:bg-gray-800 text-gray-400 transition-colors">-</button><span class="px-4 py-2 border-x border-gray-700 font-medium">${ssrInterpolate(quantity.value)}</span><button class="px-4 py-2 hover:bg-gray-800 text-gray-400 transition-colors">+</button></div></div>`);
+        _push(`<div class="flex items-center gap-4 mb-8"><div class="flex items-center border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden bg-white dark:bg-transparent"><button class="px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-600 dark:text-gray-400 transition-colors" aria-label="Decrease quantity">-</button><span class="px-4 py-2 border-x border-gray-200 dark:border-gray-700 font-medium text-gray-900 dark:text-white">${ssrInterpolate(quantity.value)}</span><button class="px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-600 dark:text-gray-400 transition-colors" aria-label="Increase quantity">+</button></div></div>`);
         _push(ssrRenderComponent(_component_PaymentModal, {
           "product-id": product.value.id,
           quantity: quantity.value,
@@ -20498,24 +20419,44 @@ const _sfc_main$y = /* @__PURE__ */ defineComponent({
           }),
           _: 1
         }, _parent));
-        _push(`</div></div><div class="mt-24 border-t border-gray-800 pt-16"><div class="grid grid-cols-1 md:grid-cols-3 gap-12"><div class="md:col-span-2"><h2 class="text-2xl font-bold mb-6">${ssrInterpolate(_ctx.$t("site.core.product.description"))}</h2><div class="bg-[#121214] border border-gray-800 rounded-2xl p-8"><div class="prose prose-invert max-w-none">`);
+        _push(`</div></div><div class="mt-24 border-t border-gray-200 dark:border-gray-800 pt-16"><div class="grid grid-cols-1 md:grid-cols-3 gap-12"><div class="md:col-span-2 space-y-8">`);
+        if (product.value.metaData?.plan_features?.length) {
+          _push(`<div><h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">`);
+          _push(ssrRenderComponent(_component_UIcon, {
+            name: "ph:list-checks-bold",
+            class: "w-6 h-6 text-purple-600 dark:text-purple-400"
+          }, null, _parent));
+          _push(` ${ssrInterpolate(_ctx.$t("site.core.product.features") || "功能与权益")}</h2><div class="bg-gray-50 dark:bg-[#121214] border border-gray-200 dark:border-gray-800 rounded-2xl p-6 sm:p-8"><ul class="grid grid-cols-1 sm:grid-cols-2 gap-3.5"><!--[-->`);
+          ssrRenderList(product.value.metaData.plan_features, (feature, index2) => {
+            _push(`<li class="flex items-start gap-3">`);
+            _push(ssrRenderComponent(_component_UIcon, {
+              name: feature.included ? "ph:check-circle-fill" : "ph:x-circle-fill",
+              class: ["w-5 h-5 shrink-0 mt-0.5", feature.included ? "text-purple-600 dark:text-purple-400" : "text-gray-400 dark:text-gray-600"]
+            }, null, _parent));
+            _push(`<span class="${ssrRenderClass([feature.included ? "text-gray-700 dark:text-gray-200 font-medium" : "text-gray-400 dark:text-gray-500 line-through", "text-sm leading-relaxed"])}">${ssrInterpolate(feature.name)}</span></li>`);
+          });
+          _push(`<!--]--></ul></div></div>`);
+        } else {
+          _push(`<!---->`);
+        }
+        _push(`<div><h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">${ssrInterpolate(_ctx.$t("site.core.product.description"))}</h2><div class="bg-gray-50 dark:bg-[#121214] border border-gray-200 dark:border-gray-800 rounded-2xl p-8"><div class="prose prose-gray dark:prose-invert max-w-none">`);
         if (product.value.description) {
-          _push(`<p class="text-gray-300 leading-relaxed whitespace-pre-wrap">${ssrInterpolate(product.value.description)}</p>`);
+          _push(`<p class="text-gray-600 dark:text-gray-300 leading-relaxed whitespace-pre-wrap">${ssrInterpolate(product.value.description)}</p>`);
         } else if (!product.value.content) {
-          _push(`<p class="text-gray-500 italic text-center py-8">${ssrInterpolate(_ctx.$t("site.core.product.noDescription"))}</p>`);
+          _push(`<p class="text-gray-400 dark:text-gray-500 italic text-center py-8">${ssrInterpolate(_ctx.$t("site.core.product.noDescription"))}</p>`);
         } else {
           _push(`<!---->`);
         }
         if (product.value.content) {
-          _push(`<div class="mt-6 pt-6 border-t border-gray-800">${product.value.content ?? ""}</div>`);
+          _push(`<div class="mt-6 pt-6 border-t border-gray-200 dark:border-gray-800">${product.value.content ?? ""}</div>`);
         } else {
           _push(`<!---->`);
         }
-        _push(`</div></div></div><div><h2 class="text-2xl font-bold mb-6 flex items-center gap-2">${ssrInterpolate(_ctx.$t("site.core.product.reviews"))} <span class="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded-full">0</span></h2><div class="bg-[#121214] border border-gray-800 rounded-2xl p-8 flex flex-col items-center text-center"><p class="text-gray-500 mb-6">${ssrInterpolate(_ctx.$t("site.core.product.noReviews"))}</p>`);
+        _push(`</div></div></div></div><div><h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">${ssrInterpolate(_ctx.$t("site.core.product.reviews"))} <span class="text-xs bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-2 py-1 rounded-full font-medium">0</span></h2><div class="bg-gray-50 dark:bg-[#121214] border border-gray-200 dark:border-gray-800 rounded-2xl p-8 flex flex-col items-center text-center"><p class="text-gray-500 dark:text-gray-400 mb-6">${ssrInterpolate(_ctx.$t("site.core.product.noReviews"))}</p>`);
         _push(ssrRenderComponent(_component_UButton, {
           color: "neutral",
           variant: "solid",
-          class: "rounded-full rounded-lg px-6 bg-white text-black hover:bg-gray-200"
+          class: "rounded-full px-6 bg-gray-900 text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200"
         }, {
           trailing: withCtx((_, _push2, _parent2, _scopeId) => {
             if (_push2) {
@@ -20548,7 +20489,7 @@ const _sfc_main$y = /* @__PURE__ */ defineComponent({
       } else if (unref(requestFailed)) {
         _push(ssrRenderComponent(_component_PageRequestError, mergeProps({ retry: unref(refresh) }, _attrs), null, _parent));
       } else {
-        _push(`<div${ssrRenderAttrs(mergeProps({ class: "text-center py-32" }, _attrs))}><h2 class="text-2xl font-bold text-gray-400">${ssrInterpolate(_ctx.$t("site.core.product.notFound"))}</h2></div>`);
+        _push(`<div${ssrRenderAttrs(mergeProps({ class: "text-center py-32" }, _attrs))}><h2 class="text-2xl font-bold text-gray-500 dark:text-gray-400">${ssrInterpolate(_ctx.$t("site.core.product.notFound"))}</h2></div>`);
       }
     };
   }
@@ -20644,7 +20585,7 @@ const _sfc_main$x = /* @__PURE__ */ defineComponent({
       const _component_ProductPrice = __nuxt_component_3$3;
       const _directive_motion_fade_visible_once = resolveDirective("motion-fade-visible-once");
       const _directive_motion_slide_visible_once_bottom = resolveDirective("motion-slide-visible-once-bottom");
-      _push(`<div${ssrRenderAttrs(mergeProps({ class: "min-h-screen bg-[#09090b] pt-24 pb-16" }, _attrs))}><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div${ssrRenderAttrs(mergeProps({ class: "text-center max-w-3xl mx-auto mb-16" }, ssrGetDirectiveProps(_ctx, _directive_motion_fade_visible_once)))}><h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">${ssrInterpolate(_ctx.$t("site.products.title"))} <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">${ssrInterpolate(_ctx.$t("site.products.titleHighlight"))}</span></h1><p class="text-lg text-gray-400">${ssrInterpolate(_ctx.$t("site.products.titleTips"))}</p></div>`);
+      _push(`<div${ssrRenderAttrs(mergeProps({ class: "min-h-screen bg-gray-50 dark:bg-[#09090b] pt-24 pb-16" }, _attrs))}><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div${ssrRenderAttrs(mergeProps({ class: "text-center max-w-3xl mx-auto mb-16" }, ssrGetDirectiveProps(_ctx, _directive_motion_fade_visible_once)))}><h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-4">${ssrInterpolate(_ctx.$t("site.products.title"))} <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">${ssrInterpolate(_ctx.$t("site.products.titleHighlight"))}</span></h1><p class="text-lg text-gray-600 dark:text-gray-400">${ssrInterpolate(_ctx.$t("site.products.titleTips"))}</p></div>`);
       if (pending.value) {
         _push(`<div class="flex justify-center items-center py-20">`);
         _push(ssrRenderComponent(_component_UIcon, {
@@ -20658,32 +20599,32 @@ const _sfc_main$x = /* @__PURE__ */ defineComponent({
           _push(ssrRenderComponent(_component_NuxtLink, mergeProps({
             key: product.id,
             to: `/products/${product.slug || product.id}`,
-            class: "group bg-[#121214] border border-gray-800 rounded-2xl overflow-hidden hover:border-purple-500/50 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] transition-all duration-300 flex flex-col h-full"
+            class: "group bg-white dark:bg-[#121214] border border-gray-200 dark:border-gray-800 rounded-2xl overflow-hidden hover:border-purple-500/50 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] transition-all duration-300 flex flex-col h-full shadow-sm dark:shadow-none"
           }, ssrGetDirectiveProps(_ctx, _directive_motion_slide_visible_once_bottom, { delay: Number(index2) * 100 })), {
             default: withCtx((_, _push2, _parent2, _scopeId) => {
               if (_push2) {
-                _push2(`<div class="aspect-w-16 aspect-h-10 w-full overflow-hidden bg-gray-900 relative"${_scopeId}>`);
+                _push2(`<div class="aspect-w-16 aspect-h-10 w-full overflow-hidden bg-gray-100 dark:bg-gray-900 relative"${_scopeId}>`);
                 if (product.imageUrl) {
                   _push2(`<img${ssrRenderAttr("src", product.imageUrl)}${ssrRenderAttr("alt", product.name)} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"${_scopeId}>`);
                 } else {
-                  _push2(`<div class="w-full h-full flex items-center justify-center bg-gray-800 text-gray-600"${_scopeId}>`);
+                  _push2(`<div class="w-full h-full flex items-center justify-center bg-gray-100 dark:bg-gray-800 text-gray-400 dark:text-gray-600"${_scopeId}>`);
                   _push2(ssrRenderComponent(_component_UIcon, {
                     name: "ph:image",
                     class: "w-12 h-12"
                   }, null, _parent2, _scopeId));
                   _push2(`</div>`);
                 }
-                _push2(`</div><div class="p-6 flex flex-col flex-grow"${_scopeId}><div class="flex justify-between items-start mb-2"${_scopeId}><h3 class="text-xl font-bold text-white group-hover:text-purple-400 transition-colors line-clamp-1"${ssrRenderAttr("title", product.name)}${_scopeId}>${ssrInterpolate(product.name)}</h3></div><p class="text-gray-400 text-sm mb-4 line-clamp-2 flex-grow"${_scopeId}>${ssrInterpolate(product.description || _ctx.$t("site.products.noDescription"))}</p><div class="flex items-center justify-between mt-auto pt-4 border-t border-gray-800/50"${_scopeId}><span class="text-2xl font-bold text-white flex items-center"${_scopeId}>`);
+                _push2(`</div><div class="p-6 flex flex-col flex-grow"${_scopeId}><div class="flex justify-between items-start mb-2"${_scopeId}><h3 class="text-xl font-bold text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors line-clamp-1"${ssrRenderAttr("title", product.name)}${_scopeId}>${ssrInterpolate(product.name)}</h3></div><p class="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-2 flex-grow"${_scopeId}>${ssrInterpolate(product.description || _ctx.$t("site.products.noDescription"))}</p><div class="flex items-center justify-between mt-auto pt-4 border-t border-gray-100 dark:border-gray-800/50"${_scopeId}><span class="text-2xl font-bold text-gray-900 dark:text-white flex items-center"${_scopeId}>`);
                 _push2(ssrRenderComponent(_component_ProductPrice, { product }, null, _parent2, _scopeId));
                 _push2(`</span><div class="w-10 h-10 rounded-full bg-purple-500/10 flex items-center justify-center group-hover:bg-purple-500 transition-colors"${_scopeId}>`);
                 _push2(ssrRenderComponent(_component_UIcon, {
                   name: "ph:arrow-right-bold",
-                  class: "w-5 h-5 text-purple-500 group-hover:text-white transition-colors"
+                  class: "w-5 h-5 text-purple-600 dark:text-purple-500 group-hover:text-white transition-colors"
                 }, null, _parent2, _scopeId));
                 _push2(`</div></div></div>`);
               } else {
                 return [
-                  createVNode("div", { class: "aspect-w-16 aspect-h-10 w-full overflow-hidden bg-gray-900 relative" }, [
+                  createVNode("div", { class: "aspect-w-16 aspect-h-10 w-full overflow-hidden bg-gray-100 dark:bg-gray-900 relative" }, [
                     product.imageUrl ? (openBlock(), createBlock("img", {
                       key: 0,
                       src: product.imageUrl,
@@ -20691,7 +20632,7 @@ const _sfc_main$x = /* @__PURE__ */ defineComponent({
                       class: "w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     }, null, 8, ["src", "alt"])) : (openBlock(), createBlock("div", {
                       key: 1,
-                      class: "w-full h-full flex items-center justify-center bg-gray-800 text-gray-600"
+                      class: "w-full h-full flex items-center justify-center bg-gray-100 dark:bg-gray-800 text-gray-400 dark:text-gray-600"
                     }, [
                       createVNode(_component_UIcon, {
                         name: "ph:image",
@@ -20702,19 +20643,19 @@ const _sfc_main$x = /* @__PURE__ */ defineComponent({
                   createVNode("div", { class: "p-6 flex flex-col flex-grow" }, [
                     createVNode("div", { class: "flex justify-between items-start mb-2" }, [
                       createVNode("h3", {
-                        class: "text-xl font-bold text-white group-hover:text-purple-400 transition-colors line-clamp-1",
+                        class: "text-xl font-bold text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors line-clamp-1",
                         title: product.name
                       }, toDisplayString$1(product.name), 9, ["title"])
                     ]),
-                    createVNode("p", { class: "text-gray-400 text-sm mb-4 line-clamp-2 flex-grow" }, toDisplayString$1(product.description || _ctx.$t("site.products.noDescription")), 1),
-                    createVNode("div", { class: "flex items-center justify-between mt-auto pt-4 border-t border-gray-800/50" }, [
-                      createVNode("span", { class: "text-2xl font-bold text-white flex items-center" }, [
+                    createVNode("p", { class: "text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-2 flex-grow" }, toDisplayString$1(product.description || _ctx.$t("site.products.noDescription")), 1),
+                    createVNode("div", { class: "flex items-center justify-between mt-auto pt-4 border-t border-gray-100 dark:border-gray-800/50" }, [
+                      createVNode("span", { class: "text-2xl font-bold text-gray-900 dark:text-white flex items-center" }, [
                         createVNode(_component_ProductPrice, { product }, null, 8, ["product"])
                       ]),
                       createVNode("div", { class: "w-10 h-10 rounded-full bg-purple-500/10 flex items-center justify-center group-hover:bg-purple-500 transition-colors" }, [
                         createVNode(_component_UIcon, {
                           name: "ph:arrow-right-bold",
-                          class: "w-5 h-5 text-purple-500 group-hover:text-white transition-colors"
+                          class: "w-5 h-5 text-purple-600 dark:text-purple-500 group-hover:text-white transition-colors"
                         })
                       ])
                     ])
@@ -20727,12 +20668,12 @@ const _sfc_main$x = /* @__PURE__ */ defineComponent({
         });
         _push(`<!--]--></div>`);
       } else {
-        _push(`<div class="text-center py-20 bg-[#121214] rounded-3xl border border-gray-800">`);
+        _push(`<div class="text-center py-20 bg-white dark:bg-[#121214] rounded-3xl border border-gray-200 dark:border-gray-800 shadow-sm dark:shadow-none">`);
         _push(ssrRenderComponent(_component_UIcon, {
           name: "ph:package",
-          class: "w-16 h-16 text-gray-600 mx-auto mb-4"
+          class: "w-16 h-16 text-gray-400 dark:text-gray-600 mx-auto mb-4"
         }, null, _parent));
-        _push(`<h3 class="text-xl font-bold text-white mb-2">${ssrInterpolate(_ctx.$t("site.products.emptyTitle"))}</h3><p class="text-gray-400">${ssrInterpolate(_ctx.$t("site.products.emptyDesc"))}</p></div>`);
+        _push(`<h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">${ssrInterpolate(_ctx.$t("site.products.emptyTitle"))}</h3><p class="text-gray-600 dark:text-gray-400">${ssrInterpolate(_ctx.$t("site.products.emptyDesc"))}</p></div>`);
       }
       _push(`</div></div>`);
     };
@@ -24855,7 +24796,7 @@ const corePageModules = Object.fromEntries(Object.entries(/* @__PURE__ */ Object
   "/core/pages/user/tokens/index.vue": __vite_glob_0_10
 })).map(([file, module]) => [file.replace("/", "../"), module]));
 const themePageModules = {
-  ...Object.fromEntries(Object.entries(/* @__PURE__ */ Object.assign({ "/themes/shoply/pages/about.vue": () => import('./about-DJEteRnW.mjs'), "/themes/shoply/pages/apps/[slug].vue": () => import('./_slug_-DuzTten7.mjs'), "/themes/shoply/pages/apps/index.vue": () => import('./index-CHTSnN3G.mjs'), "/themes/shoply/pages/auth/forgot-password.vue": () => import('./forgot-password-BOFoLwg0.mjs'), "/themes/shoply/pages/auth/login.vue": () => import('./login-CUWT3Gu-.mjs'), "/themes/shoply/pages/auth/register.vue": () => import('./register-CBaww9B4.mjs'), "/themes/shoply/pages/auth/reset-password.vue": () => import('./reset-password-Ddtk4qBP.mjs'), "/themes/shoply/pages/blog/[slug].vue": () => import('./_slug_-DF4c0WWD.mjs'), "/themes/shoply/pages/blog/index.vue": () => import('./index-DWVibmKX.mjs'), "/themes/shoply/pages/cases/[slug].vue": () => import('./_slug_-BbYZxpAq.mjs'), "/themes/shoply/pages/cases/index.vue": () => import('./index-B6m0NsFg.mjs'), "/themes/shoply/pages/index.vue": () => import('./index-_In1vP1n.mjs'), "/themes/shoply/pages/page/about.vue": () => import('./about-C7g9Sbt1.mjs'), "/themes/shoply/pages/page/amazon-store.vue": () => import('./amazon-store-B_h55Rwi.mjs'), "/themes/shoply/pages/page/b2b-website.vue": () => import('./b2b-website-we5c5fG5.mjs'), "/themes/shoply/pages/page/b2c-store.vue": () => import('./b2c-store-DINTdTyh.mjs'), "/themes/shoply/pages/page/cookies.vue": () => import('./cookies-BcTGcP5d.mjs'), "/themes/shoply/pages/page/custom.vue": () => import('./custom-n4mRMbv5.mjs'), "/themes/shoply/pages/page/install.vue": () => import('./install-BSB-fFz4.mjs'), "/themes/shoply/pages/page/migration.vue": () => import('./migration-BatWitWJ.mjs'), "/themes/shoply/pages/page/pricing.vue": () => import('./pricing-wWPaZWKn.mjs'), "/themes/shoply/pages/page/privacy.vue": () => import('./privacy-DkfdblRO.mjs'), "/themes/shoply/pages/page/solutions.vue": () => import('./solutions-WTcpNqjf.mjs'), "/themes/shoply/pages/page/store-design.vue": () => import('./store-design-DfwENlEh.mjs'), "/themes/shoply/pages/page/terms.vue": () => import('./terms-DGdJhMZd.mjs'), "/themes/shoply/pages/page/weidian.vue": () => import('./weidian-jlXx6mmW.mjs'), "/themes/shoply/pages/page/wholesale.vue": () => import('./wholesale-BwVZeYk9.mjs'), "/themes/shoply/pages/pricing.vue": () => import('./pricing-Br0vkRPd.mjs'), "/themes/shoply/pages/solutions/[slug].vue": () => import('./_slug_-YLfYdaH4.mjs'), "/themes/shoply/pages/solutions/index.vue": () => import('./index-CFODPRWW.mjs'), "/themes/shoply/pages/themes/[slug].vue": () => import('./_slug_-BAgru2OZ.mjs'), "/themes/shoply/pages/themes/detail/[slug].vue": () => import('./_slug_-CCxcqPOs.mjs'), "/themes/shoply/pages/themes/index.vue": () => import('./index-CVGwnyde.mjs'), "/themes/shoply/pages/user/account.vue": () => import('./account-1lkeDRap.mjs'), "/themes/shoply/pages/user/dashboard.vue": () => import('./dashboard-BlSUcyFl.mjs'), "/themes/shoply/pages/user/index.vue": () => import('./index-ztQE9yFV.mjs'), "/themes/shoply/pages/user/invoice/[order_id].vue": () => import('./_order_id_-DjnIXSf5.mjs'), "/themes/shoply/pages/user/layout.vue": () => import('./layout-DakGpCsi.mjs'), "/themes/shoply/pages/user/orders/[order_id].vue": () => import('./_order_id_-CV8wHq0u.mjs'), "/themes/shoply/pages/user/orders/index.vue": () => import('./index-v-ZeNIV8.mjs'), "/themes/shoply/pages/user/stores/index.vue": () => import('./index-V7DeNFDB.mjs'), "/themes/shoply/pages/user/subscription.vue": () => import('./subscription-CdYfignt.mjs') })).map(([file, module]) => [file.replace("/", "../"), module]))
+  ...Object.fromEntries(Object.entries(/* @__PURE__ */ Object.assign({ "/themes/shoply/pages/about.vue": () => import('./about-DJEteRnW.mjs'), "/themes/shoply/pages/apps/[slug].vue": () => import('./_slug_-CvwmkgJp.mjs'), "/themes/shoply/pages/apps/index.vue": () => import('./index-BqApqgqx.mjs'), "/themes/shoply/pages/auth/forgot-password.vue": () => import('./forgot-password-Ch-WKTi7.mjs'), "/themes/shoply/pages/auth/login.vue": () => import('./login-CDNHbq_c.mjs'), "/themes/shoply/pages/auth/register.vue": () => import('./register-DttRCnEU.mjs'), "/themes/shoply/pages/auth/reset-password.vue": () => import('./reset-password-DKmAQ6P7.mjs'), "/themes/shoply/pages/blog/[slug].vue": () => import('./_slug_-DF4c0WWD.mjs'), "/themes/shoply/pages/blog/index.vue": () => import('./index-DnPQJNH_.mjs'), "/themes/shoply/pages/cases/[slug].vue": () => import('./_slug_-BNskRx6l.mjs'), "/themes/shoply/pages/cases/index.vue": () => import('./index-Bv_6S5UR.mjs'), "/themes/shoply/pages/index.vue": () => import('./index-UTIJWkYh.mjs'), "/themes/shoply/pages/page/about.vue": () => import('./about-DUbHKYc8.mjs'), "/themes/shoply/pages/page/amazon-store.vue": () => import('./amazon-store-CK6gqL4J.mjs'), "/themes/shoply/pages/page/b2b-website.vue": () => import('./b2b-website-DnH2rnIM.mjs'), "/themes/shoply/pages/page/b2c-store.vue": () => import('./b2c-store-DHCmXJdk.mjs'), "/themes/shoply/pages/page/cookies.vue": () => import('./cookies-BQunqMxV.mjs'), "/themes/shoply/pages/page/custom.vue": () => import('./custom-DV1QOqki.mjs'), "/themes/shoply/pages/page/install.vue": () => import('./install-DXfMvdA8.mjs'), "/themes/shoply/pages/page/migration.vue": () => import('./migration-BN24jcj-.mjs'), "/themes/shoply/pages/page/pricing.vue": () => import('./pricing-DGJ5Azb0.mjs'), "/themes/shoply/pages/page/privacy.vue": () => import('./privacy-D8i5tCgc.mjs'), "/themes/shoply/pages/page/solutions.vue": () => import('./solutions-WTcpNqjf.mjs'), "/themes/shoply/pages/page/store-design.vue": () => import('./store-design-DfwENlEh.mjs'), "/themes/shoply/pages/page/terms.vue": () => import('./terms-Czum14a6.mjs'), "/themes/shoply/pages/page/weidian.vue": () => import('./weidian-B95VOdd6.mjs'), "/themes/shoply/pages/page/wholesale.vue": () => import('./wholesale-hcL6lRBs.mjs'), "/themes/shoply/pages/pricing.vue": () => import('./pricing-Br0vkRPd.mjs'), "/themes/shoply/pages/solutions/[slug].vue": () => import('./_slug_-YLfYdaH4.mjs'), "/themes/shoply/pages/solutions/index.vue": () => import('./index-CbkVzZSi.mjs'), "/themes/shoply/pages/themes/[slug].vue": () => import('./_slug_-CT35m17K.mjs'), "/themes/shoply/pages/themes/detail/[slug].vue": () => import('./_slug_-CCxcqPOs.mjs'), "/themes/shoply/pages/themes/index.vue": () => import('./index-B2mv4SLH.mjs'), "/themes/shoply/pages/user/account.vue": () => import('./account-478BGPIX.mjs'), "/themes/shoply/pages/user/dashboard.vue": () => import('./dashboard-C_Ga_5rs.mjs'), "/themes/shoply/pages/user/index.vue": () => import('./index-ztQE9yFV.mjs'), "/themes/shoply/pages/user/invoice/[order_id].vue": () => import('./_order_id_-B5TKUuVb.mjs'), "/themes/shoply/pages/user/layout.vue": () => import('./layout-Dyj1nOC2.mjs'), "/themes/shoply/pages/user/orders/[order_id].vue": () => import('./_order_id_-ByDOLwea.mjs'), "/themes/shoply/pages/user/orders/index.vue": () => import('./index-D9naQnDr.mjs'), "/themes/shoply/pages/user/stores/index.vue": () => import('./index-BHYMbKcd.mjs'), "/themes/shoply/pages/user/subscription.vue": () => import('./subscription-CTbDkkDW.mjs') })).map(([file, module]) => [file.replace("/", "../"), module]))
 };
 const themeAdminManifestModules = {
   ...Object.fromEntries(Object.entries(/* @__PURE__ */ Object.assign({
@@ -24863,7 +24804,7 @@ const themeAdminManifestModules = {
   })).map(([file, module]) => [file.replace("/", "../"), module]))
 };
 const themeAdminPageModules = {
-  ...Object.fromEntries(Object.entries(/* @__PURE__ */ Object.assign({ "/themes/shoply/admin/pages/cases.vue": () => import('./cases-CAANcggy.mjs') })).map(([file, module]) => [file.replace("/", "../"), module]))
+  ...Object.fromEntries(Object.entries(/* @__PURE__ */ Object.assign({ "/themes/shoply/admin/pages/cases.vue": () => import('./cases-DN_gfUFl.mjs') })).map(([file, module]) => [file.replace("/", "../"), module]))
 };
 const themeAdminLocaleEnModules = {
   ...Object.fromEntries(Object.entries(/* @__PURE__ */ Object.assign({})).map(([file, module]) => [file.replace("/", "../"), module]))
@@ -24872,7 +24813,7 @@ const themeAdminLocaleZhModules = {
   ...Object.fromEntries(Object.entries(/* @__PURE__ */ Object.assign({})).map(([file, module]) => [file.replace("/", "../"), module]))
 };
 const themeLayoutLoaders = {
-  "shoply": () => import('./default-B4lwdkBj.mjs')
+  "shoply": () => import('./default-DXf5EmIH.mjs')
 };
 const schemaVersion$2 = 1;
 const id$2 = "apps";
@@ -26409,7 +26350,7 @@ const _sfc_main$n = /* @__PURE__ */ defineComponent({
   __ssrInlineRender: true,
   async setup(__props) {
     let __temp, __restore;
-    const RichEditor = defineAsyncComponent(() => import('./RichEditor-Bqggu4H3.mjs'));
+    const RichEditor = defineAsyncComponent(() => import('./RichEditor-DpqBYTjG.mjs'));
     const copyItem = (item) => ({
       id: item?.id || "",
       name: item?.name || "",
@@ -31371,7 +31312,7 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
       };
       return map[key] ? isZh.value ? map[key].zh : map[key].en : key;
     };
-    const checkReason = (check) => check.reason || check.status;
+    const checkReason = (check) => check.reason === "catalog_mismatch" ? isZh.value ? "套餐价格、周期或等级与规范不一致" : "Plan price, cycle or rank conflicts with the catalog" : check.reason || check.status;
     const formatDetail = (check) => {
       if (!check.detail) return "";
       return Object.entries(check.detail).filter(([_, v]) => v !== void 0 && v !== null && v !== "").map(([k, v]) => `${k}: ${v}`).join("  ·  ");
@@ -32318,7 +32259,7 @@ const _sfc_main$a = /* @__PURE__ */ defineComponent({
   __ssrInlineRender: true,
   async setup(__props) {
     let __temp, __restore;
-    const RichEditor = defineAsyncComponent(() => import('./RichEditor-Bqggu4H3.mjs'));
+    const RichEditor = defineAsyncComponent(() => import('./RichEditor-DpqBYTjG.mjs'));
     const copyItem = (item) => ({
       id: item?.id || "",
       name: item?.name || "",
@@ -35677,23 +35618,23 @@ const plugin_MeUvTuoKUi51yb_kBguab6hdcExVXeTtZtTg9TZZBB8 = /* @__PURE__ */ defin
   // For type portability
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
 });
-const LazyLegalPage = defineAsyncComponent(() => import('./LegalPage-B8gVXh8H.mjs').then((r) => r["default"] || r.default || r));
-const LazyMarketingPage = defineAsyncComponent(() => import('./MarketingPage-Disy78mr.mjs').then((r) => r["default"] || r.default || r));
-const LazyMarketplaceCard = defineAsyncComponent(() => import('./MarketplaceCard-Dg28U-xq.mjs').then((r) => r["default"] || r.default || r));
-const LazyMarketplaceDetail = defineAsyncComponent(() => import('./MarketplaceDetail-CH7IQoIG.mjs').then((r) => r["default"] || r.default || r));
+const LazyLegalPage = defineAsyncComponent(() => import('./LegalPage-CB2HXre_.mjs').then((r) => r["default"] || r.default || r));
+const LazyMarketingPage = defineAsyncComponent(() => import('./MarketingPage-Dtk5B_Gx.mjs').then((r) => r["default"] || r.default || r));
+const LazyMarketplaceCard = defineAsyncComponent(() => import('./MarketplaceCard-DArSG9Np.mjs').then((r) => r["default"] || r.default || r));
+const LazyMarketplaceDetail = defineAsyncComponent(() => import('./MarketplaceDetail-B2LyNJnj.mjs').then((r) => r["default"] || r.default || r));
 const LazyMarketplaceHero = defineAsyncComponent(() => import('./MarketplaceHero-hnb2iXb4.mjs').then((r) => r["default"] || r.default || r));
-const LazyMarketplaceList = defineAsyncComponent(() => import('./MarketplaceList-Cu2FiRu7.mjs').then((r) => r["default"] || r.default || r));
-const LazyMarketplaceVisual = defineAsyncComponent(() => import('./MarketplaceVisual-Cr5WaubP.mjs').then((r) => r["default"] || r.default || r));
+const LazyMarketplaceList = defineAsyncComponent(() => import('./MarketplaceList-Donchzr7.mjs').then((r) => r["default"] || r.default || r));
+const LazyMarketplaceVisual = defineAsyncComponent(() => import('./MarketplaceVisual-S5JpFqOO.mjs').then((r) => r["default"] || r.default || r));
 const LazyPageCta = defineAsyncComponent(() => import('./PageCta-0XQxZIIo.mjs').then((r) => r["default"] || r.default || r));
 const LazySectionHeading = defineAsyncComponent(() => import('./SectionHeading-D_ZqEZzo.mjs').then((r) => r["default"] || r.default || r));
-const LazyShoplyAuthShell = defineAsyncComponent(() => import('./ShoplyAuthShell-LsQC90Yk.mjs').then((r) => r["default"] || r.default || r));
-const LazyShoplyBindDialog = defineAsyncComponent(() => import('./ShoplyBindDialog-Byb1d-mD.mjs').then((n) => n.S).then((r) => r["default"] || r.default || r));
-const LazyShoplyCheckoutModal = defineAsyncComponent(() => import('./ShoplyCheckoutModal-B6CbgIbe.mjs').then((r) => r["default"] || r.default || r));
+const LazyShoplyAuthShell = defineAsyncComponent(() => import('./ShoplyAuthShell-CPyYcxIx.mjs').then((r) => r["default"] || r.default || r));
+const LazyShoplyBindDialog = defineAsyncComponent(() => import('./ShoplyBindDialog-CYzVITwe.mjs').then((n) => n.S).then((r) => r["default"] || r.default || r));
+const LazyShoplyCheckoutModal = defineAsyncComponent(() => import('./ShoplyCheckoutModal-DiN_E7Xy.mjs').then((r) => r["default"] || r.default || r));
 const LazyShoplyConsoleHeader = defineAsyncComponent(() => import('./ShoplyConsoleHeader-DroiRVCS.mjs').then((r) => r["default"] || r.default || r));
 const LazyShoplyConsultDialog = defineAsyncComponent(() => import('./ShoplyConsultDialog-DsFYw0Dw.mjs').then((r) => r["default"] || r.default || r));
 const LazyShoplyLanguageSwitcher = defineAsyncComponent(() => import('./ShoplyLanguageSwitcher-D-nYAmKF.mjs').then((r) => r["default"] || r.default || r));
 const LazyShoplyLeadForm = defineAsyncComponent(() => import('./ShoplyLeadForm-BPVVz4Cl.mjs').then((r) => r["default"] || r.default || r));
-const LazyShoplyPlanCards = defineAsyncComponent(() => import('./ShoplyPlanCards-ZbgDpREp.mjs').then((r) => r["default"] || r.default || r));
+const LazyShoplyPlanCards = defineAsyncComponent(() => import('./ShoplyPlanCards-SmmNP5oL.mjs').then((r) => r["default"] || r.default || r));
 const LazyProseA = defineAsyncComponent(() => import('./A-B-8_Qiz-.mjs').then((r) => r["default"] || r.default || r));
 const LazyProseAccordion = defineAsyncComponent(() => import('./Accordion-BbVqTT0N.mjs').then((r) => r["default"] || r.default || r));
 const LazyProseAccordionItem = defineAsyncComponent(() => import('./AccordionItem-B8BuKVwe.mjs').then((r) => r["default"] || r.default || r));
@@ -40327,5 +40268,5 @@ let entry;
 }
 const entry_default = ((ssrContext) => entry(ssrContext));
 
-export { PopperRoot_default as $, ADMIN_PERMISSIONS as A, _sfc_main$i as B, publishedOptionalThemes as C, useLocaleRouter as D, useProductPricing as E, useCurrencyFormat as F, useRoute as G, themeAdminLocaleEnModules as H, themeAdminLocaleZhModules as I, useHead as J, useExtensions as K, setResponseStatus as L, stripLocalePrefix as M, __nuxt_component_3$4 as N, _export_sfc as O, useAdminSession as P, firstAllowedAdminRoute as Q, PageRequestError as R, _sfc_main$k as S, __nuxt_component_0$1 as T, useRequestURL as U, useLocaleCurrency as V, PopperAnchor_default as W, PopperArrow_default as X, createSharedComposable as Y, useDirection as Z, _sfc_main$S as _, _sfc_main$t as a, useParentElement as a$, createContext as a0, useVModel as a1, useFocusGuards as a2, useBodyScrollLock as a3, useForwardExpose as a4, useTypeahead as a5, getActiveElement as a6, FocusScope_default as a7, DismissableLayer_default as a8, RovingFocusGroup_default as a9, useAppConfig as aA, usePortal as aB, createReusableTemplate as aC, isArrayOfArray as aD, _sfc_main$Q as aE, get as aF, _sfc_main$O as aG, pickLinkProps as aH, _sfc_main$P as aI, omit as aJ, useComponentUI as aK, reactivePick as aL, tv as aM, useFormControl as aN, VisuallyHiddenInput_default as aO, useFormField as aP, Label_default as aQ, createEventHook as aR, useFieldGroup as aS, useComponentIcons as aT, compare as aU, _sfc_main$R as aV, looseToNumber as aW, getDisplayValue as aX, getFocusIntent as aY, refAutoReset as aZ, handleAndDispatchCustomEvent$1 as a_, PopperContent_default as aa, getOpenState as ab, PopperContentPropsDefaultValue as ac, isPointerInGraceArea as ad, isMouseEvent as ae, FIRST_LAST_KEYS as af, LAST_KEYS as ag, focusFirst$1 as ah, useCollection as ai, Primitive as aj, SELECTION_KEYS$1 as ak, ITEM_SELECT as al, Presence_default as am, isIndeterminate$1 as an, getCheckedState as ao, reactiveOmit as ap, useForwardProps as aq, useForwardPropsEmits as ar, useHideOthers as as, useId as at, Teleport_default as au, SUB_CLOSE_KEYS as av, SUB_OPEN_KEYS as aw, useEmitAsProps as ax, usePrimitiveElement as ay, useLocale as az, _sfc_main$s as b, MAP_KEY_TO_FOCUS_INTENT as b0, getNextMatch as b1, useResizeObserver as b2, RovingFocusItem_default as b3, useNuxtApp as b4, tryOnScopeDispose$1 as b5, injectTooltipProviderContext as b6, useTimeoutFn as b7, VisuallyHidden_default as b8, usePageFailureLog as b9, formStateInjectionKey as bA, formErrorsInjectionKey as bB, formInputsInjectionKey as bC, formLoadingInjectionKey as bD, formOptionsInjectionKey as bE, useEventBus as bF, usePageResourceState as bG, __nuxt_component_3$2 as bH, useUserSession as bI, refThrottled as bJ, useDebounceFn as bK, useActiveElement as bL, __nuxt_component_2$1 as bM, _sfc_main$m as bN, useState as bO, useCookie as bP, pointerDownOutside as bQ, DialogOverlay_default as bR, DialogContent_default as bS, DialogTitle_default as bT, DialogDescription_default as bU, DialogClose_default as bV, themeLayoutLoaders as bW, createError as bX, useRequestEvent as ba, corePageModules as bb, themePageModules as bc, useActiveTheme as bd, __nuxt_component_4$1 as be, isPathLocaleAllowed as bf, useSeoMeta as bg, useLocalizedSettings as bh, useCustomerAuth as bi, publishedOptionalThemeSet as bj, useJsonLd as bk, useCheckout as bl, __nuxt_component_1$1 as bm, __nuxt_component_3$3 as bn, isValueEqualOrExist as bo, transformUI as bp, useEventListener$1 as bq, useRuntimeConfig as br, resolveBaseURL as bs, ImageComponent as bt, DialogRoot_default as bu, DialogTrigger_default as bv, DialogPortal_default as bw, useClipboard as bx, useCollectionPageJsonLd as by, formBusInjectionKey as bz, _sfc_main$o as c, useFormatTime as d, entry_default as default, useToast as e, useAdminPermissions as f, useAdminExtensions as g, moduleEditCode as h, _sfc_main$N as i, _sfc_main$p as j, _sfc_main$I as k, _sfc_main$r as l, moduleViewCode as m, _sfc_main$C as n, navigateTo as o, useRouter as p, useConfirm as q, useSettings as r, useRequestFetch as s, useAsyncData as t, useI18n as u, _sfc_main$l as v, themeExtensionPermissionCode as w, usePagination as x, useFetch as y, _sfc_main$v as z };
+export { PopperRoot_default as $, ADMIN_PERMISSIONS as A, _sfc_main$i as B, publishedOptionalThemes as C, useLocaleRouter as D, useProductPricing as E, useCurrencyFormat as F, useRoute as G, themeAdminLocaleEnModules as H, themeAdminLocaleZhModules as I, useHead as J, useExtensions as K, setResponseStatus as L, stripLocalePrefix as M, __nuxt_component_3$4 as N, _export_sfc as O, useAdminSession as P, firstAllowedAdminRoute as Q, PageRequestError as R, _sfc_main$k as S, __nuxt_component_0$1 as T, useRequestURL as U, useLocaleCurrency as V, PopperAnchor_default as W, PopperArrow_default as X, createSharedComposable as Y, useDirection as Z, _sfc_main$S as _, _sfc_main$t as a, useParentElement as a$, createContext as a0, useVModel as a1, useFocusGuards as a2, useBodyScrollLock as a3, useForwardExpose as a4, useTypeahead as a5, getActiveElement as a6, FocusScope_default as a7, DismissableLayer_default as a8, RovingFocusGroup_default as a9, useAppConfig as aA, usePortal as aB, createReusableTemplate as aC, isArrayOfArray as aD, _sfc_main$Q as aE, get as aF, _sfc_main$O as aG, pickLinkProps as aH, _sfc_main$P as aI, omit as aJ, useComponentUI as aK, reactivePick as aL, tv as aM, useFormControl as aN, VisuallyHiddenInput_default as aO, useFormField as aP, Label_default as aQ, createEventHook as aR, useFieldGroup as aS, useComponentIcons as aT, compare as aU, _sfc_main$R as aV, looseToNumber as aW, getDisplayValue as aX, getFocusIntent as aY, refAutoReset as aZ, handleAndDispatchCustomEvent$1 as a_, PopperContent_default as aa, getOpenState as ab, PopperContentPropsDefaultValue as ac, isPointerInGraceArea as ad, isMouseEvent as ae, FIRST_LAST_KEYS as af, LAST_KEYS as ag, focusFirst$1 as ah, useCollection as ai, Primitive as aj, SELECTION_KEYS$1 as ak, ITEM_SELECT as al, Presence_default as am, isIndeterminate$1 as an, getCheckedState as ao, reactiveOmit as ap, useForwardProps as aq, useForwardPropsEmits as ar, useHideOthers as as, useId as at, Teleport_default as au, SUB_CLOSE_KEYS as av, SUB_OPEN_KEYS as aw, useEmitAsProps as ax, usePrimitiveElement as ay, useLocale as az, _sfc_main$s as b, MAP_KEY_TO_FOCUS_INTENT as b0, getNextMatch as b1, useResizeObserver as b2, RovingFocusItem_default as b3, useNuxtApp as b4, tryOnScopeDispose$1 as b5, injectTooltipProviderContext as b6, useTimeoutFn as b7, VisuallyHidden_default as b8, usePageFailureLog as b9, formStateInjectionKey as bA, formErrorsInjectionKey as bB, formInputsInjectionKey as bC, formLoadingInjectionKey as bD, formOptionsInjectionKey as bE, useEventBus as bF, usePageResourceState as bG, __nuxt_component_3$2 as bH, useUserSession as bI, refThrottled as bJ, useDebounceFn as bK, useActiveElement as bL, __nuxt_component_2$2 as bM, _sfc_main$m as bN, useState as bO, useCookie as bP, pointerDownOutside as bQ, DialogOverlay_default as bR, DialogContent_default as bS, DialogTitle_default as bT, DialogDescription_default as bU, DialogClose_default as bV, themeLayoutLoaders as bW, createError as bX, useRequestEvent as ba, corePageModules as bb, themePageModules as bc, useActiveTheme as bd, __nuxt_component_4$1 as be, isPathLocaleAllowed as bf, useSeoMeta as bg, useLocalizedSettings as bh, useCustomerAuth as bi, publishedOptionalThemeSet as bj, useJsonLd as bk, useCheckout as bl, __nuxt_component_2$1 as bm, __nuxt_component_3$3 as bn, isValueEqualOrExist as bo, transformUI as bp, useEventListener$1 as bq, useRuntimeConfig as br, resolveBaseURL as bs, ImageComponent as bt, DialogRoot_default as bu, DialogTrigger_default as bv, DialogPortal_default as bw, useClipboard as bx, useCollectionPageJsonLd as by, formBusInjectionKey as bz, _sfc_main$o as c, useFormatTime as d, entry_default as default, useToast as e, useAdminPermissions as f, useAdminExtensions as g, moduleEditCode as h, _sfc_main$N as i, _sfc_main$p as j, _sfc_main$I as k, _sfc_main$r as l, moduleViewCode as m, _sfc_main$C as n, navigateTo as o, useRouter as p, useConfirm as q, useSettings as r, useRequestFetch as s, useAsyncData as t, useI18n as u, _sfc_main$l as v, themeExtensionPermissionCode as w, usePagination as x, useFetch as y, _sfc_main$v as z };
 //# sourceMappingURL=server.mjs.map

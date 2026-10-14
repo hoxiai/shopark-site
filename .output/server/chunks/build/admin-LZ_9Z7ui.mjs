@@ -1,10 +1,10 @@
-import { bP as useCookie, f as useAdminPermissions, t as useAsyncData, O as _export_sfc, r as useSettings, bh as useLocalizedSettings, u as useI18n, P as useAdminSession, o as navigateTo, N as __nuxt_component_3$4, i as _sfc_main$N, bM as __nuxt_component_2$1$1, g as useAdminExtensions, w as themeExtensionPermissionCode, T as __nuxt_component_0$1, _ as _sfc_main$S, G as useRoute, bO as useState, n as _sfc_main$C, bN as _sfc_main$m, bK as useDebounceFn, bq as useEventListener$1, az as useLocale, aA as useAppConfig, aK as useComponentUI, ar as useForwardPropsEmits, aL as reactivePick, aC as createReusableTemplate, aM as tv, bJ as refThrottled, aG as _sfc_main$O, aH as pickLinkProps, aF as get, aJ as omit, aI as _sfc_main$P, aE as _sfc_main$Q, aV as _sfc_main$R, b as _sfc_main$s, bL as useActiveElement, aj as Primitive } from './server.mjs';
+import { bP as useCookie, f as useAdminPermissions, t as useAsyncData, O as _export_sfc, r as useSettings, bh as useLocalizedSettings, u as useI18n, P as useAdminSession, o as navigateTo, N as __nuxt_component_3$4, i as _sfc_main$N, bM as __nuxt_component_2$2, g as useAdminExtensions, w as themeExtensionPermissionCode, T as __nuxt_component_0$1, _ as _sfc_main$S, G as useRoute, bO as useState, n as _sfc_main$C, bN as _sfc_main$m, bK as useDebounceFn, bq as useEventListener$1, az as useLocale, aA as useAppConfig, aK as useComponentUI, ar as useForwardPropsEmits, aL as reactivePick, aC as createReusableTemplate, aM as tv, bJ as refThrottled, aG as _sfc_main$O, aH as pickLinkProps, aF as get, aJ as omit, aI as _sfc_main$P, aE as _sfc_main$Q, aV as _sfc_main$R, b as _sfc_main$s, bL as useActiveElement, aj as Primitive } from './server.mjs';
 import { _ as __nuxt_component_1$1, a as _sfc_main$7 } from './Slideover-C_8gTDGH.mjs';
 import { _ as _sfc_main$9, u as useKbd } from './Kbd-D90vDiJp.mjs';
 import { defineComponent, ref, withAsyncContext, mergeProps, isRef, unref, computed, withCtx, openBlock, createBlock, createVNode, createCommentVNode, toDisplayString, createTextVNode, Fragment, renderList, withDirectives, vShow, useModel, watch, toValue, useSlots, toRef, useTemplateRef, renderSlot, createSlots, withKeys, mergeModels, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent, ssrRenderClass, ssrRenderSlot, ssrInterpolate, ssrRenderList, ssrRenderStyle, ssrRenderAttr } from 'vue/server-renderer';
 import { g as getEstimateSize, L as ListboxItem_default, a as ListboxItemIndicator_default, b as ListboxRoot_default, c as ListboxFilter_default, f as ListboxContent_default, d as ListboxVirtualizer_default, e as ListboxGroup_default, h as injectListboxGroupContext } from './virtualizer-DdPTQ41a.mjs';
-import { eo as defu } from '../nitro/nitro.mjs';
+import { eq as defu } from '../nitro/nitro.mjs';
 import { useFuse } from '@vueuse/integrations/useFuse';
 import { useRouter } from 'vue-router';
 import { _ as _sfc_main$8 } from './Tooltip-BTaeSdzd.mjs';
@@ -2362,7 +2362,7 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
       ];
     });
     return (_ctx, _push, _parent, _attrs) => {
-      const _component_ClientOnly = __nuxt_component_2$1$1;
+      const _component_ClientOnly = __nuxt_component_2$2;
       const _component_USkeleton = _sfc_main$m;
       _push(ssrRenderComponent(_component_ClientOnly, _attrs, {
         fallback: withCtx((_, _push2, _parent2, _scopeId) => {
@@ -2446,7 +2446,7 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
       const _component_RouteSearch = __nuxt_component_2$1;
       const _component_LanguageSwitcher = __nuxt_component_3;
       const _component_UButton = _sfc_main$N;
-      const _component_ClientOnly = __nuxt_component_2$1$1;
+      const _component_ClientOnly = __nuxt_component_2$2;
       _push(`<header${ssrRenderAttrs(mergeProps({ class: "sticky top-0 z-50 border-b border-gray-200/80 bg-white/90 backdrop-blur dark:border-gray-800/50 dark:bg-[#09090b]/80" }, _attrs))}><div class="w-full px-4 md:px-6 h-16 flex items-center justify-between"><div class="flex items-center gap-8">`);
       _push(ssrRenderComponent(_component_NuxtLink, {
         to: "/",
@@ -2794,7 +2794,7 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
     return (_ctx, _push, _parent, _attrs) => {
       const _component_USlideover = _sfc_main$7;
       const _component_SiteLogo = __nuxt_component_1$1;
-      const _component_ClientOnly = __nuxt_component_2$1$1;
+      const _component_ClientOnly = __nuxt_component_2$2;
       const _component_UButton = _sfc_main$N;
       const _component_NuxtLink = __nuxt_component_3$4;
       const _component_Icon = __nuxt_component_0$1;
