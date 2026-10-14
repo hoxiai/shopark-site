@@ -948,17 +948,32 @@ const _routes = [
   },
   {
     name: "user-plugins-slug___en",
-    path: "/en/user/plugins/:slug(.*)*",
+    path: "/user/plugins/:slug(.*)*",
+    component: () => import('./_...slug_-D8rbZovd.mjs')
+  },
+  {
+    name: "user-plugins-slug___zh___default",
+    path: "/user/plugins/:slug(.*)*",
     component: () => import('./_...slug_-D8rbZovd.mjs')
   },
   {
     name: "user-plugins-slug___zh",
+    path: "/zh/user/plugins/:slug(.*)*",
+    component: () => import('./_...slug_-D8rbZovd.mjs')
+  },
+  {
+    name: "user-plugins-slug___zh-HK___default",
     path: "/user/plugins/:slug(.*)*",
     component: () => import('./_...slug_-D8rbZovd.mjs')
   },
   {
     name: "user-plugins-slug___zh-HK",
     path: "/zh-HK/user/plugins/:slug(.*)*",
+    component: () => import('./_...slug_-D8rbZovd.mjs')
+  },
+  {
+    name: "user-plugins-slug___ru___default",
+    path: "/user/plugins/:slug(.*)*",
     component: () => import('./_...slug_-D8rbZovd.mjs')
   },
   {
@@ -1046,12 +1061,24 @@ const _routes = [
   },
   {
     name: "admin-setup___en",
-    path: "/en/admin/setup",
+    path: "/admin/setup",
+    meta: __nuxt_page_meta$5 || {},
+    component: () => import('./setup-Cwb2wvWG.mjs')
+  },
+  {
+    name: "admin-setup___zh___default",
+    path: "/admin/setup",
     meta: __nuxt_page_meta$5 || {},
     component: () => import('./setup-Cwb2wvWG.mjs')
   },
   {
     name: "admin-setup___zh",
+    path: "/zh/admin/setup",
+    meta: __nuxt_page_meta$5 || {},
+    component: () => import('./setup-Cwb2wvWG.mjs')
+  },
+  {
+    name: "admin-setup___zh-HK___default",
     path: "/admin/setup",
     meta: __nuxt_page_meta$5 || {},
     component: () => import('./setup-Cwb2wvWG.mjs')
@@ -1059,6 +1086,12 @@ const _routes = [
   {
     name: "admin-setup___zh-HK",
     path: "/zh-HK/admin/setup",
+    meta: __nuxt_page_meta$5 || {},
+    component: () => import('./setup-Cwb2wvWG.mjs')
+  },
+  {
+    name: "admin-setup___ru___default",
+    path: "/admin/setup",
     meta: __nuxt_page_meta$5 || {},
     component: () => import('./setup-Cwb2wvWG.mjs')
   },
@@ -1100,17 +1133,32 @@ const _routes = [
   },
   {
     name: "slug___en",
-    path: "/en/:slug(.*)*",
+    path: "/:slug(.*)*",
+    component: () => import('./_...slug_-B4bvgCIO.mjs')
+  },
+  {
+    name: "slug___zh___default",
+    path: "/:slug(.*)*",
     component: () => import('./_...slug_-B4bvgCIO.mjs')
   },
   {
     name: "slug___zh",
+    path: "/zh/:slug(.*)*",
+    component: () => import('./_...slug_-B4bvgCIO.mjs')
+  },
+  {
+    name: "slug___zh-HK___default",
     path: "/:slug(.*)*",
     component: () => import('./_...slug_-B4bvgCIO.mjs')
   },
   {
     name: "slug___zh-HK",
     path: "/zh-HK/:slug(.*)*",
+    component: () => import('./_...slug_-B4bvgCIO.mjs')
+  },
+  {
+    name: "slug___ru___default",
+    path: "/:slug(.*)*",
     component: () => import('./_...slug_-B4bvgCIO.mjs')
   },
   {
@@ -14664,7 +14712,17 @@ const normalizedLocales = [
       }
     ],
     name: "English",
-    language: "en-US"
+    language: "en-US",
+    domains: [
+      "iqingpu.com",
+      "www.iqingpu.com",
+      "runshoply.com",
+      "www.runshoply.com"
+    ],
+    defaultForDomains: [
+      "runshoply.com",
+      "www.runshoply.com"
+    ]
   },
   {
     code: "zh",
@@ -14680,7 +14738,17 @@ const normalizedLocales = [
       }
     ],
     name: "简体中文",
-    language: "zh-CN"
+    language: "zh-CN",
+    domains: [
+      "iqingpu.com",
+      "www.iqingpu.com",
+      "runshoply.com",
+      "www.runshoply.com"
+    ],
+    defaultForDomains: [
+      "iqingpu.com",
+      "www.iqingpu.com"
+    ]
   },
   {
     code: "zh-HK",
@@ -14696,7 +14764,14 @@ const normalizedLocales = [
       }
     ],
     name: "香港繁體",
-    language: "zh-HK"
+    language: "zh-HK",
+    domains: [
+      "iqingpu.com",
+      "www.iqingpu.com",
+      "runshoply.com",
+      "www.runshoply.com"
+    ],
+    defaultForDomains: []
   },
   {
     code: "ru",
@@ -14712,7 +14787,14 @@ const normalizedLocales = [
       }
     ],
     name: "Русский",
-    language: "ru-RU"
+    language: "ru-RU",
+    domains: [
+      "iqingpu.com",
+      "www.iqingpu.com",
+      "runshoply.com",
+      "www.runshoply.com"
+    ],
+    defaultForDomains: []
   }
 ];
 const NUXT_I18N_MODULE_ID = "@nuxtjs/i18n";

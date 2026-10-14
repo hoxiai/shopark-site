@@ -1,0 +1,1 @@
+import{P as n,F as i,n as u}from"./CihqxCKY.js";import{i as m,aJ as p}from"./BbmMkH88.js";import"./BLIcvORX.js";import"./CfYFMnge.js";const y=m({__name:"[slug]",async setup(c){let e,a;const s=n(),{localePath:o}=i(),t=s.params.slug,r=Array.isArray(t)?String(t.at(-1)||""):String(t||"");return[e,a]=p(()=>u(o(`/themes/${r}`),{replace:!0})),await e,a(),()=>{}}});export{y as default};
