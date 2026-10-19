@@ -1,4 +1,4 @@
-import { d as defineEventHandler, c as getRequestLocale, r as readBody, e as createError, a$ as saveSchedulerJobs, b0 as loadSchedulerJobs, b1 as runSchedulerJob } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, c as getRequestLocale, r as readBody, e as createError, b0 as saveSchedulerJobs, b1 as loadSchedulerJobs, b2 as runSchedulerJob } from '../../../nitro/nitro.mjs';
 import 'drizzle-orm';
 import 'node:crypto';
 import 'crypto';

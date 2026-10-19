@@ -1,4 +1,4 @@
-import { u as useI18n, D as useLocaleRouter, bg as useSeoMeta, _ as _sfc_main$S, N as __nuxt_component_3$4 } from './server.mjs';
+import { u as useI18n, D as useLocaleRouter, bg as useSeoMeta, _ as _sfc_main$V, N as __nuxt_component_3$4 } from './server.mjs';
 import __nuxt_component_1 from './PageCta-0XQxZIIo.mjs';
 import { defineComponent, computed, ref, mergeProps, unref, withCtx, createTextVNode, toDisplayString, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent, ssrInterpolate, ssrRenderList, ssrRenderAttr, ssrRenderClass, ssrRenderStyle } from 'vue/server-renderer';
@@ -847,7 +847,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       twitterDescription: () => copy.value.seo.description
     });
     return (_ctx, _push, _parent, _attrs) => {
-      const _component_UIcon = _sfc_main$S;
+      const _component_UIcon = _sfc_main$V;
       const _component_NuxtLink = __nuxt_component_3$4;
       const _component_PageCta = __nuxt_component_1;
       _push(`<div${ssrRenderAttrs(mergeProps({ class: "bg-white" }, _attrs))}><section class="relative isolate overflow-hidden bg-gradient-to-b from-[#1b64e4] via-[#2472f8] to-[#1d63e0] text-white"><div class="absolute inset-0 -z-10 overflow-hidden"><div class="animate-shoply-glow absolute -left-28 -top-20 h-96 w-96 rounded-full bg-cyan-400/20 blur-3xl"></div><div class="animate-shoply-float-delayed absolute -right-20 top-20 h-[30rem] w-[30rem] rounded-full bg-indigo-900/35 blur-3xl"></div><div class="absolute inset-0 bg-[radial-gradient(#ffffff0a_1px,transparent_1px)] [background-size:24px_24px] opacity-60"></div><div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white/10 to-transparent"></div></div><div class="mx-auto grid max-w-[1240px] items-center gap-10 px-5 pt-28 pb-16 sm:px-8 sm:pt-36 sm:pb-20 lg:grid-cols-[1.05fr_1.15fr] lg:gap-12 lg:px-12 lg:pt-40 lg:pb-24"><div><div class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3.5 py-1 text-xs font-bold tracking-wider text-cyan-200 backdrop-blur-md">`);

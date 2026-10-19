@@ -1,4 +1,4 @@
-import { u as useI18n, r as useSettings, bg as useSeoMeta, _ as _sfc_main$S } from './server.mjs';
+import { u as useI18n, r as useSettings, bg as useSeoMeta, _ as _sfc_main$V } from './server.mjs';
 import __nuxt_component_1 from './PageCta-0XQxZIIo.mjs';
 import __nuxt_component_2 from './ShoplyConsultDialog-DsFYw0Dw.mjs';
 import { defineComponent, computed, unref, isRef, useSSRContext } from 'vue';
@@ -105,7 +105,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       twitterDescription: () => page.value.seoDescription
     });
     return (_ctx, _push, _parent, _attrs) => {
-      const _component_UIcon = _sfc_main$S;
+      const _component_UIcon = _sfc_main$V;
       const _component_PageCta = __nuxt_component_1;
       const _component_ShoplyConsultDialog = __nuxt_component_2;
       _push(`<!--[--><div class="bg-white"><section class="relative isolate overflow-hidden bg-[#2678ff] px-5 py-20 text-white sm:px-8 sm:py-28"><div class="absolute inset-0 -z-10"><div class="animate-shoply-glow absolute -left-24 top-0 h-80 w-80 rounded-full bg-cyan-300/25 blur-3xl"></div><div class="animate-shoply-float-delayed absolute -right-20 bottom-0 h-96 w-96 rounded-full bg-indigo-900/30 blur-3xl"></div></div><div class="mx-auto grid max-w-[1280px] items-center gap-12 lg:grid-cols-[1fr_0.86fr]"><div class="min-w-0"><p class="animate-shoply-fade-in text-sm font-black tracking-[0.18em] text-amber-300 uppercase">${ssrInterpolate(page.value.eyebrow)}</p><h1 class="animate-shoply-fade-in-up mt-5 max-w-4xl text-4xl font-black leading-[1.08] tracking-[-0.04em] sm:text-6xl">${ssrInterpolate(page.value.title)}</h1><p class="animate-shoply-fade-in-up animate-delay-100 mt-6 max-w-2xl text-base leading-8 text-blue-50/85 sm:text-lg">${ssrInterpolate(page.value.description)}</p><div class="animate-shoply-fade-in-up animate-delay-180 mt-8 flex flex-col gap-3 sm:flex-row"><a${ssrRenderAttr("href", unref(primaryUrl))} class="rounded-full bg-white px-7 py-3.5 text-center text-sm font-extrabold text-blue-700 shadow-xl shadow-blue-950/15 transition-all hover:-translate-y-0.5 hover:shadow-2xl active:scale-95">${ssrInterpolate(page.value.primary)}</a><a${ssrRenderAttr("href", unref(secondaryUrl))} class="rounded-full border border-white/25 bg-white/10 px-7 py-3.5 text-center text-sm font-extrabold text-white backdrop-blur-sm transition-all hover:bg-white/20 active:scale-95">${ssrInterpolate(page.value.secondary)}</a></div></div><div class="animate-shoply-slide-in-right animate-delay-150 relative mx-auto flex aspect-[4/3] w-full max-w-lg items-center justify-center rounded-[2.5rem] border border-white/25 bg-white/10 p-8 shadow-2xl backdrop-blur-sm"><div class="absolute inset-5 rounded-[2rem] border border-white/15"></div><div class="relative flex h-44 w-44 items-center justify-center rounded-[2.5rem] bg-white text-blue-600 shadow-2xl transition-transform duration-500 hover:scale-105 sm:h-56 sm:w-56">`);

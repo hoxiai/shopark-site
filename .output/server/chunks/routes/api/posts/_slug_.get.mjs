@@ -1,4 +1,4 @@
-import { cP as defineCachedEventHandler, f as getRouterParam, c as getRequestLocale, e as createError, b as db, aG as posts } from '../../../nitro/nitro.mjs';
+import { cQ as defineCachedEventHandler, f as getRouterParam, cR as resolvePostRequestLocaleHint, c as getRequestLocale, e as createError, b as db, aG as posts } from '../../../nitro/nitro.mjs';
 import { and, or, eq, sql } from 'drizzle-orm';
 import 'node:crypto';
 import 'crypto';
@@ -68,7 +68,12 @@ const _slug__get = defineCachedEventHandler(async (event) => {
   // 1 minute
   swr: true,
   name: "post-detail",
-  getKey: (event) => getRouterParam(event, "slug") || "unknown"
+  varies: ["cookie", "accept-language", "referer", "x-apay-ssr-path", "host", "x-forwarded-host"],
+  getKey: (event) => {
+    const slug = getRouterParam(event, "slug") || "unknown";
+    const localeKey = resolvePostRequestLocaleHint(event);
+    return `${slug}-l-${localeKey}`;
+  }
 });
 
 export { _slug__get as default };

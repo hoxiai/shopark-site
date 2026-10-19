@@ -1,4 +1,4 @@
-import { u as useI18n, _ as _sfc_main$S } from './server.mjs';
+import { u as useI18n, _ as _sfc_main$V } from './server.mjs';
 import { defineComponent, computed, ref, mergeProps, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderClass, ssrRenderAttr, ssrRenderComponent, ssrInterpolate, ssrRenderStyle, ssrRenderList } from 'vue/server-renderer';
 import '../nitro/nitro.mjs';
@@ -121,7 +121,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     const rootRef = ref(null);
     return (_ctx, _push, _parent, _attrs) => {
       var _a, _b;
-      const _component_UIcon = _sfc_main$S;
+      const _component_UIcon = _sfc_main$V;
       _push(`<div${ssrRenderAttrs(mergeProps({
         ref_key: "rootRef",
         ref: rootRef,

@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { d as defineEventHandler, e as createError, dc as setHeader, bt as getHeader, cS as setResponseStatus, dq as sendStream } from '../../nitro/nitro.mjs';
+import { d as defineEventHandler, e as createError, df as setHeader, bu as getHeader, cV as setResponseStatus, dt as sendStream } from '../../nitro/nitro.mjs';
 import { blob } from '@nuxthub/blob';
 import 'drizzle-orm';
 import 'node:crypto';

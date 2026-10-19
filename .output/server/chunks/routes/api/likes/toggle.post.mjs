@@ -1,4 +1,4 @@
-import { d as defineEventHandler, r as readBody, e as createError, b2 as getUserSession, c2 as ensureVisitorId, ch as getRequestIP, bt as getHeader, b as db, cp as likes, cq as syncLikesCount, ai as emitEvent } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, r as readBody, e as createError, b3 as getUserSession, c3 as ensureVisitorId, ci as getRequestIP, bu as getHeader, b as db, cq as likes, cr as syncLikesCount, ai as emitEvent } from '../../../nitro/nitro.mjs';
 import { and, eq, or, isNull } from 'drizzle-orm';
 import 'node:crypto';
 import 'crypto';

@@ -1,4 +1,4 @@
-import { _ as _sfc_main$S, N as __nuxt_component_3$4 } from './server.mjs';
+import { _ as _sfc_main$V, N as __nuxt_component_3$4 } from './server.mjs';
 import { defineComponent, ref, mergeProps, unref, withCtx, createVNode, toDisplayString, openBlock, createBlock, createCommentVNode, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrInterpolate, ssrRenderComponent, ssrRenderClass, ssrRenderAttr, ssrRenderStyle } from 'vue/server-renderer';
 import { u as useMarketplaceCopy } from './marketplace-C1k4z0uB.mjs';
@@ -87,7 +87,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       transition: "transform 1s cubic-bezier(0.25, 1, 0.5, 1)"
     });
     return (_ctx, _push, _parent, _attrs) => {
-      const _component_UIcon = _sfc_main$S;
+      const _component_UIcon = _sfc_main$V;
       const _component_NuxtLink = __nuxt_component_3$4;
       if (__props.entry.kind === "theme") {
         _push(`<div${ssrRenderAttrs(mergeProps({ class: "group relative flex h-full flex-col overflow-hidden rounded-[1.75rem] border border-slate-200/90 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-blue-400 hover:shadow-2xl hover:shadow-blue-900/15" }, _attrs))}><div class="flex items-center justify-between border-b border-slate-100 bg-slate-50/90 px-4 py-2.5 text-xs text-slate-400"><div class="flex items-center gap-1.5"><span class="h-2.5 w-2.5 rounded-full bg-rose-400/80"></span><span class="h-2.5 w-2.5 rounded-full bg-amber-400/80"></span><span class="h-2.5 w-2.5 rounded-full bg-emerald-400/80"></span></div><span class="font-mono text-[11px] text-slate-400 select-none truncate max-w-[150px]">${ssrInterpolate(__props.entry.slug)}.iqingpu.com</span><div class="flex items-center gap-1 text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">`);

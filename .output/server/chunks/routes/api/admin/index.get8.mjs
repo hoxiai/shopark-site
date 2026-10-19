@@ -1,4 +1,4 @@
-import { d as defineEventHandler, g as getQuery, aG as posts, b as db } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, g as getQuery, aG as posts, aH as normalizePostLocale, b as db } from '../../../nitro/nitro.mjs';
 import { eq, or, like, and, count, desc, sql } from 'drizzle-orm';
 import 'node:crypto';
 import 'crypto';
@@ -44,11 +44,18 @@ const index_get = defineEventHandler(async (event) => {
   const pageSize = Math.min(100, Math.max(1, parseInt(query.pageSize) || 15));
   const offset = (page - 1) * pageSize;
   const type = String(query.type || "").trim();
+  const locale = String(query.locale || "").trim();
   const status = String(query.status || "").trim();
   const search = String(query.search || "").trim();
   const conditions = [];
   if (type && type !== "all") {
     conditions.push(eq(posts.type, type));
+  }
+  if (locale && locale !== "all") {
+    const normalizedLocale = normalizePostLocale(locale);
+    if (normalizedLocale) {
+      conditions.push(eq(posts.locale, normalizedLocale));
+    }
   }
   if (status === "published") {
     conditions.push(eq(posts.isActive, true));

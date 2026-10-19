@@ -1,4 +1,4 @@
-import { u as useI18n, D as useLocaleRouter, r as useSettings, bh as useLocalizedSettings, J as useHead, bg as useSeoMeta, _ as _sfc_main$S, N as __nuxt_component_3$4 } from './server.mjs';
+import { u as useI18n, D as useLocaleRouter, r as useSettings, bh as useLocalizedSettings, J as useHead, bg as useSeoMeta, _ as _sfc_main$V, N as __nuxt_component_3$4 } from './server.mjs';
 import __nuxt_component_1 from './SectionHeading-D_ZqEZzo.mjs';
 import __nuxt_component_2 from './ShoplyConsultDialog-DsFYw0Dw.mjs';
 import { defineComponent, computed, ref, unref, withCtx, createVNode, toDisplayString, isRef, useSSRContext } from 'vue';
@@ -212,7 +212,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       twitterDescription: () => seoDescription.value
     });
     return (_ctx, _push, _parent, _attrs) => {
-      const _component_UIcon = _sfc_main$S;
+      const _component_UIcon = _sfc_main$V;
       const _component_SectionHeading = __nuxt_component_1;
       const _component_NuxtLink = __nuxt_component_3$4;
       const _component_ShoplyConsultDialog = __nuxt_component_2;

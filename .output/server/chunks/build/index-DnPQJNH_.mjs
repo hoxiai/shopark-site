@@ -1,4 +1,4 @@
-import { u as useI18n, D as useLocaleRouter, d as useFormatTime, y as useFetch, bg as useSeoMeta, _ as _sfc_main$S, N as __nuxt_component_3$4, z as _sfc_main$v } from './server.mjs';
+import { u as useI18n, D as useLocaleRouter, d as useFormatTime, y as useFetch, bg as useSeoMeta, _ as _sfc_main$V, N as __nuxt_component_3$4, z as _sfc_main$y } from './server.mjs';
 import { defineComponent, ref, withAsyncContext, computed, mergeProps, unref, withCtx, createVNode, openBlock, createBlock, toDisplayString, createCommentVNode, createTextVNode, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrInterpolate, ssrRenderList, ssrRenderComponent, ssrRenderAttr } from 'vue/server-renderer';
 import '../nitro/nitro.mjs';
@@ -108,9 +108,9 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       twitterDescription: () => t("shoply.blog.seoDescription")
     });
     return (_ctx, _push, _parent, _attrs) => {
-      const _component_UIcon = _sfc_main$S;
+      const _component_UIcon = _sfc_main$V;
       const _component_NuxtLink = __nuxt_component_3$4;
-      const _component_UPagination = _sfc_main$v;
+      const _component_UPagination = _sfc_main$y;
       _push(`<div${ssrRenderAttrs(mergeProps({ class: "bg-white" }, _attrs))}><section class="relative isolate overflow-hidden bg-gradient-to-b from-[#2678ff] via-[#1e6df0] to-[#155fc8] px-5 pt-28 pb-18 text-white sm:px-8 sm:pt-36 sm:pb-24 lg:px-12 lg:pt-40"><div class="pointer-events-none absolute inset-0 -z-10"><div class="animate-shoply-glow absolute -left-20 top-10 h-96 w-96 rounded-full bg-cyan-300/25 blur-3xl"></div><div class="animate-shoply-float-delayed absolute -right-20 bottom-10 h-[420px] w-[420px] rounded-full bg-indigo-900/30 blur-3xl"></div></div><div class="mx-auto max-w-[1280px]"><div class="max-w-3xl"><div class="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-xs font-bold tracking-wider text-blue-50 backdrop-blur-sm uppercase"><span class="h-2 w-2 rounded-full bg-amber-300 animate-pulse"></span><span>${ssrInterpolate(copy.value.eyebrow)}</span></div><h1 class="mt-5 text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl">${ssrInterpolate(copy.value.title)}</h1><p class="mt-5 text-base leading-8 text-blue-50/90 sm:text-lg">${ssrInterpolate(copy.value.description)}</p></div></div></section><section class="bg-slate-50/70 px-5 py-16 sm:px-8 sm:py-20 lg:px-12"><div class="mx-auto max-w-[1280px]">`);
       if (unref(status) === "pending" && !posts.value.length) {
         _push(`<div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3"><!--[-->`);

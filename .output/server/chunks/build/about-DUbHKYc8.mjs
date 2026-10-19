@@ -1,5 +1,5 @@
-import { dr as buildAssetsURL } from '../nitro/nitro.mjs';
-import { u as useI18n, r as useSettings, D as useLocaleRouter, bg as useSeoMeta, bk as useJsonLd, _ as _sfc_main$S } from './server.mjs';
+import { du as buildAssetsURL } from '../nitro/nitro.mjs';
+import { u as useI18n, r as useSettings, D as useLocaleRouter, bg as useSeoMeta, bk as useJsonLd, _ as _sfc_main$V } from './server.mjs';
 import ShoplyLeadForm from './ShoplyLeadForm-BPVVz4Cl.mjs';
 import { defineComponent, computed, ref, mergeProps, unref, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrInterpolate, ssrRenderAttr, ssrRenderComponent, ssrRenderList } from 'vue/server-renderer';
@@ -154,7 +154,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     ]));
     return (_ctx, _push, _parent, _attrs) => {
       var _a, _b, _c, _d, _e, _f, _g, _h, _i, _j, _k, _l, _m, _n, _o, _p, _q, _r, _s, _t, _u, _v, _w, _x, _y, _z;
-      const _component_UIcon = _sfc_main$S;
+      const _component_UIcon = _sfc_main$V;
       const _component_ShoplyLeadForm = ShoplyLeadForm;
       _push(`<div${ssrRenderAttrs(mergeProps({ class: "bg-white font-sans text-slate-900 selection:bg-blue-200" }, _attrs))}><section class="relative isolate overflow-hidden bg-gradient-to-b from-[#2678ff] via-[#1e6df0] to-[#155fc8] px-5 pt-28 pb-20 text-white sm:px-8 sm:pt-36 sm:pb-28 lg:px-12 lg:pt-40"><div class="pointer-events-none absolute inset-0 -z-10"><div class="animate-shoply-glow absolute -left-20 top-10 h-96 w-96 rounded-full bg-cyan-300/25 blur-3xl"></div><div class="animate-shoply-float-delayed absolute -right-20 bottom-10 h-[480px] w-[480px] rounded-full bg-indigo-900/30 blur-3xl"></div><div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-blue-800/20 to-transparent"></div></div><div class="mx-auto max-w-[1360px]"><div class="mx-auto max-w-4xl text-center"><div class="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-xs font-bold tracking-wider text-blue-50 backdrop-blur-sm"><span class="h-2 w-2 rounded-full bg-amber-300 animate-pulse"></span> ${ssrInterpolate(copy.value.hero.badge)}</div><h1 class="mt-6 text-4xl font-black leading-[1.15] tracking-tight sm:text-5xl lg:text-6xl">${ssrInterpolate(copy.value.hero.titleMain)} <span class="mt-2 block text-amber-300">${ssrInterpolate(copy.value.hero.titleHighlight)}</span></h1><p class="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-blue-50/90 sm:text-lg sm:leading-8">`);
       if (companyName.value && companyName.value !== "Shoply") {

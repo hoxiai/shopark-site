@@ -1,4 +1,4 @@
-import { u as useI18n, r as useSettings, _ as _sfc_main$S } from './server.mjs';
+import { u as useI18n, r as useSettings, _ as _sfc_main$V } from './server.mjs';
 import { _ as __nuxt_component_1 } from './CaptchaSlider-BJqv3jPw.mjs';
 import { defineComponent, useId, computed, reactive, ref, unref, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent, ssrInterpolate, ssrRenderAttr, ssrIncludeBooleanAttr } from 'vue/server-renderer';
@@ -133,7 +133,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       }
     };
     return (_ctx, _push, _parent, _attrs) => {
-      const _component_UIcon = _sfc_main$S;
+      const _component_UIcon = _sfc_main$V;
       const _component_CaptchaSlider = __nuxt_component_1;
       _push(`<div${ssrRenderAttrs(_attrs)}>`);
       if (submitted.value) {

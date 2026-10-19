@@ -1,4 +1,4 @@
-import { n as _sfc_main$C, i as _sfc_main$N } from './server.mjs';
+import { n as _sfc_main$F, i as _sfc_main$Q } from './server.mjs';
 import ShoplyLeadForm from './ShoplyLeadForm-BPVVz4Cl.mjs';
 import { defineComponent, useModel, mergeProps, withCtx, createVNode, toDisplayString, mergeModels, useSSRContext } from 'vue';
 import { ssrRenderComponent, ssrInterpolate } from 'vue/server-renderer';
@@ -76,8 +76,8 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
   setup(__props) {
     const isOpen = useModel(__props, "open");
     return (_ctx, _push, _parent, _attrs) => {
-      const _component_UModal = _sfc_main$C;
-      const _component_UButton = _sfc_main$N;
+      const _component_UModal = _sfc_main$F;
+      const _component_UButton = _sfc_main$Q;
       const _component_ShoplyLeadForm = ShoplyLeadForm;
       _push(ssrRenderComponent(_component_UModal, mergeProps({
         open: isOpen.value,
