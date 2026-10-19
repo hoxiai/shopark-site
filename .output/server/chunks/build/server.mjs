@@ -1,5 +1,5 @@
 import process from 'node:process';globalThis._importMeta_=globalThis._importMeta_||{url:"file:///_entry.js",env:process.env};import * as vue from 'vue';
-import { defineComponent, ref, renderSlot, useSlots, useId as useId$1, useAttrs, computed, unref, mergeProps, withCtx, openBlock, createBlock, createVNode, resolveDynamicComponent, createTextVNode, toDisplayString as toDisplayString$1, createCommentVNode, hasInjectionContext, inject, h, watchPostEffect, createElementBlock, normalizeStyle, watch, provide, shallowRef, toValue, getCurrentInstance, nextTick, watchEffect, reactive, toRefs, Fragment, renderList, useModel, mergeModels, customRef, mergeDefaults, markRaw, toRef as toRef$1, camelize as camelize$1, Teleport, toHandlerKey, useTemplateRef, getCurrentScope, onScopeDispose, shallowReadonly, cloneVNode, isRef, toHandlers, normalizeProps, guardReactiveProps, readonly, withKeys, withModifiers, resolveComponent, onServerPrefetch, Comment, defineAsyncComponent, withAsyncContext, createSlots, resolveDirective, createElementVNode, effectScope, useSSRContext, toRaw, shallowReactive, Suspense, createApp, Text, onErrorCaptured, isReadonly, isShallow, isReactive } from 'vue';
+import { defineComponent, ref, renderSlot, useSlots, useId as useId$1, useAttrs, computed, unref, mergeProps, withCtx, openBlock, createBlock, createVNode, resolveDynamicComponent, createTextVNode, toDisplayString as toDisplayString$1, createCommentVNode, hasInjectionContext, inject, h, watchPostEffect, createElementBlock, normalizeStyle, watch, provide, shallowRef, toValue, getCurrentInstance, nextTick, watchEffect, reactive, toRefs, Fragment, renderList, useModel, mergeModels, customRef, mergeDefaults, markRaw, toRef as toRef$1, camelize as camelize$1, Teleport, toHandlerKey, useTemplateRef, getCurrentScope, onScopeDispose, shallowReadonly, isRef, cloneVNode, toHandlers, normalizeProps, guardReactiveProps, readonly, withKeys, withModifiers, resolveComponent, onServerPrefetch, Comment, defineAsyncComponent, withAsyncContext, createSlots, resolveDirective, createElementVNode, effectScope, useSSRContext, toRaw, shallowReactive, Suspense, createApp, Text, onErrorCaptured, isReadonly, isShallow, isReactive } from 'vue';
 import { eq as serialize, er as createPricingContext, cV as setResponseStatus$1, es as getRequestURL, et as defu, eu as isEqual$1, ev as getErrorRequestId, e as createError$1, ew as resolveActiveTheme, ex as SEO_LOCALE_LANGUAGE, ey as upperFirst, ct as quoteProductPrice, ez as defuFn, eA as appendResponseHeader, eB as parse$1, cl as getRequestHeader, eC as errorRecord, eD as errorData, eE as resolveLocalizedSetting, eF as sanitizeStatusCode, eG as getContext, eH as setCookie, cD as getCookie, eI as deleteCookie, cO as getRequestHeaders, eJ as $fetch$1, eK as baseURL, eL as hash, eM as createHooks, eN as executeAsync, eO as normalizeSiteOrigin, eP as stripLocalePrefix$1, dr as classifySeoRoute, dq as seoRouteRegistry, eQ as localePathForSeo, eR as safeJsonLd, eS as localeDomainUrl, eT as getRequestProtocol, eU as themeHostConfigs } from '../nitro/nitro.mjs';
 import { useRoute as useRoute$1, useRouter as useRouter$1, RouterView, isNavigationFailure, createMemoryHistory, createRouter, START_LOCATION } from 'vue-router';
 import { Icon, getIcon, loadIcon as loadIcon$1, _api, addAPIProvider, setCustomIconsLoader } from '@iconify/vue';
@@ -1117,7 +1117,7 @@ const _routes = [
     name: "admin-tickets",
     path: "/admin/tickets",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./tickets-UkQ9OHOK.mjs')
+    component: () => import('./tickets-CLcwIfHy.mjs')
   },
   {
     name: "admin-topups",
@@ -5626,7 +5626,7 @@ const cfg0 = defineAppConfig({
   }
 });
 const inlineConfig = {
-  "appVersion": "1.1.7",
+  "appVersion": "1.1.8",
   "nuxt": {},
   "ui": {
     "colors": {
@@ -24879,7 +24879,7 @@ const corePageModules = Object.fromEntries(Object.entries(/* @__PURE__ */ Object
   "/core/pages/user/tokens/index.vue": __vite_glob_0_10
 })).map(([file, module]) => [file.replace("/", "../"), module]));
 const themePageModules = {
-  ...Object.fromEntries(Object.entries(/* @__PURE__ */ Object.assign({ "/themes/shoply/pages/about.vue": () => import('./about-DJEteRnW.mjs'), "/themes/shoply/pages/apps/[slug].vue": () => import('./_slug_-ApAZgqKs.mjs'), "/themes/shoply/pages/apps/index.vue": () => import('./index-D6h0Al0G.mjs'), "/themes/shoply/pages/auth/forgot-password.vue": () => import('./forgot-password-BU1nNoSL.mjs'), "/themes/shoply/pages/auth/login.vue": () => import('./login-M9XasK1-.mjs'), "/themes/shoply/pages/auth/register.vue": () => import('./register-Ck6qsPV_.mjs'), "/themes/shoply/pages/auth/reset-password.vue": () => import('./reset-password-sjeGVtGn.mjs'), "/themes/shoply/pages/blog/[slug].vue": () => import('./_slug_-DtNzuqJN.mjs'), "/themes/shoply/pages/blog/index.vue": () => import('./index-DnPQJNH_.mjs'), "/themes/shoply/pages/cases/[slug].vue": () => import('./_slug_-DnhCHFWi.mjs'), "/themes/shoply/pages/cases/index.vue": () => import('./index-Dx8SViDJ.mjs'), "/themes/shoply/pages/index.vue": () => import('./index-D3BMptPj.mjs'), "/themes/shoply/pages/page/about.vue": () => import('./about-DUbHKYc8.mjs'), "/themes/shoply/pages/page/amazon-store.vue": () => import('./amazon-store-CK6gqL4J.mjs'), "/themes/shoply/pages/page/b2b-website.vue": () => import('./b2b-website-DnH2rnIM.mjs'), "/themes/shoply/pages/page/b2c-store.vue": () => import('./b2c-store-DHCmXJdk.mjs'), "/themes/shoply/pages/page/cookies.vue": () => import('./cookies-DZR9GHzx.mjs'), "/themes/shoply/pages/page/custom.vue": () => import('./custom-DV1QOqki.mjs'), "/themes/shoply/pages/page/install.vue": () => import('./install-DXfMvdA8.mjs'), "/themes/shoply/pages/page/migration.vue": () => import('./migration-BN24jcj-.mjs'), "/themes/shoply/pages/page/pricing.vue": () => import('./pricing-DAPfjZ53.mjs'), "/themes/shoply/pages/page/privacy.vue": () => import('./privacy-2EWwK7ca.mjs'), "/themes/shoply/pages/page/solutions.vue": () => import('./solutions-WTcpNqjf.mjs'), "/themes/shoply/pages/page/store-design.vue": () => import('./store-design-DfwENlEh.mjs'), "/themes/shoply/pages/page/terms.vue": () => import('./terms-BXmvJ4V1.mjs'), "/themes/shoply/pages/page/weidian.vue": () => import('./weidian-B95VOdd6.mjs'), "/themes/shoply/pages/page/wholesale.vue": () => import('./wholesale-hcL6lRBs.mjs'), "/themes/shoply/pages/pricing.vue": () => import('./pricing-Br0vkRPd.mjs'), "/themes/shoply/pages/solutions/[slug].vue": () => import('./_slug_-YLfYdaH4.mjs'), "/themes/shoply/pages/solutions/index.vue": () => import('./index-CbkVzZSi.mjs'), "/themes/shoply/pages/themes/[slug].vue": () => import('./_slug_-L9Z0OAoN.mjs'), "/themes/shoply/pages/themes/detail/[slug].vue": () => import('./_slug_-CCxcqPOs.mjs'), "/themes/shoply/pages/themes/index.vue": () => import('./index-C2SS8W_W.mjs'), "/themes/shoply/pages/user/account.vue": () => import('./account-8T14_wKu.mjs'), "/themes/shoply/pages/user/dashboard.vue": () => import('./dashboard-QmPfjXct.mjs'), "/themes/shoply/pages/user/index.vue": () => import('./index-ztQE9yFV.mjs'), "/themes/shoply/pages/user/invoice/[order_id].vue": () => import('./_order_id_-DN2rAfw_.mjs'), "/themes/shoply/pages/user/layout.vue": () => import('./layout-CCRU0UrH.mjs'), "/themes/shoply/pages/user/orders/[order_id].vue": () => import('./_order_id_-CODxk6pw.mjs'), "/themes/shoply/pages/user/orders/index.vue": () => import('./index-Cm8yyg7d.mjs'), "/themes/shoply/pages/user/stores/index.vue": () => import('./index-MIUvqvnY.mjs'), "/themes/shoply/pages/user/subscription.vue": () => import('./subscription-BNbZ6_Y3.mjs') })).map(([file, module]) => [file.replace("/", "../"), module]))
+  ...Object.fromEntries(Object.entries(/* @__PURE__ */ Object.assign({ "/themes/shoply/pages/about.vue": () => import('./about-DJEteRnW.mjs'), "/themes/shoply/pages/apps/[slug].vue": () => import('./_slug_-ApAZgqKs.mjs'), "/themes/shoply/pages/apps/index.vue": () => import('./index-D6h0Al0G.mjs'), "/themes/shoply/pages/auth/forgot-password.vue": () => import('./forgot-password-DqBWRLpA.mjs'), "/themes/shoply/pages/auth/login.vue": () => import('./login-DtEtFj41.mjs'), "/themes/shoply/pages/auth/register.vue": () => import('./register-CzLBuV5l.mjs'), "/themes/shoply/pages/auth/reset-password.vue": () => import('./reset-password-Ce2YbY8X.mjs'), "/themes/shoply/pages/blog/[slug].vue": () => import('./_slug_-DtNzuqJN.mjs'), "/themes/shoply/pages/blog/index.vue": () => import('./index-DnPQJNH_.mjs'), "/themes/shoply/pages/cases/[slug].vue": () => import('./_slug_-DnhCHFWi.mjs'), "/themes/shoply/pages/cases/index.vue": () => import('./index-Dx8SViDJ.mjs'), "/themes/shoply/pages/index.vue": () => import('./index-D3BMptPj.mjs'), "/themes/shoply/pages/page/about.vue": () => import('./about-DUbHKYc8.mjs'), "/themes/shoply/pages/page/amazon-store.vue": () => import('./amazon-store-CK6gqL4J.mjs'), "/themes/shoply/pages/page/b2b-website.vue": () => import('./b2b-website-DnH2rnIM.mjs'), "/themes/shoply/pages/page/b2c-store.vue": () => import('./b2c-store-DHCmXJdk.mjs'), "/themes/shoply/pages/page/cookies.vue": () => import('./cookies-DZR9GHzx.mjs'), "/themes/shoply/pages/page/custom.vue": () => import('./custom-DV1QOqki.mjs'), "/themes/shoply/pages/page/install.vue": () => import('./install-DXfMvdA8.mjs'), "/themes/shoply/pages/page/migration.vue": () => import('./migration-BN24jcj-.mjs'), "/themes/shoply/pages/page/pricing.vue": () => import('./pricing-DZyUJYSl.mjs'), "/themes/shoply/pages/page/privacy.vue": () => import('./privacy-2EWwK7ca.mjs'), "/themes/shoply/pages/page/solutions.vue": () => import('./solutions-WTcpNqjf.mjs'), "/themes/shoply/pages/page/store-design.vue": () => import('./store-design-DfwENlEh.mjs'), "/themes/shoply/pages/page/terms.vue": () => import('./terms-BXmvJ4V1.mjs'), "/themes/shoply/pages/page/weidian.vue": () => import('./weidian-B95VOdd6.mjs'), "/themes/shoply/pages/page/wholesale.vue": () => import('./wholesale-hcL6lRBs.mjs'), "/themes/shoply/pages/pricing.vue": () => import('./pricing-Br0vkRPd.mjs'), "/themes/shoply/pages/solutions/[slug].vue": () => import('./_slug_-YLfYdaH4.mjs'), "/themes/shoply/pages/solutions/index.vue": () => import('./index-CbkVzZSi.mjs'), "/themes/shoply/pages/themes/[slug].vue": () => import('./_slug_-L9Z0OAoN.mjs'), "/themes/shoply/pages/themes/detail/[slug].vue": () => import('./_slug_-CCxcqPOs.mjs'), "/themes/shoply/pages/themes/index.vue": () => import('./index-C2SS8W_W.mjs'), "/themes/shoply/pages/user/account.vue": () => import('./account-D2tu0TR7.mjs'), "/themes/shoply/pages/user/dashboard.vue": () => import('./dashboard-D8pFZgcs.mjs'), "/themes/shoply/pages/user/index.vue": () => import('./index-ztQE9yFV.mjs'), "/themes/shoply/pages/user/invoice/[order_id].vue": () => import('./_order_id_-BB4tP1gw.mjs'), "/themes/shoply/pages/user/layout.vue": () => import('./layout-_CA_6Nxn.mjs'), "/themes/shoply/pages/user/notifications.vue": () => import('./notifications-C5zQiIvp.mjs'), "/themes/shoply/pages/user/orders/[order_id].vue": () => import('./_order_id_-DBDMJhyI.mjs'), "/themes/shoply/pages/user/orders/index.vue": () => import('./index-B_tx2X_7.mjs'), "/themes/shoply/pages/user/stores/index.vue": () => import('./index-Dc5T7jDL.mjs'), "/themes/shoply/pages/user/subscription.vue": () => import('./subscription-BffmmvwF.mjs'), "/themes/shoply/pages/user/tickets.vue": () => import('./tickets-C619n_HL.mjs') })).map(([file, module]) => [file.replace("/", "../"), module]))
 };
 const themeAdminManifestModules = {
   ...Object.fromEntries(Object.entries(/* @__PURE__ */ Object.assign({
@@ -24896,7 +24896,7 @@ const themeAdminLocaleZhModules = {
   ...Object.fromEntries(Object.entries(/* @__PURE__ */ Object.assign({})).map(([file, module]) => [file.replace("/", "../"), module]))
 };
 const themeLayoutLoaders = {
-  "shoply": () => import('./default-DOAtRn3e.mjs')
+  "shoply": () => import('./default-BzWGic6d.mjs')
 };
 const schemaVersion$2 = 1;
 const id$2 = "apps";
@@ -24929,7 +24929,7 @@ const defaultEnabled$1 = true;
 const database$1 = { "migrations": [] };
 const capabilities$1 = [{ "key": "stores", "label": "Stores & Operations", "labelZh": "店铺与经营", "editable": true }, { "key": "connection", "label": "Shoply Connection", "labelZh": "连接与自检", "editable": true }, { "key": "licenses", "label": "Subscription Licenses", "labelZh": "订阅权益同步", "editable": true }, { "key": "settings", "label": "Platform Settings", "labelZh": "平台设置", "editable": true }, { "key": "applications", "label": "Applications", "labelZh": "应用管理", "editable": true }, { "key": "themes", "label": "Themes", "labelZh": "主题管理", "editable": true }, { "key": "leads", "label": "Consulting Leads", "labelZh": "咨询线索", "editable": true }];
 const adminPages$1 = [{ "key": "stores", "title": "Stores & Operations", "titleZh": "店铺与经营", "description": "Monitor opened stores, regional distribution, and store operating metrics across Shoply.", "descriptionZh": "查看全平台已开设店铺、开设地区/币种/类目分布及各店铺商品、订单、GMV 经营情况。", "component": "stores.vue", "capability": "stores", "icon": "ph:storefront", "order": 39 }, { "key": "connection", "title": "Shoply Connection", "titleZh": "服务连接", "description": "Check partner API connection, HMAC signing, and system readiness.", "descriptionZh": "查看 Shoply 合作方接口连接、HMAC 签名与接入自检。", "component": "connection.vue", "capability": "connection", "icon": "ph:plugs-connected", "order": 43 }, { "key": "licenses", "title": "Subscription Licenses", "titleZh": "订阅权益", "description": "Manage APay subscriptions mapped to Shoply store licenses and sync status.", "descriptionZh": "管理 APay 订阅与 Shoply 店铺权益映射及同步状态。", "component": "licenses.vue", "capability": "licenses", "icon": "ph:arrows-clockwise", "order": 44 }, { "key": "leads", "title": "Consulting Leads", "titleZh": "咨询线索", "description": "Manage website consulting leads, follow-up status, and sales notes.", "descriptionZh": "查看并跟进官网解决方案与定制开发咨询线索。", "component": "leads.vue", "capability": "leads", "icon": "ph:chat-centered-text", "order": 45 }, { "key": "settings", "title": "Platform Settings", "titleZh": "平台设置", "component": "settings.vue", "capability": "settings", "icon": "ph:sliders-horizontal", "order": 40 }, { "key": "applications", "title": "Applications", "titleZh": "应用管理", "component": "applications.vue", "capability": "applications", "icon": "ph:squares-four", "order": 41 }, { "key": "themes", "title": "Themes", "titleZh": "主题管理", "component": "themes.vue", "capability": "themes", "icon": "ph:paint-brush", "order": 42 }];
-const adminApis$1 = [{ "method": "get", "path": "stores/list", "handler": "stores/list.get.ts", "capability": "stores" }, { "method": "get", "path": "leads/list", "handler": "leads/list.get.ts", "capability": "leads" }, { "method": "post", "path": "leads/save", "handler": "leads/save.post.ts", "capability": "leads" }, { "method": "get", "path": "connection/status", "handler": "connection/status.get.ts", "capability": "connection" }, { "method": "post", "path": "connection/test", "handler": "connection/test.post.ts", "capability": "connection" }, { "method": "get", "path": "readiness/status", "handler": "readiness/status.get.ts", "capability": "connection" }, { "method": "get", "path": "licenses/list", "handler": "licenses/list.get.ts", "capability": "licenses" }, { "method": "get", "path": "licenses/customers", "handler": "licenses/customers.get.ts", "capability": "licenses" }, { "method": "post", "path": "licenses/plan", "handler": "licenses/plan.post.ts", "capability": "licenses" }, { "method": "post", "path": "licenses/sync", "handler": "licenses/sync.post.ts", "capability": "licenses" }, { "method": "post", "path": "licenses/reconcile", "handler": "licenses/reconcile.post.ts", "capability": "licenses" }, { "method": "get", "path": "licenses/reconcile-status", "handler": "licenses/reconcile-status.get.ts", "capability": "licenses" }, { "method": "get", "path": "settings/status", "handler": "settings/status.get.ts", "capability": "settings" }, { "method": "post", "path": "settings/save", "handler": "settings/save.post.ts", "capability": "settings" }, { "method": "get", "path": "applications/list", "handler": "applications/list.get.ts", "capability": "applications" }, { "method": "post", "path": "applications/register", "handler": "applications/register.post.ts", "capability": "applications" }, { "method": "post", "path": "applications/rule", "handler": "applications/rule.post.ts", "capability": "applications" }, { "method": "get", "path": "themes/list", "handler": "themes/list.get.ts", "capability": "themes" }, { "method": "post", "path": "themes/register", "handler": "themes/register.post.ts", "capability": "themes" }, { "method": "post", "path": "themes/rule", "handler": "themes/rule.post.ts", "capability": "themes" }];
+const adminApis$1 = [{ "method": "get", "path": "stores/list", "handler": "stores/list.get.ts", "capability": "stores" }, { "method": "get", "path": "leads/list", "handler": "leads/list.get.ts", "capability": "leads" }, { "method": "post", "path": "leads/save", "handler": "leads/save.post.ts", "capability": "leads" }, { "method": "get", "path": "connection/status", "handler": "connection/status.get.ts", "capability": "connection" }, { "method": "post", "path": "connection/test", "handler": "connection/test.post.ts", "capability": "connection" }, { "method": "get", "path": "readiness/status", "handler": "readiness/status.get.ts", "capability": "connection" }, { "method": "post", "path": "readiness/setup-scheduler", "handler": "readiness/setup-scheduler.post.ts", "capability": "connection" }, { "method": "get", "path": "licenses/list", "handler": "licenses/list.get.ts", "capability": "licenses" }, { "method": "get", "path": "licenses/customers", "handler": "licenses/customers.get.ts", "capability": "licenses" }, { "method": "post", "path": "licenses/plan", "handler": "licenses/plan.post.ts", "capability": "licenses" }, { "method": "post", "path": "licenses/sync", "handler": "licenses/sync.post.ts", "capability": "licenses" }, { "method": "post", "path": "licenses/reconcile", "handler": "licenses/reconcile.post.ts", "capability": "licenses" }, { "method": "get", "path": "licenses/reconcile-status", "handler": "licenses/reconcile-status.get.ts", "capability": "licenses" }, { "method": "get", "path": "settings/status", "handler": "settings/status.get.ts", "capability": "settings" }, { "method": "post", "path": "settings/save", "handler": "settings/save.post.ts", "capability": "settings" }, { "method": "get", "path": "applications/list", "handler": "applications/list.get.ts", "capability": "applications" }, { "method": "post", "path": "applications/register", "handler": "applications/register.post.ts", "capability": "applications" }, { "method": "post", "path": "applications/rule", "handler": "applications/rule.post.ts", "capability": "applications" }, { "method": "get", "path": "themes/list", "handler": "themes/list.get.ts", "capability": "themes" }, { "method": "post", "path": "themes/register", "handler": "themes/register.post.ts", "capability": "themes" }, { "method": "post", "path": "themes/rule", "handler": "themes/rule.post.ts", "capability": "themes" }];
 const __vite_glob_0_1 = {
   schemaVersion: schemaVersion$1,
   id: id$1,
@@ -31308,6 +31308,7 @@ const _sfc_main$h = /* @__PURE__ */ defineComponent({
   async setup(__props) {
     let __temp, __restore;
     const { locale } = useI18n();
+    const toast = useToast();
     const isZh = computed(() => String(locale.value || "").startsWith("zh"));
     const text2 = computed(() => isZh.value ? {
       title: "Shoply 店铺服务连接",
@@ -31323,13 +31324,15 @@ const _sfc_main$h = /* @__PURE__ */ defineComponent({
       testFailed: "接口响应失败",
       loadFailed: "加载状态失败",
       readinessTitle: "接入自检",
-      readinessDesc: "实时检查合作方配置、补推定时任务、线索收件箱与定价套餐四项基础依赖。",
+      readinessDesc: "实时检查合作方配置、补推定时任务、到期提醒定时任务、线索收件箱与定价套餐五项基础依赖。",
+      setupSchedulerBtn: "一键配置定时任务",
+      schedulerSetupToast: "已自动配置并启用权益补推（每5分钟）与到期提醒（每天）定时任务",
       setupTitle: "上线排查步骤",
       setupSteps: [
         "环境变量：配置 SHOPLY_PARTNER_API_URL 与 SHOPLY_PARTNER_SECRET（至少 32 字符）。",
         "Shoply 服务端：把同一个密钥设为 SHOPLY_APAY_PARTNER_SECRET，并执行 Saas 应用的数据迁移。",
         "商品预设：在订阅商品的元数据预设里加 shoply_plan_code 与 shoply_store_limit，并在套餐商品上填写。",
-        "定时任务：在 /admin/scheduler 添加 /api/shoply/cron/license-sync 定时补推，确保到期与退款收回可自动核对。"
+        "定时任务：点击上方「一键配置定时任务」或在 /admin/scheduler 添加 /api/shoply/cron/license-sync 与 /api/shoply/cron/expiry-reminders。"
       ]
     } : {
       title: "Shoply Connection",
@@ -31345,17 +31348,20 @@ const _sfc_main$h = /* @__PURE__ */ defineComponent({
       testFailed: "Partner handshake failed",
       loadFailed: "Failed to load status",
       readinessTitle: "Readiness Diagnostics",
-      readinessDesc: "Checks partner connection, reconciliation cron, leads inbox, and subscription product configuration.",
+      readinessDesc: "Checks partner connection, reconciliation cron, expiry reminder cron, leads inbox, and subscription product configuration.",
+      setupSchedulerBtn: "Auto-Setup Cron Jobs",
+      schedulerSetupToast: "Configured and enabled license-sync (5m) and expiry-reminders (daily) scheduler jobs",
       setupTitle: "Setup Checklist",
       setupSteps: [
         "Environment: Set SHOPLY_PARTNER_API_URL and SHOPLY_PARTNER_SECRET (min 32 characters).",
         "Shoply Server: Set matching SHOPLY_APAY_PARTNER_SECRET and run Saas plugin migrations.",
         "Product Metadata: Configure shoply_plan_code and shoply_store_limit on subscription products.",
-        "Scheduler: Add /api/shoply/cron/license-sync in /admin/scheduler to keep store statuses synced."
+        'Scheduler: Click "Auto-Setup Cron Jobs" above or add /api/shoply/cron/license-sync and /api/shoply/cron/expiry-reminders in /admin/scheduler.'
       ]
     });
     const testing = ref(false);
     const testResult = ref(null);
+    const settingUpScheduler = ref(false);
     const { data: connectionRes, pending, error, refresh } = ([__temp, __restore] = withAsyncContext(() => useFetch(
       "/api/admin/plugins/shoply/connection/status",
       "$dqgG6t8RkK"
@@ -31380,6 +31386,21 @@ const _sfc_main$h = /* @__PURE__ */ defineComponent({
         testing.value = false;
       }
     };
+    const setupScheduler = async () => {
+      settingUpScheduler.value = true;
+      try {
+        await $fetch("/api/admin/plugins/shoply/readiness/setup-scheduler", { method: "POST" });
+        toast.add({ title: text2.value.schedulerSetupToast, color: "success" });
+        await refreshReadiness();
+      } catch (err) {
+        toast.add({
+          title: err?.data?.statusMessage || err?.message || "Failed to setup scheduler jobs",
+          color: "error"
+        });
+      } finally {
+        settingUpScheduler.value = false;
+      }
+    };
     const statusIcon = (status) => {
       if (status === "ok") return "ph:check-circle-fill";
       if (status === "warn") return "ph:warning-circle-fill";
@@ -31394,12 +31415,24 @@ const _sfc_main$h = /* @__PURE__ */ defineComponent({
       const map = {
         partner: { zh: "合作方接口连接", en: "Partner Connection" },
         cron: { zh: "权益补推定时任务", en: "Reconcile Scheduler" },
+        expiry_cron: { zh: "到期提醒定时任务 (7天/1天邮件)", en: "Expiry Reminder Scheduler (7d/1d Email)" },
         leads: { zh: "官网咨询线索配置", en: "Website Leads Inbox" },
         plans: { zh: "Shoply 定价套餐配置", en: "Pricing Plans Metadata" }
       };
       return map[key] ? isZh.value ? map[key].zh : map[key].en : key;
     };
-    const checkReason = (check) => check.reason === "catalog_mismatch" ? isZh.value ? "套餐价格、周期或等级与规范不一致" : "Plan price, cycle or rank conflicts with the catalog" : check.reason || check.status;
+    const checkReason = (check) => {
+      if (check.reason === "catalog_mismatch") {
+        return isZh.value ? "套餐价格、周期或等级与规范不一致" : "Plan price, cycle or rank conflicts with the catalog";
+      }
+      if (check.reason === "job_missing") {
+        return isZh.value ? "尚未配置定时任务（可点击右上角一键配置）" : "Cron job not configured (click Auto-Setup Cron Jobs above)";
+      }
+      if (check.reason === "ready") {
+        return isZh.value ? "已就绪，等待下次调度触发" : "Configured and ready for next scheduled run";
+      }
+      return check.reason || check.status;
+    };
     const formatDetail = (check) => {
       if (!check.detail) return "";
       return Object.entries(check.detail).filter(([_, v]) => v !== void 0 && v !== null && v !== "").map(([k, v]) => `${k}: ${v}`).join("  ·  ");
@@ -31491,10 +31524,30 @@ const _sfc_main$h = /* @__PURE__ */ defineComponent({
         }
         _push(`</div>`);
       }
-      _push(`</section><section class="rounded-2xl border border-gray-200 bg-white p-6 dark:border-white/10 dark:bg-[#121214]"><div class="flex items-start justify-between gap-4"><div><h2 class="text-base font-semibold text-gray-900 dark:text-white">${ssrInterpolate(text2.value.readinessTitle)}</h2><p class="mt-1 text-sm text-gray-500 dark:text-gray-400">${ssrInterpolate(text2.value.readinessDesc)}</p></div>`);
+      _push(`</section><section class="rounded-2xl border border-gray-200 bg-white p-6 dark:border-white/10 dark:bg-[#121214]"><div class="flex flex-wrap items-start justify-between gap-4"><div><h2 class="text-base font-semibold text-gray-900 dark:text-white">${ssrInterpolate(text2.value.readinessTitle)}</h2><p class="mt-1 text-sm text-gray-500 dark:text-gray-400">${ssrInterpolate(text2.value.readinessDesc)}</p></div><div class="flex flex-wrap items-center gap-2">`);
+      _push(ssrRenderComponent(_component_UButton, {
+        color: "primary",
+        variant: "soft",
+        size: "sm",
+        icon: "ph:clock-clockwise-bold",
+        loading: settingUpScheduler.value,
+        onClick: setupScheduler
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`${ssrInterpolate(text2.value.setupSchedulerBtn)}`);
+          } else {
+            return [
+              createTextVNode(toDisplayString$1(text2.value.setupSchedulerBtn), 1)
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
       _push(ssrRenderComponent(_component_UButton, {
         color: "neutral",
         variant: "ghost",
+        size: "sm",
         icon: "ph:arrow-clockwise",
         loading: unref(readinessPending),
         onClick: ($event) => unref(refreshReadiness)()
@@ -31510,7 +31563,7 @@ const _sfc_main$h = /* @__PURE__ */ defineComponent({
         }),
         _: 1
       }, _parent));
-      _push(`</div>`);
+      _push(`</div></div>`);
       if (!readiness.value && !unref(readinessError)) {
         _push(ssrRenderComponent(_component_USkeleton, { class: "mt-4 h-40 w-full" }, null, _parent));
       } else if (unref(readinessError)) {
@@ -31565,6 +31618,7 @@ const _sfc_main$g = /* @__PURE__ */ defineComponent({
       title: "官网咨询线索",
       subtitle: "集中管理来自官网解决方案、定制开发与预约演示表单的客户咨询线索，支持跟进状态流转与销售备注。",
       refresh: "刷新列表",
+      exportCsv: "导出 CSV",
       searchPlaceholder: "搜索称呼 / 联系方式 / 公司 / 需求 / 来源...",
       search: "查询",
       loading: "正在加载线索...",
@@ -31633,6 +31687,7 @@ const _sfc_main$g = /* @__PURE__ */ defineComponent({
       title: "Website Consulting Leads",
       subtitle: "Manage customer inquiries from solution pages, custom development, and demo booking forms.",
       refresh: "Refresh",
+      exportCsv: "Export CSV",
       searchPlaceholder: "Search name / contact / company / demand / source...",
       search: "Search",
       loading: "Loading leads...",
@@ -31699,6 +31754,7 @@ const _sfc_main$g = /* @__PURE__ */ defineComponent({
       confirmDeleteText: (name2) => `Delete inquiry from "${name2}"?`
     });
     const loading = ref(false);
+    const exporting = ref(false);
     const list = ref([]);
     const total = ref(0);
     const counts = ref({
@@ -31780,6 +31836,9 @@ const _sfc_main$g = /* @__PURE__ */ defineComponent({
       } finally {
         loading.value = false;
       }
+    }
+    async function exportLeadsCsv() {
+      return;
     }
     function selectStatus(status) {
       statusFilter.value = status;
@@ -31883,6 +31942,8 @@ const _sfc_main$g = /* @__PURE__ */ defineComponent({
       const _component_UBadge = _sfc_main$L;
       const _component_UInput = _sfc_main$v;
       const _component_USelect = _sfc_main$u;
+      const _component_NuxtLink = __nuxt_component_3$4;
+      const _component_UIcon = _sfc_main$V;
       const _component_UModal = _sfc_main$F;
       const _component_UFormField = _sfc_main$w;
       const _component_UTextarea = _sfc_main$r;
@@ -31892,6 +31953,26 @@ const _sfc_main$g = /* @__PURE__ */ defineComponent({
       }, _attrs), {
         actions: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
+            _push2(`<div class="flex flex-wrap items-center gap-2"${_scopeId}>`);
+            _push2(ssrRenderComponent(_component_UButton, {
+              color: "neutral",
+              variant: "outline",
+              icon: "ph:download-simple",
+              loading: exporting.value,
+              disabled: !list.value.length,
+              onClick: exportLeadsCsv
+            }, {
+              default: withCtx((_2, _push3, _parent3, _scopeId2) => {
+                if (_push3) {
+                  _push3(`${ssrInterpolate(copy.value.exportCsv)}`);
+                } else {
+                  return [
+                    createTextVNode(toDisplayString$1(copy.value.exportCsv), 1)
+                  ];
+                }
+              }),
+              _: 1
+            }, _parent2, _scopeId));
             _push2(ssrRenderComponent(_component_UButton, {
               color: "neutral",
               variant: "outline",
@@ -31910,20 +31991,36 @@ const _sfc_main$g = /* @__PURE__ */ defineComponent({
               }),
               _: 1
             }, _parent2, _scopeId));
+            _push2(`</div>`);
           } else {
             return [
-              createVNode(_component_UButton, {
-                color: "neutral",
-                variant: "outline",
-                icon: "i-lucide-refresh-cw",
-                loading: loading.value,
-                onClick: ($event) => loadLeads()
-              }, {
-                default: withCtx(() => [
-                  createTextVNode(toDisplayString$1(copy.value.refresh), 1)
-                ]),
-                _: 1
-              }, 8, ["loading", "onClick"])
+              createVNode("div", { class: "flex flex-wrap items-center gap-2" }, [
+                createVNode(_component_UButton, {
+                  color: "neutral",
+                  variant: "outline",
+                  icon: "ph:download-simple",
+                  loading: exporting.value,
+                  disabled: !list.value.length,
+                  onClick: exportLeadsCsv
+                }, {
+                  default: withCtx(() => [
+                    createTextVNode(toDisplayString$1(copy.value.exportCsv), 1)
+                  ]),
+                  _: 1
+                }, 8, ["loading", "disabled"]),
+                createVNode(_component_UButton, {
+                  color: "neutral",
+                  variant: "outline",
+                  icon: "i-lucide-refresh-cw",
+                  loading: loading.value,
+                  onClick: ($event) => loadLeads()
+                }, {
+                  default: withCtx(() => [
+                    createTextVNode(toDisplayString$1(copy.value.refresh), 1)
+                  ]),
+                  _: 1
+                }, 8, ["loading", "onClick"])
+              ])
             ];
           }
         }),
@@ -32131,7 +32228,7 @@ const _sfc_main$g = /* @__PURE__ */ defineComponent({
                   } else {
                     _push3(`<div class="overflow-x-auto"${_scopeId2}><table class="w-full text-left text-sm"${_scopeId2}><thead${_scopeId2}><tr class="border-b border-default text-xs text-muted"${_scopeId2}><th class="pb-3 pr-4 font-medium"${_scopeId2}>${ssrInterpolate(copy.value.cols.customer)}</th><th class="pb-3 pr-4 font-medium"${_scopeId2}>${ssrInterpolate(copy.value.cols.contact)}</th><th class="pb-3 pr-4 font-medium"${_scopeId2}>${ssrInterpolate(copy.value.cols.demand)}</th><th class="pb-3 pr-4 font-medium"${_scopeId2}>${ssrInterpolate(copy.value.cols.source)}</th><th class="pb-3 pr-4 font-medium"${_scopeId2}>${ssrInterpolate(copy.value.cols.status)}</th><th class="pb-3 pr-4 font-medium"${_scopeId2}>${ssrInterpolate(copy.value.cols.createdAt)}</th><th class="pb-3 text-right font-medium"${_scopeId2}>${ssrInterpolate(copy.value.cols.actions)}</th></tr></thead><tbody class="divide-y divide-default"${_scopeId2}><!--[-->`);
                     ssrRenderList(list.value, (item) => {
-                      _push3(`<tr class="align-top"${_scopeId2}><td class="py-3 pr-4"${_scopeId2}><div class="font-medium text-highlighted"${_scopeId2}>${ssrInterpolate(item.name)}</div><div class="text-xs text-muted"${_scopeId2}>${ssrInterpolate(item.company || "—")}</div></td><td class="py-3 pr-4"${_scopeId2}><div class="flex items-center gap-1.5"${_scopeId2}>`);
+                      _push3(`<tr class="align-top"${_scopeId2}><td class="py-3 pr-4"${_scopeId2}><div class="font-medium text-highlighted"${_scopeId2}>${ssrInterpolate(item.name)}</div><div class="text-xs text-muted"${_scopeId2}>${ssrInterpolate(item.company || "—")}</div></td><td class="py-3 pr-4"${_scopeId2}><div class="flex flex-wrap items-center gap-1.5"${_scopeId2}>`);
                       _push3(ssrRenderComponent(_component_UBadge, {
                         color: "neutral",
                         variant: "subtle",
@@ -32148,7 +32245,34 @@ const _sfc_main$g = /* @__PURE__ */ defineComponent({
                         }),
                         _: 2
                       }, _parent3, _scopeId2));
-                      _push3(`<span class="font-mono text-xs text-highlighted"${_scopeId2}>${ssrInterpolate(item.contact)}</span></div><div class="mt-1"${_scopeId2}>`);
+                      if (item.contact && item.contact.includes("@")) {
+                        _push3(ssrRenderComponent(_component_NuxtLink, {
+                          to: `/admin/plugins/shoply/licenses?keyword=${encodeURIComponent(item.contact)}`,
+                          class: "inline-flex items-center gap-1 font-mono text-xs text-primary-600 hover:underline dark:text-primary-400"
+                        }, {
+                          default: withCtx((_3, _push4, _parent4, _scopeId3) => {
+                            if (_push4) {
+                              _push4(`<span${_scopeId3}>${ssrInterpolate(item.contact)}</span>`);
+                              _push4(ssrRenderComponent(_component_UIcon, {
+                                name: "ph:arrow-up-right",
+                                class: "h-3 w-3"
+                              }, null, _parent4, _scopeId3));
+                            } else {
+                              return [
+                                createVNode("span", null, toDisplayString$1(item.contact), 1),
+                                createVNode(_component_UIcon, {
+                                  name: "ph:arrow-up-right",
+                                  class: "h-3 w-3"
+                                })
+                              ];
+                            }
+                          }),
+                          _: 2
+                        }, _parent3, _scopeId2));
+                      } else {
+                        _push3(`<span class="font-mono text-xs text-highlighted"${_scopeId2}>${ssrInterpolate(item.contact)}</span>`);
+                      }
+                      _push3(`</div><div class="mt-1"${_scopeId2}>`);
                       _push3(ssrRenderComponent(_component_UBadge, {
                         color: item.delivered ? "success" : "neutral",
                         variant: "subtle",
@@ -32282,7 +32406,7 @@ const _sfc_main$g = /* @__PURE__ */ defineComponent({
                                 createVNode("div", { class: "text-xs text-muted" }, toDisplayString$1(item.company || "—"), 1)
                               ]),
                               createVNode("td", { class: "py-3 pr-4" }, [
-                                createVNode("div", { class: "flex items-center gap-1.5" }, [
+                                createVNode("div", { class: "flex flex-wrap items-center gap-1.5" }, [
                                   createVNode(_component_UBadge, {
                                     color: "neutral",
                                     variant: "subtle",
@@ -32293,7 +32417,23 @@ const _sfc_main$g = /* @__PURE__ */ defineComponent({
                                     ]),
                                     _: 2
                                   }, 1024),
-                                  createVNode("span", { class: "font-mono text-xs text-highlighted" }, toDisplayString$1(item.contact), 1)
+                                  item.contact && item.contact.includes("@") ? (openBlock(), createBlock(_component_NuxtLink, {
+                                    key: 0,
+                                    to: `/admin/plugins/shoply/licenses?keyword=${encodeURIComponent(item.contact)}`,
+                                    class: "inline-flex items-center gap-1 font-mono text-xs text-primary-600 hover:underline dark:text-primary-400"
+                                  }, {
+                                    default: withCtx(() => [
+                                      createVNode("span", null, toDisplayString$1(item.contact), 1),
+                                      createVNode(_component_UIcon, {
+                                        name: "ph:arrow-up-right",
+                                        class: "h-3 w-3"
+                                      })
+                                    ]),
+                                    _: 2
+                                  }, 1032, ["to"])) : (openBlock(), createBlock("span", {
+                                    key: 1,
+                                    class: "font-mono text-xs text-highlighted"
+                                  }, toDisplayString$1(item.contact), 1))
                                 ]),
                                 createVNode("div", { class: "mt-1" }, [
                                   createVNode(_component_UBadge, {
@@ -32814,7 +32954,7 @@ const _sfc_main$g = /* @__PURE__ */ defineComponent({
                               createVNode("div", { class: "text-xs text-muted" }, toDisplayString$1(item.company || "—"), 1)
                             ]),
                             createVNode("td", { class: "py-3 pr-4" }, [
-                              createVNode("div", { class: "flex items-center gap-1.5" }, [
+                              createVNode("div", { class: "flex flex-wrap items-center gap-1.5" }, [
                                 createVNode(_component_UBadge, {
                                   color: "neutral",
                                   variant: "subtle",
@@ -32825,7 +32965,23 @@ const _sfc_main$g = /* @__PURE__ */ defineComponent({
                                   ]),
                                   _: 2
                                 }, 1024),
-                                createVNode("span", { class: "font-mono text-xs text-highlighted" }, toDisplayString$1(item.contact), 1)
+                                item.contact && item.contact.includes("@") ? (openBlock(), createBlock(_component_NuxtLink, {
+                                  key: 0,
+                                  to: `/admin/plugins/shoply/licenses?keyword=${encodeURIComponent(item.contact)}`,
+                                  class: "inline-flex items-center gap-1 font-mono text-xs text-primary-600 hover:underline dark:text-primary-400"
+                                }, {
+                                  default: withCtx(() => [
+                                    createVNode("span", null, toDisplayString$1(item.contact), 1),
+                                    createVNode(_component_UIcon, {
+                                      name: "ph:arrow-up-right",
+                                      class: "h-3 w-3"
+                                    })
+                                  ]),
+                                  _: 2
+                                }, 1032, ["to"])) : (openBlock(), createBlock("span", {
+                                  key: 1,
+                                  class: "font-mono text-xs text-highlighted"
+                                }, toDisplayString$1(item.contact), 1))
                               ]),
                               createVNode("div", { class: "mt-1" }, [
                                 createVNode(_component_UBadge, {
@@ -33832,6 +33988,7 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
   async setup(__props) {
     let __temp, __restore;
     const { locale } = useI18n();
+    const route = useRoute();
     const toast = useToast();
     const isZh = computed(() => String(locale.value || "").startsWith("zh"));
     const text2 = computed(() => isZh.value ? {
@@ -33865,6 +34022,7 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
       searchPlaceholder: "输入客户邮箱、昵称、订阅号或商品名...",
       status: "订阅状态",
       apply: "筛选",
+      exportCsv: "导出 CSV",
       refresh: "刷新",
       emptyCustomers: "暂无符合筛选条件的客户",
       empty: "暂无符合条件的订阅记录",
@@ -33899,6 +34057,10 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
       drawerNoStores: "该客户暂未在 Shoply 创建店铺",
       drawerSubHistoryTitle: "订阅与人工授权记录",
       drawerNoSubHistory: "暂无订阅记录",
+      drawerOrdersTitle: "历史支付订单记录",
+      drawerNoOrders: "暂无订单记录",
+      drawerLeadsTitle: "关联官网咨询线索",
+      drawerNoLeads: "未匹配到同邮箱官网咨询线索",
       storeOpen: "营业中",
       storeReview: "审核中",
       storeDisabled: "已停用",
@@ -33965,6 +34127,7 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
       searchPlaceholder: "Search by email, nickname, subscription ID, or product...",
       status: "Subscription Status",
       apply: "Apply",
+      exportCsv: "Export CSV",
       refresh: "Refresh",
       emptyCustomers: "No matching customers found",
       empty: "No subscription records found",
@@ -33999,6 +34162,10 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
       drawerNoStores: "No stores created in Shoply yet",
       drawerSubHistoryTitle: "Subscription & Manual Grant History",
       drawerNoSubHistory: "No subscription history",
+      drawerOrdersTitle: "Payment Orders History",
+      drawerNoOrders: "No orders found",
+      drawerLeadsTitle: "Associated Consulting Leads",
+      drawerNoLeads: "No consulting leads matched this email",
       storeOpen: "Open",
       storeReview: "Review",
       storeDisabled: "Disabled",
@@ -34051,13 +34218,15 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
     const viewMode = ref("customers");
     const customerFilter = ref("all");
     const customerPage = ref(1);
-    const keywordInput = ref("");
+    const initialQueryKeyword = String(route.query.keyword || route.query.customerId || "").trim();
+    const keywordInput = ref(initialQueryKeyword);
     const statusInput = ref("all");
-    const keyword = ref("");
+    const keyword = ref(initialQueryKeyword);
     const selectedStatus = ref("all");
     const syncingUserId = ref(null);
     const remindingUserId = ref(null);
     const batchReminding = ref(false);
+    const exportingCsv = ref(false);
     const reconciling = ref(false);
     const lastSyncResult = ref(null);
     const {
@@ -34403,6 +34572,104 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
         batchReminding.value = false;
       }
     }
+    function escapeCsvCell(val) {
+      const str = String(val ?? "").replace(/\r?\n/g, " ");
+      if (/[",]/.test(str)) return `"${str.replace(/"/g, '""')}"`;
+      return str;
+    }
+    async function exportActiveViewCsv() {
+      exportingCsv.value = true;
+      try {
+        const dateSuffix = (/* @__PURE__ */ new Date()).toISOString().slice(0, 10);
+        if (viewMode.value === "customers") {
+          const exportRes = await $fetch("/api/admin/plugins/shoply/licenses/customers", {
+            query: {
+              page: 1,
+              limit: 100,
+              keyword: keyword.value,
+              filter: customerFilter.value
+            }
+          });
+          const items = exportRes?.data?.list || customerRows.value || [];
+          const headers = isZh.value ? ["客户ID", "邮箱", "昵称", "账号状态", "订阅状态", "当前套餐", "版本代码", "是否人工开通", "计算可开店上限", "自定义配额覆写", "套餐有效期至", "剩余天数", "订单金额", "币种", "注册时间", "最近登录"] : ["Customer ID", "Email", "Nickname", "User Status", "Sub Status", "Product Name", "Plan Code", "Manual Grant", "Max Stores", "Custom Store Limit", "Valid Until", "Days Left", "Amount", "Currency", "Registered At", "Last Login"];
+          const csvLines = [
+            headers.map(escapeCsvCell).join(","),
+            ...items.map((c) => [
+              c.id,
+              c.email || "",
+              c.nickname || "",
+              c.status === 1 ? "active" : "disabled",
+              c.subscriptionStatus,
+              c.subscription?.productName || "",
+              c.entitlement?.license?.planCode || "free",
+              c.subscription?.isManual ? "yes" : "no",
+              c.entitlement?.license?.maxStores ?? 1,
+              c.customStoreLimit ?? "",
+              c.subscription?.currentPeriodEnd || "",
+              c.subscription?.daysRemaining ?? "",
+              c.subscription?.amount ?? "",
+              c.subscription?.currency || "",
+              c.createdAt || "",
+              c.lastLoginAt || ""
+            ].map(escapeCsvCell).join(","))
+          ];
+          const blob = new Blob([`\uFEFF${csvLines.join("\n")}`], { type: "text/csv;charset=utf-8;" });
+          const url = URL.createObjectURL(blob);
+          const link = (void 0).createElement("a");
+          link.href = url;
+          link.download = `shoply-customers-${dateSuffix}.csv`;
+          link.click();
+          URL.revokeObjectURL(url);
+        } else {
+          const items = rows.value || [];
+          const headers = isZh.value ? ["订阅ID", "客户ID", "客户邮箱", "客户昵称", "套餐商品", "版本代码", "状态", "金额", "币种", "周期", "是否人工开通", "人工原因", "当前周期结束", "创建时间"] : ["Subscription ID", "User ID", "Email", "Nickname", "Product Name", "Plan Code", "Status", "Amount", "Currency", "Interval", "Manual Grant", "Manual Reason", "Period End", "Created At"];
+          const csvLines = [
+            headers.map(escapeCsvCell).join(","),
+            ...items.map((r) => [
+              r.id,
+              r.userId,
+              r.userEmail || "",
+              r.userNickname || "",
+              r.productName || "",
+              r.planCode || "",
+              r.status || "",
+              r.amount ?? 0,
+              r.currency || "CNY",
+              `${r.intervalCount || 1} ${r.interval || ""}`.trim(),
+              r.isManual ? "yes" : "no",
+              r.manualReason || "",
+              r.currentPeriodEnd || "",
+              r.createdAt || ""
+            ].map(escapeCsvCell).join(","))
+          ];
+          const blob = new Blob([`\uFEFF${csvLines.join("\n")}`], { type: "text/csv;charset=utf-8;" });
+          const url = URL.createObjectURL(blob);
+          const link = (void 0).createElement("a");
+          link.href = url;
+          link.download = `shoply-subscriptions-${dateSuffix}.csv`;
+          link.click();
+          URL.revokeObjectURL(url);
+        }
+      } finally {
+        exportingCsv.value = false;
+      }
+    }
+    watch(
+      () => [route.query.customerId, route.query.keyword],
+      ([nextCid, nextKw]) => {
+        const kw = String(nextKw || nextCid || "").trim();
+        if (kw && kw !== keyword.value) {
+          keywordInput.value = kw;
+          keyword.value = kw;
+          customerPage.value = 1;
+        }
+        const cid = Number(nextCid || 0);
+        if (Number.isInteger(cid) && cid > 0) {
+          viewMode.value = "customers";
+          openCustomerDrawer(cid);
+        }
+      }
+    );
     function statusColor(status) {
       if (status === "active") return "success";
       if (status === "past_due") return "warning";
@@ -34629,6 +34896,24 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
           } else {
             return [
               createTextVNode(toDisplayString$1(text2.value.apply), 1)
+            ];
+          }
+        }),
+        _: 1
+      }, _parent));
+      _push(ssrRenderComponent(_component_UButton, {
+        color: "neutral",
+        variant: "outline",
+        icon: "ph:download-simple",
+        loading: exportingCsv.value,
+        onClick: exportActiveViewCsv
+      }, {
+        default: withCtx((_, _push2, _parent2, _scopeId) => {
+          if (_push2) {
+            _push2(`${ssrInterpolate(text2.value.exportCsv)}`);
+          } else {
+            return [
+              createTextVNode(toDisplayString$1(text2.value.exportCsv), 1)
             ];
           }
         }),
@@ -35395,6 +35680,99 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
                 });
                 _push2(`<!--]--></div>`);
               }
+              _push2(`</div><div class="space-y-3"${_scopeId}><h3 class="text-sm font-bold text-gray-900 dark:text-white"${_scopeId}>${ssrInterpolate(text2.value.drawerOrdersTitle)} (${ssrInterpolate((drawerDetail.value.orders || []).length)}) </h3>`);
+              if (!(drawerDetail.value.orders || []).length) {
+                _push2(`<div class="rounded-xl border border-dashed border-gray-200 p-6 text-center text-xs text-gray-400 dark:border-white/10"${_scopeId}>${ssrInterpolate(text2.value.drawerNoOrders)}</div>`);
+              } else {
+                _push2(`<div class="space-y-2"${_scopeId}><!--[-->`);
+                ssrRenderList(drawerDetail.value.orders, (ord) => {
+                  _push2(`<div class="rounded-xl border border-gray-200 bg-white p-3 text-xs dark:border-white/10 dark:bg-[#161618]"${_scopeId}><div class="flex flex-wrap items-center justify-between gap-2"${_scopeId}><div class="flex flex-wrap items-center gap-1.5"${_scopeId}><span class="font-semibold text-gray-900 dark:text-white"${_scopeId}>${ssrInterpolate(ord.productName)}</span>`);
+                  _push2(ssrRenderComponent(_component_UBadge, {
+                    color: ord.payStatus === "paid" ? "success" : ord.payStatus === "refunded" ? "error" : "warning",
+                    variant: "soft",
+                    size: "xs"
+                  }, {
+                    default: withCtx((_2, _push3, _parent3, _scopeId2) => {
+                      if (_push3) {
+                        _push3(`${ssrInterpolate(ord.payStatus)}`);
+                      } else {
+                        return [
+                          createTextVNode(toDisplayString$1(ord.payStatus), 1)
+                        ];
+                      }
+                    }),
+                    _: 2
+                  }, _parent2, _scopeId));
+                  _push2(`</div><span class="font-mono font-semibold text-gray-900 dark:text-white"${_scopeId}>${ssrInterpolate(ord.amount)} ${ssrInterpolate(ord.currency)}</span></div><p class="mt-1.5 flex flex-wrap items-center justify-between gap-2 text-[11px] text-gray-500"${_scopeId}><span class="font-mono"${_scopeId}>${ssrInterpolate(ord.id.slice(0, 18))} · ${ssrInterpolate(ord.payMethod || "online")}</span><span${_scopeId}>${ssrInterpolate(formatTime(ord.paidAt || ord.createdAt))}</span></p></div>`);
+                });
+                _push2(`<!--]--></div>`);
+              }
+              _push2(`</div><div class="space-y-3"${_scopeId}><div class="flex items-center justify-between"${_scopeId}><h3 class="text-sm font-bold text-gray-900 dark:text-white"${_scopeId}>${ssrInterpolate(text2.value.drawerLeadsTitle)} (${ssrInterpolate((drawerDetail.value.leads || []).length)}) </h3>`);
+              if ((drawerDetail.value.leads || []).length) {
+                _push2(ssrRenderComponent(_component_UButton, {
+                  to: "/admin/plugins/shoply/leads",
+                  color: "neutral",
+                  variant: "ghost",
+                  size: "xs",
+                  "trailing-icon": "ph:arrow-right"
+                }, {
+                  default: withCtx((_2, _push3, _parent3, _scopeId2) => {
+                    if (_push3) {
+                      _push3(`${ssrInterpolate(text2.value.leadsDashboard)}`);
+                    } else {
+                      return [
+                        createTextVNode(toDisplayString$1(text2.value.leadsDashboard), 1)
+                      ];
+                    }
+                  }),
+                  _: 1
+                }, _parent2, _scopeId));
+              } else {
+                _push2(`<!---->`);
+              }
+              _push2(`</div>`);
+              if (!(drawerDetail.value.leads || []).length) {
+                _push2(`<div class="rounded-xl border border-dashed border-gray-200 p-6 text-center text-xs text-gray-400 dark:border-white/10"${_scopeId}>${ssrInterpolate(text2.value.drawerNoLeads)}</div>`);
+              } else {
+                _push2(`<div class="space-y-2"${_scopeId}><!--[-->`);
+                ssrRenderList(drawerDetail.value.leads, (lead) => {
+                  _push2(`<div class="rounded-xl border border-gray-200 bg-white p-3 text-xs dark:border-white/10 dark:bg-[#161618]"${_scopeId}><div class="flex flex-wrap items-center justify-between gap-2"${_scopeId}><div class="flex flex-wrap items-center gap-1.5"${_scopeId}><span class="font-semibold text-gray-900 dark:text-white"${_scopeId}>${ssrInterpolate(lead.name)}</span>`);
+                  if (lead.company) {
+                    _push2(`<span class="text-gray-500"${_scopeId}>(${ssrInterpolate(lead.company)})</span>`);
+                  } else {
+                    _push2(`<!---->`);
+                  }
+                  _push2(ssrRenderComponent(_component_UBadge, {
+                    color: lead.status === "converted" ? "success" : lead.status === "contacted" ? "info" : "warning",
+                    variant: "soft",
+                    size: "xs"
+                  }, {
+                    default: withCtx((_2, _push3, _parent3, _scopeId2) => {
+                      if (_push3) {
+                        _push3(`${ssrInterpolate(lead.status)}`);
+                      } else {
+                        return [
+                          createTextVNode(toDisplayString$1(lead.status), 1)
+                        ];
+                      }
+                    }),
+                    _: 2
+                  }, _parent2, _scopeId));
+                  _push2(`</div><span class="text-[11px] text-gray-400"${_scopeId}>${ssrInterpolate(formatTime(lead.createdAt))}</span></div>`);
+                  if (lead.demand) {
+                    _push2(`<p class="mt-1.5 text-[11px] text-gray-600 dark:text-gray-300"${_scopeId}>${ssrInterpolate(lead.demand)}</p>`);
+                  } else {
+                    _push2(`<!---->`);
+                  }
+                  if (lead.note) {
+                    _push2(`<p class="mt-1 text-[11px] text-primary-600 dark:text-primary-400"${_scopeId}>${ssrInterpolate(lead.note)}</p>`);
+                  } else {
+                    _push2(`<!---->`);
+                  }
+                  _push2(`</div>`);
+                });
+                _push2(`<!--]--></div>`);
+              }
               _push2(`</div></div>`);
             } else {
               _push2(`<!---->`);
@@ -35710,6 +36088,105 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
                             class: "ml-2 text-rose-500"
                           }, "(" + toDisplayString$1(text2.value.cancelReasonLabel) + ": " + toDisplayString$1(sub.cancelReason) + ")", 1)) : createCommentVNode("", true)
                         ])) : createCommentVNode("", true)
+                      ]);
+                    }), 128))
+                  ]))
+                ]),
+                createVNode("div", { class: "space-y-3" }, [
+                  createVNode("h3", { class: "text-sm font-bold text-gray-900 dark:text-white" }, toDisplayString$1(text2.value.drawerOrdersTitle) + " (" + toDisplayString$1((drawerDetail.value.orders || []).length) + ") ", 1),
+                  !(drawerDetail.value.orders || []).length ? (openBlock(), createBlock("div", {
+                    key: 0,
+                    class: "rounded-xl border border-dashed border-gray-200 p-6 text-center text-xs text-gray-400 dark:border-white/10"
+                  }, toDisplayString$1(text2.value.drawerNoOrders), 1)) : (openBlock(), createBlock("div", {
+                    key: 1,
+                    class: "space-y-2"
+                  }, [
+                    (openBlock(true), createBlock(Fragment, null, renderList(drawerDetail.value.orders, (ord) => {
+                      return openBlock(), createBlock("div", {
+                        key: ord.id,
+                        class: "rounded-xl border border-gray-200 bg-white p-3 text-xs dark:border-white/10 dark:bg-[#161618]"
+                      }, [
+                        createVNode("div", { class: "flex flex-wrap items-center justify-between gap-2" }, [
+                          createVNode("div", { class: "flex flex-wrap items-center gap-1.5" }, [
+                            createVNode("span", { class: "font-semibold text-gray-900 dark:text-white" }, toDisplayString$1(ord.productName), 1),
+                            createVNode(_component_UBadge, {
+                              color: ord.payStatus === "paid" ? "success" : ord.payStatus === "refunded" ? "error" : "warning",
+                              variant: "soft",
+                              size: "xs"
+                            }, {
+                              default: withCtx(() => [
+                                createTextVNode(toDisplayString$1(ord.payStatus), 1)
+                              ]),
+                              _: 2
+                            }, 1032, ["color"])
+                          ]),
+                          createVNode("span", { class: "font-mono font-semibold text-gray-900 dark:text-white" }, toDisplayString$1(ord.amount) + " " + toDisplayString$1(ord.currency), 1)
+                        ]),
+                        createVNode("p", { class: "mt-1.5 flex flex-wrap items-center justify-between gap-2 text-[11px] text-gray-500" }, [
+                          createVNode("span", { class: "font-mono" }, toDisplayString$1(ord.id.slice(0, 18)) + " · " + toDisplayString$1(ord.payMethod || "online"), 1),
+                          createVNode("span", null, toDisplayString$1(formatTime(ord.paidAt || ord.createdAt)), 1)
+                        ])
+                      ]);
+                    }), 128))
+                  ]))
+                ]),
+                createVNode("div", { class: "space-y-3" }, [
+                  createVNode("div", { class: "flex items-center justify-between" }, [
+                    createVNode("h3", { class: "text-sm font-bold text-gray-900 dark:text-white" }, toDisplayString$1(text2.value.drawerLeadsTitle) + " (" + toDisplayString$1((drawerDetail.value.leads || []).length) + ") ", 1),
+                    (drawerDetail.value.leads || []).length ? (openBlock(), createBlock(_component_UButton, {
+                      key: 0,
+                      to: "/admin/plugins/shoply/leads",
+                      color: "neutral",
+                      variant: "ghost",
+                      size: "xs",
+                      "trailing-icon": "ph:arrow-right"
+                    }, {
+                      default: withCtx(() => [
+                        createTextVNode(toDisplayString$1(text2.value.leadsDashboard), 1)
+                      ]),
+                      _: 1
+                    })) : createCommentVNode("", true)
+                  ]),
+                  !(drawerDetail.value.leads || []).length ? (openBlock(), createBlock("div", {
+                    key: 0,
+                    class: "rounded-xl border border-dashed border-gray-200 p-6 text-center text-xs text-gray-400 dark:border-white/10"
+                  }, toDisplayString$1(text2.value.drawerNoLeads), 1)) : (openBlock(), createBlock("div", {
+                    key: 1,
+                    class: "space-y-2"
+                  }, [
+                    (openBlock(true), createBlock(Fragment, null, renderList(drawerDetail.value.leads, (lead) => {
+                      return openBlock(), createBlock("div", {
+                        key: lead.id,
+                        class: "rounded-xl border border-gray-200 bg-white p-3 text-xs dark:border-white/10 dark:bg-[#161618]"
+                      }, [
+                        createVNode("div", { class: "flex flex-wrap items-center justify-between gap-2" }, [
+                          createVNode("div", { class: "flex flex-wrap items-center gap-1.5" }, [
+                            createVNode("span", { class: "font-semibold text-gray-900 dark:text-white" }, toDisplayString$1(lead.name), 1),
+                            lead.company ? (openBlock(), createBlock("span", {
+                              key: 0,
+                              class: "text-gray-500"
+                            }, "(" + toDisplayString$1(lead.company) + ")", 1)) : createCommentVNode("", true),
+                            createVNode(_component_UBadge, {
+                              color: lead.status === "converted" ? "success" : lead.status === "contacted" ? "info" : "warning",
+                              variant: "soft",
+                              size: "xs"
+                            }, {
+                              default: withCtx(() => [
+                                createTextVNode(toDisplayString$1(lead.status), 1)
+                              ]),
+                              _: 2
+                            }, 1032, ["color"])
+                          ]),
+                          createVNode("span", { class: "text-[11px] text-gray-400" }, toDisplayString$1(formatTime(lead.createdAt)), 1)
+                        ]),
+                        lead.demand ? (openBlock(), createBlock("p", {
+                          key: 0,
+                          class: "mt-1.5 text-[11px] text-gray-600 dark:text-gray-300"
+                        }, toDisplayString$1(lead.demand), 1)) : createCommentVNode("", true),
+                        lead.note ? (openBlock(), createBlock("p", {
+                          key: 1,
+                          class: "mt-1 text-[11px] text-primary-600 dark:text-primary-400"
+                        }, toDisplayString$1(lead.note), 1)) : createCommentVNode("", true)
                       ]);
                     }), 128))
                   ]))
@@ -36579,6 +37056,7 @@ const _sfc_main$c = /* @__PURE__ */ defineComponent({
     const text2 = computed(() => isZh.value ? {
       title: "店铺与经营管理",
       subtitle: "实时查看全平台已开设的 Shoply 店铺、地区/币种/类目分布，以及每家店铺的商品、订单、GMV 与流量经营情况。",
+      exportCsv: "导出 CSV",
       licensePage: "订阅权益同步",
       refresh: "刷新数据",
       retry: "重试",
@@ -36632,6 +37110,7 @@ const _sfc_main$c = /* @__PURE__ */ defineComponent({
     } : {
       title: "Stores & Operations",
       subtitle: "Monitor all opened Shoply stores, regional/currency/category distributions, and per-store product, order, GMV, and traffic performance.",
+      exportCsv: "Export CSV",
       licensePage: "Subscription Licenses",
       refresh: "Refresh",
       retry: "Retry",
@@ -36741,6 +37220,7 @@ const _sfc_main$c = /* @__PURE__ */ defineComponent({
     const selectedPlan = ref("all");
     const selectedTimezone = ref("all");
     const selectedCurrency = ref("all");
+    const exporting = ref(false);
     const { data: res, pending, error, refresh } = ([__temp, __restore] = withAsyncContext(() => useFetch(
       "/api/admin/plugins/shoply/stores/list",
       {
@@ -36868,6 +37348,65 @@ const _sfc_main$c = /* @__PURE__ */ defineComponent({
     const refreshData = async () => {
       await refresh();
     };
+    const escapeCsvCell = (val) => {
+      const str = String(val ?? "").replace(/\r?\n/g, " ");
+      if (/[",]/.test(str)) return `"${str.replace(/"/g, '""')}"`;
+      return str;
+    };
+    const exportStoresCsv = async () => {
+      exporting.value = true;
+      try {
+        const exportRes = await $fetch("/api/admin/plugins/shoply/stores/list", {
+          query: {
+            page: 1,
+            limit: 100,
+            keyword: keyword.value || void 0,
+            status: selectedStatus.value === "all" ? void 0 : selectedStatus.value,
+            planKey: selectedPlan.value === "all" ? void 0 : selectedPlan.value,
+            timezone: selectedTimezone.value === "all" ? void 0 : selectedTimezone.value,
+            currency: selectedCurrency.value === "all" ? void 0 : selectedCurrency.value
+          }
+        });
+        const items = exportRes?.data?.list || rows.value || [];
+        const headers = isZh.value ? ["店铺ID", "店铺名称", "域名", "状态", "套餐版本", "开设地区/时区", "结算币种", "经营类目", "APay客户ID", "客户邮箱", "客户昵称", "在售商品", "总商品", "近30天订单", "累计订单", "近30天GMV", "累计GMV", "近30天UV", "近30天PV", "成交买家数", "创建时间", "到期时间"] : ["Store ID", "Store Name", "Domain", "Status", "Plan", "Timezone", "Currency", "Category", "APay User ID", "Customer Email", "Customer Nickname", "Active Products", "Total Products", "30d Orders", "Total Orders", "30d GMV", "Total GMV", "30d UV", "30d PV", "Buyers", "Created At", "Expires At"];
+        const csvLines = [
+          headers.map(escapeCsvCell).join(","),
+          ...items.map((item) => [
+            item.id,
+            item.name,
+            item.domain,
+            storeBadge(item).label,
+            item.planKey || item.edition,
+            item.timezone || "UTC",
+            item.currency || "USD",
+            item.categoryName || "",
+            item.apayUser?.id || "",
+            item.apayUser?.email || item.owner?.shoplyEmail || "",
+            item.apayUser?.nickname || "",
+            item.stats?.activeProductCount ?? 0,
+            item.stats?.productCount ?? 0,
+            item.stats?.orderCount30d ?? 0,
+            item.stats?.orderCount ?? 0,
+            item.stats?.revenue30d ?? "0.00",
+            item.stats?.revenue ?? "0.00",
+            item.stats?.uv30d ?? 0,
+            item.stats?.pv30d ?? 0,
+            item.stats?.customerCount ?? 0,
+            item.createdAt || "",
+            item.expireAt || ""
+          ].map(escapeCsvCell).join(","))
+        ];
+        const blob = new Blob([`\uFEFF${csvLines.join("\n")}`], { type: "text/csv;charset=utf-8;" });
+        const url = URL.createObjectURL(blob);
+        const link = (void 0).createElement("a");
+        link.href = url;
+        link.download = `shoply-stores-${(/* @__PURE__ */ new Date()).toISOString().slice(0, 10)}.csv`;
+        link.click();
+        URL.revokeObjectURL(url);
+      } finally {
+        exporting.value = false;
+      }
+    };
     const percent = (count2, sum) => {
       if (!sum || sum <= 0) return 0;
       return Math.min(100, Math.round(count2 / sum * 100));
@@ -36897,6 +37436,7 @@ const _sfc_main$c = /* @__PURE__ */ defineComponent({
       const _component_USelect = _sfc_main$u;
       const _component_USkeleton = _sfc_main$p;
       const _component_UBadge = _sfc_main$L;
+      const _component_NuxtLink = __nuxt_component_3$4;
       const _component_UPagination = _sfc_main$y;
       _push(ssrRenderComponent(_sfc_main$k, mergeProps({
         title: text2.value.title,
@@ -36904,7 +37444,26 @@ const _sfc_main$c = /* @__PURE__ */ defineComponent({
       }, _attrs), {
         actions: withCtx((_, _push2, _parent2, _scopeId) => {
           if (_push2) {
-            _push2(`<div class="flex items-center gap-2"${_scopeId}>`);
+            _push2(`<div class="flex flex-wrap items-center gap-2"${_scopeId}>`);
+            _push2(ssrRenderComponent(_component_UButton, {
+              color: "neutral",
+              variant: "outline",
+              icon: "ph:download-simple",
+              loading: exporting.value,
+              disabled: !rows.value.length,
+              onClick: exportStoresCsv
+            }, {
+              default: withCtx((_2, _push3, _parent3, _scopeId2) => {
+                if (_push3) {
+                  _push3(`${ssrInterpolate(text2.value.exportCsv)}`);
+                } else {
+                  return [
+                    createTextVNode(toDisplayString$1(text2.value.exportCsv), 1)
+                  ];
+                }
+              }),
+              _: 1
+            }, _parent2, _scopeId));
             _push2(ssrRenderComponent(_component_UButton, {
               to: "/admin/plugins/shoply/licenses",
               color: "neutral",
@@ -36943,7 +37502,20 @@ const _sfc_main$c = /* @__PURE__ */ defineComponent({
             _push2(`</div>`);
           } else {
             return [
-              createVNode("div", { class: "flex items-center gap-2" }, [
+              createVNode("div", { class: "flex flex-wrap items-center gap-2" }, [
+                createVNode(_component_UButton, {
+                  color: "neutral",
+                  variant: "outline",
+                  icon: "ph:download-simple",
+                  loading: exporting.value,
+                  disabled: !rows.value.length,
+                  onClick: exportStoresCsv
+                }, {
+                  default: withCtx(() => [
+                    createTextVNode(toDisplayString$1(text2.value.exportCsv), 1)
+                  ]),
+                  _: 1
+                }, 8, ["loading", "disabled"]),
                 createVNode(_component_UButton, {
                   to: "/admin/plugins/shoply/licenses",
                   color: "neutral",
@@ -37339,16 +37911,41 @@ const _sfc_main$c = /* @__PURE__ */ defineComponent({
                 } else {
                   _push2(`<!---->`);
                 }
-                _push2(`</div><div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-gray-400"${_scopeId}><span${_scopeId}>${ssrInterpolate(text2.value.owner)}: <strong class="font-medium text-gray-700 dark:text-gray-300"${_scopeId}>${ssrInterpolate(item.apayUser?.email || item.owner?.shoplyEmail || text2.value.unlinkedOwner)}</strong>`);
-                if (item.apayUser?.nickname) {
-                  _push2(`<!--[--> (${ssrInterpolate(item.apayUser.nickname)})<!--]-->`);
-                } else {
-                  _push2(`<!---->`);
-                }
+                _push2(`</div><div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-gray-400"${_scopeId}><span class="inline-flex flex-wrap items-center gap-1"${_scopeId}><span${_scopeId}>${ssrInterpolate(text2.value.owner)}:</span>`);
                 if (item.apayUser?.id) {
-                  _push2(`<!--[--> · APay #${ssrInterpolate(item.apayUser.id)}<!--]-->`);
+                  _push2(ssrRenderComponent(_component_NuxtLink, {
+                    to: `/admin/plugins/shoply/licenses?customerId=${item.apayUser.id}`,
+                    class: "inline-flex items-center gap-1 font-medium text-primary-600 hover:underline dark:text-primary-400"
+                  }, {
+                    default: withCtx((_2, _push3, _parent3, _scopeId2) => {
+                      if (_push3) {
+                        _push3(`<span${_scopeId2}>${ssrInterpolate(item.apayUser?.email || item.owner?.shoplyEmail || `#${item.apayUser.id}`)}</span>`);
+                        if (item.apayUser?.nickname) {
+                          _push3(`<span${_scopeId2}>(${ssrInterpolate(item.apayUser.nickname)})</span>`);
+                        } else {
+                          _push3(`<!---->`);
+                        }
+                        _push3(`<span class="font-mono text-[10px]"${_scopeId2}>· APay #${ssrInterpolate(item.apayUser.id)}</span>`);
+                        _push3(ssrRenderComponent(_component_UIcon, {
+                          name: "ph:arrow-up-right",
+                          class: "h-3 w-3"
+                        }, null, _parent3, _scopeId2));
+                      } else {
+                        return [
+                          createVNode("span", null, toDisplayString$1(item.apayUser?.email || item.owner?.shoplyEmail || `#${item.apayUser.id}`), 1),
+                          item.apayUser?.nickname ? (openBlock(), createBlock("span", { key: 0 }, "(" + toDisplayString$1(item.apayUser.nickname) + ")", 1)) : createCommentVNode("", true),
+                          createVNode("span", { class: "font-mono text-[10px]" }, "· APay #" + toDisplayString$1(item.apayUser.id), 1),
+                          createVNode(_component_UIcon, {
+                            name: "ph:arrow-up-right",
+                            class: "h-3 w-3"
+                          })
+                        ];
+                      }
+                    }),
+                    _: 2
+                  }, _parent2, _scopeId));
                 } else {
-                  _push2(`<!---->`);
+                  _push2(`<strong class="font-medium text-gray-700 dark:text-gray-300"${_scopeId}>${ssrInterpolate(item.owner?.shoplyEmail || text2.value.unlinkedOwner)}</strong>`);
                 }
                 _push2(`</span><span${_scopeId}>·</span><span${_scopeId}>${ssrInterpolate(text2.value.createdAt)}: ${ssrInterpolate(formatTime(item.createdAt))}</span><span${_scopeId}>·</span><span${_scopeId}>${ssrInterpolate(text2.value.expiresAt)}: ${ssrInterpolate(formatExpiry(item.expireAt))}</span>`);
                 if (item.lastOrderAt) {
@@ -37782,15 +38379,27 @@ const _sfc_main$c = /* @__PURE__ */ defineComponent({
                           ])) : createCommentVNode("", true)
                         ]),
                         createVNode("div", { class: "flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-gray-400" }, [
-                          createVNode("span", null, [
-                            createTextVNode(toDisplayString$1(text2.value.owner) + ": ", 1),
-                            createVNode("strong", { class: "font-medium text-gray-700 dark:text-gray-300" }, toDisplayString$1(item.apayUser?.email || item.owner?.shoplyEmail || text2.value.unlinkedOwner), 1),
-                            item.apayUser?.nickname ? (openBlock(), createBlock(Fragment, { key: 0 }, [
-                              createTextVNode(" (" + toDisplayString$1(item.apayUser.nickname) + ")", 1)
-                            ], 64)) : createCommentVNode("", true),
-                            item.apayUser?.id ? (openBlock(), createBlock(Fragment, { key: 1 }, [
-                              createTextVNode(" · APay #" + toDisplayString$1(item.apayUser.id), 1)
-                            ], 64)) : createCommentVNode("", true)
+                          createVNode("span", { class: "inline-flex flex-wrap items-center gap-1" }, [
+                            createVNode("span", null, toDisplayString$1(text2.value.owner) + ":", 1),
+                            item.apayUser?.id ? (openBlock(), createBlock(_component_NuxtLink, {
+                              key: 0,
+                              to: `/admin/plugins/shoply/licenses?customerId=${item.apayUser.id}`,
+                              class: "inline-flex items-center gap-1 font-medium text-primary-600 hover:underline dark:text-primary-400"
+                            }, {
+                              default: withCtx(() => [
+                                createVNode("span", null, toDisplayString$1(item.apayUser?.email || item.owner?.shoplyEmail || `#${item.apayUser.id}`), 1),
+                                item.apayUser?.nickname ? (openBlock(), createBlock("span", { key: 0 }, "(" + toDisplayString$1(item.apayUser.nickname) + ")", 1)) : createCommentVNode("", true),
+                                createVNode("span", { class: "font-mono text-[10px]" }, "· APay #" + toDisplayString$1(item.apayUser.id), 1),
+                                createVNode(_component_UIcon, {
+                                  name: "ph:arrow-up-right",
+                                  class: "h-3 w-3"
+                                })
+                              ]),
+                              _: 2
+                            }, 1032, ["to"])) : (openBlock(), createBlock("strong", {
+                              key: 1,
+                              class: "font-medium text-gray-700 dark:text-gray-300"
+                            }, toDisplayString$1(item.owner?.shoplyEmail || text2.value.unlinkedOwner), 1))
                           ]),
                           createVNode("span", null, "·"),
                           createVNode("span", null, toDisplayString$1(text2.value.createdAt) + ": " + toDisplayString$1(formatTime(item.createdAt)), 1),
@@ -41253,14 +41862,14 @@ const LazyMarketplaceList = defineAsyncComponent(() => import('./MarketplaceList
 const LazyMarketplaceVisual = defineAsyncComponent(() => import('./MarketplaceVisual-S5JpFqOO.mjs').then((r) => r["default"] || r.default || r));
 const LazyPageCta = defineAsyncComponent(() => import('./PageCta-0XQxZIIo.mjs').then((r) => r["default"] || r.default || r));
 const LazySectionHeading = defineAsyncComponent(() => import('./SectionHeading-D_ZqEZzo.mjs').then((r) => r["default"] || r.default || r));
-const LazyShoplyAuthShell = defineAsyncComponent(() => import('./ShoplyAuthShell-CQlgzQUj.mjs').then((r) => r["default"] || r.default || r));
-const LazyShoplyBindDialog = defineAsyncComponent(() => import('./ShoplyBindDialog-D0k4TybL.mjs').then((n) => n.S).then((r) => r["default"] || r.default || r));
-const LazyShoplyCheckoutModal = defineAsyncComponent(() => import('./ShoplyCheckoutModal-fAqP6IaJ.mjs').then((r) => r["default"] || r.default || r));
+const LazyShoplyAuthShell = defineAsyncComponent(() => import('./ShoplyAuthShell-CML7h0wr.mjs').then((r) => r["default"] || r.default || r));
+const LazyShoplyBindDialog = defineAsyncComponent(() => import('./ShoplyBindDialog-CfJWmaYY.mjs').then((n) => n.S).then((r) => r["default"] || r.default || r));
+const LazyShoplyCheckoutModal = defineAsyncComponent(() => import('./ShoplyCheckoutModal-_aVbwaIx.mjs').then((r) => r["default"] || r.default || r));
 const LazyShoplyConsoleHeader = defineAsyncComponent(() => import('./ShoplyConsoleHeader-DroiRVCS.mjs').then((r) => r["default"] || r.default || r));
 const LazyShoplyConsultDialog = defineAsyncComponent(() => import('./ShoplyConsultDialog-DsFYw0Dw.mjs').then((r) => r["default"] || r.default || r));
 const LazyShoplyLanguageSwitcher = defineAsyncComponent(() => import('./ShoplyLanguageSwitcher-D-nYAmKF.mjs').then((r) => r["default"] || r.default || r));
 const LazyShoplyLeadForm = defineAsyncComponent(() => import('./ShoplyLeadForm-BPVVz4Cl.mjs').then((r) => r["default"] || r.default || r));
-const LazyShoplyPlanCards = defineAsyncComponent(() => import('./ShoplyPlanCards-Bnys58lv.mjs').then((r) => r["default"] || r.default || r));
+const LazyShoplyPlanCards = defineAsyncComponent(() => import('./ShoplyPlanCards-DgpSjxdV.mjs').then((r) => r["default"] || r.default || r));
 const LazyProseA = defineAsyncComponent(() => import('./A-B-8_Qiz-.mjs').then((r) => r["default"] || r.default || r));
 const LazyProseAccordion = defineAsyncComponent(() => import('./Accordion-BbVqTT0N.mjs').then((r) => r["default"] || r.default || r));
 const LazyProseAccordionItem = defineAsyncComponent(() => import('./AccordionItem-B8BuKVwe.mjs').then((r) => r["default"] || r.default || r));
@@ -45080,8 +45689,8 @@ const __nuxt_component_1 = defineComponent({
   }
 });
 const layouts = {
-  admin: defineAsyncComponent(() => import('./admin-BXLF2N_V.mjs').then((m) => m.default || m)),
-  default: defineAsyncComponent(() => import('./default-BskFCuju.mjs').then((m) => m.default || m)),
+  admin: defineAsyncComponent(() => import('./admin-CgXOjan5.mjs').then((m) => m.default || m)),
+  default: defineAsyncComponent(() => import('./default-C-mxtmbm.mjs').then((m) => m.default || m)),
   empty: defineAsyncComponent(() => import('./empty-DyM_sw7C.mjs').then((m) => m.default || m))
 };
 const routeRulesMatcher = _routeRulesMatcher;
@@ -45894,5 +46503,5 @@ let entry;
 }
 const entry_default = ((ssrContext) => entry(ssrContext));
 
-export { PopperRoot_default as $, ADMIN_PERMISSIONS as A, _sfc_main$l as B, publishedOptionalThemes as C, useLocaleRouter as D, useProductPricing as E, useCurrencyFormat as F, useRoute as G, themeAdminLocaleEnModules as H, themeAdminLocaleZhModules as I, useHead as J, useExtensions as K, setResponseStatus as L, stripLocalePrefix as M, __nuxt_component_3$4 as N, _export_sfc as O, useAdminSession as P, firstAllowedAdminRoute as Q, PageRequestError as R, _sfc_main$n as S, __nuxt_component_0$1 as T, useRequestURL as U, useLocaleCurrency as V, PopperAnchor_default as W, PopperArrow_default as X, createSharedComposable as Y, useDirection as Z, _sfc_main$V as _, _sfc_main$w as a, useParentElement as a$, createContext as a0, useVModel as a1, useFocusGuards as a2, useBodyScrollLock as a3, useForwardExpose as a4, useTypeahead as a5, getActiveElement as a6, FocusScope_default as a7, DismissableLayer_default as a8, RovingFocusGroup_default as a9, useAppConfig as aA, usePortal as aB, createReusableTemplate as aC, isArrayOfArray as aD, _sfc_main$T as aE, get as aF, _sfc_main$R as aG, pickLinkProps as aH, _sfc_main$S as aI, omit as aJ, useComponentUI as aK, reactivePick as aL, tv as aM, useFormControl as aN, VisuallyHiddenInput_default as aO, useFormField as aP, Label_default as aQ, createEventHook as aR, useFieldGroup as aS, useComponentIcons as aT, compare as aU, _sfc_main$U as aV, looseToNumber as aW, getDisplayValue as aX, getFocusIntent as aY, refAutoReset as aZ, handleAndDispatchCustomEvent$1 as a_, PopperContent_default as aa, getOpenState as ab, PopperContentPropsDefaultValue as ac, isPointerInGraceArea as ad, isMouseEvent as ae, FIRST_LAST_KEYS as af, LAST_KEYS as ag, focusFirst$1 as ah, useCollection as ai, Primitive as aj, SELECTION_KEYS$1 as ak, ITEM_SELECT as al, Presence_default as am, isIndeterminate$1 as an, getCheckedState as ao, reactiveOmit as ap, useForwardProps as aq, useForwardPropsEmits as ar, useHideOthers as as, useId as at, Teleport_default as au, SUB_CLOSE_KEYS as av, SUB_OPEN_KEYS as aw, useEmitAsProps as ax, usePrimitiveElement as ay, useLocale as az, _sfc_main$v as b, MAP_KEY_TO_FOCUS_INTENT as b0, getNextMatch as b1, useResizeObserver as b2, RovingFocusItem_default as b3, useNuxtApp as b4, tryOnScopeDispose$1 as b5, injectTooltipProviderContext as b6, useTimeoutFn as b7, VisuallyHidden_default as b8, usePageFailureLog as b9, formStateInjectionKey as bA, formErrorsInjectionKey as bB, formInputsInjectionKey as bC, formLoadingInjectionKey as bD, formOptionsInjectionKey as bE, useEventBus as bF, usePageResourceState as bG, __nuxt_component_3$2 as bH, useUserSession as bI, refThrottled as bJ, useDebounceFn as bK, useActiveElement as bL, __nuxt_component_2$2 as bM, _sfc_main$p as bN, useState as bO, _sfc_main$f as bP, useCookie as bQ, themeLayoutLoaders as bR, createError as bS, useRequestEvent as ba, corePageModules as bb, themePageModules as bc, useActiveTheme as bd, __nuxt_component_4$1 as be, isPathLocaleAllowed as bf, useSeoMeta as bg, useLocalizedSettings as bh, useCustomerAuth as bi, publishedOptionalThemeSet as bj, useJsonLd as bk, useCheckout as bl, __nuxt_component_2$1 as bm, __nuxt_component_3$3 as bn, isValueEqualOrExist as bo, transformUI as bp, useEventListener$1 as bq, useRuntimeConfig as br, resolveBaseURL as bs, ImageComponent as bt, DialogRoot_default as bu, DialogTrigger_default as bv, DialogPortal_default as bw, useClipboard as bx, useCollectionPageJsonLd as by, formBusInjectionKey as bz, _sfc_main$r as c, useFormatTime as d, entry_default as default, useToast as e, useAdminPermissions as f, useAdminExtensions as g, moduleEditCode as h, _sfc_main$Q as i, _sfc_main$s as j, _sfc_main$L as k, _sfc_main$u as l, moduleViewCode as m, _sfc_main$F as n, navigateTo as o, useRouter as p, useConfirm as q, useSettings as r, useRequestFetch as s, useAsyncData as t, useI18n as u, _sfc_main$o as v, themeExtensionPermissionCode as w, usePagination as x, useFetch as y, _sfc_main$y as z };
+export { PopperRoot_default as $, ADMIN_PERMISSIONS as A, _sfc_main$l as B, publishedOptionalThemes as C, useLocaleRouter as D, useProductPricing as E, useCurrencyFormat as F, useRoute as G, themeAdminLocaleEnModules as H, themeAdminLocaleZhModules as I, useHead as J, useExtensions as K, setResponseStatus as L, stripLocalePrefix as M, __nuxt_component_3$4 as N, _export_sfc as O, useAdminSession as P, firstAllowedAdminRoute as Q, PageRequestError as R, _sfc_main$n as S, __nuxt_component_0$1 as T, useRequestURL as U, useLocaleCurrency as V, PopperAnchor_default as W, PopperArrow_default as X, createSharedComposable as Y, useDirection as Z, _sfc_main$V as _, _sfc_main$w as a, useParentElement as a$, createContext as a0, useVModel as a1, useFocusGuards as a2, useBodyScrollLock as a3, useForwardExpose as a4, useTypeahead as a5, getActiveElement as a6, FocusScope_default as a7, DismissableLayer_default as a8, RovingFocusGroup_default as a9, useAppConfig as aA, usePortal as aB, createReusableTemplate as aC, isArrayOfArray as aD, _sfc_main$T as aE, get as aF, _sfc_main$R as aG, pickLinkProps as aH, _sfc_main$S as aI, omit as aJ, useComponentUI as aK, reactivePick as aL, tv as aM, useFormControl as aN, VisuallyHiddenInput_default as aO, useFormField as aP, Label_default as aQ, createEventHook as aR, useFieldGroup as aS, useComponentIcons as aT, compare as aU, _sfc_main$U as aV, looseToNumber as aW, getDisplayValue as aX, getFocusIntent as aY, refAutoReset as aZ, handleAndDispatchCustomEvent$1 as a_, PopperContent_default as aa, getOpenState as ab, PopperContentPropsDefaultValue as ac, isPointerInGraceArea as ad, isMouseEvent as ae, FIRST_LAST_KEYS as af, LAST_KEYS as ag, focusFirst$1 as ah, useCollection as ai, Primitive as aj, SELECTION_KEYS$1 as ak, ITEM_SELECT as al, Presence_default as am, isIndeterminate$1 as an, getCheckedState as ao, reactiveOmit as ap, useForwardProps as aq, useForwardPropsEmits as ar, useHideOthers as as, useId as at, Teleport_default as au, SUB_CLOSE_KEYS as av, SUB_OPEN_KEYS as aw, useEmitAsProps as ax, usePrimitiveElement as ay, useLocale as az, _sfc_main$v as b, MAP_KEY_TO_FOCUS_INTENT as b0, getNextMatch as b1, useResizeObserver as b2, RovingFocusItem_default as b3, useNuxtApp as b4, tryOnScopeDispose$1 as b5, injectTooltipProviderContext as b6, useTimeoutFn as b7, VisuallyHidden_default as b8, usePageFailureLog as b9, formStateInjectionKey as bA, formErrorsInjectionKey as bB, formInputsInjectionKey as bC, formLoadingInjectionKey as bD, formOptionsInjectionKey as bE, useEventBus as bF, usePageResourceState as bG, __nuxt_component_3$2 as bH, useState as bI, useUserSession as bJ, refThrottled as bK, useDebounceFn as bL, useActiveElement as bM, __nuxt_component_2$2 as bN, _sfc_main$p as bO, _sfc_main$f as bP, useCookie as bQ, themeLayoutLoaders as bR, createError as bS, useRequestEvent as ba, corePageModules as bb, themePageModules as bc, useActiveTheme as bd, __nuxt_component_4$1 as be, isPathLocaleAllowed as bf, useSeoMeta as bg, useLocalizedSettings as bh, useCustomerAuth as bi, publishedOptionalThemeSet as bj, useJsonLd as bk, useCheckout as bl, __nuxt_component_2$1 as bm, __nuxt_component_3$3 as bn, isValueEqualOrExist as bo, transformUI as bp, useEventListener$1 as bq, useRuntimeConfig as br, resolveBaseURL as bs, ImageComponent as bt, DialogRoot_default as bu, DialogTrigger_default as bv, DialogPortal_default as bw, useClipboard as bx, useCollectionPageJsonLd as by, formBusInjectionKey as bz, _sfc_main$r as c, useFormatTime as d, entry_default as default, useToast as e, useAdminPermissions as f, useAdminExtensions as g, moduleEditCode as h, _sfc_main$Q as i, _sfc_main$s as j, _sfc_main$L as k, _sfc_main$u as l, moduleViewCode as m, _sfc_main$F as n, navigateTo as o, useRouter as p, useConfirm as q, useSettings as r, useRequestFetch as s, useAsyncData as t, useI18n as u, _sfc_main$o as v, themeExtensionPermissionCode as w, usePagination as x, useFetch as y, _sfc_main$y as z };
 //# sourceMappingURL=server.mjs.map
