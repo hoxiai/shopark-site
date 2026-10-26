@@ -2,7 +2,6 @@ import { d as defineEventHandler, c as getRequestLocale, e as createError, r as 
 import crypto from 'crypto';
 import { count, eq } from 'drizzle-orm';
 import 'node:crypto';
-import 'zod';
 import 'fs';
 import 'path';
 import 'node:path';
@@ -25,8 +24,17 @@ import 'drizzle-orm/mysql-core';
 import 'maxmind';
 import 'node:os';
 import 'node:url';
+import 'zod';
 import '@iconify/utils';
 import 'consola';
+import 'ioredis';
+import 'jose';
+import 'node:child_process';
+import 'process';
+import 'buffer';
+import 'node:fs/promises';
+import 'node:dns/promises';
+import 'node:net';
 import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
 

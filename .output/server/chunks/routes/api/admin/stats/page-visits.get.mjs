@@ -1,7 +1,6 @@
-import { d as defineEventHandler, g as getQuery, D as getConfiguredTimezone, bu as parseStatsRange, by as clampStatsPage, bz as clampStatsPageSize, bx as visitorEvents, b as db } from '../../../../nitro/nitro.mjs';
+import { d as defineEventHandler, g as getQuery, D as getConfiguredTimezone, bv as parseStatsRange, bz as clampStatsPage, bA as clampStatsPageSize, by as visitorEvents, b as db } from '../../../../nitro/nitro.mjs';
 import { or, sql, and, gte, lt, eq, count, desc } from 'drizzle-orm';
 import 'node:crypto';
-import 'zod';
 import 'crypto';
 import 'fs';
 import 'path';
@@ -25,8 +24,17 @@ import 'drizzle-orm/mysql-core';
 import 'maxmind';
 import 'node:os';
 import 'node:url';
+import 'zod';
 import '@iconify/utils';
 import 'consola';
+import 'ioredis';
+import 'jose';
+import 'node:child_process';
+import 'process';
+import 'buffer';
+import 'node:fs/promises';
+import 'node:dns/promises';
+import 'node:net';
 import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
 

@@ -1,7 +1,6 @@
-import { d as defineEventHandler, g as getQuery, bQ as getRequestURL, d1 as sendRedirect, d2 as normalizeMcpScopes, e as createError, d3 as resolveAndValidateMcpClient, d4 as isValidPkceCodeChallenge, b7 as getUserSession, d5 as MCP_DEFAULT_SCOPES, d6 as MCP_SCOPE_DEFINITIONS, ct as requireUserSession, r as readBody, b as db, bX as userTokens, c1 as MCP_OAUTH_CODE_TOKEN_NAME, d7 as createMcpAuthorizationCodeEnvelope, d8 as hashMcpOAuthSecret } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, g as getQuery, bR as getRequestURL, d2 as sendRedirect, d3 as normalizeMcpScopes, e as createError, d4 as resolveAndValidateMcpClient, d5 as isValidPkceCodeChallenge, b8 as getUserSession, d6 as MCP_DEFAULT_SCOPES, d7 as MCP_SCOPE_DEFINITIONS, cu as requireUserSession, r as readBody, b as db, bY as userTokens, c2 as MCP_OAUTH_CODE_TOKEN_NAME, d8 as createMcpAuthorizationCodeEnvelope, d9 as hashMcpOAuthSecret } from '../../../nitro/nitro.mjs';
 import { and, eq } from 'drizzle-orm';
 import 'node:crypto';
-import 'zod';
 import 'crypto';
 import 'fs';
 import 'path';
@@ -25,8 +24,17 @@ import 'drizzle-orm/mysql-core';
 import 'maxmind';
 import 'node:os';
 import 'node:url';
+import 'zod';
 import '@iconify/utils';
 import 'consola';
+import 'ioredis';
+import 'jose';
+import 'node:child_process';
+import 'process';
+import 'buffer';
+import 'node:fs/promises';
+import 'node:dns/promises';
+import 'node:net';
 import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
 

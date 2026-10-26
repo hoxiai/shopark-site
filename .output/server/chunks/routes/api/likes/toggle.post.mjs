@@ -1,7 +1,6 @@
-import { d as defineEventHandler, r as readBody, e as createError, b7 as getUserSession, cq as ensureVisitorId, cF as getRequestIP, bM as getHeader, b as db, cP as likes, cQ as syncLikesCount, al as emitEvent } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, r as readBody, e as createError, b8 as getUserSession, cr as ensureVisitorId, cG as getRequestIP, bN as getHeader, b as db, cQ as likes, cR as syncLikesCount, al as emitEvent } from '../../../nitro/nitro.mjs';
 import { and, eq, or, isNull } from 'drizzle-orm';
 import 'node:crypto';
-import 'zod';
 import 'crypto';
 import 'fs';
 import 'path';
@@ -25,8 +24,17 @@ import 'drizzle-orm/mysql-core';
 import 'maxmind';
 import 'node:os';
 import 'node:url';
+import 'zod';
 import '@iconify/utils';
 import 'consola';
+import 'ioredis';
+import 'jose';
+import 'node:child_process';
+import 'process';
+import 'buffer';
+import 'node:fs/promises';
+import 'node:dns/promises';
+import 'node:net';
 import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
 

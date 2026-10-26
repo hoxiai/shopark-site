@@ -1,4 +1,4 @@
-import { d as defineEventHandler, c as getRequestLocale, ct as requireUserSession, e as createError, b as db, u as users, a8 as clearUserSession, cF as getRequestIP, r as readBody, dx as getTopupRules, dy as buildTopupQuote, dz as TopupValidationError, dA as ensureTopupCarrierProduct, cq as ensureVisitorId, cv as mergePromoTracking, cw as capturePromoTracking, cx as readPromoTracking, az as getMinimalCheckoutAdminConfig, aA as buildMinimalCheckoutBridgeMeta, aB as mergeMinimalCheckoutMeta, z as orders, O as ORDER_PAY_STATUS, as as ORDER_STATUS, aC as prepareOrderMetaForInsert, dB as createTopupRecord, af as createOrderAttribution, c7 as trackVisitorEvent, du as createNotification } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, c as getRequestLocale, cu as requireUserSession, e as createError, b as db, u as users, a8 as clearUserSession, cG as getRequestIP, r as readBody, dy as getTopupRules, dz as buildTopupQuote, dA as TopupValidationError, dB as ensureTopupCarrierProduct, cr as ensureVisitorId, cw as mergePromoTracking, cx as capturePromoTracking, cy as readPromoTracking, az as getMinimalCheckoutAdminConfig, aA as buildMinimalCheckoutBridgeMeta, aB as mergeMinimalCheckoutMeta, z as orders, O as ORDER_PAY_STATUS, as as ORDER_STATUS, aC as prepareOrderMetaForInsert, dC as createTopupRecord, af as createOrderAttribution, c8 as trackVisitorEvent, dv as createNotification } from '../../../nitro/nitro.mjs';
 import crypto from 'crypto';
 import { z } from 'zod';
 import { eq } from 'drizzle-orm';
@@ -27,6 +27,14 @@ import 'node:os';
 import 'node:url';
 import '@iconify/utils';
 import 'consola';
+import 'ioredis';
+import 'jose';
+import 'node:child_process';
+import 'process';
+import 'buffer';
+import 'node:fs/promises';
+import 'node:dns/promises';
+import 'node:net';
 import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
 

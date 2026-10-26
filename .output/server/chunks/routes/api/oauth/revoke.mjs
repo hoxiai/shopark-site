@@ -1,7 +1,6 @@
-import { d as defineEventHandler, cR as applyMcpPublicCors, e as createError, r as readBody, da as isMcpAccessTokenValue, db as hashMcpAccessToken, b as db, bX as userTokens, d8 as hashMcpOAuthSecret } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, cS as applyMcpPublicCors, e as createError, r as readBody, db as isMcpAccessTokenValue, dc as hashMcpAccessToken, b as db, bY as userTokens, d9 as hashMcpOAuthSecret } from '../../../nitro/nitro.mjs';
 import { eq } from 'drizzle-orm';
 import 'node:crypto';
-import 'zod';
 import 'crypto';
 import 'fs';
 import 'path';
@@ -25,8 +24,17 @@ import 'drizzle-orm/mysql-core';
 import 'maxmind';
 import 'node:os';
 import 'node:url';
+import 'zod';
 import '@iconify/utils';
 import 'consola';
+import 'ioredis';
+import 'jose';
+import 'node:child_process';
+import 'process';
+import 'buffer';
+import 'node:fs/promises';
+import 'node:dns/promises';
+import 'node:net';
 import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
 

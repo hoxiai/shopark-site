@@ -1,4 +1,4 @@
-import { d as defineEventHandler, c as getRequestLocale, ct as requireUserSession, e as createError, r as readBody, b as db, bX as userTokens, e1 as apiTokenScope, d2 as normalizeMcpScopes, d5 as MCP_DEFAULT_SCOPES, dg as generateMcpAccessToken, e2 as API_TOKEN_PREFIX } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, c as getRequestLocale, cu as requireUserSession, e as createError, r as readBody, b as db, bY as userTokens, e2 as apiTokenScope, d3 as normalizeMcpScopes, d6 as MCP_DEFAULT_SCOPES, dh as generateMcpAccessToken, e3 as API_TOKEN_PREFIX } from '../../../nitro/nitro.mjs';
 import crypto from 'crypto';
 import { z } from 'zod';
 import { count, and, eq } from 'drizzle-orm';
@@ -27,6 +27,14 @@ import 'node:os';
 import 'node:url';
 import '@iconify/utils';
 import 'consola';
+import 'ioredis';
+import 'jose';
+import 'node:child_process';
+import 'process';
+import 'buffer';
+import 'node:fs/promises';
+import 'node:dns/promises';
+import 'node:net';
 import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
 

@@ -1,7 +1,6 @@
-import { d as defineEventHandler, c as getRequestLocale, $ as resolveClientIp, a0 as checkIpRateLimit, e as createError, r as readBody, cn as getUserLoginSecurityState, a2 as consumeCaptchaTicket, b as db, u as users, a3 as verifyPassword, co as clearUserLoginFailure, cp as issueWebSession, c7 as trackVisitorEvent, cq as ensureVisitorId, cr as recordUserLoginFailure } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, c as getRequestLocale, $ as resolveClientIp, a0 as checkIpRateLimit, e as createError, r as readBody, co as getUserLoginSecurityState, a2 as consumeCaptchaTicket, b as db, u as users, a3 as verifyPassword, cp as clearUserLoginFailure, cq as issueWebSession, c8 as trackVisitorEvent, cr as ensureVisitorId, cs as recordUserLoginFailure } from '../../../nitro/nitro.mjs';
 import { eq } from 'drizzle-orm';
 import 'node:crypto';
-import 'zod';
 import 'crypto';
 import 'fs';
 import 'path';
@@ -25,8 +24,17 @@ import 'drizzle-orm/mysql-core';
 import 'maxmind';
 import 'node:os';
 import 'node:url';
+import 'zod';
 import '@iconify/utils';
 import 'consola';
+import 'ioredis';
+import 'jose';
+import 'node:child_process';
+import 'process';
+import 'buffer';
+import 'node:fs/promises';
+import 'node:dns/promises';
+import 'node:net';
 import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
 

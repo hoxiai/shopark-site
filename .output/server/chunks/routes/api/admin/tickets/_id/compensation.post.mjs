@@ -1,7 +1,6 @@
-import { d as defineEventHandler, f as getRouterParam, e as createError, b as db, L as tickets, r as readBody, bF as usesExternalWallet, bM as getHeader, bN as creditExternalWalletCompensation, bO as changeBalance, bI as ticketMessages, bP as notifications } from '../../../../../nitro/nitro.mjs';
+import { d as defineEventHandler, f as getRouterParam, e as createError, b as db, L as tickets, r as readBody, bG as usesExternalWallet, bN as getHeader, bO as creditExternalWalletCompensation, bP as changeBalance, bJ as ticketMessages, bQ as notifications } from '../../../../../nitro/nitro.mjs';
 import { eq } from 'drizzle-orm';
 import 'node:crypto';
-import 'zod';
 import 'crypto';
 import 'fs';
 import 'path';
@@ -25,8 +24,17 @@ import 'drizzle-orm/mysql-core';
 import 'maxmind';
 import 'node:os';
 import 'node:url';
+import 'zod';
 import '@iconify/utils';
 import 'consola';
+import 'ioredis';
+import 'jose';
+import 'node:child_process';
+import 'process';
+import 'buffer';
+import 'node:fs/promises';
+import 'node:dns/promises';
+import 'node:net';
 import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
 

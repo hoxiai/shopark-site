@@ -1,7 +1,6 @@
-import { d as defineEventHandler, c as getRequestLocale, f as getRouterParam, e as createError, b as db, u as users, bX as userTokens, c1 as MCP_OAUTH_CODE_TOKEN_NAME, c2 as MCP_OAUTH_REFRESH_TOKEN_NAME } from '../../../../../nitro/nitro.mjs';
+import { d as defineEventHandler, c as getRequestLocale, f as getRouterParam, e as createError, b as db, u as users, bY as userTokens, c2 as MCP_OAUTH_CODE_TOKEN_NAME, c3 as MCP_OAUTH_REFRESH_TOKEN_NAME } from '../../../../../nitro/nitro.mjs';
 import { eq, and, inArray } from 'drizzle-orm';
 import 'node:crypto';
-import 'zod';
 import 'crypto';
 import 'fs';
 import 'path';
@@ -25,8 +24,17 @@ import 'drizzle-orm/mysql-core';
 import 'maxmind';
 import 'node:os';
 import 'node:url';
+import 'zod';
 import '@iconify/utils';
 import 'consola';
+import 'ioredis';
+import 'jose';
+import 'node:child_process';
+import 'process';
+import 'buffer';
+import 'node:fs/promises';
+import 'node:dns/promises';
+import 'node:net';
 import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
 

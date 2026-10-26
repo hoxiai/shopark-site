@@ -1,7 +1,6 @@
-import { d as defineEventHandler, g as getQuery, aI as posts, aJ as normalizePostLocale, b as db } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, g as getQuery, aJ as posts, aK as normalizePostLocale, b as db } from '../../../nitro/nitro.mjs';
 import { eq, or, like, and, count, desc, sql } from 'drizzle-orm';
 import 'node:crypto';
-import 'zod';
 import 'crypto';
 import 'fs';
 import 'path';
@@ -25,8 +24,17 @@ import 'drizzle-orm/mysql-core';
 import 'maxmind';
 import 'node:os';
 import 'node:url';
+import 'zod';
 import '@iconify/utils';
 import 'consola';
+import 'ioredis';
+import 'jose';
+import 'node:child_process';
+import 'process';
+import 'buffer';
+import 'node:fs/promises';
+import 'node:dns/promises';
+import 'node:net';
 import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
 

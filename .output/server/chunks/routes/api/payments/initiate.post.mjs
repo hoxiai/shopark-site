@@ -1,4 +1,4 @@
-import { d as defineEventHandler, at as requireTrustedRequestOrigin, c as getRequestLocale, r as readBody, dw as resolveOrderAccess, O as ORDER_PAY_STATUS, b as db, aF as paymentMethods, av as getSiteLocaleConfig, aw as resolveRequestLocale, dD as isPaymentMethodAvailableForLocale, dE as resolvePaymentPluginConfig, dH as resolvePaymentMethodCurrencies, dF as isPaymentMethodCurrencySupported, cF as getRequestIP, dI as getRequestHeaders, dJ as executeCreateScript, z as orders, ar as reconcileOrder } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, at as requireTrustedRequestOrigin, c as getRequestLocale, r as readBody, dx as resolveOrderAccess, O as ORDER_PAY_STATUS, b as db, aF as paymentMethods, av as getSiteLocaleConfig, aw as resolveRequestLocale, dE as isPaymentMethodAvailableForLocale, dF as resolvePaymentPluginConfig, dI as resolvePaymentMethodCurrencies, dG as isPaymentMethodCurrencySupported, cG as getRequestIP, dJ as getRequestHeaders, dK as executeCreateScript, z as orders, ar as reconcileOrder } from '../../../nitro/nitro.mjs';
 import fs from 'fs';
 import path from 'path';
 import { z } from 'zod';
@@ -27,6 +27,14 @@ import 'node:os';
 import 'node:url';
 import '@iconify/utils';
 import 'consola';
+import 'ioredis';
+import 'jose';
+import 'node:child_process';
+import 'process';
+import 'buffer';
+import 'node:fs/promises';
+import 'node:dns/promises';
+import 'node:net';
 import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
 

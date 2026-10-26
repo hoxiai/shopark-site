@@ -1,7 +1,6 @@
-import { d as defineEventHandler, at as requireTrustedRequestOrigin, c as getRequestLocale, $ as resolveClientIp, a0 as checkIpRateLimit, e as createError, r as readBody, cv as mergePromoTracking, cw as capturePromoTracking, cx as readPromoTracking, bY as PASSWORD_MIN_LENGTH, bZ as validateEmail, b as db, u as users, j as hashPassword, au as ensurePromoMember, cy as bindInviteRelation, cz as requestPromoAgentJoin, al as emitEvent, cA as promoAgentRelations, cB as promoInviteRelations, aO as promoMembers, cp as issueWebSession, c7 as trackVisitorEvent, cq as ensureVisitorId, bX as userTokens, c0 as EMAIL_VERIFY_TOKEN_NAME, X as getLocalizedSettingValue, Y as sendEmail } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, at as requireTrustedRequestOrigin, c as getRequestLocale, $ as resolveClientIp, a0 as checkIpRateLimit, e as createError, r as readBody, cw as mergePromoTracking, cx as capturePromoTracking, cy as readPromoTracking, bZ as PASSWORD_MIN_LENGTH, b_ as validateEmail, b as db, u as users, j as hashPassword, au as ensurePromoMember, cz as bindInviteRelation, cA as requestPromoAgentJoin, al as emitEvent, cB as promoAgentRelations, cC as promoInviteRelations, aP as promoMembers, cq as issueWebSession, c8 as trackVisitorEvent, cr as ensureVisitorId, bY as userTokens, c1 as EMAIL_VERIFY_TOKEN_NAME, X as getLocalizedSettingValue, Y as sendEmail } from '../../../nitro/nitro.mjs';
 import { eq } from 'drizzle-orm';
 import 'node:crypto';
-import 'zod';
 import 'crypto';
 import 'fs';
 import 'path';
@@ -25,8 +24,17 @@ import 'drizzle-orm/mysql-core';
 import 'maxmind';
 import 'node:os';
 import 'node:url';
+import 'zod';
 import '@iconify/utils';
 import 'consola';
+import 'ioredis';
+import 'jose';
+import 'node:child_process';
+import 'process';
+import 'buffer';
+import 'node:fs/promises';
+import 'node:dns/promises';
+import 'node:net';
 import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
 

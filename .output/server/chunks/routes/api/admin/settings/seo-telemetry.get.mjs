@@ -1,7 +1,6 @@
-import { d as defineEventHandler, g as getQuery, K as getRequestHost, bg as AI_CRAWLER_SIGNATURES, a as accessLogs, b as db, J as loadVisitorReport, a$ as settings, a9 as logs, bi as detectAiCrawler, br as isGeoCorpusRequestPath, t as toIsoTimestamp, bs as buildVisitorGeoConversions } from '../../../../nitro/nitro.mjs';
+import { d as defineEventHandler, g as getQuery, K as getRequestHost, bh as AI_CRAWLER_SIGNATURES, a as accessLogs, b as db, J as loadVisitorReport, b0 as settings, a9 as logs, bj as detectAiCrawler, bs as isGeoCorpusRequestPath, t as toIsoTimestamp, bt as buildVisitorGeoConversions } from '../../../../nitro/nitro.mjs';
 import { or, sql, and, gte, desc, eq } from 'drizzle-orm';
 import 'node:crypto';
-import 'zod';
 import 'crypto';
 import 'fs';
 import 'path';
@@ -25,8 +24,17 @@ import 'drizzle-orm/mysql-core';
 import 'maxmind';
 import 'node:os';
 import 'node:url';
+import 'zod';
 import '@iconify/utils';
 import 'consola';
+import 'ioredis';
+import 'jose';
+import 'node:child_process';
+import 'process';
+import 'buffer';
+import 'node:fs/promises';
+import 'node:dns/promises';
+import 'node:net';
 import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
 

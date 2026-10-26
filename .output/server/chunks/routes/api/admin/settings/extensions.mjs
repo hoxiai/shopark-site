@@ -1,7 +1,6 @@
-import { d as defineEventHandler, b8 as extensionManifests, b9 as readExtensionMigrationStatus, ba as readEnabledExtensionIds, e as createError, r as readBody, bb as migrateExtensionDatabase, s as setAuditMeta, bc as normalizeEnabledExtensionIds, b as db, a$ as settings, bd as ENABLED_EXTENSIONS_SETTING_KEY } from '../../../../nitro/nitro.mjs';
+import { d as defineEventHandler, b9 as extensionManifests, ba as readExtensionMigrationStatus, bb as readEnabledExtensionIds, e as createError, r as readBody, bc as migrateExtensionDatabase, s as setAuditMeta, bd as normalizeEnabledExtensionIds, b as db, b0 as settings, be as ENABLED_EXTENSIONS_SETTING_KEY } from '../../../../nitro/nitro.mjs';
 import { eq } from 'drizzle-orm';
 import 'node:crypto';
-import 'zod';
 import 'crypto';
 import 'fs';
 import 'path';
@@ -25,8 +24,17 @@ import 'drizzle-orm/mysql-core';
 import 'maxmind';
 import 'node:os';
 import 'node:url';
+import 'zod';
 import '@iconify/utils';
 import 'consola';
+import 'ioredis';
+import 'jose';
+import 'node:child_process';
+import 'process';
+import 'buffer';
+import 'node:fs/promises';
+import 'node:dns/promises';
+import 'node:net';
 import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
 
