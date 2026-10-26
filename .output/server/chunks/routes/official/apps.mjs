@@ -1,6 +1,7 @@
-import { d as defineEventHandler, dk as getMethod, r as readBody, g as getQuery, bP as queryPublishedApps } from '../../nitro/nitro.mjs';
+import { d as defineEventHandler, ef as getMethod, r as readBody, g as getQuery, c9 as queryPublishedApps } from '../../nitro/nitro.mjs';
 import 'drizzle-orm';
 import 'node:crypto';
+import 'zod';
 import 'crypto';
 import 'fs';
 import 'path';
@@ -24,16 +25,8 @@ import 'drizzle-orm/mysql-core';
 import 'maxmind';
 import 'node:os';
 import 'node:url';
-import 'zod';
 import '@iconify/utils';
 import 'consola';
-import 'ioredis';
-import 'node:child_process';
-import 'process';
-import 'buffer';
-import 'node:fs/promises';
-import 'node:dns/promises';
-import 'node:net';
 import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
 
@@ -63,13 +56,13 @@ const apps = defineEventHandler(async (event) => {
     msg: "ok",
     data: {
       data: result.data.map((item) => {
-        var _a;
+        var _a, _b;
         return {
           ...item,
           salesPrice: String((_a = item.salesPrice) != null ? _a : "0"),
           thumbnail: item.thumbnail || item.imageUrl || "",
           description: item.subtitle || item.content || "",
-          author: "Shoply"
+          author: String(((_b = item.settings) == null ? void 0 : _b.author) || "Official")
         };
       }),
       total: result.total,

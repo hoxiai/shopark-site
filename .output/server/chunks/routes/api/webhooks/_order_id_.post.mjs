@@ -1,8 +1,9 @@
-import { d as defineEventHandler, df as setHeader, c as getRequestLocale, f as getRouterParam, dg as readRawBody, r as readBody, g as getQuery, cO as getRequestHeaders, bZ as logger, e as createError, b as db, z as orders, aC as paymentMethods, dh as executeCallbackScript, cV as setResponseStatus, di as markOrderPaid, O as ORDER_PAY_STATUS, ap as ORDER_STATUS, cz as getAffectedRows, dj as markTopupPaymentFailed, aj as cancelPromoCommission, ak as revokeSubscriptionForOrder, al as refundTopup, am as sendMinimalCheckoutRefundNotification } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, e6 as setHeader, c as getRequestLocale, f as getRouterParam, e7 as readRawBody, r as readBody, g as getQuery, dI as getRequestHeaders, ck as logger, e as createError, b as db, z as orders, aF as paymentMethods, e8 as executeCallbackScript, cT as setResponseStatus, e9 as markOrderPaid, O as ORDER_PAY_STATUS, as as ORDER_STATUS, dt as getAffectedRows, ea as markTopupPaymentFailed, am as cancelPromoCommission, an as revokeSubscriptionForOrder, ao as refundTopup, ap as sendMinimalCheckoutRefundNotification } from '../../../nitro/nitro.mjs';
 import { eq, and, inArray, ne } from 'drizzle-orm';
 import fs from 'fs';
 import path from 'path';
 import 'node:crypto';
+import 'zod';
 import 'crypto';
 import 'node:path';
 import '@nuxthub/blob';
@@ -24,16 +25,8 @@ import 'drizzle-orm/mysql-core';
 import 'maxmind';
 import 'node:os';
 import 'node:url';
-import 'zod';
 import '@iconify/utils';
 import 'consola';
-import 'ioredis';
-import 'node:child_process';
-import 'process';
-import 'buffer';
-import 'node:fs/promises';
-import 'node:dns/promises';
-import 'node:net';
 import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
 
@@ -110,7 +103,6 @@ const postHandler = defineEventHandler(async (event) => {
     if (!payMethod) {
       throw new Error(`Order ${urlOrderId} does not have a payment method assigned`);
     }
-    const methods = await db.select().from(paymentMethods);
     const allMethods = await db.select().from(paymentMethods);
     const method = allMethods.find((m) => m.code.toLowerCase() === payMethod.toLowerCase() && m.isActive);
     if (!method) {

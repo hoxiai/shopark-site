@@ -1,6 +1,7 @@
-import { d as defineEventHandler, c as getRequestLocale, f as getRouterParam, e as createError, b as db, u as users, H as subscriptions, bn as usesAINodeWallet, bo as appendRevokedPeriod, z as orders, ap as ORDER_STATUS, bp as syncWalletTierFromRemaining, ai as emitEvent } from '../../../../nitro/nitro.mjs';
+import { d as defineEventHandler, c as getRequestLocale, f as getRouterParam, e as createError, b as db, u as users, H as subscriptions, bF as usesExternalWallet, bG as appendRevokedPeriod, z as orders, as as ORDER_STATUS, bH as syncWalletTierFromRemaining, al as emitEvent } from '../../../../nitro/nitro.mjs';
 import { eq, and } from 'drizzle-orm';
 import 'node:crypto';
+import 'zod';
 import 'crypto';
 import 'fs';
 import 'path';
@@ -24,16 +25,8 @@ import 'drizzle-orm/mysql-core';
 import 'maxmind';
 import 'node:os';
 import 'node:url';
-import 'zod';
 import '@iconify/utils';
 import 'consola';
-import 'ioredis';
-import 'node:child_process';
-import 'process';
-import 'buffer';
-import 'node:fs/promises';
-import 'node:dns/promises';
-import 'node:net';
 import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
 
@@ -61,7 +54,7 @@ const _id__delete = defineEventHandler(async (event) => {
   const now = /* @__PURE__ */ new Date();
   const periodStart = sub.currentPeriodStart ? new Date(sub.currentPeriodStart) : null;
   const periodEnd = sub.currentPeriodEnd ? new Date(sub.currentPeriodEnd) : null;
-  const notStarted = usesAINodeWallet() && periodStart && periodEnd && periodStart.getTime() > now.getTime();
+  const notStarted = usesExternalWallet() && periodStart && periodEnd && periodStart.getTime() > now.getTime();
   await db.update(subscriptions).set({
     status: "canceled",
     cancelAtPeriodEnd: true,

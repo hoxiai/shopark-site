@@ -1,6 +1,7 @@
-import { d as defineEventHandler, f as getRouterParam, e as createError, b as db, L as tickets, u as users, bq as ticketMessages, br as userWallets, z as orders, bs as fromScaled, bt as getWalletBackend } from '../../../../nitro/nitro.mjs';
+import { d as defineEventHandler, f as getRouterParam, e as createError, b as db, L as tickets, u as users, bI as ticketMessages, bJ as userWallets, z as orders, bK as fromScaled, bL as getWalletBackend } from '../../../../nitro/nitro.mjs';
 import { eq, asc, desc } from 'drizzle-orm';
 import 'node:crypto';
+import 'zod';
 import 'crypto';
 import 'fs';
 import 'path';
@@ -24,16 +25,8 @@ import 'drizzle-orm/mysql-core';
 import 'maxmind';
 import 'node:os';
 import 'node:url';
-import 'zod';
 import '@iconify/utils';
 import 'consola';
-import 'ioredis';
-import 'node:child_process';
-import 'process';
-import 'buffer';
-import 'node:fs/promises';
-import 'node:dns/promises';
-import 'node:net';
 import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
 
@@ -47,6 +40,10 @@ const _id__get = defineEventHandler(async (event) => {
     id: tickets.id,
     ticketNo: tickets.ticketNo,
     userId: tickets.userId,
+    visitorId: tickets.visitorId,
+    contactName: tickets.contactName,
+    contactEmail: tickets.contactEmail,
+    contactInfo: tickets.contactInfo,
     userEmail: users.email,
     userNickname: users.nickname,
     category: tickets.category,
@@ -62,17 +59,18 @@ const _id__get = defineEventHandler(async (event) => {
   if (!ticket) {
     throw createError({ statusCode: 404, statusMessage: "\u5DE5\u5355\u4E0D\u5B58\u5728" });
   }
+  const orderLookupEmail = ticket.userEmail || ticket.contactEmail || "";
   const [messages, walletRows, recentOrders] = await Promise.all([
     db.select().from(ticketMessages).where(eq(ticketMessages.ticketId, ticketId)).orderBy(asc(ticketMessages.createdAt)),
-    db.select().from(userWallets).where(eq(userWallets.userId, ticket.userId)).limit(1),
-    ticket.userEmail ? db.select({
+    ticket.userId ? db.select().from(userWallets).where(eq(userWallets.userId, ticket.userId)).limit(1) : Promise.resolve([]),
+    orderLookupEmail ? db.select({
       id: orders.id,
       amount: orders.amount,
       currency: orders.currency,
       payStatus: orders.payStatus,
       payMethod: orders.payMethod,
       createdAt: orders.createdAt
-    }).from(orders).where(eq(orders.contactEmail, ticket.userEmail)).orderBy(desc(orders.createdAt)).limit(3) : Promise.resolve([])
+    }).from(orders).where(eq(orders.contactEmail, orderLookupEmail)).orderBy(desc(orders.createdAt)).limit(3) : Promise.resolve([])
   ]);
   const walletRow = walletRows[0];
   const userFinance = walletRow ? {
@@ -90,7 +88,7 @@ const _id__get = defineEventHandler(async (event) => {
       messages,
       userFinance,
       recentOrders,
-      // 钱包归属：AINode 钱包站点补偿只能发充值余额（后台据此限定补偿类型）
+      // 钱包归属：外部钱包站点补偿只能发充值余额（后台据此限定补偿类型）
       walletBackend: getWalletBackend()
     }
   };

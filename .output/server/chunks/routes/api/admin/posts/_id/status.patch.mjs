@@ -1,6 +1,7 @@
-import { d as defineEventHandler, c as getRequestLocale, f as getRouterParam, e as createError, r as readBody, b as db, aG as posts } from '../../../../../nitro/nitro.mjs';
+import { d as defineEventHandler, c as getRequestLocale, f as getRouterParam, e as createError, r as readBody, b as db, aI as posts, aK as notifyIndexNowEntityChange } from '../../../../../nitro/nitro.mjs';
 import { eq } from 'drizzle-orm';
 import 'node:crypto';
+import 'zod';
 import 'crypto';
 import 'fs';
 import 'path';
@@ -24,16 +25,8 @@ import 'drizzle-orm/mysql-core';
 import 'maxmind';
 import 'node:os';
 import 'node:url';
-import 'zod';
 import '@iconify/utils';
 import 'consola';
-import 'ioredis';
-import 'node:child_process';
-import 'process';
-import 'buffer';
-import 'node:fs/promises';
-import 'node:dns/promises';
-import 'node:net';
 import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
 
@@ -52,6 +45,14 @@ const status_patch = defineEventHandler(async (event) => {
   }).where(eq(posts.id, id)).returning();
   if (updated.length === 0) {
     throw createError({ statusCode: 404, message: locale === "zh" ? "\u6587\u7AE0\u4E0D\u5B58\u5728" : "Post not found" });
+  }
+  const updatedPost = updated[0];
+  if ((updatedPost == null ? void 0 : updatedPost.isActive) && updatedPost.type === "blog" && updatedPost.slug) {
+    notifyIndexNowEntityChange(event, {
+      entityType: "post",
+      slug: updatedPost.slug,
+      locale: updatedPost.locale
+    });
   }
   return {
     code: 0,

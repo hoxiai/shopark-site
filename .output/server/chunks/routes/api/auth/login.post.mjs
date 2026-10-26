@@ -1,6 +1,7 @@
-import { d as defineEventHandler, c as getRequestLocale, Y as resolveClientIp, Z as checkIpRateLimit, e as createError, r as readBody, c0 as getUserLoginSecurityState, $ as consumeCaptchaTicket, b as db, u as users, a0 as verifyPassword, c1 as clearUserLoginFailure, c2 as issueWebSession, bN as trackVisitorEvent, c3 as ensureVisitorId, c4 as recordUserLoginFailure } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, c as getRequestLocale, $ as resolveClientIp, a0 as checkIpRateLimit, e as createError, r as readBody, cn as getUserLoginSecurityState, a2 as consumeCaptchaTicket, b as db, u as users, a3 as verifyPassword, co as clearUserLoginFailure, cp as issueWebSession, c7 as trackVisitorEvent, cq as ensureVisitorId, cr as recordUserLoginFailure } from '../../../nitro/nitro.mjs';
 import { eq } from 'drizzle-orm';
 import 'node:crypto';
+import 'zod';
 import 'crypto';
 import 'fs';
 import 'path';
@@ -24,16 +25,8 @@ import 'drizzle-orm/mysql-core';
 import 'maxmind';
 import 'node:os';
 import 'node:url';
-import 'zod';
 import '@iconify/utils';
 import 'consola';
-import 'ioredis';
-import 'node:child_process';
-import 'process';
-import 'buffer';
-import 'node:fs/promises';
-import 'node:dns/promises';
-import 'node:net';
 import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
 
@@ -87,7 +80,7 @@ const login_post = defineEventHandler(async (event) => {
         data: { needCaptcha: true }
       });
     }
-    const isTicketValid = consumeCaptchaTicket(captchaTicket);
+    const isTicketValid = consumeCaptchaTicket(captchaTicket, ip);
     if (!isTicketValid) {
       throw createError({
         statusCode: 403,

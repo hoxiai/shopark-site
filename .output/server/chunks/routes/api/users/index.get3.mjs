@@ -1,6 +1,7 @@
-import { d as defineEventHandler, b3 as getUserSession, e as createError, g as getQuery, L as tickets, b as db } from '../../../nitro/nitro.mjs';
-import { eq, and, count, desc } from 'drizzle-orm';
+import { d as defineEventHandler, b7 as getUserSession, e as createError, g as getQuery, L as tickets, b as db } from '../../../nitro/nitro.mjs';
+import { or, eq, and, count, desc } from 'drizzle-orm';
 import 'node:crypto';
+import 'zod';
 import 'crypto';
 import 'fs';
 import 'path';
@@ -24,23 +25,17 @@ import 'drizzle-orm/mysql-core';
 import 'maxmind';
 import 'node:os';
 import 'node:url';
-import 'zod';
 import '@iconify/utils';
 import 'consola';
-import 'ioredis';
-import 'node:child_process';
-import 'process';
-import 'buffer';
-import 'node:fs/promises';
-import 'node:dns/promises';
-import 'node:net';
 import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
 
 const index_get = defineEventHandler(async (event) => {
-  var _a, _b;
+  var _a;
   const session = await getUserSession(event).catch(() => null);
-  const userId = (_a = session == null ? void 0 : session.user) == null ? void 0 : _a.id;
+  const user = session == null ? void 0 : session.user;
+  const userId = user == null ? void 0 : user.id;
+  const userEmail = (user == null ? void 0 : user.email) ? String(user.email).trim().toLowerCase() : "";
   if (!userId) {
     throw createError({ statusCode: 401, statusMessage: "Unauthorized" });
   }
@@ -50,7 +45,8 @@ const index_get = defineEventHandler(async (event) => {
   const offset = (page - 1) * pageSize;
   const status = typeof query.status === "string" && query.status.trim() ? query.status.trim() : "";
   const category = typeof query.category === "string" && query.category.trim() ? query.category.trim() : "";
-  const conditions = [eq(tickets.userId, userId)];
+  const ownerCondition = userEmail ? or(eq(tickets.userId, userId), eq(tickets.contactEmail, userEmail)) : eq(tickets.userId, userId);
+  const conditions = [ownerCondition];
   if (status) {
     conditions.push(eq(tickets.status, status));
   }
@@ -62,10 +58,11 @@ const index_get = defineEventHandler(async (event) => {
     db.select({ total: count() }).from(tickets).where(whereClause),
     db.select().from(tickets).where(whereClause).orderBy(desc(tickets.lastRepliedAt)).limit(pageSize).offset(offset)
   ]);
-  const total = Number(((_b = totalResult[0]) == null ? void 0 : _b.total) || 0);
+  const total = Number(((_a = totalResult[0]) == null ? void 0 : _a.total) || 0);
+  const safeList = list.map(({ accessToken: _omit, ...item }) => item);
   return {
     code: 200,
-    data: list,
+    data: safeList,
     pagination: {
       page,
       pageSize,

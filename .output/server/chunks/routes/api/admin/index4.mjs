@@ -1,6 +1,7 @@
-import { d as defineEventHandler, g as getQuery, p as products, b as db, r as readBody, e as createError, c as getRequestLocale, aJ as normalizeProductLocalePrices } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, g as getQuery, p as products, b as db, r as readBody, e as createError, c as getRequestLocale, aN as normalizeProductLocalePrices, aK as notifyIndexNowEntityChange } from '../../../nitro/nitro.mjs';
 import { or, like, sql, and, count, desc } from 'drizzle-orm';
 import 'node:crypto';
+import 'zod';
 import 'crypto';
 import 'fs';
 import 'path';
@@ -24,16 +25,8 @@ import 'drizzle-orm/mysql-core';
 import 'maxmind';
 import 'node:os';
 import 'node:url';
-import 'zod';
 import '@iconify/utils';
 import 'consola';
-import 'ioredis';
-import 'node:child_process';
-import 'process';
-import 'buffer';
-import 'node:fs/promises';
-import 'node:dns/promises';
-import 'node:net';
 import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
 
@@ -132,7 +125,15 @@ const index = defineEventHandler(async (event) => {
     if (insertData.createdAt) {
       delete insertData.createdAt;
     }
-    return await db.insert(products).values(insertData).returning();
+    const created = await db.insert(products).values(insertData).returning();
+    const createdProduct = created[0];
+    if ((createdProduct == null ? void 0 : createdProduct.isActive) && createdProduct.slug) {
+      notifyIndexNowEntityChange(event, {
+        entityType: "product",
+        slug: createdProduct.slug
+      });
+    }
+    return created;
   }
 });
 

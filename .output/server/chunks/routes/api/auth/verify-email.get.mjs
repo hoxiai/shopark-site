@@ -1,6 +1,7 @@
-import { d as defineEventHandler, g as getQuery, b_ as sendLocalizedRedirect, b as db, bE as userTokens, bI as EMAIL_VERIFY_TOKEN_NAME, u as users, z as orders, b3 as getUserSession, a2 as setUserSession } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, g as getQuery, cl as sendLocalizedRedirect, b as db, bX as userTokens, c0 as EMAIL_VERIFY_TOKEN_NAME, u as users, z as orders, b7 as getUserSession, a5 as setUserSession } from '../../../nitro/nitro.mjs';
 import { eq, and, isNull } from 'drizzle-orm';
 import 'node:crypto';
+import 'zod';
 import 'crypto';
 import 'fs';
 import 'path';
@@ -24,16 +25,8 @@ import 'drizzle-orm/mysql-core';
 import 'maxmind';
 import 'node:os';
 import 'node:url';
-import 'zod';
 import '@iconify/utils';
 import 'consola';
-import 'ioredis';
-import 'node:child_process';
-import 'process';
-import 'buffer';
-import 'node:fs/promises';
-import 'node:dns/promises';
-import 'node:net';
 import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
 

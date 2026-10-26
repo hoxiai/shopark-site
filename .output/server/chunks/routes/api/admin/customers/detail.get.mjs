@@ -1,6 +1,7 @@
 import { d as defineEventHandler, c as getRequestLocale, g as getQuery, e as createError, z as orders, b as db, p as products, B as aggregateOrderAccountingTotals, C as visitorProfiles, u as users } from '../../../../nitro/nitro.mjs';
 import { and, or, isNull, eq, desc } from 'drizzle-orm';
 import 'node:crypto';
+import 'zod';
 import 'crypto';
 import 'fs';
 import 'path';
@@ -24,16 +25,8 @@ import 'drizzle-orm/mysql-core';
 import 'maxmind';
 import 'node:os';
 import 'node:url';
-import 'zod';
 import '@iconify/utils';
 import 'consola';
-import 'ioredis';
-import 'node:child_process';
-import 'process';
-import 'buffer';
-import 'node:fs/promises';
-import 'node:dns/promises';
-import 'node:net';
 import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
 

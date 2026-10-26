@@ -1,6 +1,7 @@
-import { d as defineEventHandler, df as setHeader, dn as resolveServerSeoContext } from '../nitro/nitro.mjs';
+import { d as defineEventHandler, e6 as setHeader, bo as resolveServerSeoContext, ei as readGeoAiBotsPolicy, ej as renderRobotsTxt } from '../nitro/nitro.mjs';
 import 'drizzle-orm';
 import 'node:crypto';
+import 'zod';
 import 'crypto';
 import 'fs';
 import 'path';
@@ -24,34 +25,19 @@ import 'drizzle-orm/mysql-core';
 import 'maxmind';
 import 'node:os';
 import 'node:url';
-import 'zod';
 import '@iconify/utils';
 import 'consola';
-import 'ioredis';
-import 'node:child_process';
-import 'process';
-import 'buffer';
-import 'node:fs/promises';
-import 'node:dns/promises';
-import 'node:net';
 import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
 
 const robots_txt_get = defineEventHandler(async (event) => {
   setHeader(event, "content-type", "text/plain; charset=utf-8");
   setHeader(event, "cache-control", "public, max-age=300, stale-while-revalidate=3600");
-  const { origin, locales } = await resolveServerSeoContext(event);
-  const lines = [
-    "User-agent: *",
-    "Allow: /",
-    "Disallow: /api/"
-  ];
-  for (const locale of locales) {
-    lines.push(`Disallow: /${locale.code}/api/`);
-  }
-  if (origin) lines.push(`Sitemap: ${origin}/sitemap.xml`);
-  return `${lines.join("\n")}
-`;
+  const [{ origin, locales }, aiBotsPolicy] = await Promise.all([
+    resolveServerSeoContext(event),
+    readGeoAiBotsPolicy()
+  ]);
+  return renderRobotsTxt(origin, locales, { aiBotsPolicy });
 });
 
 export { robots_txt_get as default };

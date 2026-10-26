@@ -1,6 +1,7 @@
 import { d as defineEventHandler, g as getQuery, L as tickets, u as users, b as db } from '../../../nitro/nitro.mjs';
 import { eq, or, like, and, desc, count } from 'drizzle-orm';
 import 'node:crypto';
+import 'zod';
 import 'crypto';
 import 'fs';
 import 'path';
@@ -24,16 +25,8 @@ import 'drizzle-orm/mysql-core';
 import 'maxmind';
 import 'node:os';
 import 'node:url';
-import 'zod';
 import '@iconify/utils';
 import 'consola';
-import 'ioredis';
-import 'node:child_process';
-import 'process';
-import 'buffer';
-import 'node:fs/promises';
-import 'node:dns/promises';
-import 'node:net';
 import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
 
@@ -63,7 +56,10 @@ const index_get = defineEventHandler(async (event) => {
       or(
         like(tickets.ticketNo, pattern),
         like(tickets.title, pattern),
-        like(users.email, pattern)
+        like(users.email, pattern),
+        like(tickets.contactEmail, pattern),
+        like(tickets.contactName, pattern),
+        like(tickets.contactInfo, pattern)
       )
     );
   }
@@ -72,6 +68,10 @@ const index_get = defineEventHandler(async (event) => {
     id: tickets.id,
     ticketNo: tickets.ticketNo,
     userId: tickets.userId,
+    visitorId: tickets.visitorId,
+    contactName: tickets.contactName,
+    contactEmail: tickets.contactEmail,
+    contactInfo: tickets.contactInfo,
     userEmail: users.email,
     userNickname: users.nickname,
     category: tickets.category,

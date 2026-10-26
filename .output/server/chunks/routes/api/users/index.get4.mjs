@@ -1,6 +1,7 @@
-import { d as defineEventHandler, c6 as requireUserSession, b as db, bE as userTokens, da as apiTokenScope } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, ct as requireUserSession, b as db, bX as userTokens, e1 as apiTokenScope, d6 as MCP_SCOPE_DEFINITIONS } from '../../../nitro/nitro.mjs';
 import { desc } from 'drizzle-orm';
 import 'node:crypto';
+import 'zod';
 import 'crypto';
 import 'fs';
 import 'path';
@@ -24,16 +25,8 @@ import 'drizzle-orm/mysql-core';
 import 'maxmind';
 import 'node:os';
 import 'node:url';
-import 'zod';
 import '@iconify/utils';
 import 'consola';
-import 'ioredis';
-import 'node:child_process';
-import 'process';
-import 'buffer';
-import 'node:fs/promises';
-import 'node:dns/promises';
-import 'node:net';
 import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
 
@@ -43,12 +36,18 @@ const index_get = defineEventHandler(async (event) => {
   const rows = await db.select({
     id: userTokens.id,
     name: userTokens.name,
+    scopes: userTokens.scopes,
+    clientId: userTokens.clientId,
+    clientName: userTokens.clientName,
     lastUsedAt: userTokens.lastUsedAt,
     expiresAt: userTokens.expiresAt,
     revoked: userTokens.revoked,
     createdAt: userTokens.createdAt
   }).from(userTokens).where(apiTokenScope(userId)).orderBy(desc(userTokens.createdAt));
-  return { data: rows };
+  return {
+    data: rows,
+    supportedScopes: MCP_SCOPE_DEFINITIONS
+  };
 });
 
 export { index_get as default };

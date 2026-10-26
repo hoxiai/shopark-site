@@ -1,6 +1,7 @@
-import { d as defineEventHandler, g as getQuery, b as db, aK as promoMembers, aL as PROMO_ROLE, aM as listPromoAgents } from '../../../../nitro/nitro.mjs';
+import { d as defineEventHandler, g as getQuery, b as db, aO as promoMembers, aP as PROMO_ROLE, aQ as listPromoAgents } from '../../../../nitro/nitro.mjs';
 import { count, inArray } from 'drizzle-orm';
 import 'node:crypto';
+import 'zod';
 import 'crypto';
 import 'fs';
 import 'path';
@@ -24,16 +25,8 @@ import 'drizzle-orm/mysql-core';
 import 'maxmind';
 import 'node:os';
 import 'node:url';
-import 'zod';
 import '@iconify/utils';
 import 'consola';
-import 'ioredis';
-import 'node:child_process';
-import 'process';
-import 'buffer';
-import 'node:fs/promises';
-import 'node:dns/promises';
-import 'node:net';
 import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
 

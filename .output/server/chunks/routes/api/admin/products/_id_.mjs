@@ -1,6 +1,7 @@
-import { d as defineEventHandler, c as getRequestLocale, f as getRouterParam, e as createError, b as db, p as products, r as readBody, aJ as normalizeProductLocalePrices, s as setAuditMeta } from '../../../../nitro/nitro.mjs';
+import { d as defineEventHandler, c as getRequestLocale, f as getRouterParam, e as createError, b as db, p as products, r as readBody, aN as normalizeProductLocalePrices, aK as notifyIndexNowEntityChange, s as setAuditMeta } from '../../../../nitro/nitro.mjs';
 import { eq } from 'drizzle-orm';
 import 'node:crypto';
+import 'zod';
 import 'crypto';
 import 'fs';
 import 'path';
@@ -24,16 +25,8 @@ import 'drizzle-orm/mysql-core';
 import 'maxmind';
 import 'node:os';
 import 'node:url';
-import 'zod';
 import '@iconify/utils';
 import 'consola';
-import 'ioredis';
-import 'node:child_process';
-import 'process';
-import 'buffer';
-import 'node:fs/promises';
-import 'node:dns/promises';
-import 'node:net';
 import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
 
@@ -117,6 +110,13 @@ const _id_ = defineEventHandler(async (event) => {
     });
     const [before] = await db.select({ name: products.name, price: products.price, isActive: products.isActive }).from(products).where(eq(products.id, parseInt(id))).limit(1);
     const updated = await db.update(products).set(updateData).where(eq(products.id, parseInt(id))).returning();
+    const updatedProduct = updated[0];
+    if ((updatedProduct == null ? void 0 : updatedProduct.isActive) && updatedProduct.slug) {
+      notifyIndexNowEntityChange(event, {
+        entityType: "product",
+        slug: updatedProduct.slug
+      });
+    }
     setAuditMeta(event, {
       summary: `Updated product "${(_a = before == null ? void 0 : before.name) != null ? _a : id}"`,
       details: {

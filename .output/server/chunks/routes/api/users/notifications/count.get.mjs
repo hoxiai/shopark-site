@@ -1,6 +1,7 @@
-import { d as defineEventHandler, b3 as getUserSession, bx as notifications, cD as getCookie, b as db } from '../../../../nitro/nitro.mjs';
-import { eq, count, and } from 'drizzle-orm';
+import { d as defineEventHandler, b7 as getUserSession, bP as notifications, cN as getCookie, b as db } from '../../../../nitro/nitro.mjs';
+import { eq, isNull, count, and } from 'drizzle-orm';
 import 'node:crypto';
+import 'zod';
 import 'crypto';
 import 'fs';
 import 'path';
@@ -24,16 +25,8 @@ import 'drizzle-orm/mysql-core';
 import 'maxmind';
 import 'node:os';
 import 'node:url';
-import 'zod';
 import '@iconify/utils';
 import 'consola';
-import 'ioredis';
-import 'node:child_process';
-import 'process';
-import 'buffer';
-import 'node:fs/promises';
-import 'node:dns/promises';
-import 'node:net';
 import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
 
@@ -45,9 +38,9 @@ const count_get = defineEventHandler(async (event) => {
   if (userId) {
     conditions.push(eq(notifications.userId, userId));
   } else {
-    const visitorId = getCookie(event, "visitorId") || "";
+    const visitorId = getCookie(event, "visitor_id") || getCookie(event, "visitorId") || "";
     if (visitorId) {
-      conditions.push(eq(notifications.visitorId, visitorId));
+      conditions.push(eq(notifications.visitorId, visitorId), isNull(notifications.userId));
     } else {
       return { unreadCount: 0 };
     }

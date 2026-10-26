@@ -1,6 +1,7 @@
-import { d as defineEventHandler, c as getRequestLocale, r as readBody, e as createError, aH as normalizePostLocale, b as db, aG as posts, aI as findUniqueViolation } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, c as getRequestLocale, r as readBody, e as createError, aJ as normalizePostLocale, b as db, aI as posts, aK as notifyIndexNowEntityChange, aL as notifySubscribersOnPostPublished, aM as findUniqueViolation } from '../../../nitro/nitro.mjs';
 import 'drizzle-orm';
 import 'node:crypto';
+import 'zod';
 import 'crypto';
 import 'fs';
 import 'path';
@@ -24,19 +25,23 @@ import 'drizzle-orm/mysql-core';
 import 'maxmind';
 import 'node:os';
 import 'node:url';
-import 'zod';
 import '@iconify/utils';
 import 'consola';
-import 'ioredis';
-import 'node:child_process';
-import 'process';
-import 'buffer';
-import 'node:fs/promises';
-import 'node:dns/promises';
-import 'node:net';
 import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
 
+const normalizePostMetaData = (value) => {
+  if (value === null || value === void 0 || value === "") return null;
+  if (typeof value === "string") {
+    try {
+      const parsed = JSON.parse(value);
+      return parsed && typeof parsed === "object" ? parsed : null;
+    } catch {
+      return null;
+    }
+  }
+  return typeof value === "object" ? value : null;
+};
 const index_post = defineEventHandler(async (event) => {
   const locale = getRequestLocale(event);
   const body = await readBody(event);
@@ -59,12 +64,39 @@ const index_post = defineEventHandler(async (event) => {
       type: postType,
       imageUrl: body.imageUrl || null,
       isActive: body.isActive !== void 0 ? body.isActive : true,
-      metaData: body.metaData ? process.env.NUXT_HUB_DATABASE ? body.metaData : JSON.stringify(body.metaData) : null,
+      metaData: normalizePostMetaData(body.metaData),
       createdAt: /* @__PURE__ */ new Date(),
       updatedAt: /* @__PURE__ */ new Date()
     };
     const result = await db.insert(posts).values(postData).returning();
-    return { code: 0, message: locale === "zh" ? "\u6587\u7AE0\u521B\u5EFA\u6210\u529F" : "Post created successfully", data: result[0] };
+    const createdPost = result[0];
+    if (createdPost && postData.isActive && postType === "blog" && createdPost.slug) {
+      notifyIndexNowEntityChange(event, {
+        entityType: "post",
+        slug: createdPost.slug,
+        locale: createdPost.locale
+      });
+    }
+    let newsletterResult = null;
+    if (createdPost && postData.isActive && postType === "blog" && Boolean(body.notifySubscribers)) {
+      newsletterResult = await notifySubscribersOnPostPublished({
+        id: createdPost.id,
+        title: createdPost.title,
+        slug: createdPost.slug,
+        description: createdPost.description,
+        locale: createdPost.locale,
+        type: createdPost.type
+      }).catch((err) => {
+        console.error("[Newsletter] Failed to notify subscribers on post create:", err);
+        return null;
+      });
+    }
+    return {
+      code: 0,
+      message: locale === "zh" ? "\u6587\u7AE0\u521B\u5EFA\u6210\u529F" : "Post created successfully",
+      data: createdPost,
+      newsletter: newsletterResult
+    };
   } catch (error) {
     console.error("Create post error:", error);
     const duplicate = findUniqueViolation(error);

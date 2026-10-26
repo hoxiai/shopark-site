@@ -1,3 +1,35 @@
+import { eC as defaultShoplyCases } from '../nitro/nitro.mjs';
+import 'drizzle-orm';
+import 'node:crypto';
+import 'zod';
+import 'crypto';
+import 'fs';
+import 'path';
+import 'node:path';
+import '@nuxthub/blob';
+import 'node:http';
+import 'node:https';
+import 'node:events';
+import 'node:buffer';
+import 'node:fs';
+import 'node:async_hooks';
+import 'postgres';
+import 'drizzle-orm/postgres-js';
+import 'drizzle-orm/d1';
+import 'node:module';
+import 'mysql2/promise';
+import 'drizzle-orm/mysql2';
+import 'drizzle-orm/pg-core';
+import 'drizzle-orm/sqlite-core';
+import 'drizzle-orm/mysql-core';
+import 'maxmind';
+import 'node:os';
+import 'node:url';
+import '@iconify/utils';
+import 'consola';
+import '@adonisjs/hash';
+import '@adonisjs/hash/drivers/scrypt';
+
 const shoplyAppSeeds = [
   { kind: "app", packageKind: "extension", runtimeKind: "payment", slug: "stripe", name: "Stripe", category: "payment", mark: "S", accent: "#635bff", version: "0.3.1", publishedAt: "2024-06-22", updatedAt: "2026-10-13", downloads: 12 },
   { kind: "app", packageKind: "extension", runtimeKind: "payment", slug: "paddle", name: "Paddle", category: "payment", mark: "P", accent: "#7357ff", version: "0.0.2", publishedAt: "2024-06-22", updatedAt: "2026-10-13", downloads: 1 },
@@ -43,9 +75,46 @@ const shoplyThemeSeeds = [
 const shoplyMarketplaceSeeds = [...shoplyAppSeeds, ...shoplyThemeSeeds];
 
 const getSitemapEntries = (source) => {
+  if (source === "shoply-cases") {
+    return defaultShoplyCases.filter((item) => item.status === 1).map((item) => {
+      var _a;
+      return {
+        path: `/cases/${item.id}`,
+        lastmod: item.updatedAt || item.createdAt,
+        title: item.title,
+        section: "Customer Case Studies",
+        description: item.summary || item.subtitle || item.title,
+        markdown: [
+          `- Client: ${item.clientName}`,
+          `- Category: ${item.categoryLabel || item.category}`,
+          ...item.industry ? [`- Industry: ${item.industry}`] : [],
+          `- Primary Outcome: ${item.metricValue} (${item.metricLabel})`,
+          ...item.secondaryMetricValue && item.secondaryMetricLabel ? [`- Secondary Outcome: ${item.secondaryMetricValue} (${item.secondaryMetricLabel})`] : [],
+          ...item.deliveryPeriod ? [`- Delivery Period: ${item.deliveryPeriod}`] : [],
+          ...((_a = item.tags) == null ? void 0 : _a.length) ? [`- Tags: ${item.tags.join(", ")}`] : [],
+          ...item.content ? ["", item.content] : []
+        ].join("\n")
+      };
+    });
+  }
   const kind = source === "shoply-apps" ? "app" : "theme";
   const prefix = kind === "app" ? "/apps" : "/themes";
-  return shoplyMarketplaceSeeds.filter((item) => item.kind === kind).map((item) => ({ path: `${prefix}/${item.slug}` }));
+  const section = kind === "app" ? "Shoply Apps" : "Shoply Themes";
+  return shoplyMarketplaceSeeds.filter((item) => item.kind === kind).map((item) => ({
+    path: `${prefix}/${item.slug}`,
+    lastmod: item.updatedAt ? `${item.updatedAt}T00:00:00.000Z` : void 0,
+    title: item.name,
+    section,
+    description: `${item.name} (${item.category}) \u2014 Shoply ${kind === "app" ? `${item.runtimeKind || "extension"} app` : "storefront theme"} v${item.version}.`,
+    markdown: [
+      `- Name: ${item.name}`,
+      `- Category: ${item.category}`,
+      `- Package Kind: ${item.packageKind}${item.runtimeKind ? ` (${item.runtimeKind})` : ""}`,
+      `- Version: ${item.version}`,
+      ...item.publishedAt ? [`- Published: ${item.publishedAt}`] : [],
+      ...item.updatedAt ? [`- Updated: ${item.updatedAt}`] : []
+    ].join("\n")
+  }));
 };
 
 export { getSitemapEntries };

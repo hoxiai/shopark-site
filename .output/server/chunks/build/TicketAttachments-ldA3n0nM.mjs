@@ -1,4 +1,4 @@
-import { e as useToast, _ as _sfc_main$V, n as _sfc_main$F } from './server.mjs';
+import { e as useToast, _ as _sfc_main$W, n as _sfc_main$G } from './server.mjs';
 import { defineComponent, ref, computed, mergeProps, withCtx, createVNode, openBlock, createBlock, createCommentVNode, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderList, ssrRenderAttr, ssrRenderComponent, ssrIncludeBooleanAttr, ssrInterpolate } from 'vue/server-renderer';
 
@@ -24,8 +24,8 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       set: (val) => emit("update:modelValue", val)
     });
     return (_ctx, _push, _parent, _attrs) => {
-      const _component_UIcon = _sfc_main$V;
-      const _component_UModal = _sfc_main$F;
+      const _component_UIcon = _sfc_main$W;
+      const _component_UModal = _sfc_main$G;
       _push(`<div${ssrRenderAttrs(mergeProps({ class: "space-y-2" }, _attrs))}>`);
       if (attachments.value.length > 0) {
         _push(`<div class="flex flex-wrap gap-2.5"><!--[-->`);

@@ -1,6 +1,7 @@
-import { dH as syncSubscriptionToAINode } from '../nitro/nitro.mjs';
-import 'drizzle-orm';
+import { eq } from 'drizzle-orm';
+import { b as db, p as products, eA as readShoplyPlanMeta, eB as pushShoplyLicense } from '../nitro/nitro.mjs';
 import 'node:crypto';
+import 'zod';
 import 'crypto';
 import 'fs';
 import 'path';
@@ -24,56 +25,74 @@ import 'drizzle-orm/mysql-core';
 import 'maxmind';
 import 'node:os';
 import 'node:url';
-import 'zod';
 import '@iconify/utils';
 import 'consola';
-import 'ioredis';
-import 'node:child_process';
-import 'process';
-import 'buffer';
-import 'node:fs/promises';
-import 'node:dns/promises';
-import 'node:net';
 import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
 
-const toUserId = (payload) => {
-  var _a;
-  return Number((_a = payload == null ? void 0 : payload.userId) != null ? _a : 0) || 0;
-};
-const productType = (payload) => {
-  const product = payload == null ? void 0 : payload.product;
-  return product && typeof product === "object" ? String(product.type || "") : "";
-};
 function getThemeEventRules() {
   return [
     {
-      key: "ainode:sync_subscription_paid",
+      key: "shoply:license_sync",
       event: "order.paid",
-      theme: "ainode",
-      label: "AINode\uFF1A\u8BA2\u9605\u652F\u4ED8\u540E\u540C\u6B65\u5957\u9910\u989D\u5EA6",
-      description: "\u8BA2\u9605\u8BA2\u5355\uFF08\u65B0\u8D2D\u3001\u7EED\u8D39\u3001\u5347\u7EA7\uFF09\u652F\u4ED8\u5C65\u7EA6\u540E\uFF0C\u6309 APay \u5F53\u524D\u8BA2\u9605\u5411 AINode \u53D1\u9001 subscription.apply",
+      theme: "shoply",
+      label: "Shoply\uFF1A\u5957\u9910\u751F\u6548\u540E\u540C\u6B65\u5E97\u94FA\u6743\u76CA",
+      description: "\u5E26 shoply_plan_code \u7684\u5957\u9910\u5546\u54C1\u652F\u4ED8\u6210\u529F\u540E\uFF0C\u628A\u7528\u6237\u5F53\u524D\u5957\u9910\u3001\u5230\u671F\u65F6\u95F4\u4E0E\u53EF\u5F00\u5E97\u6570\u63A8\u9001\u5230 Shoply \u5E97\u94FA\u3002",
       mode: "async",
       handler: async (payload) => {
-        if (productType(payload) !== "subscription") return { ok: true };
-        const userId = toUserId(payload);
-        if (!userId) return { ok: false, errorMessage: "\u8BA2\u9605\u8BA2\u5355\u6CA1\u6709\u5173\u8054\u7528\u6237\uFF0C\u65E0\u6CD5\u540C\u6B65 AINode" };
-        const result = await syncSubscriptionToAINode(userId, `order.paid:${String((payload == null ? void 0 : payload.id) || "")}`);
-        return { ok: result.ok, errorMessage: result.errorMessage };
+        var _a;
+        const order = payload && typeof payload === "object" ? payload : {};
+        const userId = Number(order.userId || 0);
+        const productId = Number(order.productId || 0);
+        if (!userId || !productId) return { ok: true };
+        const rows = await db.select({ metaData: products.metaData }).from(products).where(eq(products.id, productId)).limit(1);
+        if (!readShoplyPlanMeta((_a = rows[0]) == null ? void 0 : _a.metaData)) return { ok: true };
+        try {
+          const result = await pushShoplyLicense(userId, { ensure: true, force: false });
+          if (result.skipped) {
+            console.warn(`[ShoplyLicense] order ${String(order.id)} skipped: ${result.reason}`);
+            return { ok: false, errorMessage: result.reason };
+          }
+          if (result.failed.length) {
+            return { ok: false, errorMessage: `license not applied to stores ${result.failed.join(",")}` };
+          }
+          return { ok: true };
+        } catch (error) {
+          const message = error instanceof Error ? error.message : String(error);
+          console.error(`[ShoplyLicense] order ${String(order.id)} push failed:`, message);
+          return { ok: false, errorMessage: message };
+        }
       }
     },
     {
-      key: "ainode:sync_subscription_revoked",
+      key: "shoply:license_revoke",
       event: "subscription.revoked",
-      theme: "ainode",
-      label: "AINode\uFF1A\u8BA2\u9605\u64A4\u9500\u540E\u540C\u6B65\u6536\u56DE\u989D\u5EA6",
-      description: "\u9000\u6B3E\u3001\u7BA1\u7406\u5458\u53D6\u6D88\u6216\u5230\u671F\u6B62\u4ED8\u540E\uFF0C\u6309 APay \u5F53\u524D\u8BA2\u9605\u5411 AINode \u53D1\u9001 subscription.cancel\uFF08\u4ECD\u6709\u5176\u4ED6\u751F\u6548\u8BA2\u9605\u65F6\u53D1\u9001 apply\uFF09",
+      theme: "shoply",
+      label: "Shoply\uFF1A\u8BA2\u9605\u88AB\u6536\u56DE\u540E\u540C\u6B65\u5E97\u94FA\u6743\u76CA",
+      description: "\u8BA2\u5355\u9000\u6B3E\u5BFC\u81F4\u8BA2\u9605\u4F5C\u5E9F\u540E\uFF0C\u628A\u7528\u6237\u5F53\u524D\u6743\u76CA\uFF08\u901A\u5E38\u662F\u56DE\u843D\u514D\u8D39\u7248\uFF09\u63A8\u9001\u5230\u4ED6\u540D\u4E0B\u7684 Shoply \u5E97\u94FA\u3002",
       mode: "async",
       handler: async (payload) => {
-        const userId = toUserId(payload);
-        if (!userId) return { ok: false, errorMessage: "\u8BA2\u9605\u64A4\u9500\u4E8B\u4EF6\u7F3A\u5C11\u7528\u6237\uFF0C\u65E0\u6CD5\u540C\u6B65 AINode" };
-        const result = await syncSubscriptionToAINode(userId, `subscription.revoked:${String((payload == null ? void 0 : payload.subscriptionId) || "")}`);
-        return { ok: result.ok, errorMessage: result.errorMessage };
+        var _a;
+        const input = payload && typeof payload === "object" ? payload : {};
+        const userId = Number(input.userId || 0);
+        const productId = Number(input.productId || 0);
+        if (!userId) return { ok: true };
+        if (productId) {
+          const rows = await db.select({ metaData: products.metaData }).from(products).where(eq(products.id, productId)).limit(1);
+          if (!readShoplyPlanMeta((_a = rows[0]) == null ? void 0 : _a.metaData)) return { ok: true };
+        }
+        try {
+          const result = await pushShoplyLicense(userId, { ensure: false, force: false });
+          if (result.skipped) return { ok: false, errorMessage: result.reason };
+          if (result.failed.length) {
+            return { ok: false, errorMessage: `license not applied to stores ${result.failed.join(",")}` };
+          }
+          return { ok: true };
+        } catch (error) {
+          const message = error instanceof Error ? error.message : String(error);
+          console.error(`[ShoplyLicense] revoke sync failed for user ${userId}:`, message);
+          return { ok: false, errorMessage: message };
+        }
       }
     }
   ];

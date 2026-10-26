@@ -1,4 +1,4 @@
-import { eV as themeImageProxyDirectHostIncludes } from '../nitro/nitro.mjs';
+import { f8 as themeImageProxyDirectHostIncludes } from '../nitro/nitro.mjs';
 
 const PROXY_ENDPOINT = "/api/proxy/image";
 const PROXIED_IMAGE_HOSTS = [

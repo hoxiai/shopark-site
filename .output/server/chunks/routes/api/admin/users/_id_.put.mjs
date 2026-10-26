@@ -1,6 +1,7 @@
-import { d as defineEventHandler, c as getRequestLocale, f as getRouterParam, e as createError, r as readBody, b as db, u as users, bF as validateEmail, bG as normalizeEmail, j as hashPassword, bH as revokeEmailVerifyTokens } from '../../../../nitro/nitro.mjs';
+import { d as defineEventHandler, c as getRequestLocale, f as getRouterParam, e as createError, bY as PASSWORD_MIN_LENGTH, r as readBody, b as db, u as users, bZ as validateEmail, b_ as normalizeEmail, j as hashPassword, b$ as revokeEmailVerifyTokens } from '../../../../nitro/nitro.mjs';
 import { eq, and, ne } from 'drizzle-orm';
 import 'node:crypto';
+import 'zod';
 import 'crypto';
 import 'fs';
 import 'path';
@@ -24,16 +25,8 @@ import 'drizzle-orm/mysql-core';
 import 'maxmind';
 import 'node:os';
 import 'node:url';
-import 'zod';
 import '@iconify/utils';
 import 'consola';
-import 'ioredis';
-import 'node:child_process';
-import 'process';
-import 'buffer';
-import 'node:fs/promises';
-import 'node:dns/promises';
-import 'node:net';
 import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
 
@@ -44,6 +37,7 @@ const _id__put = defineEventHandler(async (event) => {
     emailRequired: "\u90AE\u7BB1\u4E0D\u80FD\u4E3A\u7A7A",
     invalidEmail: "\u8BF7\u8F93\u5165\u6709\u6548\u7684\u7535\u5B50\u90AE\u7BB1\u5730\u5740",
     disposableEmail: "\u7CFB\u7EDF\u4E0D\u652F\u6301\u4E34\u65F6/\u4E00\u6B21\u6027\u90AE\u7BB1\uFF0C\u8BF7\u4F7F\u7528\u5E38\u7528\u90AE\u7BB1",
+    passwordTooShort: `\u5BC6\u7801\u957F\u5EA6\u4E0D\u80FD\u5C11\u4E8E ${PASSWORD_MIN_LENGTH} \u4F4D`,
     userNotFound: "\u7528\u6237\u4E0D\u5B58\u5728",
     emailTaken: "\u8BE5\u90AE\u7BB1\u5DF2\u88AB\u5176\u4ED6\u7528\u6237\u5360\u7528",
     updated: "\u7528\u6237\u66F4\u65B0\u6210\u529F",
@@ -54,6 +48,7 @@ const _id__put = defineEventHandler(async (event) => {
     emailRequired: "Email is required",
     invalidEmail: "Please enter a valid email address",
     disposableEmail: "Disposable email addresses are not supported. Please use a standard email.",
+    passwordTooShort: `Password must be at least ${PASSWORD_MIN_LENGTH} characters`,
     userNotFound: "User not found",
     emailTaken: "Email already taken by another user",
     updated: "User updated successfully",
@@ -110,7 +105,11 @@ const _id__put = defineEventHandler(async (event) => {
       updateData.nickname = email.split("@")[0] || email;
     }
     if (password) {
-      updateData.passwordHash = await hashPassword(String(password));
+      const passwordStr = String(password);
+      if (passwordStr.length < PASSWORD_MIN_LENGTH) {
+        throw createError({ statusCode: 400, message: messages.passwordTooShort });
+      }
+      updateData.passwordHash = await hashPassword(passwordStr);
     }
     if (emailChanged) {
       await revokeEmailVerifyTokens(userId);

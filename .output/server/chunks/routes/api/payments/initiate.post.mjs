@@ -1,4 +1,4 @@
-import { d as defineEventHandler, aq as requireTrustedRequestOrigin, c as getRequestLocale, r as readBody, cC as resolveOrderAccess, O as ORDER_PAY_STATUS, b as db, aC as paymentMethods, as as getSiteLocaleConfig, at as resolveRequestLocale, cK as isPaymentMethodAvailableForLocale, cL as resolvePaymentPluginConfig, cN as resolvePaymentMethodCurrencies, cM as isPaymentMethodCurrencySupported, ci as getRequestIP, cO as getRequestHeaders, cP as executeCreateScript, z as orders, ao as reconcileOrder } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, at as requireTrustedRequestOrigin, c as getRequestLocale, r as readBody, dw as resolveOrderAccess, O as ORDER_PAY_STATUS, b as db, aF as paymentMethods, av as getSiteLocaleConfig, aw as resolveRequestLocale, dD as isPaymentMethodAvailableForLocale, dE as resolvePaymentPluginConfig, dH as resolvePaymentMethodCurrencies, dF as isPaymentMethodCurrencySupported, cF as getRequestIP, dI as getRequestHeaders, dJ as executeCreateScript, z as orders, ar as reconcileOrder } from '../../../nitro/nitro.mjs';
 import fs from 'fs';
 import path from 'path';
 import { z } from 'zod';
@@ -27,13 +27,6 @@ import 'node:os';
 import 'node:url';
 import '@iconify/utils';
 import 'consola';
-import 'ioredis';
-import 'node:child_process';
-import 'process';
-import 'buffer';
-import 'node:fs/promises';
-import 'node:dns/promises';
-import 'node:net';
 import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
 
@@ -46,6 +39,7 @@ const bodySchema = z.object({
   successUrl: z.string().url().optional()
 });
 const initiate_post = defineEventHandler(async (event) => {
+  var _a, _b, _c;
   try {
     const origin = requireTrustedRequestOrigin(event);
     const locale = getRequestLocale(event);
@@ -121,7 +115,8 @@ const initiate_post = defineEventHandler(async (event) => {
     const callbackUrl = `${origin}/api/webhooks/${order.id}`;
     const returnUrl = body.returnUrl || body.successUrl || `${origin}/callback/${order.id}`;
     const cancelUrl = body.cancelUrl || `${origin}/callback/cancel?orderId=${order.id}`;
-    const clientIp = getRequestIP(event, { xForwardedFor: true }) || event.node.req.socket.remoteAddress || "";
+    const trustProxy = ["1", "true", "yes", "on"].includes(String(process.env.APAY_TRUST_PROXY || "").trim().toLowerCase());
+    const clientIp = getRequestIP(event, { xForwardedFor: trustProxy }) || ((_c = (_b = (_a = event.node) == null ? void 0 : _a.req) == null ? void 0 : _b.socket) == null ? void 0 : _c.remoteAddress) || "";
     const requestHeaders = getRequestHeaders(event);
     let orderMetaData = {};
     try {

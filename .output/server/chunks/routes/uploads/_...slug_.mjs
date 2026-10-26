@@ -1,9 +1,10 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { d as defineEventHandler, e as createError, df as setHeader, bu as getHeader, cV as setResponseStatus, dt as sendStream } from '../../nitro/nitro.mjs';
+import { d as defineEventHandler, e as createError, e6 as setHeader, bM as getHeader, cT as setResponseStatus, eq as sendStream } from '../../nitro/nitro.mjs';
 import { blob } from '@nuxthub/blob';
 import 'drizzle-orm';
 import 'node:crypto';
+import 'zod';
 import 'crypto';
 import 'fs';
 import 'path';
@@ -24,16 +25,8 @@ import 'drizzle-orm/mysql-core';
 import 'maxmind';
 import 'node:os';
 import 'node:url';
-import 'zod';
 import '@iconify/utils';
 import 'consola';
-import 'ioredis';
-import 'node:child_process';
-import 'process';
-import 'buffer';
-import 'node:fs/promises';
-import 'node:dns/promises';
-import 'node:net';
 import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
 
@@ -85,7 +78,7 @@ const ____slug_ = defineEventHandler(async (event) => {
     setHeader(event, "Content-Length", String(size));
     return sendStream(event, fs.createReadStream(filePath));
   }
-  if (slug.startsWith("tickets/")) {
+  if (slug && filePath !== uploadsRoot) {
     return blob.serve(event, `uploads/${slug}`);
   }
   throw createError({

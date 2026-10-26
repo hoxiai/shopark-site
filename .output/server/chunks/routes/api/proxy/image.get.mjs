@@ -1,6 +1,7 @@
-import { d as defineEventHandler, c as getRequestLocale, g as getQuery, cU as normalizeImageProxyUrl, bu as getHeader, cV as setResponseStatus, cW as setResponseHeader, cX as getImageProxyReferer, e as createError } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, c as getRequestLocale, g as getQuery, dO as normalizeImageProxyUrl, bM as getHeader, cT as setResponseStatus, cU as setResponseHeader, dP as getImageProxyReferer, e as createError } from '../../../nitro/nitro.mjs';
 import { createHash } from 'node:crypto';
 import 'drizzle-orm';
+import 'zod';
 import 'crypto';
 import 'fs';
 import 'path';
@@ -24,20 +25,14 @@ import 'drizzle-orm/mysql-core';
 import 'maxmind';
 import 'node:os';
 import 'node:url';
-import 'zod';
 import '@iconify/utils';
 import 'consola';
-import 'ioredis';
-import 'node:child_process';
-import 'process';
-import 'buffer';
-import 'node:fs/promises';
-import 'node:dns/promises';
-import 'node:net';
 import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
 
 const MAX_CACHE_ENTRIES = 500;
+const MAX_CACHE_ENTRY_BYTES = 2 * 1024 * 1024;
+const MAX_IMAGE_BYTES = 15 * 1024 * 1024;
 const CACHE_TTL_MS = 24 * 60 * 60 * 1e3;
 const imageMemoryCache = /* @__PURE__ */ new Map();
 const getFromCache = (key) => {
@@ -94,19 +89,42 @@ const image_get = defineEventHandler(async (event) => {
       statusMessage: locale === "zh" ? `\u4E0A\u6E38\u56FE\u7247\u8BF7\u6C42\u5931\u8D25\uFF08${upstream.status}\uFF09` : `Upstream image request failed (${upstream.status})`
     });
   }
-  const contentType = upstream.headers.get("content-type") || "image/jpeg";
+  const rawContentType = (upstream.headers.get("content-type") || "image/jpeg").trim();
+  const normalizedContentType = rawContentType.toLowerCase();
+  if (!normalizedContentType.startsWith("image/") && !normalizedContentType.startsWith("application/octet-stream") && !normalizedContentType.startsWith("binary/octet-stream")) {
+    throw createError({
+      statusCode: 415,
+      statusMessage: locale === "zh" ? "\u4E0A\u6E38\u8FD4\u56DE\u975E\u56FE\u7247\u5185\u5BB9" : "Upstream response is not an image"
+    });
+  }
+  const contentType = normalizedContentType.startsWith("image/") ? rawContentType : "image/jpeg";
+  const contentLength = Number(upstream.headers.get("content-length") || 0);
+  if (Number.isFinite(contentLength) && contentLength > MAX_IMAGE_BYTES) {
+    throw createError({
+      statusCode: 413,
+      statusMessage: locale === "zh" ? "\u4E0A\u6E38\u56FE\u7247\u4F53\u79EF\u8D85\u51FA\u9650\u5236" : "Upstream image exceeds maximum size"
+    });
+  }
   const arrayBuffer = await upstream.arrayBuffer();
+  if (arrayBuffer.byteLength > MAX_IMAGE_BYTES) {
+    throw createError({
+      statusCode: 413,
+      statusMessage: locale === "zh" ? "\u4E0A\u6E38\u56FE\u7247\u4F53\u79EF\u8D85\u51FA\u9650\u5236" : "Upstream image exceeds maximum size"
+    });
+  }
   const buffer = Buffer.from(arrayBuffer);
   const digest = createHash("md5").update(buffer).digest("hex");
   const etag = `"${digest}"`;
   const lastModified = upstream.headers.get("last-modified") || (/* @__PURE__ */ new Date()).toUTCString();
-  setToCache(cacheKey, {
-    buffer,
-    contentType,
-    etag,
-    lastModified,
-    expiresAt: Date.now() + CACHE_TTL_MS
-  });
+  if (buffer.byteLength <= MAX_CACHE_ENTRY_BYTES) {
+    setToCache(cacheKey, {
+      buffer,
+      contentType,
+      etag,
+      lastModified,
+      expiresAt: Date.now() + CACHE_TTL_MS
+    });
+  }
   const clientEtag = getHeader(event, "if-none-match");
   if (clientEtag && (clientEtag === etag || clientEtag === `W/${etag}`)) {
     setResponseStatus(event, 304);
