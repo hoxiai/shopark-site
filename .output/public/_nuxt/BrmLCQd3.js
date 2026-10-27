@@ -1,1 +1,0 @@
-import{_ as t}from"./DJX8IkPq.js";import{i as r,ag as e,aq as m}from"./DAs_i7hE.js";import"./BH_DVddZ.js";import"./c_i80027.js";import"./CfYFMnge.js";import"./Bp2wPaq7.js";import"./BY6UWina.js";import"./BmglUf-D.js";import"./5sKH0RGn.js";const k=r({__name:"create",setup(p){return(n,_)=>{const o=t;return e(),m(o)}}});export{k as default};
