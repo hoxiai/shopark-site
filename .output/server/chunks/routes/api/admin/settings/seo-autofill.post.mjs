@@ -1,4 +1,4 @@
-import { d as defineEventHandler, r as readBody, b as db, p as products, aJ as posts, b0 as settings, bo as generateEntityGeoCitations, aL as notifyIndexNowEntityChange, bp as resolveServerSeoContext, bk as normalizeGeoKeySpecs, bl as normalizeGeoFaqs, bm as normalizeGeoRelatedLinks, bq as submitIndexNowUrls } from '../../../../nitro/nitro.mjs';
+import { d as defineEventHandler, r as readBody, b as db, p as products, aJ as posts, b1 as settings, bD as resolveServerSeoContext, bM as generateEntityGeoCitations, aM as notifyIndexNowEntityChange, aK as assertPostMutable, bF as normalizeGeoKeySpecs, bG as normalizeGeoFaqs, bH as normalizeGeoRelatedLinks, bJ as isPostFrozen, bN as submitIndexNowUrls, bK as classifySeoRoute, bO as localeSeoUrl, bL as seoRouteRegistry } from '../../../../nitro/nitro.mjs';
 import { and, eq, desc } from 'drizzle-orm';
 import 'node:crypto';
 import 'crypto';
@@ -27,6 +27,7 @@ import 'node:url';
 import 'zod';
 import '@iconify/utils';
 import 'consola';
+import 'node:zlib';
 import 'ioredis';
 import 'jose';
 import 'node:child_process';
@@ -55,21 +56,32 @@ const seoAutofill_post = defineEventHandler(async (event) => {
   var _a, _b, _c;
   const body = await readBody(event).catch(() => ({}));
   const mode = String((body == null ? void 0 : body.mode) || "preview").trim();
-  const [activeProducts, activePosts, settingRows] = await Promise.all([
+  const [activeProducts, activePosts, settingRows, seoCtx] = await Promise.all([
     db.select().from(products).where(and(eq(products.isActive, true), eq(products.status, "active"))).orderBy(desc(products.id)).limit(200).catch(() => []),
     db.select().from(posts).where(and(eq(posts.isActive, true), eq(posts.type, "blog"))).orderBy(desc(posts.id)).limit(200).catch(() => []),
     db.select({
       key: settings.key,
       value: settings.value
-    }).from(settings).catch(() => [])
+    }).from(settings).catch(() => []),
+    resolveServerSeoContext(event).catch(() => ({
+      origin: "",
+      theme: "",
+      locales: [],
+      defaultLocale: "en",
+      seoOptions: {}
+    }))
   ]);
   const settingsMap = new Map(settingRows.map((r) => [r.key, r.value]));
+  const activeTheme = seoCtx.theme || String(settingsMap.get("active_theme") || "").trim();
+  const isPublicRoute = (path) => classifySeoRoute(seoRouteRegistry, activeTheme, path).kind === "public";
   const baseCurrency = String(settingsMap.get("currency") || settingsMap.get("base_currency") || "USD").toUpperCase();
   const i18nEnabled = settingsMap.get("i18n_enabled") !== "false";
   const supportedLocales = i18nEnabled ? String(settingsMap.get("supported_locales") || "en,zh").split(",").map((s) => s.trim()).filter(Boolean) : ["en"];
   const defaultLocale = String(settingsMap.get("default_locale") || supportedLocales[0] || "en").trim();
+  const publicProducts = activeProducts.filter((p) => Boolean(p.slug) && isPublicRoute(`/products/${p.slug}`));
+  const publicPosts = activePosts.filter((p) => Boolean(p.slug) && isPublicRoute(`/blog/${p.slug}`));
   const catalog = [
-    ...activeProducts.filter((p) => Boolean(p.slug)).map((p) => ({
+    ...publicProducts.map((p) => ({
       id: p.id,
       entityType: "product",
       title: p.name,
@@ -80,7 +92,7 @@ const seoAutofill_post = defineEventHandler(async (event) => {
       currency: baseCurrency,
       metaData: parseMetaObject(p.metaData)
     })),
-    ...activePosts.filter((p) => Boolean(p.slug)).map((p) => ({
+    ...publicPosts.map((p) => ({
       id: p.id,
       entityType: "post",
       title: p.title,
@@ -166,6 +178,7 @@ const seoAutofill_post = defineEventHandler(async (event) => {
     return primaryGenerated;
   };
   const optimizePostRow = async (post, forceOverwrite = false) => {
+    assertPostMutable(post, defaultLocale);
     const meta = parseMetaObject(post.metaData);
     const cleanMeta = forceOverwrite ? { ...meta, tldr: "", keySpecs: [], faqs: [], relatedLinks: [] } : meta;
     const postLocale = post.locale || defaultLocale;
@@ -189,11 +202,13 @@ const seoAutofill_post = defineEventHandler(async (event) => {
     return generated;
   };
   const ensureBidirectionalBacklinks = async (sourceUrl, sourceTitle, sourceType, sourcePrice, targetLinks) => {
+    if (!isPublicRoute(sourceUrl)) return;
     for (const link of targetLinks) {
       const targetUrl = String(link.url || "").trim();
+      if (!isPublicRoute(targetUrl)) continue;
       if (targetUrl.startsWith("/products/")) {
         const targetSlug = targetUrl.slice("/products/".length);
-        const targetProd = activeProducts.find((p) => p.slug === targetSlug);
+        const targetProd = publicProducts.find((p) => p.slug === targetSlug);
         if (!targetProd) continue;
         const targetMeta = parseMetaObject(targetProd.metaData);
         const existing = normalizeGeoRelatedLinks(targetMeta.relatedLinks);
@@ -212,8 +227,8 @@ const seoAutofill_post = defineEventHandler(async (event) => {
         }
       } else if (targetUrl.startsWith("/blog/")) {
         const targetSlug = targetUrl.slice("/blog/".length);
-        const targetPost = activePosts.find((p) => p.slug === targetSlug);
-        if (!targetPost) continue;
+        const targetPost = publicPosts.find((p) => p.slug === targetSlug);
+        if (!targetPost || isPostFrozen(targetPost)) continue;
         const targetMeta = parseMetaObject(targetPost.metaData);
         const existing = normalizeGeoRelatedLinks(targetMeta.relatedLinks);
         if (!existing.some((item) => item.url === sourceUrl)) {
@@ -239,8 +254,8 @@ const seoAutofill_post = defineEventHandler(async (event) => {
       return { code: 1, message: "Missing entity id" };
     }
     if (entityType === "product") {
-      const prod = activeProducts.find((p) => p.id === entityId);
-      if (!prod) return { code: 1, message: "Product not found" };
+      const prod = publicProducts.find((p) => p.id === entityId);
+      if (!prod) return { code: 1, message: "Product not found or route is suppressed by active theme" };
       const generated = await optimizeProductRow(prod, Boolean(body == null ? void 0 : body.overwrite));
       await ensureBidirectionalBacklinks(
         `/products/${prod.slug}`,
@@ -256,8 +271,9 @@ const seoAutofill_post = defineEventHandler(async (event) => {
         data: generated
       };
     } else {
-      const post = activePosts.find((p) => p.id === entityId);
-      if (!post) return { code: 1, message: "Post not found" };
+      const post = publicPosts.find((p) => p.id === entityId);
+      if (!post) return { code: 1, message: "Post not found or route is suppressed by active theme" };
+      assertPostMutable(post, defaultLocale);
       const generated = await optimizePostRow(post, Boolean(body == null ? void 0 : body.overwrite));
       await ensureBidirectionalBacklinks(
         `/blog/${post.slug}`,
@@ -278,8 +294,20 @@ const seoAutofill_post = defineEventHandler(async (event) => {
     let updatedProductsCount = 0;
     let updatedPostsCount = 0;
     const touchedUrls = [];
-    const seoCtx = await resolveServerSeoContext(event);
-    for (const prod of activeProducts) {
+    const effectiveDefaultLocale = seoCtx.defaultLocale || defaultLocale;
+    const localeList = seoCtx.locales.length ? seoCtx.locales : supportedLocales.map((code) => ({ code, language: code }));
+    const pushLocalizedEntityUrls = (basePath, boundLocale) => {
+      if (!seoCtx.origin || !isPublicRoute(basePath)) return;
+      const cleanBound = boundLocale ? String(boundLocale).trim() : "";
+      const targetLocales = cleanBound ? localeList.filter((l) => l.code.toLowerCase() === cleanBound.toLowerCase()) : localeList;
+      for (const loc of targetLocales.length ? targetLocales : [{ code: effectiveDefaultLocale }]) {
+        const canonical = localeSeoUrl(basePath, loc.code, seoCtx.origin, effectiveDefaultLocale, seoCtx.seoOptions);
+        if (new URL(canonical).origin === seoCtx.origin) {
+          touchedUrls.push(canonical, `${canonical}.md`);
+        }
+      }
+    };
+    for (const prod of publicProducts) {
       if (!prod.slug) continue;
       const meta = parseMetaObject(prod.metaData);
       const hasTldr = Boolean(typeof meta.tldr === "string" && meta.tldr.trim());
@@ -296,10 +324,10 @@ const seoAutofill_post = defineEventHandler(async (event) => {
         generated.relatedLinks
       );
       updatedProductsCount += 1;
-      touchedUrls.push(`${seoCtx.origin}/products/${prod.slug}`, `${seoCtx.origin}/products/${prod.slug}.md`);
+      pushLocalizedEntityUrls(`/products/${prod.slug}`);
     }
-    for (const post of activePosts) {
-      if (!post.slug) continue;
+    for (const post of publicPosts) {
+      if (!post.slug || isPostFrozen(post)) continue;
       const meta = parseMetaObject(post.metaData);
       const hasTldr = Boolean(typeof meta.tldr === "string" && meta.tldr.trim());
       const hasSpecs = normalizeGeoKeySpecs(meta.keySpecs).length >= 2;
@@ -315,9 +343,9 @@ const seoAutofill_post = defineEventHandler(async (event) => {
         generated.relatedLinks
       );
       updatedPostsCount += 1;
-      touchedUrls.push(`${seoCtx.origin}/blog/${post.slug}`, `${seoCtx.origin}/blog/${post.slug}.md`);
+      pushLocalizedEntityUrls(`/blog/${post.slug}`, post.locale);
     }
-    if (touchedUrls.length > 0) {
+    if (touchedUrls.length > 0 && seoCtx.origin) {
       touchedUrls.push(`${seoCtx.origin}/llms.txt`, `${seoCtx.origin}/llms-full.txt`);
       void submitIndexNowUrls(event, touchedUrls, { reason: "batch_geo_autofill" }).catch(() => {
       });

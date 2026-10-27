@@ -1,4 +1,4 @@
-import { d as defineEventHandler, c as getRequestLocale, cu as requireUserSession, e as createError, g as getQuery, bG as usesExternalWallet, dU as getOrCreateUserWallet, b as db, bK as userWallets, z as orders, B as aggregateOrderAccountingTotals, p as products, t as toIsoTimestamp } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, c as getRequestLocale, cT as requireUserSession, e as createError, g as getQuery, c3 as usesExternalWallet, eq as getOrCreateUserWallet, b as db, c7 as userWallets, z as orders, B as aggregateOrderAccountingTotals, p as products, t as toIsoTimestamp } from '../../../nitro/nitro.mjs';
 import { eq, and, gte, ne, desc, inArray } from 'drizzle-orm';
 import 'node:crypto';
 import 'crypto';
@@ -27,6 +27,7 @@ import 'node:url';
 import 'zod';
 import '@iconify/utils';
 import 'consola';
+import 'node:zlib';
 import 'ioredis';
 import 'jose';
 import 'node:child_process';

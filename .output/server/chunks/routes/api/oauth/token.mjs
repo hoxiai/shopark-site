@@ -1,4 +1,4 @@
-import { d as defineEventHandler, cS as applyMcpPublicCors, $ as resolveClientIp, a0 as checkIpRateLimit, r as readBody, dd as verifyMcpAuthorizationCodeEnvelope, de as verifyPkceS256, b as db, bY as userTokens, c2 as MCP_OAUTH_CODE_TOKEN_NAME, df as isValidPkceCodeVerifier, dg as computePkceS256Challenge, d9 as hashMcpOAuthSecret, u as users, d3 as normalizeMcpScopes, d6 as MCP_DEFAULT_SCOPES, dh as generateMcpAccessToken, di as generateMcpRefreshToken, c3 as MCP_OAUTH_REFRESH_TOKEN_NAME, cT as resolveMcpServerOrigin, dj as setResponseHeaders, dk as MCP_ACCESS_TOKEN_TTL_SECONDS, dl as MCP_REFRESH_TOKEN_TTL_MS, cU as setResponseStatus } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, df as applyMcpPublicCors, $ as resolveClientIp, a0 as checkIpRateLimit, r as readBody, dD as verifyMcpAuthorizationCodeEnvelope, dE as verifyPkceS256, b as db, cl as userTokens, cr as MCP_OAUTH_CODE_TOKEN_NAME, dF as isValidPkceCodeVerifier, dG as computePkceS256Challenge, dz as hashMcpOAuthSecret, u as users, dt as normalizeMcpScopes, dw as MCP_DEFAULT_SCOPES, dH as generateMcpAccessToken, dI as generateMcpRefreshToken, cs as MCP_OAUTH_REFRESH_TOKEN_NAME, dg as resolveMcpServerOrigin, dJ as setResponseHeaders, dK as MCP_ACCESS_TOKEN_TTL_SECONDS, dL as MCP_REFRESH_TOKEN_TTL_MS, dh as setResponseStatus } from '../../../nitro/nitro.mjs';
 import { and, eq } from 'drizzle-orm';
 import 'node:crypto';
 import 'crypto';
@@ -27,6 +27,7 @@ import 'node:url';
 import 'zod';
 import '@iconify/utils';
 import 'consola';
+import 'node:zlib';
 import 'ioredis';
 import 'jose';
 import 'node:child_process';

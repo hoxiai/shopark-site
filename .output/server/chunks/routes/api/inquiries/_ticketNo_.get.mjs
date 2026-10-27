@@ -1,4 +1,4 @@
-import { d as defineEventHandler, f as getRouterParam, e as createError, g as getQuery, b8 as getUserSession, b as db, L as tickets, bJ as ticketMessages } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, f as getRouterParam, e as createError, g as getQuery, bs as getUserSession, b as db, L as tickets, c6 as ticketMessages } from '../../../nitro/nitro.mjs';
 import crypto from 'node:crypto';
 import { eq, asc } from 'drizzle-orm';
 import 'crypto';
@@ -27,6 +27,7 @@ import 'node:url';
 import 'zod';
 import '@iconify/utils';
 import 'consola';
+import 'node:zlib';
 import 'ioredis';
 import 'jose';
 import 'node:child_process';

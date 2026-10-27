@@ -1,4 +1,4 @@
-import { d as defineEventHandler, f as getRouterParam, e as createError, b as db, L as tickets, r as readBody, bG as usesExternalWallet, bN as getHeader, bO as creditExternalWalletCompensation, bP as changeBalance, bJ as ticketMessages, bQ as notifications } from '../../../../../nitro/nitro.mjs';
+import { d as defineEventHandler, f as getRouterParam, e as createError, b as db, L as tickets, r as readBody, c3 as usesExternalWallet, ca as getHeader, cb as creditExternalWalletCompensation, cc as changeBalance, c6 as ticketMessages, cd as notifications } from '../../../../../nitro/nitro.mjs';
 import { eq } from 'drizzle-orm';
 import 'node:crypto';
 import 'crypto';
@@ -27,6 +27,7 @@ import 'node:url';
 import 'zod';
 import '@iconify/utils';
 import 'consola';
+import 'node:zlib';
 import 'ioredis';
 import 'jose';
 import 'node:child_process';

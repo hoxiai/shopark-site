@@ -1,4 +1,4 @@
-import { d as defineEventHandler, el as collectRssFeed, em as renderRssXml, e7 as setHeader, e as createError } from '../nitro/nitro.mjs';
+import { d as defineEventHandler, eP as collectRssFeed, eQ as renderRssXml, eh as setHeader, e as createError } from '../nitro/nitro.mjs';
 import 'drizzle-orm';
 import 'node:crypto';
 import 'crypto';
@@ -27,6 +27,7 @@ import 'node:url';
 import 'zod';
 import '@iconify/utils';
 import 'consola';
+import 'node:zlib';
 import 'ioredis';
 import 'jose';
 import 'node:child_process';

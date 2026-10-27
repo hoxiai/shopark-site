@@ -1,4 +1,4 @@
-import { d as defineEventHandler, cS as applyMcpPublicCors, cT as resolveMcpServerOrigin, b8 as getUserSession, cU as setResponseStatus, cV as setResponseHeader, cJ as getRequestHeader, e as createError, r as readBody, cW as getActiveThemeName, cX as dispatchMcpJsonRpcRequest, cY as buildMcpWwwAuthenticateHeader } from '../../nitro/nitro.mjs';
+import { d as defineEventHandler, df as applyMcpPublicCors, dg as resolveMcpServerOrigin, bs as getUserSession, dh as setResponseStatus, di as setResponseHeader, d6 as getRequestHeader, e as createError, r as readBody, dj as getActiveThemeName, dk as dispatchMcpJsonRpcRequest, dl as buildMcpWwwAuthenticateHeader } from '../../nitro/nitro.mjs';
 import 'drizzle-orm';
 import 'node:crypto';
 import 'crypto';
@@ -27,6 +27,7 @@ import 'node:url';
 import 'zod';
 import '@iconify/utils';
 import 'consola';
+import 'node:zlib';
 import 'ioredis';
 import 'jose';
 import 'node:child_process';

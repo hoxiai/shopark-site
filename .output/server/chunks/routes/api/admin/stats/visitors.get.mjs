@@ -1,4 +1,4 @@
-import { d as defineEventHandler, c as getRequestLocale, g as getQuery, D as getConfiguredTimezone, bv as parseStatsRange, bz as clampStatsPage, bA as clampStatsPageSize, e as createError, J as loadVisitorReport, K as getRequestHost, bF as matchesVisitorReportRow, b as db, u as users, bE as visitorSourceLabel, bD as formatSourceBrand } from '../../../../nitro/nitro.mjs';
+import { d as defineEventHandler, c as getRequestLocale, g as getQuery, D as getConfiguredTimezone, bT as parseStatsRange, bY as clampStatsPage, bZ as clampStatsPageSize, e as createError, J as loadVisitorReport, K as getRequestHost, c2 as matchesVisitorReportRow, b as db, u as users, c1 as visitorSourceLabel, c0 as formatSourceBrand } from '../../../../nitro/nitro.mjs';
 import { inArray } from 'drizzle-orm';
 import 'node:crypto';
 import 'crypto';
@@ -27,6 +27,7 @@ import 'node:url';
 import 'zod';
 import '@iconify/utils';
 import 'consola';
+import 'node:zlib';
 import 'ioredis';
 import 'jose';
 import 'node:child_process';

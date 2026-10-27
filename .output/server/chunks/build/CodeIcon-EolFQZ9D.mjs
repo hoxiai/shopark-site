@@ -1,6 +1,6 @@
 import { computed, mergeProps, useSSRContext } from 'vue';
 import { ssrRenderComponent } from 'vue/server-renderer';
-import { f9 as defu } from '../nitro/nitro.mjs';
+import { g0 as defu } from '../nitro/nitro.mjs';
 import { aA as useAppConfig, _ as _sfc_main$W } from './server.mjs';
 import 'drizzle-orm';
 import 'node:crypto';
@@ -30,6 +30,7 @@ import 'node:url';
 import 'zod';
 import '@iconify/utils';
 import 'consola';
+import 'node:zlib';
 import 'ioredis';
 import 'jose';
 import 'node:child_process';

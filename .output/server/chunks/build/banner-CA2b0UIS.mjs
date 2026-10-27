@@ -1,4 +1,4 @@
-import { es as buildAssetsURL } from '../nitro/nitro.mjs';
+import { eV as buildAssetsURL } from '../nitro/nitro.mjs';
 
 const bannerImg = "" + buildAssetsURL("banner.CSQBdV_V.jpg");
 

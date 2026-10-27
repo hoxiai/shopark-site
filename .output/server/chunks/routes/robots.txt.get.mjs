@@ -1,4 +1,4 @@
-import { d as defineEventHandler, e7 as setHeader, bp as resolveServerSeoContext, ej as readGeoAiBotsPolicy, ek as renderRobotsTxt } from '../nitro/nitro.mjs';
+import { d as defineEventHandler, eh as setHeader, bD as resolveServerSeoContext, eN as readGeoAiBotsPolicy, eO as renderRobotsTxt } from '../nitro/nitro.mjs';
 import 'drizzle-orm';
 import 'node:crypto';
 import 'crypto';
@@ -27,6 +27,7 @@ import 'node:url';
 import 'zod';
 import '@iconify/utils';
 import 'consola';
+import 'node:zlib';
 import 'ioredis';
 import 'jose';
 import 'node:child_process';

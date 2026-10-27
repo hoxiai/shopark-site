@@ -1,4 +1,4 @@
-import { es as buildAssetsURL } from '../nitro/nitro.mjs';
+import { eV as buildAssetsURL } from '../nitro/nitro.mjs';
 import { u as useI18n, D as useLocaleRouter, bg as useSeoMeta, _ as _sfc_main$W, O as __nuxt_component_3$4 } from './server.mjs';
 import { defineComponent, computed, ref, mergeProps, unref, withCtx, createVNode, toDisplayString, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrInterpolate, ssrRenderComponent, ssrRenderList, ssrRenderClass, ssrRenderAttr } from 'vue/server-renderer';
@@ -32,6 +32,7 @@ import 'node:url';
 import 'zod';
 import '@iconify/utils';
 import 'consola';
+import 'node:zlib';
 import 'ioredis';
 import 'jose';
 import 'node:child_process';

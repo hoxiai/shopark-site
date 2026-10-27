@@ -1,4 +1,4 @@
-import { d as defineEventHandler, at as requireTrustedRequestOrigin, cw as mergePromoTracking, cy as readPromoTracking, cx as capturePromoTracking, cG as getRequestIP, e as createError, r as readBody, cu as requireUserSession, b as db, u as users, a8 as clearUserSession, b0 as settings, cr as ensureVisitorId, p as products, aw as resolveRequestLocale, av as getSiteLocaleConfig, dm as getProductPricingContext, dn as quoteProductPrice, dp as ProductPricingError, dq as roundPrice, az as getMinimalCheckoutAdminConfig, dr as stripReservedOrderMeta, aA as buildMinimalCheckoutBridgeMeta, aB as mergeMinimalCheckoutMeta, ad as isMinimalCheckoutRelayOrder, ds as MINIMAL_CHECKOUT_SOURCE, ai as fulfillMinimalCheckoutRelay, aj as fulfillOrder, al as emitEvent, dt as getSubscriptionEntitlement, z as orders, O as ORDER_PAY_STATUS, aC as prepareOrderMetaForInsert, aD as ensureTopupRecordForOrder, af as createOrderAttribution, c8 as trackVisitorEvent, as as ORDER_STATUS, du as getAffectedRows, ag as settlePaidTopup, c as getRequestLocale, X as getLocalizedSettingValue, Y as sendEmail, dv as createNotification } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, at as requireTrustedRequestOrigin, cV as mergePromoTracking, cX as readPromoTracking, cW as capturePromoTracking, d3 as getRequestIP, e as createError, r as readBody, cT as requireUserSession, b as db, u as users, a8 as clearUserSession, b1 as settings, cQ as ensureVisitorId, p as products, aw as resolveRequestLocale, av as getSiteLocaleConfig, dM as getProductPricingContext, dN as quoteProductPrice, dO as ProductPricingError, dP as roundPrice, az as getMinimalCheckoutAdminConfig, dQ as stripReservedOrderMeta, aA as buildMinimalCheckoutBridgeMeta, aB as mergeMinimalCheckoutMeta, ad as isMinimalCheckoutRelayOrder, dR as MINIMAL_CHECKOUT_SOURCE, ai as fulfillMinimalCheckoutRelay, aj as fulfillOrder, al as emitEvent, dS as getSubscriptionEntitlement, z as orders, O as ORDER_PAY_STATUS, aC as prepareOrderMetaForInsert, aD as ensureTopupRecordForOrder, af as createOrderAttribution, cx as trackVisitorEvent, as as ORDER_STATUS, dT as getAffectedRows, ag as settlePaidTopup, c as getRequestLocale, X as getLocalizedSettingValue, Y as sendEmail, dU as createNotification } from '../../../nitro/nitro.mjs';
 import { eq, and, or, isNull, gte, desc } from 'drizzle-orm';
 import crypto from 'crypto';
 import { z } from 'zod';
@@ -27,6 +27,7 @@ import 'node:os';
 import 'node:url';
 import '@iconify/utils';
 import 'consola';
+import 'node:zlib';
 import 'ioredis';
 import 'jose';
 import 'node:child_process';

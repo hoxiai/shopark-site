@@ -1,4 +1,4 @@
-import { eF as getPublishAggregatesForUser, eG as getListingPricingDefaultsByUser, eH as rebuildProductAggregate, eI as ensureProductVisionFactsForImages, eJ as shouldBlockImageGenerationForVision, eK as hasChannelImageBlueprint, eL as getListingAutomationByUser, eM as customizeBlueprint, eN as resolveChannelImageBlueprint, eO as filterBlueprintPlanByEffectiveSkus, eP as buildImageBlueprintPlan, eQ as buildListingBlueprintImageTaskSpecs, eR as getChannelPromptEngine, eS as resolveChannelPromptSnapshotForSelector, eT as assertListingBlueprintImageTaskSpecs, eU as listBlueprintTaskItems, eV as completeBlueprintTaskItem, eW as settleListingBlueprintStep, eX as ensureBlueprintTaskItems, eY as registerPlannedGenerationSlots, eZ as persistGeneratedImageWorkspace, e_ as assertImageGenerationTaskSpec, e$ as isTaskControlInterrupt, f0 as isGenerationTaskStateUnknown, f1 as classifyGenerationError, f2 as failBlueprintTaskItem, f3 as startBlueprintTaskItem, f4 as runProductImageGenerationTaskSpec, f5 as updateBlueprintTaskItemStage, f6 as enqueueIdempotentToolTask } from '../nitro/nitro.mjs';
+import { ft as getPublishAggregatesForUser, fu as getListingPricingDefaultsByUser, fv as rebuildProductAggregate, fw as ensureProductVisionFactsForImages, fx as shouldBlockImageGenerationForVision, fy as hasChannelImageBlueprint, fz as getListingAutomationByUser, fA as customizeBlueprint, fB as resolveChannelImageBlueprint, fC as filterBlueprintPlanByEffectiveSkus, fD as buildImageBlueprintPlan, fE as buildListingBlueprintImageTaskSpecs, fF as getChannelPromptEngine, fG as resolveChannelPromptSnapshotForSelector, fH as assertListingBlueprintImageTaskSpecs, fI as listBlueprintTaskItems, fJ as completeBlueprintTaskItem, fK as settleListingBlueprintStep, fL as ensureBlueprintTaskItems, fM as registerPlannedGenerationSlots, fN as persistGeneratedImageWorkspace, fO as assertImageGenerationTaskSpec, fP as isTaskControlInterrupt, fQ as isGenerationTaskStateUnknown, fR as classifyGenerationError, fS as failBlueprintTaskItem, fT as startBlueprintTaskItem, fU as runProductImageGenerationTaskSpec, fV as updateBlueprintTaskItemStage, fW as enqueueIdempotentToolTask } from '../nitro/nitro.mjs';
 import 'drizzle-orm';
 import 'node:crypto';
 import 'crypto';
@@ -27,6 +27,7 @@ import 'node:url';
 import 'zod';
 import '@iconify/utils';
 import 'consola';
+import 'node:zlib';
 import 'ioredis';
 import 'jose';
 import 'node:child_process';

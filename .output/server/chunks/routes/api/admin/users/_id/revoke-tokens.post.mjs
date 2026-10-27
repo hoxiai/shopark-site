@@ -1,4 +1,4 @@
-import { d as defineEventHandler, c as getRequestLocale, f as getRouterParam, e as createError, b as db, u as users, bY as userTokens, c2 as MCP_OAUTH_CODE_TOKEN_NAME, c3 as MCP_OAUTH_REFRESH_TOKEN_NAME } from '../../../../../nitro/nitro.mjs';
+import { d as defineEventHandler, c as getRequestLocale, f as getRouterParam, e as createError, b as db, u as users, cl as userTokens, cr as MCP_OAUTH_CODE_TOKEN_NAME, cs as MCP_OAUTH_REFRESH_TOKEN_NAME } from '../../../../../nitro/nitro.mjs';
 import { eq, and, inArray } from 'drizzle-orm';
 import 'node:crypto';
 import 'crypto';
@@ -27,6 +27,7 @@ import 'node:url';
 import 'zod';
 import '@iconify/utils';
 import 'consola';
+import 'node:zlib';
 import 'ioredis';
 import 'jose';
 import 'node:child_process';

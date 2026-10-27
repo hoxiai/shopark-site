@@ -1,4 +1,4 @@
-import { d as defineEventHandler, g as getQuery, aJ as posts, aK as normalizePostLocale, b as db } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, g as getQuery, aJ as posts, aL as normalizePostLocale, b as db } from '../../../nitro/nitro.mjs';
 import { eq, or, like, and, count, desc, sql } from 'drizzle-orm';
 import 'node:crypto';
 import 'crypto';
@@ -27,6 +27,7 @@ import 'node:url';
 import 'zod';
 import '@iconify/utils';
 import 'consola';
+import 'node:zlib';
 import 'ioredis';
 import 'jose';
 import 'node:child_process';

@@ -1,4 +1,4 @@
-import { d as defineEventHandler, cG as getRequestIP, cH as checkCommentRateLimit, e as createError, b8 as getUserSession, r as readBody, b as db, bX as oauthAccounts, cI as sanitizeComment, cJ as getRequestHeader, b0 as settings, o as comments, q as syncPostCommentCount, v as getCommentAvatarUrl } from '../../nitro/nitro.mjs';
+import { d as defineEventHandler, d3 as getRequestIP, d4 as checkCommentRateLimit, e as createError, bs as getUserSession, r as readBody, b as db, ck as oauthAccounts, d5 as sanitizeComment, d6 as getRequestHeader, b1 as settings, o as comments, q as syncPostCommentCount, v as getCommentAvatarUrl } from '../../nitro/nitro.mjs';
 import { and, eq } from 'drizzle-orm';
 import 'node:crypto';
 import 'crypto';
@@ -27,6 +27,7 @@ import 'node:url';
 import 'zod';
 import '@iconify/utils';
 import 'consola';
+import 'node:zlib';
 import 'ioredis';
 import 'jose';
 import 'node:child_process';

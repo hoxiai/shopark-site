@@ -1,4 +1,4 @@
-import { d as defineEventHandler, $ as resolveClientIp, a0 as checkIpRateLimit, e as createError, r as readBody, cZ as normalizeSubscriberChannel, c_ as normalizeSubscriberTopic, c as getRequestLocale, c$ as validateAndNormalizeTarget, W as subscribeNewsletter } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, $ as resolveClientIp, a0 as checkIpRateLimit, e as createError, r as readBody, dm as normalizeSubscriberChannel, dn as normalizeSubscriberTopic, c as getRequestLocale, dp as validateAndNormalizeTarget, W as subscribeNewsletter } from '../../../nitro/nitro.mjs';
 import 'drizzle-orm';
 import 'node:crypto';
 import 'crypto';
@@ -27,6 +27,7 @@ import 'node:url';
 import 'zod';
 import '@iconify/utils';
 import 'consola';
+import 'node:zlib';
 import 'ioredis';
 import 'jose';
 import 'node:child_process';

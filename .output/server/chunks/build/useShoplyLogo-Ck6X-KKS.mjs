@@ -1,4 +1,4 @@
-import { es as buildAssetsURL } from '../nitro/nitro.mjs';
+import { eV as buildAssetsURL } from '../nitro/nitro.mjs';
 import { computed } from 'vue';
 import { u as useI18n } from './server.mjs';
 

@@ -1,4 +1,4 @@
-import { d as defineEventHandler, cK as useRuntimeConfig, bN as getHeader, e as createError, y as runAutoCommentSync } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, d7 as useRuntimeConfig, ca as getHeader, e as createError, y as runAutoCommentSync } from '../../../nitro/nitro.mjs';
 import 'drizzle-orm';
 import 'node:crypto';
 import 'crypto';
@@ -27,6 +27,7 @@ import 'node:url';
 import 'zod';
 import '@iconify/utils';
 import 'consola';
+import 'node:zlib';
 import 'ioredis';
 import 'jose';
 import 'node:child_process';

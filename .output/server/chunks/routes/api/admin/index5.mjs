@@ -1,4 +1,4 @@
-import { d as defineEventHandler, b as db, b0 as settings, r as readBody, s as setAuditMeta, bf as EMAIL_VERIFY_POLICY_KEY, bg as invalidateEmailVerifyPolicyCache } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, b as db, b1 as settings, r as readBody, s as setAuditMeta, bz as EMAIL_VERIFY_POLICY_KEY, bA as invalidateEmailVerifyPolicyCache } from '../../../nitro/nitro.mjs';
 import { eq } from 'drizzle-orm';
 import 'node:crypto';
 import 'crypto';
@@ -27,6 +27,7 @@ import 'node:url';
 import 'zod';
 import '@iconify/utils';
 import 'consola';
+import 'node:zlib';
 import 'ioredis';
 import 'jose';
 import 'node:child_process';

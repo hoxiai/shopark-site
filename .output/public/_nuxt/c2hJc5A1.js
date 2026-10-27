@@ -1,1 +1,0 @@
-import t from"./DpntKiBr.js";import{a2 as r}from"./hMuHTz8W.js";import{aq as e,ag as c}from"./DAs_i7hE.js";import"./Xooo0u4I.js";import"./D5z_uAGk.js";import"./c_i80027.js";import"./CfYFMnge.js";const n={};function _(a,m){const o=t;return c(),e(o,{slug:"cookies"})}const k=r(n,[["render",_]]);export{k as default};

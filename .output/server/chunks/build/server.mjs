@@ -1,6 +1,6 @@
 import process from 'node:process';globalThis._importMeta_=globalThis._importMeta_||{url:"file:///_entry.js",env:process.env};import * as vue from 'vue';
 import { defineComponent, ref, renderSlot, useSlots, useId as useId$1, useAttrs, computed, unref, mergeProps, withCtx, openBlock, createBlock, createVNode, resolveDynamicComponent, createTextVNode, toDisplayString as toDisplayString$1, createCommentVNode, hasInjectionContext, inject, h, watchPostEffect, createElementBlock, normalizeStyle, watch, provide, shallowRef, toValue, getCurrentInstance, nextTick, watchEffect, reactive, toRefs, Fragment, renderList, useModel, mergeModels, customRef, mergeDefaults, markRaw, toRef as toRef$1, camelize as camelize$1, Teleport, toHandlerKey, useTemplateRef, getCurrentScope, onScopeDispose, shallowReadonly, isRef, cloneVNode, toHandlers, normalizeProps, guardReactiveProps, readonly, withKeys, withModifiers, resolveComponent, onServerPrefetch, Comment, defineAsyncComponent, withAsyncContext, createSlots, resolveDirective, createElementVNode, effectScope, useSSRContext, toRaw, shallowReactive, Suspense, createApp, Text, onErrorCaptured, isReadonly, isShallow, isReactive } from 'vue';
-import { f7 as serialize, f8 as createPricingContext, cU as setResponseStatus$1, bR as getRequestURL, f9 as defu, fa as isEqual$1, fb as getErrorRequestId, fc as SEO_LOCALE_LANGUAGE, bl as normalizeGeoFaqs, e as createError$1, fd as resolveActiveTheme, fe as upperFirst, dn as quoteProductPrice, ff as defuFn, fg as htmlToCleanMarkdown, fh as appendResponseHeader, fi as parse$1, cJ as getRequestHeader, fj as errorRecord, fk as errorData, fl as resolveLocalizedSetting, fm as sanitizeStatusCode, fn as getContext, fo as setCookie, cO as getCookie, fp as deleteCookie, bk as normalizeGeoKeySpecs, bm as normalizeGeoRelatedLinks, dJ as getRequestHeaders, fq as $fetch$1, fr as baseURL, fs as hash, ft as createHooks, fu as executeAsync, fv as normalizeSiteOrigin, fw as stripLocalePrefix$1, ep as classifySeoRoute, eo as seoRouteRegistry, fx as localePathForSeo, fy as isMarkdownMirrorPath, fz as safeJsonLd, fA as localeDomainUrl, fB as getRequestProtocol, fC as themeHostConfigs } from '../nitro/nitro.mjs';
+import { f_ as serialize, f$ as createPricingContext, dh as setResponseStatus$1, ce as getRequestURL, g0 as defu, g1 as isEqual$1, g2 as getErrorRequestId, g3 as SEO_LOCALE_LANGUAGE, bG as normalizeGeoFaqs, e as createError$1, g4 as resolveActiveTheme, g5 as upperFirst, dN as quoteProductPrice, g6 as defuFn, g7 as htmlToCleanMarkdown, g8 as appendResponseHeader, g9 as parse$1, d6 as getRequestHeader, ga as errorRecord, gb as errorData, gc as resolveLocalizedSetting, gd as sanitizeStatusCode, ge as getContext, gf as setCookie, db as getCookie, gg as deleteCookie, bF as normalizeGeoKeySpecs, bH as normalizeGeoRelatedLinks, e6 as getRequestHeaders, fY as $fetch$1, gh as baseURL, gi as hash, gj as createHooks, gk as executeAsync, gl as normalizeSiteOrigin, gm as stripLocalePrefix$1, bK as classifySeoRoute, bL as seoRouteRegistry, gn as localePathForSeo, go as isMarkdownMirrorPath, gp as safeJsonLd, gq as localeDomainUrl, gr as getRequestProtocol, gs as themeHostConfigs } from '../nitro/nitro.mjs';
 import { useRoute as useRoute$1, useRouter as useRouter$1, RouterView, isNavigationFailure, createMemoryHistory, createRouter, START_LOCATION } from 'vue-router';
 import { Icon, getIcon, loadIcon as loadIcon$1, _api, addAPIProvider, setCustomIconsLoader } from '@iconify/vue';
 import { getIconCSS } from '@iconify/utils/lib/css/icon';
@@ -46,6 +46,7 @@ import 'node:url';
 import 'zod';
 import '@iconify/utils';
 import 'consola';
+import 'node:zlib';
 import 'ioredis';
 import 'jose';
 import 'node:child_process';
@@ -824,51 +825,54 @@ function getRouteRules(arg) {
     return {};
   }
 }
-const __nuxt_page_meta$v = {
+const __nuxt_page_meta$w = {
   title: "Create Post",
   layout: "admin"
 };
-const __nuxt_page_meta$u = {
+const __nuxt_page_meta$v = {
   title: "Create Product",
   layout: "admin"
 };
-const __nuxt_page_meta$t = { title: "Authorization", layout: "admin" };
-const __nuxt_page_meta$s = { title: "Extensions", layout: "admin" };
-const __nuxt_page_meta$r = { title: "Users Management", layout: "admin" };
-const __nuxt_page_meta$q = { title: "Product Meta Presets", layout: "admin" };
-const __nuxt_page_meta$p = { title: "Themes", layout: "admin" };
-const __nuxt_page_meta$o = {
+const __nuxt_page_meta$u = { title: "Authorization", layout: "admin" };
+const __nuxt_page_meta$t = { title: "Extensions", layout: "admin" };
+const __nuxt_page_meta$s = { title: "Users Management", layout: "admin" };
+const __nuxt_page_meta$r = { title: "Product Meta Presets", layout: "admin" };
+const __nuxt_page_meta$q = { title: "Themes", layout: "admin" };
+const __nuxt_page_meta$p = {
   title: "Edit Post",
   layout: "admin"
 };
-const __nuxt_page_meta$n = {
+const __nuxt_page_meta$o = {
   title: "Edit Product",
   layout: "admin"
 };
+const __nuxt_page_meta$n = { layout: "admin" };
 const __nuxt_page_meta$m = { layout: "admin" };
-const __nuxt_page_meta$l = { layout: "admin" };
-const __nuxt_page_meta$k = { title: "Cards Management", layout: "admin" };
-const __nuxt_page_meta$j = {
+const __nuxt_page_meta$l = { title: "Cards Management", layout: "admin" };
+const __nuxt_page_meta$k = {
   title: "评论审核管理",
   layout: "admin"
 };
-const __nuxt_page_meta$i = { title: "Customers & Users", layout: "admin" };
-const __nuxt_page_meta$h = { title: "Dashboard", layout: "admin" };
-const __nuxt_page_meta$g = {
+const __nuxt_page_meta$j = { title: "Customers & Users", layout: "admin" };
+const __nuxt_page_meta$i = { title: "Dashboard", layout: "admin" };
+const __nuxt_page_meta$h = {
   layout: false
   // Use no layout to take full screen control
 };
-const __nuxt_page_meta$f = { title: "Logs", layout: "admin" };
-const __nuxt_page_meta$e = {
+const __nuxt_page_meta$g = { title: "Logs", layout: "admin" };
+const __nuxt_page_meta$f = {
   title: "邮件订阅管理",
   layout: "admin"
 };
-const __nuxt_page_meta$d = { title: "Orders Management", layout: "admin" };
-const __nuxt_page_meta$c = { title: "Payment Methods", layout: "admin" };
-const __nuxt_page_meta$b = { title: "Posts Management", layout: "admin" };
-const __nuxt_page_meta$a = { title: "Products Management", layout: "admin" };
-const __nuxt_page_meta$9 = { title: "Profile Settings", layout: "admin" };
-const __nuxt_page_meta$8 = { title: "Promo Management", layout: "admin" };
+const __nuxt_page_meta$e = { title: "Orders Management", layout: "admin" };
+const __nuxt_page_meta$d = { title: "Payment Methods", layout: "admin" };
+const __nuxt_page_meta$c = { title: "Posts Management", layout: "admin" };
+const __nuxt_page_meta$b = { title: "Products Management", layout: "admin" };
+const __nuxt_page_meta$a = { title: "Profile Settings", layout: "admin" };
+const __nuxt_page_meta$9 = { title: "Promo Management", layout: "admin" };
+const __nuxt_page_meta$8 = {
+  layout: "admin"
+};
 const __nuxt_page_meta$7 = { title: "System Settings", layout: "admin" };
 const __nuxt_page_meta$6 = {
   layout: false
@@ -892,67 +896,67 @@ const _routes = [
   {
     name: "admin-posts-create",
     path: "/admin/posts/create",
-    meta: __nuxt_page_meta$v || {},
+    meta: __nuxt_page_meta$w || {},
     component: () => import('./create-B9IPt9Nj.mjs')
   },
   {
     name: "admin-products-create",
     path: "/admin/products/create",
-    meta: __nuxt_page_meta$u || {},
+    meta: __nuxt_page_meta$v || {},
     component: () => import('./create-Dia_qRb5.mjs')
   },
   {
     name: "admin-settings-authorization",
     path: "/admin/settings/authorization",
-    meta: __nuxt_page_meta$t || {},
+    meta: __nuxt_page_meta$u || {},
     component: () => import('./authorization-wq7LmJPH.mjs')
   },
   {
     name: "admin-settings-extensions",
     path: "/admin/settings/extensions",
-    meta: __nuxt_page_meta$s || {},
+    meta: __nuxt_page_meta$t || {},
     component: () => import('./extensions-CriKurN2.mjs')
   },
   {
     name: "admin-settings-manages",
     path: "/admin/settings/manages",
-    meta: __nuxt_page_meta$r || {},
+    meta: __nuxt_page_meta$s || {},
     component: () => import('./manages-BD4vye5q.mjs')
   },
   {
     name: "admin-settings-product-presets",
     path: "/admin/settings/product-presets",
-    meta: __nuxt_page_meta$q || {},
+    meta: __nuxt_page_meta$r || {},
     component: () => import('./product-presets-C26ZSErp.mjs')
   },
   {
     name: "admin-settings-themes",
     path: "/admin/settings/themes",
-    meta: __nuxt_page_meta$p || {},
+    meta: __nuxt_page_meta$q || {},
     component: () => import('./themes-CJrezEHy.mjs')
   },
   {
     name: "admin-posts-id",
     path: "/admin/posts/:id()",
-    meta: __nuxt_page_meta$o || {},
+    meta: __nuxt_page_meta$p || {},
     component: () => import('./_id_-CzQBZ9Q8.mjs')
   },
   {
     name: "admin-products-id",
     path: "/admin/products/:id()",
-    meta: __nuxt_page_meta$n || {},
+    meta: __nuxt_page_meta$o || {},
     component: () => import('./_id_-DBbFMDWs.mjs')
   },
   {
     name: "admin-extensions-slug",
     path: "/admin/extensions/:slug(.*)*",
-    meta: __nuxt_page_meta$m || {},
+    meta: __nuxt_page_meta$n || {},
     component: () => import('./_...slug_-CwA772yZ.mjs')
   },
   {
     name: "admin-plugins-slug",
     path: "/admin/plugins/:slug(.*)*",
-    meta: __nuxt_page_meta$l || {},
+    meta: __nuxt_page_meta$m || {},
     component: () => import('./_...slug_-DUZqtWUz.mjs')
   },
   {
@@ -993,86 +997,128 @@ const _routes = [
   {
     name: "admin-cards",
     path: "/admin/cards",
-    meta: __nuxt_page_meta$k || {},
-    component: () => import('./cards-DpISLJWf.mjs')
+    meta: __nuxt_page_meta$l || {},
+    component: () => import('./cards-CJkd5Yuq.mjs')
   },
   {
     name: "admin-comments",
     path: "/admin/comments",
-    meta: __nuxt_page_meta$j || {},
+    meta: __nuxt_page_meta$k || {},
     component: () => import('./comments-hkLWlndT.mjs')
   },
   {
     name: "admin-customers",
     path: "/admin/customers",
-    meta: __nuxt_page_meta$i || {},
+    meta: __nuxt_page_meta$j || {},
     component: () => import('./customers-BCHzfpTk.mjs')
   },
   {
     name: "admin-dashboard",
     path: "/admin/dashboard",
-    meta: __nuxt_page_meta$h || {},
+    meta: __nuxt_page_meta$i || {},
     component: () => import('./dashboard-BCPva-aA.mjs')
   },
   {
     name: "admin-login",
     path: "/admin/login",
-    meta: __nuxt_page_meta$g || {},
-    component: () => import('./login-CqThy4fZ.mjs')
+    meta: __nuxt_page_meta$h || {},
+    component: () => import('./login-BidEctds.mjs')
   },
   {
     name: "admin-logs",
     path: "/admin/logs",
-    meta: __nuxt_page_meta$f || {},
+    meta: __nuxt_page_meta$g || {},
     component: () => import('./logs-ufR9Q9Kw.mjs')
   },
   {
     name: "admin-newsletter",
     path: "/admin/newsletter",
-    meta: __nuxt_page_meta$e || {},
+    meta: __nuxt_page_meta$f || {},
     component: () => import('./newsletter-S0o7Cg9x.mjs')
   },
   {
     name: "admin-orders",
     path: "/admin/orders",
-    meta: __nuxt_page_meta$d || {},
+    meta: __nuxt_page_meta$e || {},
     component: () => import('./orders-CMoPkZ37.mjs')
   },
   {
     name: "admin-payments",
     path: "/admin/payments",
-    meta: __nuxt_page_meta$c || {},
+    meta: __nuxt_page_meta$d || {},
     component: () => import('./payments-BsQ560Yw.mjs')
   },
   {
     name: "admin-posts",
     path: "/admin/posts",
-    meta: __nuxt_page_meta$b || {},
+    meta: __nuxt_page_meta$c || {},
     component: () => import('./index-DUl7SGMV.mjs')
   },
   {
     name: "admin-products",
     path: "/admin/products",
-    meta: __nuxt_page_meta$a || {},
-    component: () => import('./index-ChHzl2Zk.mjs')
+    meta: __nuxt_page_meta$b || {},
+    component: () => import('./index-CUEZ3fhe.mjs')
   },
   {
     name: "admin-profile",
     path: "/admin/profile",
-    meta: __nuxt_page_meta$9 || {},
+    meta: __nuxt_page_meta$a || {},
     component: () => import('./profile-BwwB-0hH.mjs')
   },
   {
     name: "admin-promo",
     path: "/admin/promo",
-    meta: __nuxt_page_meta$8 || {},
+    meta: __nuxt_page_meta$9 || {},
     component: () => import('./promo-Cmmuuyy2.mjs')
+  },
+  {
+    name: "admin-releases___en",
+    path: "/admin/releases",
+    meta: __nuxt_page_meta$8 || {},
+    component: () => import('./releases-t5--wW95.mjs')
+  },
+  {
+    name: "admin-releases___zh___default",
+    path: "/admin/releases",
+    meta: __nuxt_page_meta$8 || {},
+    component: () => import('./releases-t5--wW95.mjs')
+  },
+  {
+    name: "admin-releases___zh",
+    path: "/zh/admin/releases",
+    meta: __nuxt_page_meta$8 || {},
+    component: () => import('./releases-t5--wW95.mjs')
+  },
+  {
+    name: "admin-releases___zh-HK___default",
+    path: "/admin/releases",
+    meta: __nuxt_page_meta$8 || {},
+    component: () => import('./releases-t5--wW95.mjs')
+  },
+  {
+    name: "admin-releases___zh-HK",
+    path: "/zh-HK/admin/releases",
+    meta: __nuxt_page_meta$8 || {},
+    component: () => import('./releases-t5--wW95.mjs')
+  },
+  {
+    name: "admin-releases___ru___default",
+    path: "/admin/releases",
+    meta: __nuxt_page_meta$8 || {},
+    component: () => import('./releases-t5--wW95.mjs')
+  },
+  {
+    name: "admin-releases___ru",
+    path: "/ru/admin/releases",
+    meta: __nuxt_page_meta$8 || {},
+    component: () => import('./releases-t5--wW95.mjs')
   },
   {
     name: "admin-settings",
     path: "/admin/settings",
     meta: __nuxt_page_meta$7 || {},
-    component: () => import('./index-CB_O4bo3.mjs')
+    component: () => import('./index-D-pRGPxp.mjs')
   },
   {
     name: "admin-setup___en",
@@ -1120,13 +1166,13 @@ const _routes = [
     name: "admin-stats",
     path: "/admin/stats",
     meta: __nuxt_page_meta$5 || {},
-    component: () => import('./stats-DYRzzvmu.mjs')
+    component: () => import('./stats-D7LoWf9b.mjs')
   },
   {
     name: "admin-subscriptions",
     path: "/admin/subscriptions",
     meta: __nuxt_page_meta$4 || {},
-    component: () => import('./subscriptions-D1rctwkD.mjs')
+    component: () => import('./subscriptions-ChuVYBOa.mjs')
   },
   {
     name: "admin-tickets",
@@ -1145,7 +1191,7 @@ const _routes = [
     path: "/admin/stats/visitors",
     meta: __nuxt_page_meta$1 || {},
     alias: ["/admin/visitors"],
-    component: () => import('./visitors-DKJhtRCE.mjs')
+    component: () => import('./visitors-CrLxrBvT.mjs')
   },
   {
     name: "admin",
@@ -5376,6 +5422,14 @@ const ADMIN_PERMISSIONS = [
     editable: true
   },
   {
+    code: "releases",
+    label: "Software Releases & Changelogs",
+    labelZh: "软件版本发布",
+    apiPrefixes: ["releases"],
+    routes: ["/admin/releases"],
+    editable: true
+  },
+  {
     code: "promo",
     label: "Promo & Affiliate System",
     labelZh: "推广体系",
@@ -5648,7 +5702,7 @@ const cfg0 = defineAppConfig({
   }
 });
 const inlineConfig = {
-  "appVersion": "1.1.10",
+  "appVersion": "1.1.11",
   "nuxt": {},
   "ui": {
     "colors": {
@@ -25763,7 +25817,7 @@ const corePageModules = Object.fromEntries(Object.entries(/* @__PURE__ */ Object
   "/core/pages/user/tokens/index.vue": __vite_glob_0_11
 })).map(([file, module]) => [file.replace("/", "../"), module]));
 const themePageModules = {
-  ...Object.fromEntries(Object.entries(/* @__PURE__ */ Object.assign({ "/themes/shoply/pages/about.vue": () => import('./about-PCO_8hHG.mjs'), "/themes/shoply/pages/apps/[slug].vue": () => import('./_slug_-DuHhCZrm.mjs'), "/themes/shoply/pages/apps/index.vue": () => import('./index-DZcjd6rs.mjs'), "/themes/shoply/pages/auth/forgot-password.vue": () => import('./forgot-password-B-T8-CO4.mjs'), "/themes/shoply/pages/auth/login.vue": () => import('./login-BBAEX8cC.mjs'), "/themes/shoply/pages/auth/register.vue": () => import('./register-CklFjBrj.mjs'), "/themes/shoply/pages/auth/reset-password.vue": () => import('./reset-password-U7g5beBS.mjs'), "/themes/shoply/pages/blog/[slug].vue": () => import('./_slug_-CzJ4iMyM.mjs'), "/themes/shoply/pages/blog/index.vue": () => import('./index-D12hZHiQ.mjs'), "/themes/shoply/pages/cases/[slug].vue": () => import('./_slug_-yQFNdpGh.mjs'), "/themes/shoply/pages/cases/index.vue": () => import('./index-DvpuFbw2.mjs'), "/themes/shoply/pages/index.vue": () => import('./index-Bi2WcJJu.mjs'), "/themes/shoply/pages/page/about.vue": () => import('./about-8ngwFWPJ.mjs'), "/themes/shoply/pages/page/amazon-store.vue": () => import('./amazon-store-aSe4OJaf.mjs'), "/themes/shoply/pages/page/b2b-website.vue": () => import('./b2b-website-5JyFG3-O.mjs'), "/themes/shoply/pages/page/b2c-store.vue": () => import('./b2c-store-RRAeQ7yc.mjs'), "/themes/shoply/pages/page/cookies.vue": () => import('./cookies-Cz1oU_fh.mjs'), "/themes/shoply/pages/page/custom.vue": () => import('./custom-Br24opsc.mjs'), "/themes/shoply/pages/page/install.vue": () => import('./install-COlVzRwG.mjs'), "/themes/shoply/pages/page/migration.vue": () => import('./migration-CqhO69OO.mjs'), "/themes/shoply/pages/page/pricing.vue": () => import('./pricing-B8tDRisD.mjs'), "/themes/shoply/pages/page/privacy.vue": () => import('./privacy-Bac_PUCX.mjs'), "/themes/shoply/pages/page/solutions.vue": () => import('./solutions-B6RRp0T3.mjs'), "/themes/shoply/pages/page/store-design.vue": () => import('./store-design-a_KfjWIl.mjs'), "/themes/shoply/pages/page/terms.vue": () => import('./terms-CDgz45Rb.mjs'), "/themes/shoply/pages/page/weidian.vue": () => import('./weidian-DmCU0C5a.mjs'), "/themes/shoply/pages/page/wholesale.vue": () => import('./wholesale-6CnIiUQM.mjs'), "/themes/shoply/pages/pricing.vue": () => import('./pricing-D5n2WIlm.mjs'), "/themes/shoply/pages/solutions/[slug].vue": () => import('./_slug_-YQUjJilA.mjs'), "/themes/shoply/pages/solutions/index.vue": () => import('./index-_6d5GcFk.mjs'), "/themes/shoply/pages/themes/[slug].vue": () => import('./_slug_-Dnnp3ZS-.mjs'), "/themes/shoply/pages/themes/detail/[slug].vue": () => import('./_slug_-jczk13Jp.mjs'), "/themes/shoply/pages/themes/index.vue": () => import('./index-Dmgwa_xQ.mjs'), "/themes/shoply/pages/user/account.vue": () => import('./account-YZUy5Vg3.mjs'), "/themes/shoply/pages/user/dashboard.vue": () => import('./dashboard-BsdVqsa4.mjs'), "/themes/shoply/pages/user/index.vue": () => import('./index-CO6SyXNV.mjs'), "/themes/shoply/pages/user/invoice/[order_id].vue": () => import('./_order_id_-D2xCMrCU.mjs'), "/themes/shoply/pages/user/layout.vue": () => import('./layout-B3BIrGs3.mjs'), "/themes/shoply/pages/user/notifications.vue": () => import('./notifications-DDHQ-fSJ.mjs'), "/themes/shoply/pages/user/orders/[order_id].vue": () => import('./_order_id_-CHy4JJeW.mjs'), "/themes/shoply/pages/user/orders/index.vue": () => import('./index-Dc4X2OWh.mjs'), "/themes/shoply/pages/user/stores/index.vue": () => import('./index-Dn5-h4_g.mjs'), "/themes/shoply/pages/user/subscription.vue": () => import('./subscription-BkN0UgkH.mjs'), "/themes/shoply/pages/user/tickets.vue": () => import('./tickets-C4Yc7-N-.mjs') })).map(([file, module]) => [file.replace("/", "../"), module]))
+  ...Object.fromEntries(Object.entries(/* @__PURE__ */ Object.assign({ "/themes/shoply/pages/about.vue": () => import('./about-PCO_8hHG.mjs'), "/themes/shoply/pages/apps/[slug].vue": () => import('./_slug_-DuHhCZrm.mjs'), "/themes/shoply/pages/apps/index.vue": () => import('./index-DZcjd6rs.mjs'), "/themes/shoply/pages/auth/forgot-password.vue": () => import('./forgot-password-B-T8-CO4.mjs'), "/themes/shoply/pages/auth/login.vue": () => import('./login-BBAEX8cC.mjs'), "/themes/shoply/pages/auth/register.vue": () => import('./register-CklFjBrj.mjs'), "/themes/shoply/pages/auth/reset-password.vue": () => import('./reset-password-U7g5beBS.mjs'), "/themes/shoply/pages/blog/[slug].vue": () => import('./_slug_-CzJ4iMyM.mjs'), "/themes/shoply/pages/blog/index.vue": () => import('./index-D12hZHiQ.mjs'), "/themes/shoply/pages/cases/[slug].vue": () => import('./_slug_-yQFNdpGh.mjs'), "/themes/shoply/pages/cases/index.vue": () => import('./index-DvpuFbw2.mjs'), "/themes/shoply/pages/changelog.vue": () => import('./changelog-C4Hx53kL.mjs'), "/themes/shoply/pages/index.vue": () => import('./index-Bi2WcJJu.mjs'), "/themes/shoply/pages/page/about.vue": () => import('./about-8ngwFWPJ.mjs'), "/themes/shoply/pages/page/amazon-store.vue": () => import('./amazon-store-aSe4OJaf.mjs'), "/themes/shoply/pages/page/b2b-website.vue": () => import('./b2b-website-5JyFG3-O.mjs'), "/themes/shoply/pages/page/b2c-store.vue": () => import('./b2c-store-RRAeQ7yc.mjs'), "/themes/shoply/pages/page/cookies.vue": () => import('./cookies-Cz1oU_fh.mjs'), "/themes/shoply/pages/page/custom.vue": () => import('./custom-Br24opsc.mjs'), "/themes/shoply/pages/page/install.vue": () => import('./install-COlVzRwG.mjs'), "/themes/shoply/pages/page/migration.vue": () => import('./migration-CqhO69OO.mjs'), "/themes/shoply/pages/page/pricing.vue": () => import('./pricing-B8tDRisD.mjs'), "/themes/shoply/pages/page/privacy.vue": () => import('./privacy-Bac_PUCX.mjs'), "/themes/shoply/pages/page/solutions.vue": () => import('./solutions-B6RRp0T3.mjs'), "/themes/shoply/pages/page/store-design.vue": () => import('./store-design-a_KfjWIl.mjs'), "/themes/shoply/pages/page/terms.vue": () => import('./terms-CDgz45Rb.mjs'), "/themes/shoply/pages/page/weidian.vue": () => import('./weidian-DmCU0C5a.mjs'), "/themes/shoply/pages/page/wholesale.vue": () => import('./wholesale-6CnIiUQM.mjs'), "/themes/shoply/pages/pricing.vue": () => import('./pricing-D5n2WIlm.mjs'), "/themes/shoply/pages/solutions/[slug].vue": () => import('./_slug_-YQUjJilA.mjs'), "/themes/shoply/pages/solutions/index.vue": () => import('./index-_6d5GcFk.mjs'), "/themes/shoply/pages/themes/[slug].vue": () => import('./_slug_-Dnnp3ZS-.mjs'), "/themes/shoply/pages/themes/detail/[slug].vue": () => import('./_slug_-jczk13Jp.mjs'), "/themes/shoply/pages/themes/index.vue": () => import('./index-Dmgwa_xQ.mjs'), "/themes/shoply/pages/user/account.vue": () => import('./account-YZUy5Vg3.mjs'), "/themes/shoply/pages/user/dashboard.vue": () => import('./dashboard-BsdVqsa4.mjs'), "/themes/shoply/pages/user/index.vue": () => import('./index-CO6SyXNV.mjs'), "/themes/shoply/pages/user/invoice/[order_id].vue": () => import('./_order_id_-D2xCMrCU.mjs'), "/themes/shoply/pages/user/layout.vue": () => import('./layout-B3BIrGs3.mjs'), "/themes/shoply/pages/user/notifications.vue": () => import('./notifications-DDHQ-fSJ.mjs'), "/themes/shoply/pages/user/orders/[order_id].vue": () => import('./_order_id_-CHy4JJeW.mjs'), "/themes/shoply/pages/user/orders/index.vue": () => import('./index-Dc4X2OWh.mjs'), "/themes/shoply/pages/user/stores/index.vue": () => import('./index-Dn5-h4_g.mjs'), "/themes/shoply/pages/user/subscription.vue": () => import('./subscription-BkN0UgkH.mjs'), "/themes/shoply/pages/user/tickets.vue": () => import('./tickets-C4Yc7-N-.mjs') })).map(([file, module]) => [file.replace("/", "../"), module]))
 };
 const themeAdminManifestModules = {
   ...Object.fromEntries(Object.entries(/* @__PURE__ */ Object.assign({
@@ -25780,7 +25834,7 @@ const themeAdminLocaleZhModules = {
   ...Object.fromEntries(Object.entries(/* @__PURE__ */ Object.assign({})).map(([file, module]) => [file.replace("/", "../"), module]))
 };
 const themeLayoutLoaders = {
-  "shoply": () => import('./default-rxGXTNWm.mjs')
+  "shoply": () => import('./default-DUwmHIZQ.mjs')
 };
 const schemaVersion$2 = 1;
 const id$2 = "apps";
@@ -25792,6 +25846,7 @@ const database$2 = { "migrations": [{ "id": "0001-create-catalog", "sqlite": "sq
 const capabilities$2 = [{ "key": "catalog", "label": "App Catalog", "labelZh": "应用管理", "editable": true }];
 const adminPages$2 = [{ "key": "catalog", "title": "Apps", "titleZh": "应用管理", "description": "Manage app packages, releases, and marketplace metadata.", "descriptionZh": "管理应用包、版本和市场元数据。", "component": "catalog.vue", "capability": "catalog", "icon": "ph:app-window", "order": 40 }];
 const adminApis$2 = [{ "method": "get", "path": "catalog/list", "handler": "catalog/list.get.ts", "capability": "catalog" }, { "method": "get", "path": "catalog/detail", "handler": "catalog/detail.get.ts", "capability": "catalog" }, { "method": "post", "path": "catalog/create", "handler": "catalog/create.post.ts", "capability": "catalog" }, { "method": "patch", "path": "catalog/update", "handler": "catalog/update.patch.ts", "capability": "catalog" }, { "method": "delete", "path": "catalog/delete", "handler": "catalog/delete.delete.ts", "capability": "catalog" }, { "method": "get", "path": "catalog/releases", "handler": "catalog/releases.get.ts", "capability": "catalog" }, { "method": "post", "path": "catalog/release", "handler": "catalog/release.post.ts", "capability": "catalog" }, { "method": "post", "path": "catalog/withdraw", "handler": "catalog/withdraw.post.ts", "capability": "catalog" }];
+const publicApis$1 = [{ "method": "post", "path": "list", "handler": "list.post.ts" }, { "method": "post", "path": "package", "handler": "package.post.ts" }];
 const __vite_glob_0_0 = {
   schemaVersion: schemaVersion$2,
   id: id$2,
@@ -25802,7 +25857,8 @@ const __vite_glob_0_0 = {
   database: database$2,
   capabilities: capabilities$2,
   adminPages: adminPages$2,
-  adminApis: adminApis$2
+  adminApis: adminApis$2,
+  publicApis: publicApis$1
 };
 const schemaVersion$1 = 1;
 const id$1 = "shoply";
@@ -25836,6 +25892,7 @@ const database = { "migrations": [{ "id": "0001-create-catalog", "sqlite": "sqli
 const capabilities = [{ "key": "catalog", "label": "Theme Catalog", "labelZh": "主题管理", "editable": true }];
 const adminPages = [{ "key": "catalog", "title": "Themes", "titleZh": "主题管理", "description": "Manage storefront theme packages, demos, and marketplace metadata.", "descriptionZh": "管理店铺主题包、演示地址和市场元数据。", "component": "catalog.vue", "capability": "catalog", "icon": "ph:paint-brush-broad", "order": 41 }];
 const adminApis = [{ "method": "get", "path": "catalog/list", "handler": "catalog/list.get.ts", "capability": "catalog" }, { "method": "get", "path": "catalog/detail", "handler": "catalog/detail.get.ts", "capability": "catalog" }, { "method": "post", "path": "catalog/create", "handler": "catalog/create.post.ts", "capability": "catalog" }, { "method": "patch", "path": "catalog/update", "handler": "catalog/update.patch.ts", "capability": "catalog" }, { "method": "delete", "path": "catalog/delete", "handler": "catalog/delete.delete.ts", "capability": "catalog" }, { "method": "get", "path": "catalog/releases", "handler": "catalog/releases.get.ts", "capability": "catalog" }, { "method": "post", "path": "catalog/release", "handler": "catalog/release.post.ts", "capability": "catalog" }, { "method": "post", "path": "catalog/withdraw", "handler": "catalog/withdraw.post.ts", "capability": "catalog" }];
+const publicApis = [{ "method": "post", "path": "list", "handler": "list.post.ts" }, { "method": "post", "path": "package", "handler": "package.post.ts" }];
 const __vite_glob_0_2 = {
   schemaVersion,
   id,
@@ -25846,7 +25903,8 @@ const __vite_glob_0_2 = {
   database,
   capabilities,
   adminPages,
-  adminApis
+  adminApis,
+  publicApis
 };
 const theme$a = {
   "slots": {
@@ -46609,7 +46667,7 @@ const __nuxt_component_1 = defineComponent({
   }
 });
 const layouts = {
-  admin: defineAsyncComponent(() => import('./admin-D8Vh4NGt.mjs').then((m) => m.default || m)),
+  admin: defineAsyncComponent(() => import('./admin-AlfikWXU.mjs').then((m) => m.default || m)),
   default: defineAsyncComponent(() => import('./default-BvWLJ21Y.mjs').then((m) => m.default || m)),
   empty: defineAsyncComponent(() => import('./empty-D0_T3mKM.mjs').then((m) => m.default || m))
 };

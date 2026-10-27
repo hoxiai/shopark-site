@@ -1,4 +1,4 @@
-import { d as defineEventHandler, at as requireTrustedRequestOrigin, c as getRequestLocale, r as readBody, dx as resolveOrderAccess, O as ORDER_PAY_STATUS, b as db, aF as paymentMethods, av as getSiteLocaleConfig, aw as resolveRequestLocale, dE as isPaymentMethodAvailableForLocale, dF as resolvePaymentPluginConfig, dI as resolvePaymentMethodCurrencies, dG as isPaymentMethodCurrencySupported, cG as getRequestIP, dJ as getRequestHeaders, dK as executeCreateScript, z as orders, ar as reconcileOrder } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, at as requireTrustedRequestOrigin, c as getRequestLocale, r as readBody, dW as resolveOrderAccess, O as ORDER_PAY_STATUS, b as db, aF as paymentMethods, av as getSiteLocaleConfig, aw as resolveRequestLocale, e1 as isPaymentMethodAvailableForLocale, e2 as resolvePaymentPluginConfig, e5 as resolvePaymentMethodCurrencies, e3 as isPaymentMethodCurrencySupported, d3 as getRequestIP, e6 as getRequestHeaders, e7 as executeCreateScript, z as orders, ar as reconcileOrder } from '../../../nitro/nitro.mjs';
 import fs from 'fs';
 import path from 'path';
 import { z } from 'zod';
@@ -27,6 +27,7 @@ import 'node:os';
 import 'node:url';
 import '@iconify/utils';
 import 'consola';
+import 'node:zlib';
 import 'ioredis';
 import 'jose';
 import 'node:child_process';

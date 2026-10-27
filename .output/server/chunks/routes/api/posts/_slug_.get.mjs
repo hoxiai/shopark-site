@@ -1,4 +1,4 @@
-import { dL as defineCachedEventHandler, f as getRouterParam, dM as resolvePostRequestLocaleHint, c as getRequestLocale, e as createError, b as db, aJ as posts } from '../../../nitro/nitro.mjs';
+import { e8 as defineCachedEventHandler, f as getRouterParam, e9 as resolvePostRequestLocaleHint, c as getRequestLocale, e as createError, b as db, aJ as posts } from '../../../nitro/nitro.mjs';
 import { and, or, eq, sql } from 'drizzle-orm';
 import 'node:crypto';
 import 'crypto';
@@ -27,6 +27,7 @@ import 'node:url';
 import 'zod';
 import '@iconify/utils';
 import 'consola';
+import 'node:zlib';
 import 'ioredis';
 import 'jose';
 import 'node:child_process';

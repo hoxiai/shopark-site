@@ -1,4 +1,4 @@
-import { d as defineEventHandler, r as readBody, b as db, by as visitorEvents } from '../../../../nitro/nitro.mjs';
+import { d as defineEventHandler, r as readBody, b as db, bX as visitorEvents } from '../../../../nitro/nitro.mjs';
 import { lt } from 'drizzle-orm';
 import 'node:crypto';
 import 'crypto';
@@ -27,6 +27,7 @@ import 'node:url';
 import 'zod';
 import '@iconify/utils';
 import 'consola';
+import 'node:zlib';
 import 'ioredis';
 import 'jose';
 import 'node:child_process';

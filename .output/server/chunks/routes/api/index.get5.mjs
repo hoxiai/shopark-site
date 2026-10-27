@@ -1,4 +1,4 @@
-import { dL as defineCachedEventHandler, g as getQuery, p as products, b as db } from '../../nitro/nitro.mjs';
+import { e8 as defineCachedEventHandler, g as getQuery, p as products, b as db } from '../../nitro/nitro.mjs';
 import { and, eq, count, desc } from 'drizzle-orm';
 import 'node:crypto';
 import 'crypto';
@@ -27,6 +27,7 @@ import 'node:url';
 import 'zod';
 import '@iconify/utils';
 import 'consola';
+import 'node:zlib';
 import 'ioredis';
 import 'jose';
 import 'node:child_process';

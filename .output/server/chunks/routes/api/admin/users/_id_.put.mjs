@@ -1,4 +1,4 @@
-import { d as defineEventHandler, c as getRequestLocale, f as getRouterParam, e as createError, bZ as PASSWORD_MIN_LENGTH, r as readBody, b as db, u as users, b_ as validateEmail, b$ as normalizeEmail, j as hashPassword, c0 as revokeEmailVerifyTokens } from '../../../../nitro/nitro.mjs';
+import { d as defineEventHandler, c as getRequestLocale, f as getRouterParam, e as createError, cm as PASSWORD_MIN_LENGTH, r as readBody, b as db, u as users, cn as validateEmail, co as normalizeEmail, j as hashPassword, cp as revokeEmailVerifyTokens } from '../../../../nitro/nitro.mjs';
 import { eq, and, ne } from 'drizzle-orm';
 import 'node:crypto';
 import 'crypto';
@@ -27,6 +27,7 @@ import 'node:url';
 import 'zod';
 import '@iconify/utils';
 import 'consola';
+import 'node:zlib';
 import 'ioredis';
 import 'jose';
 import 'node:child_process';

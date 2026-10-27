@@ -1,4 +1,4 @@
-import { d as defineEventHandler, b9 as extensionManifests, ba as readExtensionMigrationStatus, bb as readEnabledExtensionIds, e as createError, r as readBody, bc as migrateExtensionDatabase, s as setAuditMeta, bd as normalizeEnabledExtensionIds, b as db, b0 as settings, be as ENABLED_EXTENSIONS_SETTING_KEY } from '../../../../nitro/nitro.mjs';
+import { d as defineEventHandler, bt as extensionManifests, bu as readExtensionMigrationStatus, bv as readEnabledExtensionIds, e as createError, r as readBody, bw as migrateExtensionDatabase, s as setAuditMeta, bx as normalizeEnabledExtensionIds, b as db, b1 as settings, by as ENABLED_EXTENSIONS_SETTING_KEY } from '../../../../nitro/nitro.mjs';
 import { eq } from 'drizzle-orm';
 import 'node:crypto';
 import 'crypto';
@@ -27,6 +27,7 @@ import 'node:url';
 import 'zod';
 import '@iconify/utils';
 import 'consola';
+import 'node:zlib';
 import 'ioredis';
 import 'jose';
 import 'node:child_process';

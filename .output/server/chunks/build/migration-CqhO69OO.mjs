@@ -1,4 +1,4 @@
-import { es as buildAssetsURL } from '../nitro/nitro.mjs';
+import { eV as buildAssetsURL } from '../nitro/nitro.mjs';
 import { u as useI18n, bg as useSeoMeta, _ as _sfc_main$W } from './server.mjs';
 import ShoplyLeadForm from './ShoplyLeadForm-D_0Jyd2M.mjs';
 import { defineComponent, computed, ref, mergeProps, unref, useSSRContext } from 'vue';
@@ -33,6 +33,7 @@ import 'node:url';
 import 'zod';
 import '@iconify/utils';
 import 'consola';
+import 'node:zlib';
 import 'ioredis';
 import 'jose';
 import 'node:child_process';

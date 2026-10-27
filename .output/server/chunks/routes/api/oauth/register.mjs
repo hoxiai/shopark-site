@@ -1,4 +1,4 @@
-import { d as defineEventHandler, cS as applyMcpPublicCors, e as createError, $ as resolveClientIp, a0 as checkIpRateLimit, r as readBody, da as registerDynamicMcpClient, cU as setResponseStatus } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, df as applyMcpPublicCors, e as createError, $ as resolveClientIp, a0 as checkIpRateLimit, r as readBody, dA as registerDynamicMcpClient, dh as setResponseStatus } from '../../../nitro/nitro.mjs';
 import 'drizzle-orm';
 import 'node:crypto';
 import 'crypto';
@@ -27,6 +27,7 @@ import 'node:url';
 import 'zod';
 import '@iconify/utils';
 import 'consola';
+import 'node:zlib';
 import 'ioredis';
 import 'jose';
 import 'node:child_process';

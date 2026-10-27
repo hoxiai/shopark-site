@@ -2,7 +2,7 @@ import { D as useLocaleRouter, V as useLocaleCurrency, H as useRoute, u as useI1
 import { defineComponent, computed, ref, mergeProps, unref, withCtx, createTextVNode, toDisplayString, createVNode, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent, ssrInterpolate, ssrRenderList, ssrRenderClass, ssrRenderAttr } from 'vue/server-renderer';
 import MarketplaceVisual from './MarketplaceVisual-S5JpFqOO.mjs';
-import { fc as SEO_LOCALE_LANGUAGE } from '../nitro/nitro.mjs';
+import { g3 as SEO_LOCALE_LANGUAGE } from '../nitro/nitro.mjs';
 import { i as isMarkdownContent, m as markdownToHtml } from './markdown-CTbgD6Gu.mjs';
 import { s as sanitizeRichHtml } from './sanitize-html-6xfxlt13.mjs';
 import 'vue-router';
@@ -54,6 +54,7 @@ import 'node:url';
 import 'zod';
 import '@iconify/utils';
 import 'consola';
+import 'node:zlib';
 import 'ioredis';
 import 'jose';
 import 'node:child_process';

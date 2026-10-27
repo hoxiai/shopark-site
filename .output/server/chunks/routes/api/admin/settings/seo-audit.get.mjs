@@ -1,4 +1,4 @@
-import { d as defineEventHandler, b as db, p as products, aJ as posts, b0 as settings, a as accessLogs, bh as AI_CRAWLER_SIGNATURES, bi as paymentFailures, bj as detectAiCrawler, bk as normalizeGeoKeySpecs, bl as normalizeGeoFaqs, bm as normalizeGeoRelatedLinks, bn as evaluateGeoSeoReadiness } from '../../../../nitro/nitro.mjs';
+import { d as defineEventHandler, b as db, p as products, aJ as posts, b1 as settings, a as accessLogs, bB as AI_CRAWLER_SIGNATURES, bC as paymentFailures, bD as resolveServerSeoContext, bE as detectAiCrawler, bF as normalizeGeoKeySpecs, bG as normalizeGeoFaqs, bH as normalizeGeoRelatedLinks, bI as evaluateGeoSeoReadiness, bJ as isPostFrozen, bK as classifySeoRoute, bL as seoRouteRegistry } from '../../../../nitro/nitro.mjs';
 import { and, eq, desc, gte, or, sql } from 'drizzle-orm';
 import 'node:crypto';
 import 'crypto';
@@ -27,6 +27,7 @@ import 'node:url';
 import 'zod';
 import '@iconify/utils';
 import 'consola';
+import 'node:zlib';
 import 'ioredis';
 import 'jose';
 import 'node:child_process';
@@ -51,10 +52,10 @@ const parseMetaObject = (raw) => {
   }
   return {};
 };
-const seoAudit_get = defineEventHandler(async () => {
+const seoAudit_get = defineEventHandler(async (event) => {
   var _a, _b, _c;
   const since30d = new Date(Date.now() - 30 * 24 * 60 * 60 * 1e3);
-  const [activeProducts, activePosts, settingRows, recentLogs, recentPaymentFailures] = await Promise.all([
+  const [activeProducts, activePosts, settingRows, recentLogs, recentPaymentFailures, seoCtx] = await Promise.all([
     db.select({
       id: products.id,
       name: products.name,
@@ -93,13 +94,16 @@ const seoAudit_get = defineEventHandler(async () => {
         ),
         sql`lower(coalesce(${accessLogs.path}, '')) like '%.md%'`
       )
-    )).catch(() => []),
+    )).orderBy(desc(accessLogs.createdAt), desc(accessLogs.id)).limit(5e3).catch(() => []),
     db.select({
       id: paymentFailures.id,
       payMethod: paymentFailures.payMethod
-    }).from(paymentFailures).where(gte(paymentFailures.createdAt, since30d)).limit(200).catch(() => [])
+    }).from(paymentFailures).where(gte(paymentFailures.createdAt, since30d)).limit(200).catch(() => []),
+    resolveServerSeoContext(event).catch(() => ({ theme: "" }))
   ]);
   const settingsMap = new Map(settingRows.map((r) => [r.key, r.value]));
+  const activeTheme = seoCtx.theme || String(settingsMap.get("active_theme") || "").trim();
+  const isPublicRoute = (path) => classifySeoRoute(seoRouteRegistry, activeTheme, path).kind === "public";
   const baseCurrency = String(settingsMap.get("currency") || settingsMap.get("base_currency") || "USD").toUpperCase();
   const i18nEnabled = settingsMap.get("i18n_enabled") !== "false";
   const supportedLocales = i18nEnabled ? String(settingsMap.get("supported_locales") || "en,zh").split(",").map((s) => s.trim()).filter(Boolean) : ["en"];
@@ -125,6 +129,7 @@ const seoAudit_get = defineEventHandler(async () => {
   for (const prod of activeProducts) {
     if (!prod.slug) continue;
     const url = `/products/${prod.slug}`;
+    if (!isPublicRoute(url)) continue;
     const meta = parseMetaObject(prod.metaData);
     const tldr = typeof meta.tldr === "string" ? meta.tldr.trim() : "";
     const specs = normalizeGeoKeySpecs(meta.keySpecs);
@@ -179,8 +184,9 @@ const seoAudit_get = defineEventHandler(async () => {
     });
   }
   for (const post of activePosts) {
-    if (!post.slug) continue;
+    if (!post.slug || isPostFrozen(post)) continue;
     const url = `/blog/${post.slug}`;
+    if (!isPublicRoute(url)) continue;
     const meta = parseMetaObject(post.metaData);
     const tldr = typeof meta.tldr === "string" ? meta.tldr.trim() : "";
     const specs = normalizeGeoKeySpecs(meta.keySpecs);
