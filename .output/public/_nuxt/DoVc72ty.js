@@ -1,0 +1,1 @@
+import"./CL_f99Yl.js";const o=""+new URL("logo.B9vgFdvV.svg",import.meta.url).href,r=""+new URL("logo-inverse.CewQgBd6.svg",import.meta.url).href;function t(){return{logoUrl:o,inverseLogoUrl:r,logoWidth:684,logoAlt:"ShopArk"}}export{t as u};

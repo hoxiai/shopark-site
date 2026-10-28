@@ -37,9 +37,9 @@ import 'jose';
 import 'node:child_process';
 import 'process';
 import 'buffer';
-import 'node:fs/promises';
 import 'node:dns/promises';
 import 'node:net';
+import 'node:fs/promises';
 import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
 import 'vue-router';
@@ -65,9 +65,9 @@ import 'unhead/plugins';
 import 'unhead/utils';
 
 const themeDisplayMetadata = {
-  "shoply": {
+  "shopark": {
     "name": "Qingpu Website",
-    "description": "\u8F7B\u94FA / Qingpu \u4E94\u8BED\u8A00\u54C1\u724C\u5B98\u7F51\u4E3B\u9898\uFF0C\u9762\u5411\u8DE8\u5883\u7535\u5546\u72EC\u7ACB\u7AD9 SaaS\u3001AI \u8425\u9500\u4E0E\u79C1\u6709\u5316\u90E8\u7F72\u573A\u666F\uFF1B\u8D26\u53F7\u4E0E\u5957\u9910\u8BA2\u9605\u5728 APay\uFF0C\u5E97\u94FA\u8FD0\u884C\u5728 Shoply\u3002"
+    "description": "\u8F7B\u94FA / Qingpu \u4E94\u8BED\u8A00\u54C1\u724C\u5B98\u7F51\u4E3B\u9898\uFF0C\u9762\u5411\u8DE8\u5883\u7535\u5546\u72EC\u7ACB\u7AD9 SaaS\u3001AI \u8425\u9500\u4E0E\u79C1\u6709\u5316\u90E8\u7F72\u573A\u666F\uFF1B\u8D26\u53F7\u4E0E\u5957\u9910\u8BA2\u9605\u5728 APay\uFF0C\u5E97\u94FA\u8FD0\u884C\u5728 Shopark\u3002"
   }
 };
 

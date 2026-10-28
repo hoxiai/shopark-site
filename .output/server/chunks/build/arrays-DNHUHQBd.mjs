@@ -1,4 +1,4 @@
-import { g1 as isEqual } from '../nitro/nitro.mjs';
+import { g2 as isEqual } from '../nitro/nitro.mjs';
 
 function findValuesBetween(array, start, end) {
   const startIndex = array.findIndex((i) => isEqual(i, start));

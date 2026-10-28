@@ -1,6 +1,6 @@
 import process from 'node:process';globalThis._importMeta_=globalThis._importMeta_||{url:"file:///_entry.js",env:process.env};import * as vue from 'vue';
 import { defineComponent, ref, renderSlot, useSlots, useId as useId$1, useAttrs, computed, unref, mergeProps, withCtx, openBlock, createBlock, createVNode, resolveDynamicComponent, createTextVNode, toDisplayString as toDisplayString$1, createCommentVNode, hasInjectionContext, inject, h, watchPostEffect, createElementBlock, normalizeStyle, watch, provide, shallowRef, toValue, getCurrentInstance, nextTick, watchEffect, reactive, toRefs, Fragment, renderList, useModel, mergeModels, customRef, mergeDefaults, markRaw, toRef as toRef$1, camelize as camelize$1, Teleport, toHandlerKey, useTemplateRef, getCurrentScope, onScopeDispose, shallowReadonly, isRef, cloneVNode, toHandlers, normalizeProps, guardReactiveProps, readonly, withKeys, withModifiers, resolveComponent, onServerPrefetch, Comment, defineAsyncComponent, withAsyncContext, createSlots, resolveDirective, createElementVNode, effectScope, useSSRContext, toRaw, shallowReactive, Suspense, createApp, Text, onErrorCaptured, isReadonly, isShallow, isReactive } from 'vue';
-import { f_ as serialize, f$ as createPricingContext, dh as setResponseStatus$1, ce as getRequestURL, g0 as defu, g1 as isEqual$1, g2 as getErrorRequestId, g3 as SEO_LOCALE_LANGUAGE, bG as normalizeGeoFaqs, e as createError$1, g4 as resolveActiveTheme, g5 as upperFirst, dN as quoteProductPrice, g6 as defuFn, g7 as htmlToCleanMarkdown, g8 as appendResponseHeader, g9 as parse$1, d6 as getRequestHeader, ga as errorRecord, gb as errorData, gc as resolveLocalizedSetting, gd as sanitizeStatusCode, ge as getContext, gf as setCookie, db as getCookie, gg as deleteCookie, bF as normalizeGeoKeySpecs, bH as normalizeGeoRelatedLinks, e6 as getRequestHeaders, fY as $fetch$1, gh as baseURL, gi as hash, gj as createHooks, gk as executeAsync, gl as normalizeSiteOrigin, gm as stripLocalePrefix$1, bK as classifySeoRoute, bL as seoRouteRegistry, gn as localePathForSeo, go as isMarkdownMirrorPath, gp as safeJsonLd, gq as localeDomainUrl, gr as getRequestProtocol, gs as themeHostConfigs } from '../nitro/nitro.mjs';
+import { f$ as serialize, g0 as createPricingContext, dh as setResponseStatus$1, ce as getRequestURL, g1 as defu, g2 as isEqual$1, g3 as getErrorRequestId, g4 as SEO_LOCALE_LANGUAGE, bG as normalizeGeoFaqs, e as createError$1, g5 as resolveActiveTheme, g6 as upperFirst, dN as quoteProductPrice, g7 as defuFn, g8 as htmlToCleanMarkdown, g9 as appendResponseHeader, ga as parse$1, d6 as getRequestHeader, gb as errorRecord, gc as errorData, gd as resolveLocalizedSetting, ge as sanitizeStatusCode, gf as getContext, gg as setCookie, db as getCookie, gh as deleteCookie, bF as normalizeGeoKeySpecs, bH as normalizeGeoRelatedLinks, e6 as getRequestHeaders, fZ as $fetch$1, gi as baseURL, gj as hash, gk as createHooks, gl as executeAsync, gm as normalizeSiteOrigin, gn as stripLocalePrefix$1, bK as classifySeoRoute, bL as seoRouteRegistry, go as localePathForSeo, gp as isMarkdownMirrorPath, gq as safeJsonLd, gr as localeDomainUrl, gs as getRequestProtocol, gt as themeHostConfigs } from '../nitro/nitro.mjs';
 import { useRoute as useRoute$1, useRouter as useRouter$1, RouterView, isNavigationFailure, createMemoryHistory, createRouter, START_LOCATION } from 'vue-router';
 import { Icon, getIcon, loadIcon as loadIcon$1, _api, addAPIProvider, setCustomIconsLoader } from '@iconify/vue';
 import { getIconCSS } from '@iconify/utils/lib/css/icon';
@@ -52,9 +52,9 @@ import 'jose';
 import 'node:child_process';
 import 'process';
 import 'buffer';
-import 'node:fs/promises';
 import 'node:dns/promises';
 import 'node:net';
+import 'node:fs/promises';
 import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
 import 'vue-bundle-renderer/runtime';
@@ -909,7 +909,7 @@ const _routes = [
     name: "admin-settings-authorization",
     path: "/admin/settings/authorization",
     meta: __nuxt_page_meta$u || {},
-    component: () => import('./authorization-wq7LmJPH.mjs')
+    component: () => import('./authorization-DGJ-DlIQ.mjs')
   },
   {
     name: "admin-settings-extensions",
@@ -921,7 +921,7 @@ const _routes = [
     name: "admin-settings-manages",
     path: "/admin/settings/manages",
     meta: __nuxt_page_meta$s || {},
-    component: () => import('./manages-BD4vye5q.mjs')
+    component: () => import('./manages-C6gUHUj8.mjs')
   },
   {
     name: "admin-settings-product-presets",
@@ -1010,7 +1010,7 @@ const _routes = [
     name: "admin-customers",
     path: "/admin/customers",
     meta: __nuxt_page_meta$j || {},
-    component: () => import('./customers-BCHzfpTk.mjs')
+    component: () => import('./customers-mH_fps2N.mjs')
   },
   {
     name: "admin-dashboard",
@@ -1034,19 +1034,19 @@ const _routes = [
     name: "admin-newsletter",
     path: "/admin/newsletter",
     meta: __nuxt_page_meta$f || {},
-    component: () => import('./newsletter-S0o7Cg9x.mjs')
+    component: () => import('./newsletter-BbjGIlU9.mjs')
   },
   {
     name: "admin-orders",
     path: "/admin/orders",
     meta: __nuxt_page_meta$e || {},
-    component: () => import('./orders-CMoPkZ37.mjs')
+    component: () => import('./orders-BIGpJ5EQ.mjs')
   },
   {
     name: "admin-payments",
     path: "/admin/payments",
     meta: __nuxt_page_meta$d || {},
-    component: () => import('./payments-BsQ560Yw.mjs')
+    component: () => import('./payments-DEqSuM-8.mjs')
   },
   {
     name: "admin-posts",
@@ -1058,7 +1058,7 @@ const _routes = [
     name: "admin-products",
     path: "/admin/products",
     meta: __nuxt_page_meta$b || {},
-    component: () => import('./index-CUEZ3fhe.mjs')
+    component: () => import('./index-DUL-cqqm.mjs')
   },
   {
     name: "admin-profile",
@@ -1118,7 +1118,7 @@ const _routes = [
     name: "admin-settings",
     path: "/admin/settings",
     meta: __nuxt_page_meta$7 || {},
-    component: () => import('./index-D-pRGPxp.mjs')
+    component: () => import('./index-9_WIbRyN.mjs')
   },
   {
     name: "admin-setup___en",
@@ -1166,13 +1166,13 @@ const _routes = [
     name: "admin-stats",
     path: "/admin/stats",
     meta: __nuxt_page_meta$5 || {},
-    component: () => import('./stats-D7LoWf9b.mjs')
+    component: () => import('./stats-oUrndTB2.mjs')
   },
   {
     name: "admin-subscriptions",
     path: "/admin/subscriptions",
     meta: __nuxt_page_meta$4 || {},
-    component: () => import('./subscriptions-ChuVYBOa.mjs')
+    component: () => import('./subscriptions-QJRZvxVj.mjs')
   },
   {
     name: "admin-tickets",
@@ -1184,14 +1184,14 @@ const _routes = [
     name: "admin-topups",
     path: "/admin/topups",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./topups-Bry_yjV5.mjs')
+    component: () => import('./topups-WcvHUZhT.mjs')
   },
   {
     name: "admin-visitors",
     path: "/admin/stats/visitors",
     meta: __nuxt_page_meta$1 || {},
     alias: ["/admin/visitors"],
-    component: () => import('./visitors-CrLxrBvT.mjs')
+    component: () => import('./visitors-CnPsDGNF.mjs')
   },
   {
     name: "admin",
@@ -5702,7 +5702,7 @@ const cfg0 = defineAppConfig({
   }
 });
 const inlineConfig = {
-  "appVersion": "1.1.12",
+  "appVersion": "1.1.13",
   "nuxt": {},
   "ui": {
     "colors": {
@@ -14790,14 +14790,11 @@ const normalizedLocales = [
     name: "English",
     language: "en-US",
     domains: [
-      "iqingpu.com",
-      "www.iqingpu.com",
-      "runshoply.com",
-      "www.runshoply.com"
+      "shopark.net",
+      "shopark.ai"
     ],
     defaultForDomains: [
-      "runshoply.com",
-      "www.runshoply.com"
+      "shopark.ai"
     ]
   },
   {
@@ -14816,14 +14813,11 @@ const normalizedLocales = [
     name: "简体中文",
     language: "zh-CN",
     domains: [
-      "iqingpu.com",
-      "www.iqingpu.com",
-      "runshoply.com",
-      "www.runshoply.com"
+      "shopark.net",
+      "shopark.ai"
     ],
     defaultForDomains: [
-      "iqingpu.com",
-      "www.iqingpu.com"
+      "shopark.net"
     ]
   },
   {
@@ -14842,10 +14836,8 @@ const normalizedLocales = [
     name: "香港繁體",
     language: "zh-HK",
     domains: [
-      "iqingpu.com",
-      "www.iqingpu.com",
-      "runshoply.com",
-      "www.runshoply.com"
+      "shopark.net",
+      "shopark.ai"
     ],
     defaultForDomains: []
   },
@@ -14865,10 +14857,8 @@ const normalizedLocales = [
     name: "Русский",
     language: "ru-RU",
     domains: [
-      "iqingpu.com",
-      "www.iqingpu.com",
-      "runshoply.com",
-      "www.runshoply.com"
+      "shopark.net",
+      "shopark.ai"
     ],
     defaultForDomains: []
   }
@@ -25800,7 +25790,7 @@ const __vite_glob_2_0 = {
   name: name$3,
   pages
 };
-const publishedOptionalThemes = ["shoply"];
+const publishedOptionalThemes = ["shopark"];
 const publishedOptionalThemeSet = new Set(publishedOptionalThemes);
 const corePageModules = Object.fromEntries(Object.entries(/* @__PURE__ */ Object.assign({
   "/core/pages/about.vue": __vite_glob_0_0$1,
@@ -25817,15 +25807,15 @@ const corePageModules = Object.fromEntries(Object.entries(/* @__PURE__ */ Object
   "/core/pages/user/tokens/index.vue": __vite_glob_0_11
 })).map(([file, module]) => [file.replace("/", "../"), module]));
 const themePageModules = {
-  ...Object.fromEntries(Object.entries(/* @__PURE__ */ Object.assign({ "/themes/shoply/pages/about.vue": () => import('./about-PCO_8hHG.mjs'), "/themes/shoply/pages/apps/[slug].vue": () => import('./_slug_-DuHhCZrm.mjs'), "/themes/shoply/pages/apps/index.vue": () => import('./index-DZcjd6rs.mjs'), "/themes/shoply/pages/auth/forgot-password.vue": () => import('./forgot-password-B-T8-CO4.mjs'), "/themes/shoply/pages/auth/login.vue": () => import('./login-BBAEX8cC.mjs'), "/themes/shoply/pages/auth/register.vue": () => import('./register-CklFjBrj.mjs'), "/themes/shoply/pages/auth/reset-password.vue": () => import('./reset-password-U7g5beBS.mjs'), "/themes/shoply/pages/blog/[slug].vue": () => import('./_slug_-CzJ4iMyM.mjs'), "/themes/shoply/pages/blog/index.vue": () => import('./index-D12hZHiQ.mjs'), "/themes/shoply/pages/cases/[slug].vue": () => import('./_slug_-yQFNdpGh.mjs'), "/themes/shoply/pages/cases/index.vue": () => import('./index-DvpuFbw2.mjs'), "/themes/shoply/pages/changelog.vue": () => import('./changelog-C4Hx53kL.mjs'), "/themes/shoply/pages/index.vue": () => import('./index-Bi2WcJJu.mjs'), "/themes/shoply/pages/page/about.vue": () => import('./about-8ngwFWPJ.mjs'), "/themes/shoply/pages/page/amazon-store.vue": () => import('./amazon-store-aSe4OJaf.mjs'), "/themes/shoply/pages/page/b2b-website.vue": () => import('./b2b-website-5JyFG3-O.mjs'), "/themes/shoply/pages/page/b2c-store.vue": () => import('./b2c-store-RRAeQ7yc.mjs'), "/themes/shoply/pages/page/cookies.vue": () => import('./cookies-Cz1oU_fh.mjs'), "/themes/shoply/pages/page/custom.vue": () => import('./custom-Br24opsc.mjs'), "/themes/shoply/pages/page/install.vue": () => import('./install-COlVzRwG.mjs'), "/themes/shoply/pages/page/migration.vue": () => import('./migration-CqhO69OO.mjs'), "/themes/shoply/pages/page/pricing.vue": () => import('./pricing-B8tDRisD.mjs'), "/themes/shoply/pages/page/privacy.vue": () => import('./privacy-Bac_PUCX.mjs'), "/themes/shoply/pages/page/solutions.vue": () => import('./solutions-B6RRp0T3.mjs'), "/themes/shoply/pages/page/store-design.vue": () => import('./store-design-a_KfjWIl.mjs'), "/themes/shoply/pages/page/terms.vue": () => import('./terms-CDgz45Rb.mjs'), "/themes/shoply/pages/page/weidian.vue": () => import('./weidian-DmCU0C5a.mjs'), "/themes/shoply/pages/page/wholesale.vue": () => import('./wholesale-6CnIiUQM.mjs'), "/themes/shoply/pages/pricing.vue": () => import('./pricing-D5n2WIlm.mjs'), "/themes/shoply/pages/solutions/[slug].vue": () => import('./_slug_-YQUjJilA.mjs'), "/themes/shoply/pages/solutions/index.vue": () => import('./index-_6d5GcFk.mjs'), "/themes/shoply/pages/themes/[slug].vue": () => import('./_slug_-Dnnp3ZS-.mjs'), "/themes/shoply/pages/themes/detail/[slug].vue": () => import('./_slug_-jczk13Jp.mjs'), "/themes/shoply/pages/themes/index.vue": () => import('./index-Dmgwa_xQ.mjs'), "/themes/shoply/pages/user/account.vue": () => import('./account-YZUy5Vg3.mjs'), "/themes/shoply/pages/user/dashboard.vue": () => import('./dashboard-BsdVqsa4.mjs'), "/themes/shoply/pages/user/index.vue": () => import('./index-CO6SyXNV.mjs'), "/themes/shoply/pages/user/invoice/[order_id].vue": () => import('./_order_id_-D2xCMrCU.mjs'), "/themes/shoply/pages/user/layout.vue": () => import('./layout-B3BIrGs3.mjs'), "/themes/shoply/pages/user/notifications.vue": () => import('./notifications-DDHQ-fSJ.mjs'), "/themes/shoply/pages/user/orders/[order_id].vue": () => import('./_order_id_-CHy4JJeW.mjs'), "/themes/shoply/pages/user/orders/index.vue": () => import('./index-Dc4X2OWh.mjs'), "/themes/shoply/pages/user/stores/index.vue": () => import('./index-Dn5-h4_g.mjs'), "/themes/shoply/pages/user/subscription.vue": () => import('./subscription-BkN0UgkH.mjs'), "/themes/shoply/pages/user/tickets.vue": () => import('./tickets-C4Yc7-N-.mjs') })).map(([file, module]) => [file.replace("/", "../"), module]))
+  ...Object.fromEntries(Object.entries(/* @__PURE__ */ Object.assign({ "/themes/shopark/pages/about.vue": () => import('./about-NpiRJMXB.mjs'), "/themes/shopark/pages/apps/[slug].vue": () => import('./_slug_-B6tU-fjc.mjs'), "/themes/shopark/pages/apps/index.vue": () => import('./index-BwaLpoHY.mjs'), "/themes/shopark/pages/auth/forgot-password.vue": () => import('./forgot-password-BUzA2sUB.mjs'), "/themes/shopark/pages/auth/login.vue": () => import('./login-C56oe4w_.mjs'), "/themes/shopark/pages/auth/register.vue": () => import('./register-Cvy9eXdq.mjs'), "/themes/shopark/pages/auth/reset-password.vue": () => import('./reset-password-DaDkDhNL.mjs'), "/themes/shopark/pages/blog/[slug].vue": () => import('./_slug_-CxfOYoae.mjs'), "/themes/shopark/pages/blog/index.vue": () => import('./index-Bo0SxO2c.mjs'), "/themes/shopark/pages/cases/[slug].vue": () => import('./_slug_-DeBFAlUp.mjs'), "/themes/shopark/pages/cases/index.vue": () => import('./index-BmOM6kmb.mjs'), "/themes/shopark/pages/changelog.vue": () => import('./changelog-MH-yHkCZ.mjs'), "/themes/shopark/pages/index.vue": () => import('./index-B-ze8fIa.mjs'), "/themes/shopark/pages/page/about.vue": () => import('./about-BEbKMK1S.mjs'), "/themes/shopark/pages/page/amazon-store.vue": () => import('./amazon-store-BaooFERn.mjs'), "/themes/shopark/pages/page/b2b-website.vue": () => import('./b2b-website-C1jbb0fD.mjs'), "/themes/shopark/pages/page/b2c-store.vue": () => import('./b2c-store-CwmRRJUG.mjs'), "/themes/shopark/pages/page/cookies.vue": () => import('./cookies-D4sh65jm.mjs'), "/themes/shopark/pages/page/custom.vue": () => import('./custom-BA8AEk4x.mjs'), "/themes/shopark/pages/page/install.vue": () => import('./install-Dod7SST1.mjs'), "/themes/shopark/pages/page/migration.vue": () => import('./migration-Bbugu7d4.mjs'), "/themes/shopark/pages/page/pricing.vue": () => import('./pricing-CHoaqa6p.mjs'), "/themes/shopark/pages/page/privacy.vue": () => import('./privacy-BYmP46Y_.mjs'), "/themes/shopark/pages/page/solutions.vue": () => import('./solutions-r0KJ2OnS.mjs'), "/themes/shopark/pages/page/store-design.vue": () => import('./store-design-D-mbkFHT.mjs'), "/themes/shopark/pages/page/terms.vue": () => import('./terms-tkQCxr-9.mjs'), "/themes/shopark/pages/page/weidian.vue": () => import('./weidian-DmfENbf3.mjs'), "/themes/shopark/pages/page/wholesale.vue": () => import('./wholesale-DfJDUR5Z.mjs'), "/themes/shopark/pages/pricing.vue": () => import('./pricing-Co1R3NFA.mjs'), "/themes/shopark/pages/solutions/[slug].vue": () => import('./_slug_-CI5bhPnG.mjs'), "/themes/shopark/pages/solutions/index.vue": () => import('./index-DdqQYqJ-.mjs'), "/themes/shopark/pages/themes/[slug].vue": () => import('./_slug_-2tcmmbF7.mjs'), "/themes/shopark/pages/themes/detail/[slug].vue": () => import('./_slug_-BQqn8Z8T.mjs'), "/themes/shopark/pages/themes/index.vue": () => import('./index-DdoCrrOO.mjs'), "/themes/shopark/pages/user/account.vue": () => import('./account-D54-thHg.mjs'), "/themes/shopark/pages/user/dashboard.vue": () => import('./dashboard-D4oqS06j.mjs'), "/themes/shopark/pages/user/index.vue": () => import('./index-Dqa42a97.mjs'), "/themes/shopark/pages/user/invoice/[order_id].vue": () => import('./_order_id_-DhwMqmbq.mjs'), "/themes/shopark/pages/user/layout.vue": () => import('./layout-Di26JQXK.mjs'), "/themes/shopark/pages/user/notifications.vue": () => import('./notifications-C9Jmr8iJ.mjs'), "/themes/shopark/pages/user/orders/[order_id].vue": () => import('./_order_id_-CTMtPXZS.mjs'), "/themes/shopark/pages/user/orders/index.vue": () => import('./index-BMq7X5e2.mjs'), "/themes/shopark/pages/user/stores/index.vue": () => import('./index-D81AnmIW.mjs'), "/themes/shopark/pages/user/subscription.vue": () => import('./subscription-dymUG8gF.mjs'), "/themes/shopark/pages/user/tickets.vue": () => import('./tickets-BG3mOCsi.mjs') })).map(([file, module]) => [file.replace("/", "../"), module]))
 };
 const themeAdminManifestModules = {
   ...Object.fromEntries(Object.entries(/* @__PURE__ */ Object.assign({
-    "/themes/shoply/theme.admin.json": __vite_glob_2_0
+    "/themes/shopark/theme.admin.json": __vite_glob_2_0
   })).map(([file, module]) => [file.replace("/", "../"), module]))
 };
 const themeAdminPageModules = {
-  ...Object.fromEntries(Object.entries(/* @__PURE__ */ Object.assign({ "/themes/shoply/admin/pages/cases.vue": () => import('./cases-CXqueQ0Q.mjs') })).map(([file, module]) => [file.replace("/", "../"), module]))
+  ...Object.fromEntries(Object.entries(/* @__PURE__ */ Object.assign({ "/themes/shopark/admin/pages/cases.vue": () => import('./cases-ty9Bm-mV.mjs') })).map(([file, module]) => [file.replace("/", "../"), module]))
 };
 const themeAdminLocaleEnModules = {
   ...Object.fromEntries(Object.entries(/* @__PURE__ */ Object.assign({})).map(([file, module]) => [file.replace("/", "../"), module]))
@@ -25834,12 +25824,12 @@ const themeAdminLocaleZhModules = {
   ...Object.fromEntries(Object.entries(/* @__PURE__ */ Object.assign({})).map(([file, module]) => [file.replace("/", "../"), module]))
 };
 const themeLayoutLoaders = {
-  "shoply": () => import('./default-DUwmHIZQ.mjs')
+  "shopark": () => import('./default-DVdYfVWX.mjs')
 };
 const schemaVersion$2 = 1;
 const id$2 = "apps";
 const name$2 = "App Catalog";
-const description$2 = "Manage downloadable app and plugin packages published in the Shoply marketplace.";
+const description$2 = "Manage downloadable app and plugin packages published in the Shopark marketplace.";
 const version$2 = "1.0.0";
 const defaultEnabled$2 = false;
 const database$2 = { "migrations": [{ "id": "0001-create-catalog", "sqlite": "sqlite/0001-create-catalog.sql", "postgresql": "postgresql/0001-create-catalog.sql", "mysql": "mysql/0001-create-catalog.sql" }, { "id": "0002-create-releases", "sqlite": "sqlite/0002-create-releases.sql", "postgresql": "postgresql/0002-create-releases.sql", "mysql": "mysql/0002-create-releases.sql" }] };
@@ -25861,14 +25851,14 @@ const __vite_glob_0_0 = {
   publicApis: publicApis$1
 };
 const schemaVersion$1 = 1;
-const id$1 = "shoply";
+const id$1 = "shopark";
 const name$1 = "SaaS Management";
-const description$1 = "Manage Shoply SaaS platform defaults, deployed applications and themes, connection and subscription licenses.";
+const description$1 = "Manage Shopark SaaS platform defaults, deployed applications and themes, connection and subscription licenses.";
 const version$1 = "1.1.0";
 const defaultEnabled$1 = true;
 const database$1 = { "migrations": [] };
-const capabilities$1 = [{ "key": "stores", "label": "Stores & Operations", "labelZh": "店铺与经营", "editable": true }, { "key": "connection", "label": "Shoply Connection", "labelZh": "连接与自检", "editable": true }, { "key": "licenses", "label": "Subscription Licenses", "labelZh": "订阅权益同步", "editable": true }, { "key": "settings", "label": "Platform Settings", "labelZh": "平台设置", "editable": true }, { "key": "applications", "label": "Applications", "labelZh": "应用管理", "editable": true }, { "key": "themes", "label": "Themes", "labelZh": "主题管理", "editable": true }, { "key": "leads", "label": "Consulting Leads", "labelZh": "咨询线索", "editable": true }];
-const adminPages$1 = [{ "key": "stores", "title": "Stores & Operations", "titleZh": "店铺与经营", "description": "Monitor opened stores, regional distribution, and store operating metrics across Shoply.", "descriptionZh": "查看全平台已开设店铺、开设地区/币种/类目分布及各店铺商品、订单、GMV 经营情况。", "component": "stores.vue", "capability": "stores", "icon": "ph:storefront", "order": 39 }, { "key": "connection", "title": "Shoply Connection", "titleZh": "服务连接", "description": "Check partner API connection, HMAC signing, and system readiness.", "descriptionZh": "查看 Shoply 合作方接口连接、HMAC 签名与接入自检。", "component": "connection.vue", "capability": "connection", "icon": "ph:plugs-connected", "order": 43 }, { "key": "licenses", "title": "Subscription Licenses", "titleZh": "订阅权益", "description": "Manage APay subscriptions mapped to Shoply store licenses and sync status.", "descriptionZh": "管理 APay 订阅与 Shoply 店铺权益映射及同步状态。", "component": "licenses.vue", "capability": "licenses", "icon": "ph:arrows-clockwise", "order": 44 }, { "key": "leads", "title": "Consulting Leads", "titleZh": "咨询线索", "description": "Manage website consulting leads, follow-up status, and sales notes.", "descriptionZh": "查看并跟进官网解决方案与定制开发咨询线索。", "component": "leads.vue", "capability": "leads", "icon": "ph:chat-centered-text", "order": 45 }, { "key": "settings", "title": "Platform Settings", "titleZh": "平台设置", "component": "settings.vue", "capability": "settings", "icon": "ph:sliders-horizontal", "order": 40 }, { "key": "applications", "title": "Applications", "titleZh": "应用管理", "component": "applications.vue", "capability": "applications", "icon": "ph:squares-four", "order": 41 }, { "key": "themes", "title": "Themes", "titleZh": "主题管理", "component": "themes.vue", "capability": "themes", "icon": "ph:paint-brush", "order": 42 }];
+const capabilities$1 = [{ "key": "stores", "label": "Stores & Operations", "labelZh": "店铺与经营", "editable": true }, { "key": "connection", "label": "Shopark Connection", "labelZh": "连接与自检", "editable": true }, { "key": "licenses", "label": "Subscription Licenses", "labelZh": "订阅权益同步", "editable": true }, { "key": "settings", "label": "Platform Settings", "labelZh": "平台设置", "editable": true }, { "key": "applications", "label": "Applications", "labelZh": "应用管理", "editable": true }, { "key": "themes", "label": "Themes", "labelZh": "主题管理", "editable": true }, { "key": "leads", "label": "Consulting Leads", "labelZh": "咨询线索", "editable": true }];
+const adminPages$1 = [{ "key": "stores", "title": "Stores & Operations", "titleZh": "店铺与经营", "description": "Monitor opened stores, regional distribution, and store operating metrics across Shopark.", "descriptionZh": "查看全平台已开设店铺、开设地区/币种/类目分布及各店铺商品、订单、GMV 经营情况。", "component": "stores.vue", "capability": "stores", "icon": "ph:storefront", "order": 39 }, { "key": "connection", "title": "Shopark Connection", "titleZh": "服务连接", "description": "Check partner API connection, HMAC signing, and system readiness.", "descriptionZh": "查看 Shopark 合作方接口连接、HMAC 签名与接入自检。", "component": "connection.vue", "capability": "connection", "icon": "ph:plugs-connected", "order": 43 }, { "key": "licenses", "title": "Subscription Licenses", "titleZh": "订阅权益", "description": "Manage APay subscriptions mapped to Shopark store licenses and sync status.", "descriptionZh": "管理 APay 订阅与 Shopark 店铺权益映射及同步状态。", "component": "licenses.vue", "capability": "licenses", "icon": "ph:arrows-clockwise", "order": 44 }, { "key": "leads", "title": "Consulting Leads", "titleZh": "咨询线索", "description": "Manage website consulting leads, follow-up status, and sales notes.", "descriptionZh": "查看并跟进官网解决方案与定制开发咨询线索。", "component": "leads.vue", "capability": "leads", "icon": "ph:chat-centered-text", "order": 45 }, { "key": "settings", "title": "Platform Settings", "titleZh": "平台设置", "component": "settings.vue", "capability": "settings", "icon": "ph:sliders-horizontal", "order": 40 }, { "key": "applications", "title": "Applications", "titleZh": "应用管理", "component": "applications.vue", "capability": "applications", "icon": "ph:squares-four", "order": 41 }, { "key": "themes", "title": "Themes", "titleZh": "主题管理", "component": "themes.vue", "capability": "themes", "icon": "ph:paint-brush", "order": 42 }];
 const adminApis$1 = [{ "method": "get", "path": "stores/list", "handler": "stores/list.get.ts", "capability": "stores" }, { "method": "get", "path": "leads/list", "handler": "leads/list.get.ts", "capability": "leads" }, { "method": "post", "path": "leads/save", "handler": "leads/save.post.ts", "capability": "leads" }, { "method": "get", "path": "connection/status", "handler": "connection/status.get.ts", "capability": "connection" }, { "method": "post", "path": "connection/test", "handler": "connection/test.post.ts", "capability": "connection" }, { "method": "get", "path": "readiness/status", "handler": "readiness/status.get.ts", "capability": "connection" }, { "method": "post", "path": "readiness/setup-scheduler", "handler": "readiness/setup-scheduler.post.ts", "capability": "connection" }, { "method": "get", "path": "licenses/list", "handler": "licenses/list.get.ts", "capability": "licenses" }, { "method": "get", "path": "licenses/customers", "handler": "licenses/customers.get.ts", "capability": "licenses" }, { "method": "post", "path": "licenses/plan", "handler": "licenses/plan.post.ts", "capability": "licenses" }, { "method": "post", "path": "licenses/sync", "handler": "licenses/sync.post.ts", "capability": "licenses" }, { "method": "post", "path": "licenses/reconcile", "handler": "licenses/reconcile.post.ts", "capability": "licenses" }, { "method": "get", "path": "licenses/reconcile-status", "handler": "licenses/reconcile-status.get.ts", "capability": "licenses" }, { "method": "get", "path": "settings/status", "handler": "settings/status.get.ts", "capability": "settings" }, { "method": "post", "path": "settings/save", "handler": "settings/save.post.ts", "capability": "settings" }, { "method": "get", "path": "applications/list", "handler": "applications/list.get.ts", "capability": "applications" }, { "method": "post", "path": "applications/register", "handler": "applications/register.post.ts", "capability": "applications" }, { "method": "post", "path": "applications/rule", "handler": "applications/rule.post.ts", "capability": "applications" }, { "method": "get", "path": "themes/list", "handler": "themes/list.get.ts", "capability": "themes" }, { "method": "post", "path": "themes/register", "handler": "themes/register.post.ts", "capability": "themes" }, { "method": "post", "path": "themes/rule", "handler": "themes/rule.post.ts", "capability": "themes" }];
 const __vite_glob_0_1 = {
   schemaVersion: schemaVersion$1,
@@ -25885,7 +25875,7 @@ const __vite_glob_0_1 = {
 const schemaVersion = 1;
 const id = "themes";
 const name = "Theme Catalog";
-const description = "Manage downloadable storefront theme packages published in the Shoply marketplace.";
+const description = "Manage downloadable storefront theme packages published in the Shopark marketplace.";
 const version = "1.0.0";
 const defaultEnabled = false;
 const database = { "migrations": [{ "id": "0001-create-catalog", "sqlite": "sqlite/0001-create-catalog.sql", "postgresql": "postgresql/0001-create-catalog.sql", "mysql": "mysql/0001-create-catalog.sql" }, { "id": "0002-create-releases", "sqlite": "sqlite/0002-create-releases.sql", "postgresql": "postgresql/0002-create-releases.sql", "mysql": "mysql/0002-create-releases.sql" }] };
@@ -31122,12 +31112,12 @@ const messages = {
     availabilityHelp: "Turning this off prevents new installations. Existing stores keep using the resource.",
     requiredHelp: "New stores install this application. Merchants with it installed cannot disable or uninstall it.",
     worker_reload_failed: "Registration was saved, but workers did not reload. Retry registration.",
-    not_configured: "Configure SHOPLY_PLATFORM_ADMIN_SECRET on APay and Shoply. Set SHOPLY_PLATFORM_API_URL if the platform uses a separate address.",
+    not_configured: "Configure SHOPARK_PLATFORM_ADMIN_SECRET on APay and Shopark. Set SHOPARK_PLATFORM_API_URL if the platform uses a separate address.",
     revision_conflict: "Settings changed elsewhere. Refresh before saving again.",
-    operation_rejected: "Shoply rejected the operation. Check registration and the default or required rules.",
+    operation_rejected: "Shopark rejected the operation. Check registration and the default or required rules.",
     authentication_failed: "Platform authentication failed. Check the dedicated platform credential.",
-    upstream_unavailable: "Shoply platform service is unavailable. Check the connection and retry.",
-    invalid_response: "Shoply returned an invalid response.",
+    upstream_unavailable: "Shopark platform service is unavailable. Check the connection and retry.",
+    invalid_response: "Shopark returned an invalid response.",
     failed: "Unable to complete the operation."
   },
   zh: {
@@ -31174,12 +31164,12 @@ const messages = {
     availabilityHelp: "关闭后禁止新安装，已有店铺继续使用。",
     requiredHelp: "新店自动安装，已安装该应用的商家不能停用或卸载。",
     worker_reload_failed: "登记已保存，工作进程未完成重载，请重试登记。",
-    not_configured: "在 APay 和 Shoply 配置相同的 SHOPLY_PLATFORM_ADMIN_SECRET；平台地址不同时另配 SHOPLY_PLATFORM_API_URL。",
+    not_configured: "在 APay 和 Shopark 配置相同的 SHOPARK_PLATFORM_ADMIN_SECRET；平台地址不同时另配 SHOPARK_PLATFORM_API_URL。",
     revision_conflict: "设置已被其他操作修改，请刷新后重新保存。",
-    operation_rejected: "Shoply 拒绝了操作，请检查资源登记状态及默认、必装规则。",
+    operation_rejected: "Shopark 拒绝了操作，请检查资源登记状态及默认、必装规则。",
     authentication_failed: "平台认证失败，请检查独立的平台凭据。",
-    upstream_unavailable: "Shoply 平台服务不可用，请检查连接后重试。",
-    invalid_response: "Shoply 返回了无效响应。",
+    upstream_unavailable: "Shopark 平台服务不可用，请检查连接后重试。",
+    invalid_response: "Shopark 返回了无效响应。",
     failed: "操作未完成。"
   }
 };
@@ -31204,7 +31194,7 @@ const _sfc_main$k = /* @__PURE__ */ defineComponent({
     const text2 = computed(() => locale.value.startsWith("zh") ? messages.zh : messages.en);
     const { hasPerm, loadAdmin } = useAdminPermissions();
     [__temp, __restore] = withAsyncContext(() => loadAdmin()), await __temp, __restore();
-    const visibleEntries = computed(() => ["stores", "settings", "applications", "themes", "connection", "licenses", "leads"].filter((key) => hasPerm(`plugin:shoply:${key}:view`)).map((key) => ({ key, label: text2.value[key] })));
+    const visibleEntries = computed(() => ["stores", "settings", "applications", "themes", "connection", "licenses", "leads"].filter((key) => hasPerm(`plugin:shopark:${key}:view`)).map((key) => ({ key, label: text2.value[key] })));
     return (_ctx, _push, _parent, _attrs) => {
       const _component_UButton = _sfc_main$R;
       _push(`<div${ssrRenderAttrs(mergeProps({ class: "space-y-6 pb-8" }, _attrs))}><div class="flex flex-wrap items-center justify-between gap-3"><div><p class="mb-1 text-sm text-muted">${ssrInterpolate(text2.value.management)}</p><h1 class="text-2xl font-semibold text-highlighted">${ssrInterpolate(__props.title)}</h1></div>`);
@@ -31213,7 +31203,7 @@ const _sfc_main$k = /* @__PURE__ */ defineComponent({
       ssrRenderList(visibleEntries.value, (entry2) => {
         _push(ssrRenderComponent(_component_UButton, {
           key: entry2.key,
-          to: `/admin/plugins/shoply/${entry2.key}`,
+          to: `/admin/plugins/shopark/${entry2.key}`,
           color: "neutral",
           variant: __props.active === entry2.key ? "soft" : "ghost",
           label: entry2.label
@@ -31228,7 +31218,7 @@ const _sfc_main$k = /* @__PURE__ */ defineComponent({
 const _sfc_setup$k = _sfc_main$k.setup;
 _sfc_main$k.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("extensions/shoply/admin/components/SaaSWorkspace.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("extensions/shopark/admin/components/SaaSWorkspace.vue");
   return _sfc_setup$k ? _sfc_setup$k(props, ctx) : void 0;
 };
 const _sfc_main$j = /* @__PURE__ */ defineComponent({
@@ -31245,10 +31235,10 @@ const _sfc_main$j = /* @__PURE__ */ defineComponent({
     const title2 = computed(() => text2.value[props.kind]);
     const { hasPerm, loadAdmin } = useAdminPermissions();
     [__temp, __restore] = withAsyncContext(() => loadAdmin()), await __temp, __restore();
-    const canEdit = computed(() => hasPerm(`plugin:shoply:${props.kind}:edit`));
+    const canEdit = computed(() => hasPerm(`plugin:shopark:${props.kind}:edit`));
     const { data: response, pending, error, refresh } = ([__temp, __restore] = withAsyncContext(() => useFetch(
-      `/api/admin/plugins/shoply/${props.kind}/list`,
-      "$iqkMK53gZf"
+      `/api/admin/plugins/shopark/${props.kind}/list`,
+      "$WDxUA-yKV2"
       /* nuxt-injected */
     )), __temp = await __temp, __restore(), __temp);
     const keyword = ref("");
@@ -31278,7 +31268,7 @@ const _sfc_main$j = /* @__PURE__ */ defineComponent({
       busyName.value = registerItem.value.uniqueName;
       operationError.value = "";
       try {
-        await $fetch(`/api/admin/plugins/shoply/${props.kind}/register`, { method: "POST", body: { uniqueName: registerItem.value.uniqueName } });
+        await $fetch(`/api/admin/plugins/shopark/${props.kind}/register`, { method: "POST", body: { uniqueName: registerItem.value.uniqueName } });
         registerItem.value = null;
         toast.add({ title: text2.value.registered, color: "success" });
         await refresh();
@@ -31294,7 +31284,7 @@ const _sfc_main$j = /* @__PURE__ */ defineComponent({
       operationError.value = "";
       try {
         const body = { revision: response.value.data.revision, uniqueName: ruleItem.value.uniqueName, ...props.kind === "applications" ? { appRule: draft.value } : { themeRule: { available: draft.value.available } } };
-        await $fetch(`/api/admin/plugins/shoply/${props.kind}/rule`, { method: "POST", body });
+        await $fetch(`/api/admin/plugins/shopark/${props.kind}/rule`, { method: "POST", body });
         ruleItem.value = null;
         toast.add({ title: text2.value.saved, color: "success" });
         await refresh();
@@ -32226,7 +32216,7 @@ const _sfc_main$j = /* @__PURE__ */ defineComponent({
 const _sfc_setup$j = _sfc_main$j.setup;
 _sfc_main$j.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("extensions/shoply/admin/components/SaaSResources.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("extensions/shopark/admin/components/SaaSResources.vue");
   return _sfc_setup$j ? _sfc_setup$j(props, ctx) : void 0;
 };
 const _sfc_main$i = /* @__PURE__ */ defineComponent({
@@ -32241,7 +32231,7 @@ const _sfc_main$i = /* @__PURE__ */ defineComponent({
 const _sfc_setup$i = _sfc_main$i.setup;
 _sfc_main$i.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("extensions/shoply/admin/pages/applications.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("extensions/shopark/admin/pages/applications.vue");
   return _sfc_setup$i ? _sfc_setup$i(props, ctx) : void 0;
 };
 const _sfc_main$h = /* @__PURE__ */ defineComponent({
@@ -32253,8 +32243,8 @@ const _sfc_main$h = /* @__PURE__ */ defineComponent({
     const toast = useToast();
     const isZh = computed(() => String(locale.value || "").startsWith("zh"));
     const text2 = computed(() => isZh.value ? {
-      title: "Shoply 店铺服务连接",
-      subtitle: "检查与 Shoply 系统的合作方 HMAC 接口连接、配置健康度与自检状态。",
+      title: "Shopark 店铺服务连接",
+      subtitle: "检查与 Shopark 系统的合作方 HMAC 接口连接、配置健康度与自检状态。",
       manageLicenses: "管理订阅权益同步",
       status: "连接状态",
       configured: "已连接",
@@ -32271,14 +32261,14 @@ const _sfc_main$h = /* @__PURE__ */ defineComponent({
       schedulerSetupToast: "已自动配置并启用权益补推（每5分钟）与到期提醒（每天）定时任务",
       setupTitle: "上线排查步骤",
       setupSteps: [
-        "环境变量：配置 SHOPLY_PARTNER_API_URL 与 SHOPLY_PARTNER_SECRET（至少 32 字符）。",
-        "Shoply 服务端：把同一个密钥设为 SHOPLY_APAY_PARTNER_SECRET，并执行 Saas 应用的数据迁移。",
-        "商品预设：在订阅商品的元数据预设里加 shoply_plan_code 与 shoply_store_limit，并在套餐商品上填写。",
-        "定时任务：点击上方「一键配置定时任务」或在 /admin/scheduler 添加 /api/shoply/cron/license-sync 与 /api/shoply/cron/expiry-reminders。"
+        "环境变量：配置 SHOPARK_PARTNER_API_URL 与 SHOPARK_PARTNER_SECRET（至少 32 字符）。",
+        "Shopark 服务端：把同一个密钥设为 SHOPARK_APAY_PARTNER_SECRET，并执行 Saas 应用的数据迁移。",
+        "商品预设：在订阅商品的元数据预设里加 shopark_plan_code 与 shopark_store_limit，并在套餐商品上填写。",
+        "定时任务：点击上方「一键配置定时任务」或在 /admin/scheduler 添加 /api/shopark/cron/license-sync 与 /api/shopark/cron/expiry-reminders。"
       ]
     } : {
-      title: "Shoply Connection",
-      subtitle: "Check partner HMAC connection, system readiness, and integration diagnostics for Shoply.",
+      title: "Shopark Connection",
+      subtitle: "Check partner HMAC connection, system readiness, and integration diagnostics for Shopark.",
       manageLicenses: "Manage Subscription Licenses",
       status: "Connection Status",
       configured: "Connected",
@@ -32295,24 +32285,24 @@ const _sfc_main$h = /* @__PURE__ */ defineComponent({
       schedulerSetupToast: "Configured and enabled license-sync (5m) and expiry-reminders (daily) scheduler jobs",
       setupTitle: "Setup Checklist",
       setupSteps: [
-        "Environment: Set SHOPLY_PARTNER_API_URL and SHOPLY_PARTNER_SECRET (min 32 characters).",
-        "Shoply Server: Set matching SHOPLY_APAY_PARTNER_SECRET and run Saas plugin migrations.",
-        "Product Metadata: Configure shoply_plan_code and shoply_store_limit on subscription products.",
-        'Scheduler: Click "Auto-Setup Cron Jobs" above or add /api/shoply/cron/license-sync and /api/shoply/cron/expiry-reminders in /admin/scheduler.'
+        "Environment: Set SHOPARK_PARTNER_API_URL and SHOPARK_PARTNER_SECRET (min 32 characters).",
+        "Shopark Server: Set matching SHOPARK_APAY_PARTNER_SECRET and run Saas plugin migrations.",
+        "Product Metadata: Configure shopark_plan_code and shopark_store_limit on subscription products.",
+        'Scheduler: Click "Auto-Setup Cron Jobs" above or add /api/shopark/cron/license-sync and /api/shopark/cron/expiry-reminders in /admin/scheduler.'
       ]
     });
     const testing = ref(false);
     const testResult = ref(null);
     const settingUpScheduler = ref(false);
     const { data: connectionRes, pending, error, refresh } = ([__temp, __restore] = withAsyncContext(() => useFetch(
-      "/api/admin/plugins/shoply/connection/status",
-      "$dqgG6t8RkK"
+      "/api/admin/plugins/shopark/connection/status",
+      "$qVtDTTj1j6"
       /* nuxt-injected */
     )), __temp = await __temp, __restore(), __temp);
     const connection = computed(() => connectionRes.value?.data);
     const { data: readinessRes, pending: readinessPending, error: readinessError, refresh: refreshReadiness } = ([__temp, __restore] = withAsyncContext(() => useFetch(
-      "/api/admin/plugins/shoply/readiness/status",
-      "$KhOfxciFFc"
+      "/api/admin/plugins/shopark/readiness/status",
+      "$kVfV9mTrQH"
       /* nuxt-injected */
     )), __temp = await __temp, __restore(), __temp);
     const readiness = computed(() => readinessRes.value?.data);
@@ -32320,7 +32310,7 @@ const _sfc_main$h = /* @__PURE__ */ defineComponent({
       testing.value = true;
       testResult.value = null;
       try {
-        const res = await $fetch("/api/admin/plugins/shoply/connection/test", { method: "POST" });
+        const res = await $fetch("/api/admin/plugins/shopark/connection/test", { method: "POST" });
         testResult.value = res.data;
       } catch (err) {
         testResult.value = { ok: false, status: err.statusCode || 500, action: "category/list", latencyMs: 0, body: err.data || err.message };
@@ -32331,7 +32321,7 @@ const _sfc_main$h = /* @__PURE__ */ defineComponent({
     const setupScheduler = async () => {
       settingUpScheduler.value = true;
       try {
-        await $fetch("/api/admin/plugins/shoply/readiness/setup-scheduler", { method: "POST" });
+        await $fetch("/api/admin/plugins/shopark/readiness/setup-scheduler", { method: "POST" });
         toast.add({ title: text2.value.schedulerSetupToast, color: "success" });
         await refreshReadiness();
       } catch (err) {
@@ -32359,7 +32349,7 @@ const _sfc_main$h = /* @__PURE__ */ defineComponent({
         cron: { zh: "权益补推定时任务", en: "Reconcile Scheduler" },
         expiry_cron: { zh: "到期提醒定时任务 (7天/1天邮件)", en: "Expiry Reminder Scheduler (7d/1d Email)" },
         leads: { zh: "官网咨询线索配置", en: "Website Leads Inbox" },
-        plans: { zh: "Shoply 定价套餐配置", en: "Pricing Plans Metadata" }
+        plans: { zh: "Shopark 定价套餐配置", en: "Pricing Plans Metadata" }
       };
       return map[key] ? isZh.value ? map[key].zh : map[key].en : key;
     };
@@ -32386,7 +32376,7 @@ const _sfc_main$h = /* @__PURE__ */ defineComponent({
       const _component_UIcon = _sfc_main$W;
       _push(`<div${ssrRenderAttrs(mergeProps({ class: "flex max-w-4xl flex-col gap-6 pb-8" }, _attrs))}><div class="flex flex-wrap items-center justify-between gap-4"><div><h1 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">${ssrInterpolate(text2.value.title)}</h1><p class="mt-2 text-sm text-gray-500 dark:text-gray-400">${ssrInterpolate(text2.value.subtitle)}</p></div><div class="flex items-center gap-3">`);
       _push(ssrRenderComponent(_component_UButton, {
-        to: "/admin/plugins/shoply/licenses",
+        to: "/admin/plugins/shopark/licenses",
         icon: "ph:arrows-clockwise",
         color: "primary"
       }, {
@@ -32545,7 +32535,7 @@ const _sfc_main$h = /* @__PURE__ */ defineComponent({
 const _sfc_setup$h = _sfc_main$h.setup;
 _sfc_main$h.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("extensions/shoply/admin/pages/connection.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("extensions/shopark/admin/pages/connection.vue");
   return _sfc_setup$h ? _sfc_setup$h(props, ctx) : void 0;
 };
 const limit = 20;
@@ -32757,7 +32747,7 @@ const _sfc_main$g = /* @__PURE__ */ defineComponent({
     async function loadLeads() {
       loading.value = true;
       try {
-        const res = await $fetch("/api/admin/plugins/shoply/leads/list", {
+        const res = await $fetch("/api/admin/plugins/shopark/leads/list", {
           query: {
             page: page.value,
             limit,
@@ -32799,7 +32789,7 @@ const _sfc_main$g = /* @__PURE__ */ defineComponent({
     async function quickUpdateStatus(item, status) {
       savingId.value = item.id;
       try {
-        await $fetch("/api/admin/plugins/shoply/leads/save", {
+        await $fetch("/api/admin/plugins/shopark/leads/save", {
           method: "POST",
           body: {
             action: "update",
@@ -32835,7 +32825,7 @@ const _sfc_main$g = /* @__PURE__ */ defineComponent({
       if (!editingLead.value) return;
       savingModal.value = true;
       try {
-        await $fetch("/api/admin/plugins/shoply/leads/save", {
+        await $fetch("/api/admin/plugins/shopark/leads/save", {
           method: "POST",
           body: {
             action: "update",
@@ -32860,7 +32850,7 @@ const _sfc_main$g = /* @__PURE__ */ defineComponent({
     async function confirmDelete(item) {
       deletingId.value = item.id;
       try {
-        await $fetch("/api/admin/plugins/shoply/leads/save", {
+        await $fetch("/api/admin/plugins/shopark/leads/save", {
           method: "POST",
           body: {
             action: "delete",
@@ -33189,7 +33179,7 @@ const _sfc_main$g = /* @__PURE__ */ defineComponent({
                       }, _parent3, _scopeId2));
                       if (item.contact && item.contact.includes("@")) {
                         _push3(ssrRenderComponent(_component_NuxtLink, {
-                          to: `/admin/plugins/shoply/licenses?keyword=${encodeURIComponent(item.contact)}`,
+                          to: `/admin/plugins/shopark/licenses?keyword=${encodeURIComponent(item.contact)}`,
                           class: "inline-flex items-center gap-1 font-mono text-xs text-primary-600 hover:underline dark:text-primary-400"
                         }, {
                           default: withCtx((_3, _push4, _parent4, _scopeId3) => {
@@ -33361,7 +33351,7 @@ const _sfc_main$g = /* @__PURE__ */ defineComponent({
                                   }, 1024),
                                   item.contact && item.contact.includes("@") ? (openBlock(), createBlock(_component_NuxtLink, {
                                     key: 0,
-                                    to: `/admin/plugins/shoply/licenses?keyword=${encodeURIComponent(item.contact)}`,
+                                    to: `/admin/plugins/shopark/licenses?keyword=${encodeURIComponent(item.contact)}`,
                                     class: "inline-flex items-center gap-1 font-mono text-xs text-primary-600 hover:underline dark:text-primary-400"
                                   }, {
                                     default: withCtx(() => [
@@ -33909,7 +33899,7 @@ const _sfc_main$g = /* @__PURE__ */ defineComponent({
                                 }, 1024),
                                 item.contact && item.contact.includes("@") ? (openBlock(), createBlock(_component_NuxtLink, {
                                   key: 0,
-                                  to: `/admin/plugins/shoply/licenses?keyword=${encodeURIComponent(item.contact)}`,
+                                  to: `/admin/plugins/shopark/licenses?keyword=${encodeURIComponent(item.contact)}`,
                                   class: "inline-flex items-center gap-1 font-mono text-xs text-primary-600 hover:underline dark:text-primary-400"
                                 }, {
                                   default: withCtx(() => [
@@ -34154,7 +34144,7 @@ const _sfc_main$g = /* @__PURE__ */ defineComponent({
 const _sfc_setup$g = _sfc_main$g.setup;
 _sfc_main$g.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("extensions/shoply/admin/pages/leads.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("extensions/shopark/admin/pages/leads.vue");
   return _sfc_setup$g ? _sfc_setup$g(props, ctx) : void 0;
 };
 const theme$3 = {
@@ -34935,7 +34925,7 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
     const isZh = computed(() => String(locale.value || "").startsWith("zh"));
     const text2 = computed(() => isZh.value ? {
       title: "客户与订阅权益管理",
-      subtitle: "以客户为中心管理 Shoply 订阅套餐、人工开通/续期/取消、大客户开店配额覆写、7天到期预警与权益实时同步。",
+      subtitle: "以客户为中心管理 Shopark 订阅套餐、人工开通/续期/取消、大客户开店配额覆写、7天到期预警与权益实时同步。",
       storesDashboard: "店铺与经营大盘",
       leadsDashboard: "官网咨询线索",
       connectionSettings: "服务连接与自检",
@@ -34975,13 +34965,13 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
       manualGranted: "后台人工授权",
       customQuotaBadge: "自定义配额: {n} 店",
       customShort: "自定义",
-      noShoplyMeta: "无 Shoply 套餐声明",
+      noShoparkMeta: "无 Shopark 套餐声明",
       noSubscriptionHint: "尚未订购付费套餐（当前按免费/试用配额核算）",
       validUntil: "有效期至",
       daysRemaining: "剩余 {days} 天",
       registeredAt: "注册于",
       lastActiveAt: "最近登录",
-      computedLicense: "计算出的 Shoply 权益",
+      computedLicense: "计算出的 Shopark 权益",
       planCode: "版本",
       maxStores: "可开店配额",
       expires: "到期",
@@ -34989,14 +34979,14 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
       grantPlan: "手动开通",
       renewOrReplacePlan: "续期 / 更换",
       cancelNow: "立即取消",
-      syncToShoply: "同步到 Shoply",
+      syncToShopark: "同步到 Shopark",
       customerDetail: "客户详情",
-      syncSuccess: "已成功推送到 Shoply 店铺",
+      syncSuccess: "已成功推送到 Shopark 店铺",
       syncIssue: "推送异常或已被跳过",
       showingPage: "第 {page} 页 · 共 {total} 位客户",
-      drawerStoresTitle: "名下开设的 Shoply 店铺",
-      drawerStoresUnavailable: "Shoply 合作方接口暂不可达，仅展示本地订阅数据",
-      drawerNoStores: "该客户暂未在 Shoply 创建店铺",
+      drawerStoresTitle: "名下开设的 Shopark 店铺",
+      drawerStoresUnavailable: "Shopark 合作方接口暂不可达，仅展示本地订阅数据",
+      drawerNoStores: "该客户暂未在 Shopark 创建店铺",
       drawerSubHistoryTitle: "订阅与人工授权记录",
       drawerNoSubHistory: "暂无订阅记录",
       drawerOrdersTitle: "历史支付订单记录",
@@ -35012,7 +35002,7 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
       metricOrders: "30天/总订单",
       metricGmv: "30天/总GMV",
       metricTraffic: "30天 UV/PV",
-      selectPlanLabel: "选择 Shoply 套餐",
+      selectPlanLabel: "选择 Shopark 套餐",
       validDaysLabel: "增加有效天数",
       daysUnit: "天",
       customStoreLimitLabel: "自定义可开店上限",
@@ -35021,26 +35011,26 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
       defaultQuotaPlaceholder: "默认按套餐额度",
       saveQuotaBtn: "保存配额",
       resetQuotaBtn: "恢复默认",
-      quotaSavedToast: "客户开店配额已更新并同步至 Shoply",
+      quotaSavedToast: "客户开店配额已更新并同步至 Shopark",
       reasonLabel: "操作原因",
       reasonPlaceholder: "必填（2-500字），如：线下年度合同开通、活动赠送、客诉延期补偿...",
       activePlanExtendHint: "客户当前持有「{plan}」（有效期至 {date}）。新开通或更换套餐将在现有未到期时间基础上自动顺延累加，不会吞掉剩余天数。",
       cancelBtn: "取消",
-      confirmPlanBtn: "确认开通并同步 Shoply",
+      confirmPlanBtn: "确认开通并同步 Shopark",
       cancelModalTitle: "立即取消客户当前套餐",
-      cancelWarningHint: "确定立即终止「{plan}」吗？取消后客户权益将立即回落为未付费状态并同步至名下所有 Shoply 店铺。",
+      cancelWarningHint: "确定立即终止「{plan}」吗？取消后客户权益将立即回落为未付费状态并同步至名下所有 Shopark 店铺。",
       cancelReasonLabel: "取消原因",
       cancelReasonPlaceholder: "必填（2-500字），如：线下退款收回、违规处置、误操作回滚...",
       confirmCancelBtn: "确认立即取消",
-      planSuccessToast: "套餐已更新并触发 Shoply 权益同步",
-      cancelSuccessToast: "已立即取消套餐并同步收回 Shoply 权益",
+      planSuccessToast: "套餐已更新并触发 Shopark 权益同步",
+      cancelSuccessToast: "已立即取消套餐并同步收回 Shopark 权益",
       remindExpiryBtn: "催续费邮件",
       batchRemindBtn: "群发到期提醒",
       remindSentToast: "续费提醒邮件已发送至 {email}",
       batchRemindSentToast: "已扫描 {checked} 条即将到期订阅，新发送 {sent} 封提醒邮件（去重跳过 {skipped} 条）"
     } : {
       title: "Customers & Subscription Entitlements",
-      subtitle: "Customer-centric Shoply plan management, manual grant/renewal/cancellation, custom store quota overrides, 7-day expiry alerts, and live sync.",
+      subtitle: "Customer-centric Shopark plan management, manual grant/renewal/cancellation, custom store quota overrides, 7-day expiry alerts, and live sync.",
       storesDashboard: "Stores & Operations",
       leadsDashboard: "Consulting Leads",
       connectionSettings: "Connection & Diagnostics",
@@ -35080,13 +35070,13 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
       manualGranted: "Admin Manual Grant",
       customQuotaBadge: "Custom Quota: {n} stores",
       customShort: "Custom",
-      noShoplyMeta: "No Shoply Plan Metadata",
+      noShoparkMeta: "No Shopark Plan Metadata",
       noSubscriptionHint: "No paid plan yet (computed with free/trial store limit)",
       validUntil: "Valid Until",
       daysRemaining: "{days}d left",
       registeredAt: "Joined",
       lastActiveAt: "Last Login",
-      computedLicense: "Computed Shoply Entitlement",
+      computedLicense: "Computed Shopark Entitlement",
       planCode: "Plan Code",
       maxStores: "Store Limit",
       expires: "Expires",
@@ -35094,14 +35084,14 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
       grantPlan: "Grant Plan",
       renewOrReplacePlan: "Renew / Switch",
       cancelNow: "Cancel Now",
-      syncToShoply: "Sync to Shoply",
+      syncToShopark: "Sync to Shopark",
       customerDetail: "Details",
-      syncSuccess: "Successfully pushed license to Shoply",
+      syncSuccess: "Successfully pushed license to Shopark",
       syncIssue: "Sync encountered issue or skipped",
       showingPage: "Page {page} · {total} customers",
-      drawerStoresTitle: "Opened Shoply Stores",
-      drawerStoresUnavailable: "Shoply Partner API is unreachable; showing local subscription data only",
-      drawerNoStores: "No stores created in Shoply yet",
+      drawerStoresTitle: "Opened Shopark Stores",
+      drawerStoresUnavailable: "Shopark Partner API is unreachable; showing local subscription data only",
+      drawerNoStores: "No stores created in Shopark yet",
       drawerSubHistoryTitle: "Subscription & Manual Grant History",
       drawerNoSubHistory: "No subscription history",
       drawerOrdersTitle: "Payment Orders History",
@@ -35117,7 +35107,7 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
       metricOrders: "30d/Total Orders",
       metricGmv: "30d/Total GMV",
       metricTraffic: "30d UV/PV",
-      selectPlanLabel: "Select Shoply Plan",
+      selectPlanLabel: "Select Shopark Plan",
       validDaysLabel: "Valid Days to Add",
       daysUnit: "days",
       customStoreLimitLabel: "Custom Store Quota Override",
@@ -35126,19 +35116,19 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
       defaultQuotaPlaceholder: "Plan default",
       saveQuotaBtn: "Save Quota",
       resetQuotaBtn: "Reset",
-      quotaSavedToast: "Custom store quota saved and synced to Shoply",
+      quotaSavedToast: "Custom store quota saved and synced to Shopark",
       reasonLabel: "Operation Reason",
       reasonPlaceholder: "Required (2-500 chars), e.g., offline enterprise contract, promotional extension...",
       activePlanExtendHint: 'Customer currently holds "{plan}" (valid until {date}). New days will extend from the existing expiry date without losing remaining days.',
       cancelBtn: "Cancel",
-      confirmPlanBtn: "Confirm & Sync to Shoply",
+      confirmPlanBtn: "Confirm & Sync to Shopark",
       cancelModalTitle: "Immediately Cancel Active Plan",
-      cancelWarningHint: 'Immediately terminate "{plan}"? The customer entitlement will revert to unpaid (free) and sync to all their Shoply stores right away.',
+      cancelWarningHint: 'Immediately terminate "{plan}"? The customer entitlement will revert to unpaid (free) and sync to all their Shopark stores right away.',
       cancelReasonLabel: "Cancellation Reason",
       cancelReasonPlaceholder: "Required (2-500 chars), e.g., offline refund revocation, policy violation...",
       confirmCancelBtn: "Confirm Immediate Cancel",
-      planSuccessToast: "Plan updated and synced to Shoply",
-      cancelSuccessToast: "Plan canceled and revoked on Shoply",
+      planSuccessToast: "Plan updated and synced to Shopark",
+      cancelSuccessToast: "Plan canceled and revoked on Shopark",
       remindExpiryBtn: "Remind Renewal",
       batchRemindBtn: "Batch Remind Expiring",
       remindSentToast: "Renewal reminder email sent to {email}",
@@ -35176,7 +35166,7 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
       pending: customersPending,
       refresh: refreshCustomers
     } = ([__temp, __restore] = withAsyncContext(() => useFetch(
-      "/api/admin/plugins/shoply/licenses/customers",
+      "/api/admin/plugins/shopark/licenses/customers",
       {
         query: computed(() => ({
           page: customerPage.value,
@@ -35185,7 +35175,7 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
           filter: customerFilter.value
         }))
       },
-      "$xaN-ZvE1MC"
+      "$a0WqTvQhTE"
       /* nuxt-injected */
     )), __temp = await __temp, __restore(), __temp);
     const customerRows = computed(() => customersRes.value?.data?.list || []);
@@ -35212,14 +35202,14 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
       { key: "none", label: text2.value.statUnsubscribedCustomers, count: customerCounts.value.none }
     ]);
     const { data: res, pending, refresh: refreshSubscriptions } = ([__temp, __restore] = withAsyncContext(() => useFetch(
-      "/api/admin/plugins/shoply/licenses/list",
+      "/api/admin/plugins/shopark/licenses/list",
       {
         query: computed(() => ({
           keyword: keyword.value,
           status: selectedStatus.value === "all" ? "" : selectedStatus.value
         }))
       },
-      "$XMyqUtVpy4"
+      "$-Iyd7uGV1q"
       /* nuxt-injected */
     )), __temp = await __temp, __restore(), __temp);
     const rows = computed(() => res.value?.data?.list || []);
@@ -35254,7 +35244,7 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
     async function loadCustomerDetail(userId) {
       drawerLoading.value = true;
       try {
-        const response = await $fetch("/api/admin/plugins/shoply/licenses/customers", {
+        const response = await $fetch("/api/admin/plugins/shopark/licenses/customers", {
           query: { userId }
         });
         drawerDetail.value = response?.data || null;
@@ -35279,7 +35269,7 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
       try {
         const raw = reset ? "" : String(drawerStoreLimitInput.value ?? "").trim();
         const customStoreLimit = raw === "" ? null : Number(raw);
-        await $fetch("/api/admin/plugins/shoply/licenses/plan", {
+        await $fetch("/api/admin/plugins/shopark/licenses/plan", {
           method: "POST",
           body: {
             action: "set_store_limit",
@@ -35350,7 +35340,7 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
       try {
         const rawLimit = String(planForm.customStoreLimit ?? "").trim();
         const customStoreLimit = rawLimit === "" ? null : Number(rawLimit);
-        const response = await $fetch("/api/admin/plugins/shoply/licenses/plan", {
+        const response = await $fetch("/api/admin/plugins/shopark/licenses/plan", {
           method: "POST",
           body: {
             action: "grant",
@@ -35405,7 +35395,7 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
       if (!cancelModalTarget.value?.subscription?.id) return;
       submittingCancel.value = true;
       try {
-        const response = await $fetch("/api/admin/plugins/shoply/licenses/plan", {
+        const response = await $fetch("/api/admin/plugins/shopark/licenses/plan", {
           method: "POST",
           body: {
             action: "cancel",
@@ -35438,7 +35428,7 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
       syncingUserId.value = userId;
       lastSyncResult.value = null;
       try {
-        const response = await $fetch("/api/admin/plugins/shoply/licenses/sync", {
+        const response = await $fetch("/api/admin/plugins/shopark/licenses/sync", {
           method: "POST",
           body: { userId }
         });
@@ -35459,7 +35449,7 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
     async function triggerFullReconciliation() {
       reconciling.value = true;
       try {
-        await $fetch("/api/admin/plugins/shoply/licenses/reconcile", { method: "POST" });
+        await $fetch("/api/admin/plugins/shopark/licenses/reconcile", { method: "POST" });
         await refreshActiveView();
       } finally {
         reconciling.value = false;
@@ -35468,7 +35458,7 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
     async function remindCustomerExpiry(userId) {
       remindingUserId.value = userId;
       try {
-        const response = await $fetch("/api/admin/plugins/shoply/licenses/plan", {
+        const response = await $fetch("/api/admin/plugins/shopark/licenses/plan", {
           method: "POST",
           body: {
             action: "remind_expiry",
@@ -35493,7 +35483,7 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
     async function batchRemindExpiry() {
       batchReminding.value = true;
       try {
-        const response = await $fetch("/api/admin/plugins/shoply/licenses/plan", {
+        const response = await $fetch("/api/admin/plugins/shopark/licenses/plan", {
           method: "POST",
           body: {
             action: "remind_expiry",
@@ -35524,7 +35514,7 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
       try {
         const dateSuffix = (/* @__PURE__ */ new Date()).toISOString().slice(0, 10);
         if (viewMode.value === "customers") {
-          const exportRes = await $fetch("/api/admin/plugins/shoply/licenses/customers", {
+          const exportRes = await $fetch("/api/admin/plugins/shopark/licenses/customers", {
             query: {
               page: 1,
               limit: 100,
@@ -35559,7 +35549,7 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
           const url = URL.createObjectURL(blob);
           const link = (void 0).createElement("a");
           link.href = url;
-          link.download = `shoply-customers-${dateSuffix}.csv`;
+          link.download = `shopark-customers-${dateSuffix}.csv`;
           link.click();
           URL.revokeObjectURL(url);
         } else {
@@ -35588,7 +35578,7 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
           const url = URL.createObjectURL(blob);
           const link = (void 0).createElement("a");
           link.href = url;
-          link.download = `shoply-subscriptions-${dateSuffix}.csv`;
+          link.download = `shopark-subscriptions-${dateSuffix}.csv`;
           link.click();
           URL.revokeObjectURL(url);
         }
@@ -35636,7 +35626,7 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
       const _component_UTextarea = _sfc_main$r;
       _push(`<div${ssrRenderAttrs(mergeProps({ class: "space-y-6 pb-10" }, _attrs))}><div class="flex flex-wrap items-center justify-between gap-4"><div><h1 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">${ssrInterpolate(text2.value.title)}</h1><p class="mt-2 text-sm text-gray-500 dark:text-gray-400">${ssrInterpolate(text2.value.subtitle)}</p></div><div class="flex flex-wrap items-center gap-2.5">`);
       _push(ssrRenderComponent(_component_UButton, {
-        to: "/admin/plugins/shoply/stores",
+        to: "/admin/plugins/shopark/stores",
         color: "neutral",
         variant: "outline",
         icon: "ph:storefront"
@@ -35653,7 +35643,7 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
         _: 1
       }, _parent));
       _push(ssrRenderComponent(_component_UButton, {
-        to: "/admin/plugins/shoply/leads",
+        to: "/admin/plugins/shopark/leads",
         color: "neutral",
         variant: "outline",
         icon: "ph:chat-centered-text"
@@ -35670,7 +35660,7 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
         _: 1
       }, _parent));
       _push(ssrRenderComponent(_component_UButton, {
-        to: "/admin/plugins/shoply/connection",
+        to: "/admin/plugins/shopark/connection",
         color: "neutral",
         variant: "outline",
         icon: "ph:plugs-connected"
@@ -36102,10 +36092,10 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
             }, {
               default: withCtx((_, _push2, _parent2, _scopeId) => {
                 if (_push2) {
-                  _push2(`${ssrInterpolate(text2.value.syncToShoply)}`);
+                  _push2(`${ssrInterpolate(text2.value.syncToShopark)}`);
                 } else {
                   return [
-                    createTextVNode(toDisplayString$1(text2.value.syncToShoply), 1)
+                    createTextVNode(toDisplayString$1(text2.value.syncToShopark), 1)
                   ];
                 }
               }),
@@ -36184,7 +36174,7 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
               }),
               _: 2
             }, _parent));
-            if (item.shoplyPlanCode) {
+            if (item.shoparkPlanCode) {
               _push(ssrRenderComponent(_component_UBadge, {
                 color: "primary",
                 variant: "subtle",
@@ -36192,10 +36182,10 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
               }, {
                 default: withCtx((_, _push2, _parent2, _scopeId) => {
                   if (_push2) {
-                    _push2(` Plan: ${ssrInterpolate(item.shoplyPlanCode)}`);
+                    _push2(` Plan: ${ssrInterpolate(item.shoparkPlanCode)}`);
                   } else {
                     return [
-                      createTextVNode(" Plan: " + toDisplayString$1(item.shoplyPlanCode), 1)
+                      createTextVNode(" Plan: " + toDisplayString$1(item.shoparkPlanCode), 1)
                     ];
                   }
                 }),
@@ -36209,10 +36199,10 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
               }, {
                 default: withCtx((_, _push2, _parent2, _scopeId) => {
                   if (_push2) {
-                    _push2(`${ssrInterpolate(text2.value.noShoplyMeta)}`);
+                    _push2(`${ssrInterpolate(text2.value.noShoparkMeta)}`);
                   } else {
                     return [
-                      createTextVNode(toDisplayString$1(text2.value.noShoplyMeta), 1)
+                      createTextVNode(toDisplayString$1(text2.value.noShoparkMeta), 1)
                     ];
                   }
                 }),
@@ -36256,10 +36246,10 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
             }, {
               default: withCtx((_, _push2, _parent2, _scopeId) => {
                 if (_push2) {
-                  _push2(`${ssrInterpolate(text2.value.syncToShoply)}`);
+                  _push2(`${ssrInterpolate(text2.value.syncToShopark)}`);
                 } else {
                   return [
-                    createTextVNode(toDisplayString$1(text2.value.syncToShoply), 1)
+                    createTextVNode(toDisplayString$1(text2.value.syncToShopark), 1)
                   ];
                 }
               }),
@@ -36413,10 +36403,10 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
               }, {
                 default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                   if (_push3) {
-                    _push3(`${ssrInterpolate(text2.value.syncToShoply)}`);
+                    _push3(`${ssrInterpolate(text2.value.syncToShopark)}`);
                   } else {
                     return [
-                      createTextVNode(toDisplayString$1(text2.value.syncToShoply), 1)
+                      createTextVNode(toDisplayString$1(text2.value.syncToShopark), 1)
                     ];
                   }
                 }),
@@ -36652,7 +36642,7 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
               _push2(`</div><div class="space-y-3"${_scopeId}><div class="flex items-center justify-between"${_scopeId}><h3 class="text-sm font-bold text-gray-900 dark:text-white"${_scopeId}>${ssrInterpolate(text2.value.drawerLeadsTitle)} (${ssrInterpolate((drawerDetail.value.leads || []).length)}) </h3>`);
               if ((drawerDetail.value.leads || []).length) {
                 _push2(ssrRenderComponent(_component_UButton, {
-                  to: "/admin/plugins/shoply/leads",
+                  to: "/admin/plugins/shopark/leads",
                   color: "neutral",
                   variant: "ghost",
                   size: "xs",
@@ -36807,7 +36797,7 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
                         onClick: ($event) => syncLicense(drawerDetail.value.customer.id)
                       }, {
                         default: withCtx(() => [
-                          createTextVNode(toDisplayString$1(text2.value.syncToShoply), 1)
+                          createTextVNode(toDisplayString$1(text2.value.syncToShopark), 1)
                         ]),
                         _: 1
                       }, 8, ["loading", "onClick"])
@@ -37077,7 +37067,7 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
                     createVNode("h3", { class: "text-sm font-bold text-gray-900 dark:text-white" }, toDisplayString$1(text2.value.drawerLeadsTitle) + " (" + toDisplayString$1((drawerDetail.value.leads || []).length) + ") ", 1),
                     (drawerDetail.value.leads || []).length ? (openBlock(), createBlock(_component_UButton, {
                       key: 0,
-                      to: "/admin/plugins/shoply/leads",
+                      to: "/admin/plugins/shopark/leads",
                       color: "neutral",
                       variant: "ghost",
                       size: "xs",
@@ -37602,7 +37592,7 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
 const _sfc_setup$e = _sfc_main$e.setup;
 _sfc_main$e.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("extensions/shoply/admin/pages/licenses.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("extensions/shopark/admin/pages/licenses.vue");
   return _sfc_setup$e ? _sfc_setup$e(props, ctx) : void 0;
 };
 const _sfc_main$d = /* @__PURE__ */ defineComponent({
@@ -37614,10 +37604,10 @@ const _sfc_main$d = /* @__PURE__ */ defineComponent({
     const text2 = computed(() => locale.value.startsWith("zh") ? messages.zh : messages.en);
     const { hasPerm, loadAdmin } = useAdminPermissions();
     [__temp, __restore] = withAsyncContext(() => loadAdmin()), await __temp, __restore();
-    const canEdit = computed(() => hasPerm("plugin:shoply:settings:edit"));
+    const canEdit = computed(() => hasPerm("plugin:shopark:settings:edit"));
     const { data: response, pending, error, refresh } = ([__temp, __restore] = withAsyncContext(() => useFetch(
-      "/api/admin/plugins/shoply/settings/status",
-      "$5K8g36TyPZ"
+      "/api/admin/plugins/shopark/settings/status",
+      "$RVzSWEa1eJ"
       /* nuxt-injected */
     )), __temp = await __temp, __restore(), __temp);
     const defaultTheme = ref("");
@@ -37641,7 +37631,7 @@ const _sfc_main$d = /* @__PURE__ */ defineComponent({
       saving.value = true;
       saveError.value = "";
       try {
-        await $fetch("/api/admin/plugins/shoply/settings/save", { method: "POST", body: { revision: response.value.data.settings.revision, defaultTheme: defaultTheme.value } });
+        await $fetch("/api/admin/plugins/shopark/settings/save", { method: "POST", body: { revision: response.value.data.settings.revision, defaultTheme: defaultTheme.value } });
         toast.add({ title: text2.value.saved, color: "success" });
         await refresh();
       } catch (error2) {
@@ -37984,7 +37974,7 @@ const _sfc_main$d = /* @__PURE__ */ defineComponent({
 const _sfc_setup$d = _sfc_main$d.setup;
 _sfc_main$d.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("extensions/shoply/admin/pages/settings.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("extensions/shopark/admin/pages/settings.vue");
   return _sfc_setup$d ? _sfc_setup$d(props, ctx) : void 0;
 };
 const pageSize = 20;
@@ -37997,7 +37987,7 @@ const _sfc_main$c = /* @__PURE__ */ defineComponent({
     const isZh = computed(() => String(locale.value || "").startsWith("zh"));
     const text2 = computed(() => isZh.value ? {
       title: "店铺与经营管理",
-      subtitle: "实时查看全平台已开设的 Shoply 店铺、地区/币种/类目分布，以及每家店铺的商品、订单、GMV 与流量经营情况。",
+      subtitle: "实时查看全平台已开设的 Shopark 店铺、地区/币种/类目分布，以及每家店铺的商品、订单、GMV 与流量经营情况。",
       exportCsv: "导出 CSV",
       licensePage: "订阅权益同步",
       refresh: "刷新数据",
@@ -38051,7 +38041,7 @@ const _sfc_main$c = /* @__PURE__ */ defineComponent({
       statusDisabled: "已禁用"
     } : {
       title: "Stores & Operations",
-      subtitle: "Monitor all opened Shoply stores, regional/currency/category distributions, and per-store product, order, GMV, and traffic performance.",
+      subtitle: "Monitor all opened Shopark stores, regional/currency/category distributions, and per-store product, order, GMV, and traffic performance.",
       exportCsv: "Export CSV",
       licensePage: "Subscription Licenses",
       refresh: "Refresh",
@@ -38164,7 +38154,7 @@ const _sfc_main$c = /* @__PURE__ */ defineComponent({
     const selectedCurrency = ref("all");
     const exporting = ref(false);
     const { data: res, pending, error, refresh } = ([__temp, __restore] = withAsyncContext(() => useFetch(
-      "/api/admin/plugins/shoply/stores/list",
+      "/api/admin/plugins/shopark/stores/list",
       {
         query: computed(() => ({
           page: page.value,
@@ -38176,7 +38166,7 @@ const _sfc_main$c = /* @__PURE__ */ defineComponent({
           currency: selectedCurrency.value === "all" ? void 0 : selectedCurrency.value
         }))
       },
-      "$mkjRpRl_3K"
+      "$sqeENRsMix"
       /* nuxt-injected */
     )), __temp = await __temp, __restore(), __temp);
     const summary = computed(() => res.value?.data?.summary || {
@@ -38298,7 +38288,7 @@ const _sfc_main$c = /* @__PURE__ */ defineComponent({
     const exportStoresCsv = async () => {
       exporting.value = true;
       try {
-        const exportRes = await $fetch("/api/admin/plugins/shoply/stores/list", {
+        const exportRes = await $fetch("/api/admin/plugins/shopark/stores/list", {
           query: {
             page: 1,
             limit: 100,
@@ -38323,7 +38313,7 @@ const _sfc_main$c = /* @__PURE__ */ defineComponent({
             item.currency || "USD",
             item.categoryName || "",
             item.apayUser?.id || "",
-            item.apayUser?.email || item.owner?.shoplyEmail || "",
+            item.apayUser?.email || item.owner?.shoparkEmail || "",
             item.apayUser?.nickname || "",
             item.stats?.activeProductCount ?? 0,
             item.stats?.productCount ?? 0,
@@ -38342,7 +38332,7 @@ const _sfc_main$c = /* @__PURE__ */ defineComponent({
         const url = URL.createObjectURL(blob);
         const link = (void 0).createElement("a");
         link.href = url;
-        link.download = `shoply-stores-${(/* @__PURE__ */ new Date()).toISOString().slice(0, 10)}.csv`;
+        link.download = `shopark-stores-${(/* @__PURE__ */ new Date()).toISOString().slice(0, 10)}.csv`;
         link.click();
         URL.revokeObjectURL(url);
       } finally {
@@ -38407,7 +38397,7 @@ const _sfc_main$c = /* @__PURE__ */ defineComponent({
               _: 1
             }, _parent2, _scopeId));
             _push2(ssrRenderComponent(_component_UButton, {
-              to: "/admin/plugins/shoply/licenses",
+              to: "/admin/plugins/shopark/licenses",
               color: "neutral",
               variant: "outline",
               icon: "ph:arrows-clockwise"
@@ -38459,7 +38449,7 @@ const _sfc_main$c = /* @__PURE__ */ defineComponent({
                   _: 1
                 }, 8, ["loading", "disabled"]),
                 createVNode(_component_UButton, {
-                  to: "/admin/plugins/shoply/licenses",
+                  to: "/admin/plugins/shopark/licenses",
                   color: "neutral",
                   variant: "outline",
                   icon: "ph:arrows-clockwise"
@@ -38856,12 +38846,12 @@ const _sfc_main$c = /* @__PURE__ */ defineComponent({
                 _push2(`</div><div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] text-gray-400"${_scopeId}><span class="inline-flex flex-wrap items-center gap-1"${_scopeId}><span${_scopeId}>${ssrInterpolate(text2.value.owner)}:</span>`);
                 if (item.apayUser?.id) {
                   _push2(ssrRenderComponent(_component_NuxtLink, {
-                    to: `/admin/plugins/shoply/licenses?customerId=${item.apayUser.id}`,
+                    to: `/admin/plugins/shopark/licenses?customerId=${item.apayUser.id}`,
                     class: "inline-flex items-center gap-1 font-medium text-primary-600 hover:underline dark:text-primary-400"
                   }, {
                     default: withCtx((_2, _push3, _parent3, _scopeId2) => {
                       if (_push3) {
-                        _push3(`<span${_scopeId2}>${ssrInterpolate(item.apayUser?.email || item.owner?.shoplyEmail || `#${item.apayUser.id}`)}</span>`);
+                        _push3(`<span${_scopeId2}>${ssrInterpolate(item.apayUser?.email || item.owner?.shoparkEmail || `#${item.apayUser.id}`)}</span>`);
                         if (item.apayUser?.nickname) {
                           _push3(`<span${_scopeId2}>(${ssrInterpolate(item.apayUser.nickname)})</span>`);
                         } else {
@@ -38874,7 +38864,7 @@ const _sfc_main$c = /* @__PURE__ */ defineComponent({
                         }, null, _parent3, _scopeId2));
                       } else {
                         return [
-                          createVNode("span", null, toDisplayString$1(item.apayUser?.email || item.owner?.shoplyEmail || `#${item.apayUser.id}`), 1),
+                          createVNode("span", null, toDisplayString$1(item.apayUser?.email || item.owner?.shoparkEmail || `#${item.apayUser.id}`), 1),
                           item.apayUser?.nickname ? (openBlock(), createBlock("span", { key: 0 }, "(" + toDisplayString$1(item.apayUser.nickname) + ")", 1)) : createCommentVNode("", true),
                           createVNode("span", { class: "font-mono text-[10px]" }, "· APay #" + toDisplayString$1(item.apayUser.id), 1),
                           createVNode(_component_UIcon, {
@@ -38887,7 +38877,7 @@ const _sfc_main$c = /* @__PURE__ */ defineComponent({
                     _: 2
                   }, _parent2, _scopeId));
                 } else {
-                  _push2(`<strong class="font-medium text-gray-700 dark:text-gray-300"${_scopeId}>${ssrInterpolate(item.owner?.shoplyEmail || text2.value.unlinkedOwner)}</strong>`);
+                  _push2(`<strong class="font-medium text-gray-700 dark:text-gray-300"${_scopeId}>${ssrInterpolate(item.owner?.shoparkEmail || text2.value.unlinkedOwner)}</strong>`);
                 }
                 _push2(`</span><span${_scopeId}>·</span><span${_scopeId}>${ssrInterpolate(text2.value.createdAt)}: ${ssrInterpolate(formatTime(item.createdAt))}</span><span${_scopeId}>·</span><span${_scopeId}>${ssrInterpolate(text2.value.expiresAt)}: ${ssrInterpolate(formatExpiry(item.expireAt))}</span>`);
                 if (item.lastOrderAt) {
@@ -39325,11 +39315,11 @@ const _sfc_main$c = /* @__PURE__ */ defineComponent({
                             createVNode("span", null, toDisplayString$1(text2.value.owner) + ":", 1),
                             item.apayUser?.id ? (openBlock(), createBlock(_component_NuxtLink, {
                               key: 0,
-                              to: `/admin/plugins/shoply/licenses?customerId=${item.apayUser.id}`,
+                              to: `/admin/plugins/shopark/licenses?customerId=${item.apayUser.id}`,
                               class: "inline-flex items-center gap-1 font-medium text-primary-600 hover:underline dark:text-primary-400"
                             }, {
                               default: withCtx(() => [
-                                createVNode("span", null, toDisplayString$1(item.apayUser?.email || item.owner?.shoplyEmail || `#${item.apayUser.id}`), 1),
+                                createVNode("span", null, toDisplayString$1(item.apayUser?.email || item.owner?.shoparkEmail || `#${item.apayUser.id}`), 1),
                                 item.apayUser?.nickname ? (openBlock(), createBlock("span", { key: 0 }, "(" + toDisplayString$1(item.apayUser.nickname) + ")", 1)) : createCommentVNode("", true),
                                 createVNode("span", { class: "font-mono text-[10px]" }, "· APay #" + toDisplayString$1(item.apayUser.id), 1),
                                 createVNode(_component_UIcon, {
@@ -39341,7 +39331,7 @@ const _sfc_main$c = /* @__PURE__ */ defineComponent({
                             }, 1032, ["to"])) : (openBlock(), createBlock("strong", {
                               key: 1,
                               class: "font-medium text-gray-700 dark:text-gray-300"
-                            }, toDisplayString$1(item.owner?.shoplyEmail || text2.value.unlinkedOwner), 1))
+                            }, toDisplayString$1(item.owner?.shoparkEmail || text2.value.unlinkedOwner), 1))
                           ]),
                           createVNode("span", null, "·"),
                           createVNode("span", null, toDisplayString$1(text2.value.createdAt) + ": " + toDisplayString$1(formatTime(item.createdAt)), 1),
@@ -39411,7 +39401,7 @@ const _sfc_main$c = /* @__PURE__ */ defineComponent({
 const _sfc_setup$c = _sfc_main$c.setup;
 _sfc_main$c.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("extensions/shoply/admin/pages/stores.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("extensions/shopark/admin/pages/stores.vue");
   return _sfc_setup$c ? _sfc_setup$c(props, ctx) : void 0;
 };
 const _sfc_main$b = /* @__PURE__ */ defineComponent({
@@ -39426,7 +39416,7 @@ const _sfc_main$b = /* @__PURE__ */ defineComponent({
 const _sfc_setup$b = _sfc_main$b.setup;
 _sfc_main$b.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("extensions/shoply/admin/pages/themes.vue");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("extensions/shopark/admin/pages/themes.vue");
   return _sfc_setup$b ? _sfc_setup$b(props, ctx) : void 0;
 };
 const _sfc_main$a = /* @__PURE__ */ defineComponent({
@@ -41845,7 +41835,7 @@ const extensionDatabaseRequirements = {
       "0002-create-releases": "afbc8c9f1fe4b6d5f2bf0d1afe0b73b9f3ed82caa4d1eb81760e1d0da0499997"
     }
   },
-  "shoply": {
+  "shopark": {
     "sqlite": {},
     "postgresql": {},
     "mysql": {}
@@ -41867,18 +41857,18 @@ const extensionDatabaseRequirements = {
 };
 const manifestModules = /* @__PURE__ */ Object.assign({
   "../extensions/apps/extension.json": __vite_glob_0_0,
-  "../extensions/shoply/extension.json": __vite_glob_0_1,
+  "../extensions/shopark/extension.json": __vite_glob_0_1,
   "../extensions/themes/extension.json": __vite_glob_0_2
 });
 const adminPageModules = /* @__PURE__ */ Object.assign({
   "../extensions/apps/admin/pages/catalog.vue": _sfc_main$q,
-  "../extensions/shoply/admin/pages/applications.vue": _sfc_main$i,
-  "../extensions/shoply/admin/pages/connection.vue": _sfc_main$h,
-  "../extensions/shoply/admin/pages/leads.vue": _sfc_main$g,
-  "../extensions/shoply/admin/pages/licenses.vue": _sfc_main$e,
-  "../extensions/shoply/admin/pages/settings.vue": _sfc_main$d,
-  "../extensions/shoply/admin/pages/stores.vue": _sfc_main$c,
-  "../extensions/shoply/admin/pages/themes.vue": _sfc_main$b,
+  "../extensions/shopark/admin/pages/applications.vue": _sfc_main$i,
+  "../extensions/shopark/admin/pages/connection.vue": _sfc_main$h,
+  "../extensions/shopark/admin/pages/leads.vue": _sfc_main$g,
+  "../extensions/shopark/admin/pages/licenses.vue": _sfc_main$e,
+  "../extensions/shopark/admin/pages/settings.vue": _sfc_main$d,
+  "../extensions/shopark/admin/pages/stores.vue": _sfc_main$c,
+  "../extensions/shopark/admin/pages/themes.vue": _sfc_main$b,
   "../extensions/themes/admin/pages/catalog.vue": _sfc_main$a
 });
 const userPageModules = /* @__PURE__ */ Object.assign({});
@@ -42225,22 +42215,22 @@ const user_45auth_45global = /* @__PURE__ */ defineNuxtRouteMiddleware(async (to
     replace: true
   });
 });
-const shoply_45color_45scheme = /* @__PURE__ */ defineNuxtRouteMiddleware(async (to) => {
+const shopark_45color_45scheme = /* @__PURE__ */ defineNuxtRouteMiddleware(async (to) => {
   let __temp, __restore;
   const path = stripLocalePrefix(to.path);
   if (path.startsWith("/admin")) return;
   const { fetchSettings } = useSettings();
   [__temp, __restore] = executeAsync(() => fetchSettings()), await __temp, __restore();
-  if (useActiveTheme().value !== "shoply") return;
+  if (useActiveTheme().value !== "shopark") return;
   to.meta.colorMode = "light";
 });
-const shoply_45user_45auth = /* @__PURE__ */ defineNuxtRouteMiddleware(async (to) => {
+const shopark_45user_45auth = /* @__PURE__ */ defineNuxtRouteMiddleware(async (to) => {
   let __temp, __restore;
   const path = stripLocalePrefix(to.path);
   if (path !== "/user" && !path.startsWith("/user/")) return;
   const { fetchSettings } = useSettings();
   [__temp, __restore] = executeAsync(() => fetchSettings()), await __temp, __restore();
-  if (useActiveTheme().value !== "shoply") return;
+  if (useActiveTheme().value !== "shopark") return;
   const { ready, loggedIn, fetch } = useUserSession();
   if (!ready.value) [__temp, __restore] = executeAsync(() => fetch()), __temp = await __temp, __restore();
   if (loggedIn.value) return;
@@ -42262,8 +42252,8 @@ const globalMiddleware = [
   locale_45domain_45global,
   locale_45guard_45global,
   user_45auth_45global,
-  shoply_45color_45scheme,
-  shoply_45user_45auth,
+  shopark_45color_45scheme,
+  shopark_45user_45auth,
   manifest_45route_45rule
 ];
 const namedMiddleware = {};
@@ -42801,23 +42791,23 @@ const plugin_MeUvTuoKUi51yb_kBguab6hdcExVXeTtZtTg9TZZBB8 = /* @__PURE__ */ defin
   // For type portability
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
 });
-const LazyLegalPage = defineAsyncComponent(() => import('./LegalPage-_187xWX-.mjs').then((r) => r["default"] || r.default || r));
-const LazyMarketingPage = defineAsyncComponent(() => import('./MarketingPage-C9q0ki-y.mjs').then((r) => r["default"] || r.default || r));
-const LazyMarketplaceCard = defineAsyncComponent(() => import('./MarketplaceCard-D7SR9P1W.mjs').then((r) => r["default"] || r.default || r));
-const LazyMarketplaceDetail = defineAsyncComponent(() => import('./MarketplaceDetail-aEDjBTzz.mjs').then((r) => r["default"] || r.default || r));
-const LazyMarketplaceHero = defineAsyncComponent(() => import('./MarketplaceHero-hnb2iXb4.mjs').then((r) => r["default"] || r.default || r));
-const LazyMarketplaceList = defineAsyncComponent(() => import('./MarketplaceList-zK5fSCNr.mjs').then((r) => r["default"] || r.default || r));
-const LazyMarketplaceVisual = defineAsyncComponent(() => import('./MarketplaceVisual-S5JpFqOO.mjs').then((r) => r["default"] || r.default || r));
-const LazyPageCta = defineAsyncComponent(() => import('./PageCta-BrOq22xB.mjs').then((r) => r["default"] || r.default || r));
-const LazySectionHeading = defineAsyncComponent(() => import('./SectionHeading-D_ZqEZzo.mjs').then((r) => r["default"] || r.default || r));
-const LazyShoplyAuthShell = defineAsyncComponent(() => import('./ShoplyAuthShell-2q-qSahQ.mjs').then((r) => r["default"] || r.default || r));
-const LazyShoplyBindDialog = defineAsyncComponent(() => import('./ShoplyBindDialog-CfJWmaYY.mjs').then((n) => n.S).then((r) => r["default"] || r.default || r));
-const LazyShoplyCheckoutModal = defineAsyncComponent(() => import('./ShoplyCheckoutModal-BbRTNtIw.mjs').then((r) => r["default"] || r.default || r));
-const LazyShoplyConsoleHeader = defineAsyncComponent(() => import('./ShoplyConsoleHeader-DroiRVCS.mjs').then((r) => r["default"] || r.default || r));
-const LazyShoplyConsultDialog = defineAsyncComponent(() => import('./ShoplyConsultDialog-DqQPD2xx.mjs').then((r) => r["default"] || r.default || r));
-const LazyShoplyLanguageSwitcher = defineAsyncComponent(() => import('./ShoplyLanguageSwitcher-BOM261Mp.mjs').then((r) => r["default"] || r.default || r));
-const LazyShoplyLeadForm = defineAsyncComponent(() => import('./ShoplyLeadForm-D_0Jyd2M.mjs').then((r) => r["default"] || r.default || r));
-const LazyShoplyPlanCards = defineAsyncComponent(() => import('./ShoplyPlanCards-C56Lnxsq.mjs').then((r) => r["default"] || r.default || r));
+const LazyLegalPage = defineAsyncComponent(() => import('./LegalPage-CoS6Uip6.mjs').then((r) => r["default"] || r.default || r));
+const LazyMarketingPage = defineAsyncComponent(() => import('./MarketingPage-DsgVOLps.mjs').then((r) => r["default"] || r.default || r));
+const LazyMarketplaceCard = defineAsyncComponent(() => import('./MarketplaceCard-DG5poDRz.mjs').then((r) => r["default"] || r.default || r));
+const LazyMarketplaceDetail = defineAsyncComponent(() => import('./MarketplaceDetail-Bow1QPOP.mjs').then((r) => r["default"] || r.default || r));
+const LazyMarketplaceHero = defineAsyncComponent(() => import('./MarketplaceHero-BRZ-crkT.mjs').then((r) => r["default"] || r.default || r));
+const LazyMarketplaceList = defineAsyncComponent(() => import('./MarketplaceList-1mbDVElG.mjs').then((r) => r["default"] || r.default || r));
+const LazyMarketplaceVisual = defineAsyncComponent(() => import('./MarketplaceVisual-DI-8P_MU.mjs').then((r) => r["default"] || r.default || r));
+const LazyPageCta = defineAsyncComponent(() => import('./PageCta-DmQ_01T-.mjs').then((r) => r["default"] || r.default || r));
+const LazySectionHeading = defineAsyncComponent(() => import('./SectionHeading-BJpRVepO.mjs').then((r) => r["default"] || r.default || r));
+const LazyShoparkAuthShell = defineAsyncComponent(() => import('./ShoparkAuthShell-dFmK6Na8.mjs').then((r) => r["default"] || r.default || r));
+const LazyShoparkBindDialog = defineAsyncComponent(() => import('./ShoparkBindDialog-Btta3j84.mjs').then((n) => n.S).then((r) => r["default"] || r.default || r));
+const LazyShoparkCheckoutModal = defineAsyncComponent(() => import('./ShoparkCheckoutModal-BdRNNhl1.mjs').then((r) => r["default"] || r.default || r));
+const LazyShoparkConsoleHeader = defineAsyncComponent(() => import('./ShoparkConsoleHeader-D-VQHPXh.mjs').then((r) => r["default"] || r.default || r));
+const LazyShoparkConsultDialog = defineAsyncComponent(() => import('./ShoparkConsultDialog-DZynUuOL.mjs').then((r) => r["default"] || r.default || r));
+const LazyShoparkLanguageSwitcher = defineAsyncComponent(() => import('./ShoparkLanguageSwitcher-CbXHcLsf.mjs').then((r) => r["default"] || r.default || r));
+const LazyShoparkLeadForm = defineAsyncComponent(() => import('./ShoparkLeadForm-N5i4b_rX.mjs').then((r) => r["default"] || r.default || r));
+const LazyShoparkPlanCards = defineAsyncComponent(() => import('./ShoparkPlanCards-WDOkKuv-.mjs').then((r) => r["default"] || r.default || r));
 const LazyProseA = defineAsyncComponent(() => import('./A-XMdZWDIu.mjs').then((r) => r["default"] || r.default || r));
 const LazyProseAccordion = defineAsyncComponent(() => import('./Accordion-CEjwxwvi.mjs').then((r) => r["default"] || r.default || r));
 const LazyProseAccordionItem = defineAsyncComponent(() => import('./AccordionItem-Bc1v9c90.mjs').then((r) => r["default"] || r.default || r));
@@ -42877,14 +42867,14 @@ const lazyGlobalComponents = [
   ["MarketplaceVisual", LazyMarketplaceVisual],
   ["PageCta", LazyPageCta],
   ["SectionHeading", LazySectionHeading],
-  ["ShoplyAuthShell", LazyShoplyAuthShell],
-  ["ShoplyBindDialog", LazyShoplyBindDialog],
-  ["ShoplyCheckoutModal", LazyShoplyCheckoutModal],
-  ["ShoplyConsoleHeader", LazyShoplyConsoleHeader],
-  ["ShoplyConsultDialog", LazyShoplyConsultDialog],
-  ["ShoplyLanguageSwitcher", LazyShoplyLanguageSwitcher],
-  ["ShoplyLeadForm", LazyShoplyLeadForm],
-  ["ShoplyPlanCards", LazyShoplyPlanCards],
+  ["ShoparkAuthShell", LazyShoparkAuthShell],
+  ["ShoparkBindDialog", LazyShoparkBindDialog],
+  ["ShoparkCheckoutModal", LazyShoparkCheckoutModal],
+  ["ShoparkConsoleHeader", LazyShoparkConsoleHeader],
+  ["ShoparkConsultDialog", LazyShoparkConsultDialog],
+  ["ShoparkLanguageSwitcher", LazyShoparkLanguageSwitcher],
+  ["ShoparkLeadForm", LazyShoparkLeadForm],
+  ["ShoparkPlanCards", LazyShoparkPlanCards],
   ["ProseA", LazyProseA],
   ["ProseAccordion", LazyProseAccordion],
   ["ProseAccordionItem", LazyProseAccordionItem],

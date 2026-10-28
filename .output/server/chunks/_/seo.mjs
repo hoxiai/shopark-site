@@ -1,4 +1,4 @@
-import { fs as defaultShoplyCases } from '../nitro/nitro.mjs';
+import { ft as defaultShoparkCases } from '../nitro/nitro.mjs';
 import 'drizzle-orm';
 import 'node:crypto';
 import 'crypto';
@@ -33,13 +33,13 @@ import 'jose';
 import 'node:child_process';
 import 'process';
 import 'buffer';
-import 'node:fs/promises';
 import 'node:dns/promises';
 import 'node:net';
+import 'node:fs/promises';
 import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
 
-const shoplyAppSeeds = [
+const shoparkAppSeeds = [
   { kind: "app", packageKind: "extension", runtimeKind: "payment", slug: "stripe", name: "Stripe", category: "payment", mark: "S", accent: "#635bff", version: "0.3.1", publishedAt: "2024-06-22", updatedAt: "2026-10-13", downloads: 12 },
   { kind: "app", packageKind: "extension", runtimeKind: "payment", slug: "paddle", name: "Paddle", category: "payment", mark: "P", accent: "#7357ff", version: "0.0.2", publishedAt: "2024-06-22", updatedAt: "2026-10-13", downloads: 1 },
   { kind: "app", packageKind: "extension", runtimeKind: "ui", slug: "google-translate", name: "Google Translate", category: "localization", mark: "G", accent: "#4285f4", version: "0.0.2", publishedAt: "2024-07-02", updatedAt: "2026-10-13", downloads: 0 },
@@ -49,15 +49,15 @@ const shoplyAppSeeds = [
   { kind: "app", packageKind: "extension", runtimeKind: "messaging", slug: "mailer", name: "Mailer", category: "communication", mark: "M", accent: "#f97316", version: "1.0.1", publishedAt: "2024-08-26", updatedAt: "2026-10-13", downloads: 8 },
   { kind: "app", packageKind: "extension", runtimeKind: "messaging", slug: "wechat", name: "WeChat", category: "communication", mark: "W", accent: "#07c160", version: "0.0.5", publishedAt: "2024-08-26", updatedAt: "2026-10-13", downloads: 2 },
   { kind: "app", packageKind: "extension", runtimeKind: "messaging", slug: "alisms", name: "Alibaba SMS", category: "communication", mark: "A", accent: "#ff6a00", version: "0.0.4", publishedAt: "2024-08-26", updatedAt: "2026-10-13", downloads: 10 },
-  { kind: "app", packageKind: "extension", runtimeKind: "ui", artifactId: "example-tools", slug: "test", name: "Shoply Test", category: "utility", mark: "T", accent: "#64748b", version: "0.0.3", publishedAt: "2024-08-27", updatedAt: "2026-10-13", downloads: 34 },
+  { kind: "app", packageKind: "extension", runtimeKind: "ui", artifactId: "example-tools", slug: "test", name: "Shopark Test", category: "utility", mark: "T", accent: "#64748b", version: "0.0.3", publishedAt: "2024-08-27", updatedAt: "2026-10-13", downloads: 34 },
   { kind: "app", packageKind: "extension", runtimeKind: "importer", slug: "shopifyimport", name: "Shopify Import", category: "commerce", mark: "S", accent: "#95bf47", version: "1.1.0", publishedAt: "2024-11-04", updatedAt: "2026-10-13", downloads: 14 },
   { kind: "app", packageKind: "extension", runtimeKind: "payment", slug: "receive", name: "Cash on Delivery", category: "payment", mark: "C", accent: "#0891b2", version: "0.0.3", publishedAt: "2024-11-04", updatedAt: "2026-10-13", downloads: 8 },
   { kind: "app", packageKind: "extension", runtimeKind: "ui", slug: "qrcode", name: "QR Code", category: "utility", mark: "QR", accent: "#111827", version: "0.0.2", publishedAt: "2024-11-04", updatedAt: "2026-10-12", downloads: 0 },
   { kind: "app", packageKind: "extension", runtimeKind: "messaging", slug: "bird", name: "Bird", category: "communication", mark: "B", accent: "#2563eb", version: "0.0.4", publishedAt: "2026-03-16", updatedAt: "2026-10-13", downloads: 1 },
   { kind: "app", packageKind: "extension", runtimeKind: "auth", slug: "apple", name: "Sign in with Apple", category: "identity", mark: "A", accent: "#111827", version: "0.0.2", publishedAt: "2026-03-18", updatedAt: "2026-10-13", downloads: 3 }
 ];
-const shoplyThemeSeeds = [
-  { kind: "theme", packageKind: "theme", artifactId: "shoply", slug: "shoply-website", name: "Shoply Website", category: "business", mark: "SW", accent: "#2563eb", version: "1.0.0", publishedAt: "2024-05-21", updatedAt: "2026-10-13" },
+const shoparkThemeSeeds = [
+  { kind: "theme", packageKind: "theme", artifactId: "shopark", slug: "shopark-website", name: "Shopark Website", category: "business", mark: "SW", accent: "#2563eb", version: "1.0.0", publishedAt: "2024-05-21", updatedAt: "2026-10-13" },
   { kind: "theme", packageKind: "theme", slug: "outdoor-equipment-mall", name: "Outdoor Equipment", category: "outdoor", mark: "OE", accent: "#0f766e", version: "1.0.0", publishedAt: "2024-05-21", updatedAt: "2024-08-25" },
   { kind: "theme", packageKind: "theme", slug: "audio-headphones-mall", name: "Audio & Headphones", category: "electronics", mark: "AH", accent: "#7c3aed", version: "1.2.1", publishedAt: "2024-05-21", updatedAt: "2026-10-13" },
   { kind: "theme", packageKind: "theme", slug: "clothing-shoes-mall", name: "Clothing & Shoes", category: "fashion", mark: "CS", accent: "#db2777", version: "1.0.0", publishedAt: "2024-05-22", updatedAt: "2024-08-25" },
@@ -81,11 +81,11 @@ const shoplyThemeSeeds = [
   { kind: "theme", packageKind: "theme", slug: "phone-accessories-mall", name: "Phone Accessories", category: "electronics", mark: "PA", accent: "#0284c7", version: "1.0.0", publishedAt: "2024-05-23", updatedAt: "2024-08-26" },
   { kind: "theme", packageKind: "theme", slug: "apparelx", name: "ApparelX", category: "fashion", mark: "AX", accent: "#0ea5e9", version: "1.0.0", publishedAt: "2026-10-13", updatedAt: "2026-10-13" }
 ];
-const shoplyMarketplaceSeeds = [...shoplyAppSeeds, ...shoplyThemeSeeds];
+const shoparkMarketplaceSeeds = [...shoparkAppSeeds, ...shoparkThemeSeeds];
 
 const getSitemapEntries = (source) => {
-  if (source === "shoply-cases") {
-    return defaultShoplyCases.filter((item) => item.status === 1).map((item) => {
+  if (source === "shopark-cases") {
+    return defaultShoparkCases.filter((item) => item.status === 1).map((item) => {
       var _a;
       return {
         path: `/cases/${item.id}`,
@@ -106,15 +106,15 @@ const getSitemapEntries = (source) => {
       };
     });
   }
-  const kind = source === "shoply-apps" ? "app" : "theme";
+  const kind = source === "shopark-apps" ? "app" : "theme";
   const prefix = kind === "app" ? "/apps" : "/themes";
-  const section = kind === "app" ? "Shoply Apps" : "Shoply Themes";
-  return shoplyMarketplaceSeeds.filter((item) => item.kind === kind).map((item) => ({
+  const section = kind === "app" ? "Shopark Apps" : "Shopark Themes";
+  return shoparkMarketplaceSeeds.filter((item) => item.kind === kind).map((item) => ({
     path: `${prefix}/${item.slug}`,
     lastmod: item.updatedAt ? `${item.updatedAt}T00:00:00.000Z` : void 0,
     title: item.name,
     section,
-    description: `${item.name} (${item.category}) \u2014 Shoply ${kind === "app" ? `${item.runtimeKind || "extension"} app` : "storefront theme"} v${item.version}.`,
+    description: `${item.name} (${item.category}) \u2014 Shopark ${kind === "app" ? `${item.runtimeKind || "extension"} app` : "storefront theme"} v${item.version}.`,
     markdown: [
       `- Name: ${item.name}`,
       `- Category: ${item.category}`,
