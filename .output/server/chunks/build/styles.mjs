@@ -2,10 +2,10 @@ const interopDefault = r => r.default || r || [];
 const styles = {
   "pages/admin/dashboard.vue": () => import('./dashboard-styles.1EsfloRn.mjs').then(interopDefault),
   "pages/admin/dashboard.vue?vue&type=style&index=0&scoped=93ddc56c&lang.css": () => import('./dashboard-styles.1EsfloRn.mjs').then(interopDefault),
-  "components/PaymentWorkspace.vue": () => import('./PaymentWorkspace-styles.Drdicu5C.mjs').then(interopDefault),
-  "components/PaymentWorkspace.vue?vue&type=style&index=0&scoped=f68870a6&lang.css": () => import('./PaymentWorkspace-styles.Drdicu5C.mjs').then(interopDefault),
   "components/admin/settings/Nav.vue": () => import('./Nav-styles.CSE4XTdn.mjs').then(interopDefault),
   "components/admin/settings/Nav.vue?vue&type=style&index=0&scoped=3007fcd7&lang.css": () => import('./Nav-styles.CSE4XTdn.mjs').then(interopDefault),
+  "components/PaymentWorkspace.vue": () => import('./PaymentWorkspace-styles.Drdicu5C.mjs').then(interopDefault),
+  "components/PaymentWorkspace.vue?vue&type=style&index=0&scoped=f68870a6&lang.css": () => import('./PaymentWorkspace-styles.Drdicu5C.mjs').then(interopDefault),
   "themes/shopark/layouts/default.vue?vue&type=script&setup=true&lang.ts": () => import('./default-styles.CV2CqvuT.mjs').then(interopDefault),
   "components/AdminSidebar.vue": () => import('./AdminSidebar-styles.CaVlJfid.mjs').then(interopDefault),
   "components/AdminSidebar.vue?vue&type=style&index=0&scoped=1d03f188&lang.css": () => import('./AdminSidebar-styles.CaVlJfid.mjs').then(interopDefault),

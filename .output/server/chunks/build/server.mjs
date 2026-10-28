@@ -5702,7 +5702,7 @@ const cfg0 = defineAppConfig({
   }
 });
 const inlineConfig = {
-  "appVersion": "1.1.13",
+  "appVersion": "1.1.14",
   "nuxt": {},
   "ui": {
     "colors": {
@@ -25784,7 +25784,7 @@ const __vite_glob_0_11 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.de
   __proto__: null,
   default: _sfc_main$t
 }, Symbol.toStringTag, { value: "Module" }));
-const name$3 = "轻铺 SaaS 管理";
+const name$3 = "ShopArk SaaS 管理";
 const pages = [{ "key": "cases", "title": "客户案例", "description": "管理官网展示的行业标杆案例、成效数据、行业分类与推荐排序。", "route": "/admin/extensions/cases", "component": "cases.vue", "icon": "ph:briefcase-bold", "order": 10 }];
 const __vite_glob_2_0 = {
   name: name$3,
@@ -25807,7 +25807,7 @@ const corePageModules = Object.fromEntries(Object.entries(/* @__PURE__ */ Object
   "/core/pages/user/tokens/index.vue": __vite_glob_0_11
 })).map(([file, module]) => [file.replace("/", "../"), module]));
 const themePageModules = {
-  ...Object.fromEntries(Object.entries(/* @__PURE__ */ Object.assign({ "/themes/shopark/pages/about.vue": () => import('./about-NpiRJMXB.mjs'), "/themes/shopark/pages/apps/[slug].vue": () => import('./_slug_-B6tU-fjc.mjs'), "/themes/shopark/pages/apps/index.vue": () => import('./index-BwaLpoHY.mjs'), "/themes/shopark/pages/auth/forgot-password.vue": () => import('./forgot-password-BUzA2sUB.mjs'), "/themes/shopark/pages/auth/login.vue": () => import('./login-C56oe4w_.mjs'), "/themes/shopark/pages/auth/register.vue": () => import('./register-Cvy9eXdq.mjs'), "/themes/shopark/pages/auth/reset-password.vue": () => import('./reset-password-DaDkDhNL.mjs'), "/themes/shopark/pages/blog/[slug].vue": () => import('./_slug_-CxfOYoae.mjs'), "/themes/shopark/pages/blog/index.vue": () => import('./index-Bo0SxO2c.mjs'), "/themes/shopark/pages/cases/[slug].vue": () => import('./_slug_-DeBFAlUp.mjs'), "/themes/shopark/pages/cases/index.vue": () => import('./index-BmOM6kmb.mjs'), "/themes/shopark/pages/changelog.vue": () => import('./changelog-MH-yHkCZ.mjs'), "/themes/shopark/pages/index.vue": () => import('./index-B-ze8fIa.mjs'), "/themes/shopark/pages/page/about.vue": () => import('./about-BEbKMK1S.mjs'), "/themes/shopark/pages/page/amazon-store.vue": () => import('./amazon-store-BaooFERn.mjs'), "/themes/shopark/pages/page/b2b-website.vue": () => import('./b2b-website-C1jbb0fD.mjs'), "/themes/shopark/pages/page/b2c-store.vue": () => import('./b2c-store-CwmRRJUG.mjs'), "/themes/shopark/pages/page/cookies.vue": () => import('./cookies-D4sh65jm.mjs'), "/themes/shopark/pages/page/custom.vue": () => import('./custom-BA8AEk4x.mjs'), "/themes/shopark/pages/page/install.vue": () => import('./install-Dod7SST1.mjs'), "/themes/shopark/pages/page/migration.vue": () => import('./migration-Bbugu7d4.mjs'), "/themes/shopark/pages/page/pricing.vue": () => import('./pricing-CHoaqa6p.mjs'), "/themes/shopark/pages/page/privacy.vue": () => import('./privacy-BYmP46Y_.mjs'), "/themes/shopark/pages/page/solutions.vue": () => import('./solutions-r0KJ2OnS.mjs'), "/themes/shopark/pages/page/store-design.vue": () => import('./store-design-D-mbkFHT.mjs'), "/themes/shopark/pages/page/terms.vue": () => import('./terms-tkQCxr-9.mjs'), "/themes/shopark/pages/page/weidian.vue": () => import('./weidian-DmfENbf3.mjs'), "/themes/shopark/pages/page/wholesale.vue": () => import('./wholesale-DfJDUR5Z.mjs'), "/themes/shopark/pages/pricing.vue": () => import('./pricing-Co1R3NFA.mjs'), "/themes/shopark/pages/solutions/[slug].vue": () => import('./_slug_-CI5bhPnG.mjs'), "/themes/shopark/pages/solutions/index.vue": () => import('./index-DdqQYqJ-.mjs'), "/themes/shopark/pages/themes/[slug].vue": () => import('./_slug_-2tcmmbF7.mjs'), "/themes/shopark/pages/themes/detail/[slug].vue": () => import('./_slug_-BQqn8Z8T.mjs'), "/themes/shopark/pages/themes/index.vue": () => import('./index-DdoCrrOO.mjs'), "/themes/shopark/pages/user/account.vue": () => import('./account-D54-thHg.mjs'), "/themes/shopark/pages/user/dashboard.vue": () => import('./dashboard-D4oqS06j.mjs'), "/themes/shopark/pages/user/index.vue": () => import('./index-Dqa42a97.mjs'), "/themes/shopark/pages/user/invoice/[order_id].vue": () => import('./_order_id_-DhwMqmbq.mjs'), "/themes/shopark/pages/user/layout.vue": () => import('./layout-Di26JQXK.mjs'), "/themes/shopark/pages/user/notifications.vue": () => import('./notifications-C9Jmr8iJ.mjs'), "/themes/shopark/pages/user/orders/[order_id].vue": () => import('./_order_id_-CTMtPXZS.mjs'), "/themes/shopark/pages/user/orders/index.vue": () => import('./index-BMq7X5e2.mjs'), "/themes/shopark/pages/user/stores/index.vue": () => import('./index-D81AnmIW.mjs'), "/themes/shopark/pages/user/subscription.vue": () => import('./subscription-dymUG8gF.mjs'), "/themes/shopark/pages/user/tickets.vue": () => import('./tickets-BG3mOCsi.mjs') })).map(([file, module]) => [file.replace("/", "../"), module]))
+  ...Object.fromEntries(Object.entries(/* @__PURE__ */ Object.assign({ "/themes/shopark/pages/about.vue": () => import('./about-NpiRJMXB.mjs'), "/themes/shopark/pages/apps/[slug].vue": () => import('./_slug_-DQAW-GYz.mjs'), "/themes/shopark/pages/apps/index.vue": () => import('./index-BwaLpoHY.mjs'), "/themes/shopark/pages/auth/forgot-password.vue": () => import('./forgot-password-BUzA2sUB.mjs'), "/themes/shopark/pages/auth/login.vue": () => import('./login-C56oe4w_.mjs'), "/themes/shopark/pages/auth/register.vue": () => import('./register-Cvy9eXdq.mjs'), "/themes/shopark/pages/auth/reset-password.vue": () => import('./reset-password-DaDkDhNL.mjs'), "/themes/shopark/pages/blog/[slug].vue": () => import('./_slug_-CxfOYoae.mjs'), "/themes/shopark/pages/blog/index.vue": () => import('./index-Bo0SxO2c.mjs'), "/themes/shopark/pages/cases/[slug].vue": () => import('./_slug_-DLHQsoHR.mjs'), "/themes/shopark/pages/cases/index.vue": () => import('./index-DVcAmdEK.mjs'), "/themes/shopark/pages/changelog.vue": () => import('./changelog-MH-yHkCZ.mjs'), "/themes/shopark/pages/index.vue": () => import('./index-BfEpoVai.mjs'), "/themes/shopark/pages/page/about.vue": () => import('./about-JbcV2tl-.mjs'), "/themes/shopark/pages/page/amazon-store.vue": () => import('./amazon-store-CNgKgbdR.mjs'), "/themes/shopark/pages/page/b2b-website.vue": () => import('./b2b-website-vH1ltZ5Q.mjs'), "/themes/shopark/pages/page/b2c-store.vue": () => import('./b2c-store-BVcdmGIB.mjs'), "/themes/shopark/pages/page/cookies.vue": () => import('./cookies-ChVdaX5e.mjs'), "/themes/shopark/pages/page/custom.vue": () => import('./custom-Cmip-AnW.mjs'), "/themes/shopark/pages/page/install.vue": () => import('./install-DdWsPS7p.mjs'), "/themes/shopark/pages/page/migration.vue": () => import('./migration-DoyOQTVh.mjs'), "/themes/shopark/pages/page/pricing.vue": () => import('./pricing-CPWrv3vk.mjs'), "/themes/shopark/pages/page/privacy.vue": () => import('./privacy-MVi6NgO2.mjs'), "/themes/shopark/pages/page/solutions.vue": () => import('./solutions-r0KJ2OnS.mjs'), "/themes/shopark/pages/page/store-design.vue": () => import('./store-design-Cf5wsG18.mjs'), "/themes/shopark/pages/page/terms.vue": () => import('./terms-COfNgvwV.mjs'), "/themes/shopark/pages/page/weidian.vue": () => import('./weidian-aEXmk_5o.mjs'), "/themes/shopark/pages/page/wholesale.vue": () => import('./wholesale-ClDoX0NJ.mjs'), "/themes/shopark/pages/pricing.vue": () => import('./pricing-Co1R3NFA.mjs'), "/themes/shopark/pages/solutions/[slug].vue": () => import('./_slug_-CI5bhPnG.mjs'), "/themes/shopark/pages/solutions/index.vue": () => import('./index-DHtd5ik4.mjs'), "/themes/shopark/pages/themes/[slug].vue": () => import('./_slug_-_nSbkzDA.mjs'), "/themes/shopark/pages/themes/detail/[slug].vue": () => import('./_slug_-BQqn8Z8T.mjs'), "/themes/shopark/pages/themes/index.vue": () => import('./index-DdoCrrOO.mjs'), "/themes/shopark/pages/user/account.vue": () => import('./account-D54-thHg.mjs'), "/themes/shopark/pages/user/dashboard.vue": () => import('./dashboard-D4oqS06j.mjs'), "/themes/shopark/pages/user/index.vue": () => import('./index-Dqa42a97.mjs'), "/themes/shopark/pages/user/invoice/[order_id].vue": () => import('./_order_id_-DhwMqmbq.mjs'), "/themes/shopark/pages/user/layout.vue": () => import('./layout-Di26JQXK.mjs'), "/themes/shopark/pages/user/notifications.vue": () => import('./notifications-C9Jmr8iJ.mjs'), "/themes/shopark/pages/user/orders/[order_id].vue": () => import('./_order_id_-CTMtPXZS.mjs'), "/themes/shopark/pages/user/orders/index.vue": () => import('./index-BMq7X5e2.mjs'), "/themes/shopark/pages/user/stores/index.vue": () => import('./index-D81AnmIW.mjs'), "/themes/shopark/pages/user/subscription.vue": () => import('./subscription-DLT6xbxD.mjs'), "/themes/shopark/pages/user/tickets.vue": () => import('./tickets-BG3mOCsi.mjs') })).map(([file, module]) => [file.replace("/", "../"), module]))
 };
 const themeAdminManifestModules = {
   ...Object.fromEntries(Object.entries(/* @__PURE__ */ Object.assign({
@@ -25815,7 +25815,7 @@ const themeAdminManifestModules = {
   })).map(([file, module]) => [file.replace("/", "../"), module]))
 };
 const themeAdminPageModules = {
-  ...Object.fromEntries(Object.entries(/* @__PURE__ */ Object.assign({ "/themes/shopark/admin/pages/cases.vue": () => import('./cases-ty9Bm-mV.mjs') })).map(([file, module]) => [file.replace("/", "../"), module]))
+  ...Object.fromEntries(Object.entries(/* @__PURE__ */ Object.assign({ "/themes/shopark/admin/pages/cases.vue": () => import('./cases-D6klRb9m.mjs') })).map(([file, module]) => [file.replace("/", "../"), module]))
 };
 const themeAdminLocaleEnModules = {
   ...Object.fromEntries(Object.entries(/* @__PURE__ */ Object.assign({})).map(([file, module]) => [file.replace("/", "../"), module]))
@@ -25824,7 +25824,7 @@ const themeAdminLocaleZhModules = {
   ...Object.fromEntries(Object.entries(/* @__PURE__ */ Object.assign({})).map(([file, module]) => [file.replace("/", "../"), module]))
 };
 const themeLayoutLoaders = {
-  "shopark": () => import('./default-DVdYfVWX.mjs')
+  "shopark": () => import('./default-C_GHjxT6.mjs')
 };
 const schemaVersion$2 = 1;
 const id$2 = "apps";
@@ -42791,14 +42791,14 @@ const plugin_MeUvTuoKUi51yb_kBguab6hdcExVXeTtZtTg9TZZBB8 = /* @__PURE__ */ defin
   // For type portability
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
 });
-const LazyLegalPage = defineAsyncComponent(() => import('./LegalPage-CoS6Uip6.mjs').then((r) => r["default"] || r.default || r));
-const LazyMarketingPage = defineAsyncComponent(() => import('./MarketingPage-DsgVOLps.mjs').then((r) => r["default"] || r.default || r));
+const LazyLegalPage = defineAsyncComponent(() => import('./LegalPage-Fc1c1vK4.mjs').then((r) => r["default"] || r.default || r));
+const LazyMarketingPage = defineAsyncComponent(() => import('./MarketingPage-Cyi4lIcv.mjs').then((r) => r["default"] || r.default || r));
 const LazyMarketplaceCard = defineAsyncComponent(() => import('./MarketplaceCard-DG5poDRz.mjs').then((r) => r["default"] || r.default || r));
-const LazyMarketplaceDetail = defineAsyncComponent(() => import('./MarketplaceDetail-Bow1QPOP.mjs').then((r) => r["default"] || r.default || r));
+const LazyMarketplaceDetail = defineAsyncComponent(() => import('./MarketplaceDetail-Cst0gWig.mjs').then((r) => r["default"] || r.default || r));
 const LazyMarketplaceHero = defineAsyncComponent(() => import('./MarketplaceHero-BRZ-crkT.mjs').then((r) => r["default"] || r.default || r));
 const LazyMarketplaceList = defineAsyncComponent(() => import('./MarketplaceList-1mbDVElG.mjs').then((r) => r["default"] || r.default || r));
 const LazyMarketplaceVisual = defineAsyncComponent(() => import('./MarketplaceVisual-DI-8P_MU.mjs').then((r) => r["default"] || r.default || r));
-const LazyPageCta = defineAsyncComponent(() => import('./PageCta-DmQ_01T-.mjs').then((r) => r["default"] || r.default || r));
+const LazyPageCta = defineAsyncComponent(() => import('./PageCta-DnrHivVs.mjs').then((r) => r["default"] || r.default || r));
 const LazySectionHeading = defineAsyncComponent(() => import('./SectionHeading-BJpRVepO.mjs').then((r) => r["default"] || r.default || r));
 const LazyShoparkAuthShell = defineAsyncComponent(() => import('./ShoparkAuthShell-dFmK6Na8.mjs').then((r) => r["default"] || r.default || r));
 const LazyShoparkBindDialog = defineAsyncComponent(() => import('./ShoparkBindDialog-Btta3j84.mjs').then((n) => n.S).then((r) => r["default"] || r.default || r));
@@ -42807,7 +42807,7 @@ const LazyShoparkConsoleHeader = defineAsyncComponent(() => import('./ShoparkCon
 const LazyShoparkConsultDialog = defineAsyncComponent(() => import('./ShoparkConsultDialog-DZynUuOL.mjs').then((r) => r["default"] || r.default || r));
 const LazyShoparkLanguageSwitcher = defineAsyncComponent(() => import('./ShoparkLanguageSwitcher-CbXHcLsf.mjs').then((r) => r["default"] || r.default || r));
 const LazyShoparkLeadForm = defineAsyncComponent(() => import('./ShoparkLeadForm-N5i4b_rX.mjs').then((r) => r["default"] || r.default || r));
-const LazyShoparkPlanCards = defineAsyncComponent(() => import('./ShoparkPlanCards-WDOkKuv-.mjs').then((r) => r["default"] || r.default || r));
+const LazyShoparkPlanCards = defineAsyncComponent(() => import('./ShoparkPlanCards-DXEADjwb.mjs').then((r) => r["default"] || r.default || r));
 const LazyProseA = defineAsyncComponent(() => import('./A-XMdZWDIu.mjs').then((r) => r["default"] || r.default || r));
 const LazyProseAccordion = defineAsyncComponent(() => import('./Accordion-CEjwxwvi.mjs').then((r) => r["default"] || r.default || r));
 const LazyProseAccordionItem = defineAsyncComponent(() => import('./AccordionItem-Bc1v9c90.mjs').then((r) => r["default"] || r.default || r));

@@ -1,0 +1,1 @@
+import{r as l}from"./mwaJVqHO.js";import{n as a,d as e}from"./DAs_i7hE.js";const f=()=>{const{getSetting:r}=l(),t=e(()=>String(r("shopark_consult_url","mailto:support@qingpu.ai"))),s=e(()=>/^https?:\/\//i.test(t.value)),n=a(!1),o=()=>{n.value=!0};return{consultUrl:t,isExternal:s,isOpen:n,open:o,onConsultClick:u=>{s.value||(u.preventDefault(),o())}}};export{f as u};

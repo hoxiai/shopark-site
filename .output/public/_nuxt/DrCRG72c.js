@@ -1,0 +1,1 @@
+import t from"./CF7SdCE1.js";import{a2 as r}from"./mwaJVqHO.js";import{aq as e,ag as c}from"./DAs_i7hE.js";import"./Bc5Z-toR.js";import"./BIumN-Uf.js";import"./c_i80027.js";import"./CfYFMnge.js";const m={};function n(_,a){const o=t;return c(),e(o,{slug:"terms"})}const x=r(m,[["render",n]]);export{x as default};
