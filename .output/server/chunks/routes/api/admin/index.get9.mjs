@@ -1,5 +1,5 @@
 import { desc } from 'drizzle-orm';
-import { d as defineEventHandler, g as getQuery, b8 as normalizeAppKey, b9 as normalizeReleaseChannel, b as db, ba as releases, bb as mapDbRowToReleaseEntry, bc as compareSemVer, bd as listReleaseApps } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, g as getQuery, bn as normalizeAppKey, bo as normalizeReleaseChannel, b as db, bp as releases, bq as mapDbRowToReleaseEntry, br as compareSemVer, bs as listReleaseApps } from '../../../nitro/nitro.mjs';
 import 'node:crypto';
 import 'crypto';
 import 'fs';
@@ -23,6 +23,7 @@ import 'drizzle-orm/sqlite-core';
 import 'drizzle-orm/mysql-core';
 import 'maxmind';
 import 'node:os';
+import 'node:fs/promises';
 import 'node:url';
 import 'zod';
 import '@iconify/utils';
@@ -30,14 +31,13 @@ import 'consola';
 import 'node:zlib';
 import 'ioredis';
 import 'jose';
+import '@adonisjs/hash';
+import '@adonisjs/hash/drivers/scrypt';
 import 'node:child_process';
 import 'process';
 import 'buffer';
 import 'node:dns/promises';
 import 'node:net';
-import 'node:fs/promises';
-import '@adonisjs/hash';
-import '@adonisjs/hash/drivers/scrypt';
 
 const index_get = defineEventHandler(async (event) => {
   const query = getQuery(event);

@@ -1,5 +1,5 @@
-import { d as defineEventHandler, c as getRequestLocale, g as getQuery, u as users, b as db, c7 as userWallets, cv as fetchExternalUsersMap, cl as userTokens, e as createError } from '../../../nitro/nitro.mjs';
-import { sql, or, like, count, desc, eq, and, gt } from 'drizzle-orm';
+import { d as defineEventHandler, c as getRequestLocale, g as getQuery, u as users, cJ as userWallets, b as db, d4 as fetchExternalUsersMap, cW as userTokens, e as createError } from '../../../nitro/nitro.mjs';
+import { sql, or, like, count, desc, asc, eq, and, gt } from 'drizzle-orm';
 import 'node:crypto';
 import 'crypto';
 import 'fs';
@@ -23,6 +23,7 @@ import 'drizzle-orm/sqlite-core';
 import 'drizzle-orm/mysql-core';
 import 'maxmind';
 import 'node:os';
+import 'node:fs/promises';
 import 'node:url';
 import 'zod';
 import '@iconify/utils';
@@ -30,14 +31,13 @@ import 'consola';
 import 'node:zlib';
 import 'ioredis';
 import 'jose';
+import '@adonisjs/hash';
+import '@adonisjs/hash/drivers/scrypt';
 import 'node:child_process';
 import 'process';
 import 'buffer';
 import 'node:dns/promises';
 import 'node:net';
-import 'node:fs/promises';
-import '@adonisjs/hash';
-import '@adonisjs/hash/drivers/scrypt';
 
 const index_get = defineEventHandler(async (event) => {
   var _a;
@@ -63,15 +63,19 @@ const index_get = defineEventHandler(async (event) => {
   const hasSpendingFilter = hasSpending === "true" || hasSpending === "false";
   const requiresFullScan = isExternalSort || hasSpendingFilter;
   try {
+    const cashSumExpr = sql`coalesce(sum(${userWallets.cashBalance}), 0)`;
+    const grantSumExpr = sql`coalesce(sum(${userWallets.grantBalance}), 0)`;
+    const totalBalanceExpr = sql`(${cashSumExpr} + ${grantSumExpr})`;
     if (!requiresFullScan) {
       const totalResult = await db.select({ total: count() }).from(users).where(whereClause);
       const total2 = Number(((_a = totalResult[0]) == null ? void 0 : _a.total) || 0);
-      let orderByClause;
-      if (sortBy === "balance" || sortBy === "availableBalance") {
-        orderByClause = sortOrder === "asc" ? sql`(coalesce(${userWallets.cashBalance}, 0) + coalesce(${userWallets.grantBalance}, 0)) ASC` : sql`(coalesce(${userWallets.cashBalance}, 0) + coalesce(${userWallets.grantBalance}, 0)) DESC`;
-      } else {
-        orderByClause = sortOrder === "asc" ? users.createdAt : desc(users.createdAt);
-      }
+      const orderByClauses = sortBy === "balance" || sortBy === "availableBalance" ? [
+        sortOrder === "asc" ? sql`${totalBalanceExpr} ASC` : sql`${totalBalanceExpr} DESC`,
+        desc(users.id)
+      ] : [
+        sortOrder === "asc" ? asc(users.createdAt) : desc(users.createdAt),
+        sortOrder === "asc" ? asc(users.id) : desc(users.id)
+      ];
       const paginatedUsers2 = await db.select({
         id: users.id,
         username: users.email,
@@ -81,9 +85,17 @@ const index_get = defineEventHandler(async (event) => {
         status: users.status,
         lastLoginAt: users.lastLoginAt,
         emailVerifiedAt: users.emailVerifiedAt,
-        cashBalance: userWallets.cashBalance,
-        grantBalance: userWallets.grantBalance
-      }).from(users).leftJoin(userWallets, eq(userWallets.userId, users.id)).where(whereClause).orderBy(orderByClause).limit(pageSize).offset(offset);
+        cashBalance: cashSumExpr,
+        grantBalance: grantSumExpr
+      }).from(users).leftJoin(userWallets, eq(userWallets.userId, users.id)).where(whereClause).groupBy(
+        users.id,
+        users.email,
+        users.nickname,
+        users.createdAt,
+        users.status,
+        users.lastLoginAt,
+        users.emailVerifiedAt
+      ).orderBy(...orderByClauses).limit(pageSize).offset(offset);
       const [externalUsersMap2, activeKeyCountMap2] = await Promise.all([
         fetchExternalUsersMap(event),
         (async () => {
@@ -150,13 +162,21 @@ const index_get = defineEventHandler(async (event) => {
       status: users.status,
       lastLoginAt: users.lastLoginAt,
       emailVerifiedAt: users.emailVerifiedAt,
-      cashBalance: userWallets.cashBalance,
-      grantBalance: userWallets.grantBalance
+      cashBalance: cashSumExpr,
+      grantBalance: grantSumExpr
     }).from(users).leftJoin(userWallets, eq(userWallets.userId, users.id));
     if (whereClause) {
       usersQuery = usersQuery.where(whereClause);
     }
-    const allUsers = await usersQuery.orderBy(desc(users.createdAt));
+    const allUsers = await usersQuery.groupBy(
+      users.id,
+      users.email,
+      users.nickname,
+      users.createdAt,
+      users.status,
+      users.lastLoginAt,
+      users.emailVerifiedAt
+    ).orderBy(desc(users.createdAt), desc(users.id));
     const mergedUsers = allUsers.map((user) => {
       const extData = externalUsersMap.get(user.id) || {};
       return {

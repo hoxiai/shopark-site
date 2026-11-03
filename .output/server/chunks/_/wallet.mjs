@@ -1,5 +1,5 @@
 import { eq } from 'drizzle-orm';
-import { fY as getWebhookSubscriptionUrl, cH as getIntegrationToken, fZ as $fetch, f_ as refundEventId, b as db, u as users } from '../nitro/nitro.mjs';
+import { gL as getWebhookSubscriptionUrl, dg as getIntegrationToken, gM as $fetch, gN as refundEventId, b as db, u as users } from '../nitro/nitro.mjs';
 import 'node:crypto';
 import 'crypto';
 import 'fs';
@@ -23,6 +23,7 @@ import 'drizzle-orm/sqlite-core';
 import 'drizzle-orm/mysql-core';
 import 'maxmind';
 import 'node:os';
+import 'node:fs/promises';
 import 'node:url';
 import 'zod';
 import '@iconify/utils';
@@ -30,14 +31,13 @@ import 'consola';
 import 'node:zlib';
 import 'ioredis';
 import 'jose';
+import '@adonisjs/hash';
+import '@adonisjs/hash/drivers/scrypt';
 import 'node:child_process';
 import 'process';
 import 'buffer';
 import 'node:dns/promises';
 import 'node:net';
-import 'node:fs/promises';
-import '@adonisjs/hash';
-import '@adonisjs/hash/drivers/scrypt';
 
 const AINODE_BALANCE_SCALE = 1e8;
 const AINODE_CREDIT_POOL = "cash";
@@ -172,7 +172,7 @@ async function creditCompensationInAINode(input) {
     direction: "credit",
     amount: input.amount,
     eventId: input.eventId,
-    type: "admin_recharge",
+    type: input.kind || "admin_recharge",
     sourceId: input.sourceId,
     remark: input.remark
   });

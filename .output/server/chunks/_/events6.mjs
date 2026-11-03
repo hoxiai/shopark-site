@@ -1,4 +1,4 @@
-import { fb as evaluateMonitors } from '../nitro/nitro.mjs';
+import { b as db, fS as ensureHoxiWorkMcpToolsRegistered, fT as ensureRewardOutboxWorkerStarted, fU as startAaDailySyncWorker, fV as stopRewardOutboxWorker, fW as stopAaDailySyncWorker } from '../nitro/nitro.mjs';
 import 'drizzle-orm';
 import 'node:crypto';
 import 'crypto';
@@ -23,6 +23,7 @@ import 'drizzle-orm/sqlite-core';
 import 'drizzle-orm/mysql-core';
 import 'maxmind';
 import 'node:os';
+import 'node:fs/promises';
 import 'node:url';
 import 'zod';
 import '@iconify/utils';
@@ -30,40 +31,28 @@ import 'consola';
 import 'node:zlib';
 import 'ioredis';
 import 'jose';
+import '@adonisjs/hash';
+import '@adonisjs/hash/drivers/scrypt';
 import 'node:child_process';
 import 'process';
 import 'buffer';
 import 'node:dns/promises';
 import 'node:net';
-import 'node:fs/promises';
-import '@adonisjs/hash';
-import '@adonisjs/hash/drivers/scrypt';
 
-const TICK_MS = 6e4;
-let timer = null;
-let running = false;
-const tick = async () => {
-  if (running) return;
-  running = true;
-  try {
-    await evaluateMonitors();
-  } catch (error) {
-    console.error("[panel-monitor] evaluate failed:", error);
-  } finally {
-    running = false;
-  }
-};
-async function startThemeBackgroundWorkers() {
-  if (timer) return;
-  timer = setInterval(() => void tick(), TICK_MS);
-  console.log("[panel-monitor] heartbeat evaluator started");
+function getThemeEventRules() {
+  return [];
 }
-async function stopThemeBackgroundWorkers() {
-  if (timer) {
-    clearInterval(timer);
-    timer = null;
-  }
+function registerThemeMcpTools() {
+  ensureHoxiWorkMcpToolsRegistered();
+}
+function startThemeBackgroundWorkers(database = db) {
+  ensureRewardOutboxWorkerStarted(database, 6e4, { immediateSweep: true });
+  startAaDailySyncWorker(database);
+}
+function stopThemeBackgroundWorkers() {
+  stopRewardOutboxWorker();
+  stopAaDailySyncWorker();
 }
 
-export { startThemeBackgroundWorkers, stopThemeBackgroundWorkers };
+export { getThemeEventRules, registerThemeMcpTools, startThemeBackgroundWorkers, stopThemeBackgroundWorkers };
 //# sourceMappingURL=events6.mjs.map

@@ -1,4 +1,4 @@
-import { b as db, f7 as ensureHoxiWorkMcpToolsRegistered, f8 as ensureRewardOutboxWorkerStarted, f9 as stopRewardOutboxWorker } from '../nitro/nitro.mjs';
+import { fM as ensureFishSchedulerJob, fN as ensureBlogCategories, fO as runAutoPublish, fP as runVideoCrawl } from '../nitro/nitro.mjs';
 import 'drizzle-orm';
 import 'node:crypto';
 import 'crypto';
@@ -23,6 +23,7 @@ import 'drizzle-orm/sqlite-core';
 import 'drizzle-orm/mysql-core';
 import 'maxmind';
 import 'node:os';
+import 'node:fs/promises';
 import 'node:url';
 import 'zod';
 import '@iconify/utils';
@@ -30,27 +31,39 @@ import 'consola';
 import 'node:zlib';
 import 'ioredis';
 import 'jose';
+import '@adonisjs/hash';
+import '@adonisjs/hash/drivers/scrypt';
 import 'node:child_process';
 import 'process';
 import 'buffer';
 import 'node:dns/promises';
 import 'node:net';
-import 'node:fs/promises';
-import '@adonisjs/hash';
-import '@adonisjs/hash/drivers/scrypt';
 
-function getThemeEventRules() {
-  return [];
+let workerTimer = null;
+async function startThemeBackgroundWorkers() {
+  await ensureFishSchedulerJob().catch(() => {
+  });
+  await ensureBlogCategories().catch(() => {
+  });
+  runAutoPublish().catch(() => {
+  });
+  runVideoCrawl().catch(() => {
+  });
+  if (!workerTimer) {
+    workerTimer = setInterval(() => {
+      runAutoPublish().catch(() => {
+      });
+      runVideoCrawl().catch(() => {
+      });
+    }, 60 * 6e4);
+  }
 }
-function registerThemeMcpTools() {
-  ensureHoxiWorkMcpToolsRegistered();
-}
-function startThemeBackgroundWorkers(database = db) {
-  ensureRewardOutboxWorkerStarted(database, 6e4, { immediateSweep: true });
-}
-function stopThemeBackgroundWorkers() {
-  stopRewardOutboxWorker();
+async function stopThemeBackgroundWorkers() {
+  if (workerTimer) {
+    clearInterval(workerTimer);
+    workerTimer = null;
+  }
 }
 
-export { getThemeEventRules, registerThemeMcpTools, startThemeBackgroundWorkers, stopThemeBackgroundWorkers };
+export { startThemeBackgroundWorkers, stopThemeBackgroundWorkers };
 //# sourceMappingURL=events4.mjs.map
