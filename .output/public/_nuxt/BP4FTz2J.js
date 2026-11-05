@@ -1,1 +1,0 @@
-import{F as a,o as s}from"./DG-rToER.js";import{m as r,aK as n,c,o as i}from"./hDlDAId6.js";import"./Cyuf6BJ4.js";import"./B991hDY3.js";import"./CfYFMnge.js";const x=r({__name:"solutions",async setup(m){let t,e;const{localePath:o}=a();return[t,e]=n(()=>s(o("/solutions"),{replace:!0})),await t,e(),(p,_)=>(i(),c("div"))}});export{x as default};

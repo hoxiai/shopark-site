@@ -4,7 +4,7 @@ import { ssrRenderAttrs, ssrRenderComponent, ssrInterpolate, ssrRenderList, ssrR
 import MarketplaceVisual from './MarketplaceVisual-DI-8P_MU.mjs';
 import { i as isMarkdownContent, m as markdownToHtml } from './markdown-CTbgD6Gu.mjs';
 import { s as sanitizeRichHtml } from './sanitize-html-6xfxlt13.mjs';
-import { gS as SEO_LOCALE_LANGUAGE } from '../nitro/nitro.mjs';
+import { gV as SEO_LOCALE_LANGUAGE } from '../nitro/nitro.mjs';
 import 'vue-router';
 import '@iconify/vue';
 import '@iconify/utils/lib/css/icon';

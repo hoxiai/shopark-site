@@ -1,0 +1,1 @@
+import{o as a}from"./CuBltAMh.js";import{m as o,aK as r,o as s,c as n}from"./hDlDAId6.js";import"./Cyuf6BJ4.js";import"./B991hDY3.js";import"./CfYFMnge.js";const d=o({__name:"releases",async setup(m){let e,t;return[e,t]=r(()=>a("/admin/settings/releases",{replace:!0})),await e,t(),(i,p)=>(s(),n("div"))}});export{d as default};
