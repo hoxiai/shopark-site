@@ -97,7 +97,7 @@ const info_post = defineEventHandler(async (event) => {
       content = content.replace(/\{\$currency\}/g, String(order.currency || "USD"));
       content = content.replace(/\{\$productId\}/g, order.productId.toString());
       for (const [key, value] of Object.entries(configObj)) {
-        if (/(secret|private|password|token|mchkey|apikey|signkey|cert|pem)/i.test(key)) continue;
+        if (/(secret|private|password|token|mch[_-]?key|api[_-]?key|sign[_-]?key|cert|pem)/i.test(key)) continue;
         const regex = new RegExp(`\\{\\$config\\.${key}\\}`, "g");
         content = content.replace(regex, String(value));
       }
@@ -154,7 +154,7 @@ const info_post = defineEventHandler(async (event) => {
     return {
       code: 0,
       data: {
-        methods: geoSortedMethods,
+        methods: geoSortedMethods.map(({ code, name, iconUrl, content }) => ({ code, name, iconUrl, content })),
         visitorCountry,
         amount: order.amount,
         currency: String(order.currency || "USD"),
