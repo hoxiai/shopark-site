@@ -1,16 +1,17 @@
-import { dh as eventHandler, g as getQuery, e as createError, di as logger, dj as sendLocalizedRedirect, al as getRequestURL, dk as getCookie, dl as deleteCookie, dm as setCookie, dn as sendRedirect, dp as withQuery, dq as handleOAuthLogin, dr as useRuntimeConfig } from '../../../nitro/nitro.mjs';
+import { dk as eventHandler, g as getQuery, e as createError, dl as logger, dm as sendLocalizedRedirect, A as getRequestURL, dn as getCookie, dp as deleteCookie, dq as beginAppOAuth, dr as setCookie, ds as sendRedirect, dt as withQuery, du as validateAppOAuth, dv as appAuthorizationFailurePath, dw as handleOAuthLogin, dx as useRuntimeConfig } from '../../../nitro/nitro.mjs';
 import { randomBytes } from 'node:crypto';
 import 'drizzle-orm';
+import 'zod';
 import 'crypto';
 import 'fs';
 import 'path';
+import 'node:fs';
 import 'node:path';
 import '@nuxthub/blob';
 import 'node:http';
 import 'node:https';
 import 'node:events';
 import 'node:buffer';
-import 'node:fs';
 import 'node:async_hooks';
 import 'postgres';
 import 'drizzle-orm/postgres-js';
@@ -25,19 +26,10 @@ import 'maxmind';
 import 'node:os';
 import 'node:fs/promises';
 import 'node:url';
-import 'zod';
 import '@iconify/utils';
 import 'consola';
-import 'node:zlib';
-import 'ioredis';
-import 'jose';
 import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
-import 'node:child_process';
-import 'process';
-import 'buffer';
-import 'node:dns/promises';
-import 'node:net';
 
 const AUTHORIZATION_URL = "https://github.com/login/oauth/authorize";
 const TOKEN_URL = "https://github.com/login/oauth/access_token";
@@ -81,7 +73,7 @@ const github_get = eventHandler(async (event) => {
     state = String(getCookie(event, STATE_COOKIE) || "");
     deleteCookie(event, STATE_COOKIE, { path: "/" });
   } else {
-    state = base64url(randomBytes(8));
+    state = query.app_authorization ? await beginAppOAuth(event, String(query.app_authorization)) : base64url(randomBytes(8));
     setCookie(event, STATE_COOKIE, state, {
       httpOnly: true,
       secure: true,
@@ -90,7 +82,7 @@ const github_get = eventHandler(async (event) => {
       path: "/"
     });
   }
-  if (!query.code) {
+  if (!query.code && !query.error) {
     return sendRedirect(event, withQuery(AUTHORIZATION_URL, {
       client_id: clientId,
       redirect_uri: redirectURL,
@@ -103,6 +95,8 @@ const github_get = eventHandler(async (event) => {
     await logger.error(`GitHub OAuth error: ${error.message}`, { source: "github_oauth", details: { error } });
     return sendLocalizedRedirect(event, "/auth/login?error=github_auth_failed");
   }
+  await validateAppOAuth(event, String(query.state || ""));
+  if (query.error) return sendLocalizedRedirect(event, await appAuthorizationFailurePath(event, "github_auth_failed"));
   const tokens = await $fetch(TOKEN_URL, {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -117,7 +111,7 @@ const github_get = eventHandler(async (event) => {
   if (tokens == null ? void 0 : tokens.error) {
     const error = createError({ statusCode: 401, message: `GitHub login failed: ${tokens.error_description || tokens.error}`, data: tokens });
     await logger.error(`GitHub OAuth error: ${error.message}`, { source: "github_oauth", details: { error } });
-    return sendLocalizedRedirect(event, "/auth/login?error=github_auth_failed");
+    return sendLocalizedRedirect(event, await appAuthorizationFailurePath(event, "github_auth_failed"));
   }
   const user = await $fetch("https://api.github.com/user", {
     headers: { "User-Agent": "apay-oauth", Authorization: `token ${tokens.access_token}` }

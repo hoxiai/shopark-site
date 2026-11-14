@@ -1,16 +1,17 @@
-import { gj as defaultShoparkCases } from '../nitro/nitro.mjs';
+import { fP as defaultShoparkCases } from '../nitro/nitro.mjs';
 import 'drizzle-orm';
 import 'node:crypto';
+import 'zod';
 import 'crypto';
 import 'fs';
 import 'path';
+import 'node:fs';
 import 'node:path';
 import '@nuxthub/blob';
 import 'node:http';
 import 'node:https';
 import 'node:events';
 import 'node:buffer';
-import 'node:fs';
 import 'node:async_hooks';
 import 'postgres';
 import 'drizzle-orm/postgres-js';
@@ -25,19 +26,10 @@ import 'maxmind';
 import 'node:os';
 import 'node:fs/promises';
 import 'node:url';
-import 'zod';
 import '@iconify/utils';
 import 'consola';
-import 'node:zlib';
-import 'ioredis';
-import 'jose';
 import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
-import 'node:child_process';
-import 'process';
-import 'buffer';
-import 'node:dns/promises';
-import 'node:net';
 
 const shoparkAppSeeds = [
   { kind: "app", packageKind: "extension", runtimeKind: "payment", slug: "stripe", name: "Stripe", category: "payment", mark: "S", accent: "#635bff", version: "0.3.1", publishedAt: "2024-06-22", updatedAt: "2026-10-13", downloads: 12 },

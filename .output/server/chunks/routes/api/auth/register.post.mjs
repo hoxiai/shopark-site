@@ -1,16 +1,17 @@
-import { d as defineEventHandler, aF as requireTrustedRequestOrigin, c as getRequestLocale, ab as resolveClientIp, ac as checkIpRateLimit, e as createError, r as readBody, dA as mergePromoTracking, dB as capturePromoTracking, dC as readPromoTracking, cX as PASSWORD_MIN_LENGTH, cY as validateEmail, b as db, u as users, j as hashPassword, aG as ensurePromoMember, dD as bindInviteRelation, dE as requestPromoAgentJoin, ax as emitEvent, dF as promoAgentRelations, L as promoInviteRelations, b4 as promoMembers, du as issueWebSession, d6 as trackVisitorEvent, dv as ensureVisitorId, cW as userTokens, c$ as EMAIL_VERIFY_TOKEN_NAME, a7 as getLocalizedSettingValue, a8 as sendEmail } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, dy as validateLoginAuthorization, aL as requireTrustedRequestOrigin, c as getRequestLocale, aj as resolveClientIp, ak as checkIpRateLimit, e as createError, r as readBody, dH as mergePromoTracking, dI as capturePromoTracking, dJ as readPromoTracking, c_ as PASSWORD_MIN_LENGTH, c$ as validateEmail, b as db, v as users, l as hashPassword, aM as ensurePromoMember, dK as bindInviteRelation, dL as requestPromoAgentJoin, aD as emitEvent, dM as promoAgentRelations, T as promoInviteRelations, b9 as promoMembers, dB as issueLoginSession, d9 as trackVisitorEvent, dC as ensureVisitorId, cY as userTokens, d2 as EMAIL_VERIFY_TOKEN_NAME, ag as getLocalizedSettingValue, B as sendEmail } from '../../../nitro/nitro.mjs';
 import { eq } from 'drizzle-orm';
 import 'node:crypto';
+import 'zod';
 import 'crypto';
 import 'fs';
 import 'path';
+import 'node:fs';
 import 'node:path';
 import '@nuxthub/blob';
 import 'node:http';
 import 'node:https';
 import 'node:events';
 import 'node:buffer';
-import 'node:fs';
 import 'node:async_hooks';
 import 'postgres';
 import 'drizzle-orm/postgres-js';
@@ -25,21 +26,13 @@ import 'maxmind';
 import 'node:os';
 import 'node:fs/promises';
 import 'node:url';
-import 'zod';
 import '@iconify/utils';
 import 'consola';
-import 'node:zlib';
-import 'ioredis';
-import 'jose';
 import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
-import 'node:child_process';
-import 'process';
-import 'buffer';
-import 'node:dns/promises';
-import 'node:net';
 
 const register_post = defineEventHandler(async (event) => {
+  await validateLoginAuthorization(event);
   const siteUrl = requireTrustedRequestOrigin(event);
   const locale = getRequestLocale(event);
   const messages = locale === "zh" ? {
@@ -143,7 +136,7 @@ const register_post = defineEventHandler(async (event) => {
       statusMessage: err.statusMessage || err.message || "\u6CE8\u518C\u524D\u7F6E\u89C4\u5219\u6821\u9A8C\u5931\u8D25\uFF0C\u64CD\u4F5C\u5DF2\u7EC8\u6B62"
     });
   }
-  await issueWebSession(event, user, "register");
+  const loginResult = await issueLoginSession(event, user, "register");
   await trackVisitorEvent(event, {
     visitorId: ensureVisitorId(event),
     userId: user.id,
@@ -176,6 +169,7 @@ const register_post = defineEventHandler(async (event) => {
   }
   return {
     success: true,
+    ...loginResult,
     user: {
       id: user.id,
       email: user.email,

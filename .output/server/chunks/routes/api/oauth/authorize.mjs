@@ -1,16 +1,17 @@
-import { d as defineEventHandler, g as getQuery, al as getRequestURL, dn as sendRedirect, e4 as normalizeMcpScopes, e as createError, e5 as resolveAndValidateMcpClient, e6 as isValidPkceCodeChallenge, bH as getUserSession, e7 as MCP_DEFAULT_SCOPES, e8 as MCP_SCOPE_DEFINITIONS, dy as requireUserSession, r as readBody, b as db, cW as userTokens, d0 as MCP_OAUTH_CODE_TOKEN_NAME, e9 as createMcpAuthorizationCodeEnvelope, ea as hashMcpOAuthSecret } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, g as getQuery, A as getRequestURL, ds as sendRedirect, eb as normalizeMcpScopes, e as createError, ec as resolveAndValidateMcpClient, ed as isValidPkceCodeChallenge, b8 as getUserSession, ee as MCP_DEFAULT_SCOPES, ef as MCP_SCOPE_DEFINITIONS, dF as requireUserSession, r as readBody, b as db, cY as userTokens, d3 as MCP_OAUTH_CODE_TOKEN_NAME, eg as createMcpAuthorizationCodeEnvelope, eh as hashMcpOAuthSecret } from '../../../nitro/nitro.mjs';
 import { and, eq } from 'drizzle-orm';
 import 'node:crypto';
+import 'zod';
 import 'crypto';
 import 'fs';
 import 'path';
+import 'node:fs';
 import 'node:path';
 import '@nuxthub/blob';
 import 'node:http';
 import 'node:https';
 import 'node:events';
 import 'node:buffer';
-import 'node:fs';
 import 'node:async_hooks';
 import 'postgres';
 import 'drizzle-orm/postgres-js';
@@ -25,19 +26,10 @@ import 'maxmind';
 import 'node:os';
 import 'node:fs/promises';
 import 'node:url';
-import 'zod';
 import '@iconify/utils';
 import 'consola';
-import 'node:zlib';
-import 'ioredis';
-import 'jose';
 import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
-import 'node:child_process';
-import 'process';
-import 'buffer';
-import 'node:dns/promises';
-import 'node:net';
 
 const authorize = defineEventHandler(async (event) => {
   if (event.method === "GET") {

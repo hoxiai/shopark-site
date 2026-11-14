@@ -1,1 +1,0 @@
-import{F as a,o as r}from"./CuBltAMh.js";import{m as c,aK as n,c as p,o as s}from"./hDlDAId6.js";import"./Cyuf6BJ4.js";import"./B991hDY3.js";import"./CfYFMnge.js";const h=c({__name:"pricing",async setup(i){let e,t;const{localePath:o}=a();return[e,t]=n(()=>r(o("/page/pricing"),{replace:!0})),await e,t(),(m,_)=>(s(),p("div"))}});export{h as default};

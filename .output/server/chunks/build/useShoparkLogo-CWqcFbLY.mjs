@@ -1,4 +1,4 @@
-import { fy as buildAssetsURL } from '../nitro/nitro.mjs';
+import { fE as buildAssetsURL } from '../nitro/nitro.mjs';
 
 const logoUrl = "" + buildAssetsURL("logo.B9vgFdvV.svg");
 const inverseLogoUrl = "" + buildAssetsURL("logo-inverse.CewQgBd6.svg");
