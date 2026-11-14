@@ -9,10 +9,10 @@ const styles = {
   "components/admin/stats/TrafficTrendPanel.vue": () => import('./TrafficTrendPanel-styles.BOS2mtA2.mjs').then(interopDefault),
   "components/admin/stats/TrafficTrendPanel.vue?vue&type=style&index=0&scoped=095fb394&lang.css": () => import('./TrafficTrendPanel-styles.BOS2mtA2.mjs').then(interopDefault),
   "themes/shopark/layouts/default.vue?vue&type=script&setup=true&lang.ts": () => import('./default-styles.CV2CqvuT.mjs').then(interopDefault),
-  "components/AdminSidebar.vue": () => import('./AdminSidebar-styles.CHDMD42R.mjs').then(interopDefault),
-  "components/AdminSidebar.vue?vue&type=style&index=0&scoped=9fb3a552&lang.css": () => import('./AdminSidebar-styles.CHDMD42R.mjs').then(interopDefault),
   "components/RichEditor.vue": () => import('./RichEditor-styles.DD6KqjPn.mjs').then(interopDefault),
+  "components/AdminSidebar.vue": () => import('./AdminSidebar-styles.CHDMD42R.mjs').then(interopDefault),
   "components/RichEditor.vue?vue&type=style&index=0&lang.css": () => import('./RichEditor-styles.DD6KqjPn.mjs').then(interopDefault),
+  "components/AdminSidebar.vue?vue&type=style&index=0&scoped=9fb3a552&lang.css": () => import('./AdminSidebar-styles.CHDMD42R.mjs').then(interopDefault),
   "components/LikeButton.vue": () => import('./LikeButton-styles.DOImobUk.mjs').then(interopDefault),
   "components/LikeButton.vue?vue&type=style&index=0&scoped=f08c92ca&lang.css": () => import('./LikeButton-styles.DOImobUk.mjs').then(interopDefault)
 };
