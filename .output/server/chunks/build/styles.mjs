@@ -2,10 +2,10 @@ const interopDefault = r => r.default || r || [];
 const styles = {
   "components/PaymentWorkspace.vue": () => import('./PaymentWorkspace-styles.BaFeR8u7.mjs').then(interopDefault),
   "components/PaymentWorkspace.vue?vue&type=style&index=0&scoped=bee4cb1b&lang.css": () => import('./PaymentWorkspace-styles.BaFeR8u7.mjs').then(interopDefault),
-  "components/admin/dashboard/TrendChartCard.vue": () => import('./TrendChartCard-styles.2MGmtkJC.mjs').then(interopDefault),
-  "components/admin/dashboard/TrendChartCard.vue?vue&type=style&index=0&scoped=9842279b&lang.css": () => import('./TrendChartCard-styles.2MGmtkJC.mjs').then(interopDefault),
   "components/admin/settings/Nav.vue": () => import('./Nav-styles.Pka3R9t-.mjs').then(interopDefault),
   "components/admin/settings/Nav.vue?vue&type=style&index=0&scoped=905193c6&lang.css": () => import('./Nav-styles.Pka3R9t-.mjs').then(interopDefault),
+  "components/admin/dashboard/TrendChartCard.vue": () => import('./TrendChartCard-styles.2MGmtkJC.mjs').then(interopDefault),
+  "components/admin/dashboard/TrendChartCard.vue?vue&type=style&index=0&scoped=9842279b&lang.css": () => import('./TrendChartCard-styles.2MGmtkJC.mjs').then(interopDefault),
   "components/admin/stats/TrafficTrendPanel.vue": () => import('./TrafficTrendPanel-styles.BOS2mtA2.mjs').then(interopDefault),
   "components/admin/stats/TrafficTrendPanel.vue?vue&type=style&index=0&scoped=095fb394&lang.css": () => import('./TrafficTrendPanel-styles.BOS2mtA2.mjs').then(interopDefault),
   "themes/shopark/layouts/default.vue?vue&type=script&setup=true&lang.ts": () => import('./default-styles.CV2CqvuT.mjs').then(interopDefault),

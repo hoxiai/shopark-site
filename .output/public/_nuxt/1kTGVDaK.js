@@ -1,1 +1,0 @@
-import{G as a,q as s}from"./DqZsVkM9.js";import{m as r,aJ as n,c,o as i}from"./DNrfE9ZI.js";import"./DMPUdRPP.js";import"./nka3VApU.js";import"./CfYFMnge.js";const x=r({__name:"solutions",async setup(m){let t,e;const{localePath:o}=a();return[t,e]=n(()=>s(o("/solutions"),{replace:!0})),await t,e(),(p,_)=>(i(),c("div"))}});export{x as default};
