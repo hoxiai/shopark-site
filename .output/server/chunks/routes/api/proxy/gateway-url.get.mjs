@@ -1,4 +1,4 @@
-import { d as defineEventHandler, eW as getAIGatewayUrl } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, f2 as getAIGatewayUrl } from '../../../nitro/nitro.mjs';
 import 'drizzle-orm';
 import 'node:crypto';
 import 'zod';

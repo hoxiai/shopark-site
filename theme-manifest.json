@@ -1,6 +1,8 @@
 {
   "coreTheme": "core",
-  "publishedOptionalThemes": [],
-  "buildMode": "core-only",
-  "generatedAt": "2026-11-14T05:52:41.804Z"
+  "publishedOptionalThemes": [
+    "shopark"
+  ],
+  "buildMode": "filtered",
+  "generatedAt": "2026-11-14T16:48:47.683Z"
 }

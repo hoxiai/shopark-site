@@ -1,6 +1,6 @@
 import process from 'node:process';globalThis._importMeta_=globalThis._importMeta_||{url:"file:///_entry.js",env:process.env};import * as vue from 'vue';
 import { defineComponent, computed, openBlock, createElementBlock, Fragment, createCommentVNode, createBlock, mergeProps, renderList, useSlots, useId as useId$1, useAttrs, unref, withCtx, createVNode, resolveDynamicComponent, renderSlot, createTextVNode, toDisplayString as toDisplayString$1, hasInjectionContext, inject, getCurrentInstance, ref, watch, nextTick, toValue, h, provide, watchEffect, markRaw, customRef, shallowRef, toRefs, watchPostEffect, toRef as toRef$1, camelize as camelize$1, reactive, normalizeStyle, mergeDefaults, Teleport, useModel, mergeModels, toHandlerKey, getCurrentScope, onScopeDispose, shallowReadonly, normalizeProps, guardReactiveProps, readonly, cloneVNode, toHandlers, isRef, useTemplateRef, withKeys, withModifiers, resolveComponent, Comment, onServerPrefetch, defineAsyncComponent, withAsyncContext, createSlots, resolveDirective, createElementVNode, effectScope, useSSRContext, toRaw, shallowReactive, Suspense, createApp, Text, onErrorCaptured, isReadonly, isShallow, isReactive } from 'vue';
-import { fQ as serialize, fR as createPricingContext, e1 as setResponseStatus$1, A as getRequestURL, fS as defu, fT as isEqual$1, fU as SEO_LOCALE_LANGUAGE, c3 as normalizeGeoFaqs, eP as getRequestHeaders, e as createError$1, fV as getErrorRequestId, fW as resolveActiveTheme, fX as upperFirst, ev as quoteProductPrice, fY as defuFn, fZ as htmlToCleanMarkdown, f_ as appendResponseHeader, f$ as parse$1, dT as getRequestHeader, g0 as errorRecord, g1 as errorData, g2 as resolveLocalizedSetting, g3 as sanitizeStatusCode, g4 as getContext, dr as setCookie, dn as getCookie, dp as deleteCookie, c2 as normalizeGeoKeySpecs, c4 as normalizeGeoRelatedLinks, g5 as $fetch$1, g6 as baseURL, g7 as hash, g8 as createHooks, g9 as executeAsync, ga as normalizeSiteOrigin, gb as stripLocalePrefix$1, c7 as classifySeoRoute, c8 as seoRouteRegistry, gc as localePathForSeo, gd as isMarkdownMirrorPath, ge as safeJsonLd, gf as localeDomainUrl, gg as getRequestProtocol, gh as themeHostConfigs } from '../nitro/nitro.mjs';
+import { fY as serialize, fZ as createPricingContext, e7 as setResponseStatus$1, A as getRequestURL, f_ as defu, f$ as isEqual$1, g0 as SEO_LOCALE_LANGUAGE, c3 as normalizeGeoFaqs, eX as getRequestHeaders, e as createError$1, g1 as getErrorRequestId, g2 as resolveActiveTheme, g3 as upperFirst, eB as quoteProductPrice, g4 as defuFn, g5 as htmlToCleanMarkdown, g6 as appendResponseHeader, g7 as parse$1, dZ as getRequestHeader, g8 as errorRecord, g9 as errorData, ga as resolveLocalizedSetting, gb as sanitizeStatusCode, gc as getContext, dx as setCookie, du as getCookie, dv as deleteCookie, c2 as normalizeGeoKeySpecs, c4 as normalizeGeoRelatedLinks, gd as $fetch$1, ge as baseURL, gf as hash, gg as createHooks, gh as executeAsync, gi as normalizeSiteOrigin, gj as stripLocalePrefix$1, c7 as classifySeoRoute, c8 as seoRouteRegistry, gk as localePathForSeo, gl as isMarkdownMirrorPath, gm as safeJsonLd, gn as localeDomainUrl, go as getRequestProtocol, gp as themeHostConfigs } from '../nitro/nitro.mjs';
 import { useRoute as useRoute$1, useRouter as useRouter$1, RouterView, isNavigationFailure, createMemoryHistory, createRouter, START_LOCATION } from 'vue-router';
 import { Icon, getIcon, loadIcon as loadIcon$1, _api, addAPIProvider, setCustomIconsLoader } from '@iconify/vue';
 import { getIconCSS } from '@iconify/utils/lib/css/icon';
@@ -893,279 +893,279 @@ const _routes = [
     name: "admin-posts-categories",
     path: "/admin/posts/categories",
     meta: __nuxt_page_meta$v || {},
-    component: () => import('./categories-BLfymbFd.mjs')
+    component: () => import('./categories-CuxLPZnx.mjs')
   },
   {
     name: "admin-posts-create",
     path: "/admin/posts/create",
     meta: __nuxt_page_meta$u || {},
-    component: () => import('./create-Cqx6kz69.mjs')
+    component: () => import('./create-Db59qVYC.mjs')
   },
   {
     name: "admin-products-create",
     path: "/admin/products/create",
     meta: __nuxt_page_meta$t || {},
-    component: () => import('./create-e_pGbwrT.mjs')
+    component: () => import('./create-BK5UU4iP.mjs')
   },
   {
     name: "admin-settings-authorization",
     path: "/admin/settings/authorization",
     meta: __nuxt_page_meta$s || {},
-    component: () => import('./authorization-CRUUbCCQ.mjs')
+    component: () => import('./authorization-0-jvO-9q.mjs')
   },
   {
     name: "admin-settings-extensions",
     path: "/admin/settings/extensions",
     meta: __nuxt_page_meta$r || {},
-    component: () => import('./extensions-BmAaYzQd.mjs')
+    component: () => import('./extensions-CGcu6lBm.mjs')
   },
   {
     name: "admin-settings-manages",
     path: "/admin/settings/manages",
     meta: __nuxt_page_meta$q || {},
-    component: () => import('./manages-Cm_ZgaxA.mjs')
+    component: () => import('./manages-BNxM-bKn.mjs')
   },
   {
     name: "admin-settings-product-presets",
     path: "/admin/settings/product-presets",
     meta: __nuxt_page_meta$p || {},
-    component: () => import('./product-presets-B7CaNPuE.mjs')
+    component: () => import('./product-presets-Dns3sDT9.mjs')
   },
   {
     name: "admin-settings-releases",
     path: "/admin/settings/releases",
     meta: __nuxt_page_meta$o || {},
-    component: () => import('./releases-Kce4zN_G.mjs')
+    component: () => import('./releases-C8-NrjwX.mjs')
   },
   {
     name: "admin-settings-themes",
     path: "/admin/settings/themes",
     meta: __nuxt_page_meta$n || {},
-    component: () => import('./themes-CK_DbEsJ.mjs')
+    component: () => import('./themes-DIpJMB4R.mjs')
   },
   {
     name: "admin-posts-id",
     path: "/admin/posts/:id()",
     meta: __nuxt_page_meta$m || {},
-    component: () => import('./_id_-DMSX0T6t.mjs')
+    component: () => import('./_id_-CgM5H5Pj.mjs')
   },
   {
     name: "admin-products-id",
     path: "/admin/products/:id()",
     meta: __nuxt_page_meta$l || {},
-    component: () => import('./_id_-CxUghV70.mjs')
+    component: () => import('./_id_-MSVKucr-.mjs')
   },
   {
     name: "admin-extensions-slug",
     path: "/admin/extensions/:slug(.*)*",
     meta: __nuxt_page_meta$k || {},
-    component: () => import('./_...slug_-CJgZHIZv.mjs')
+    component: () => import('./_...slug_-COFM6Wl8.mjs')
   },
   {
     name: "admin-plugins-slug",
     path: "/admin/plugins/:slug(.*)*",
     meta: __nuxt_page_meta$j || {},
-    component: () => import('./_...slug_-BmBojNMR.mjs')
+    component: () => import('./_...slug_-BU-MNqGg.mjs')
   },
   {
     name: "user-plugins-slug___en",
     path: "/user/plugins/:slug(.*)*",
-    component: () => import('./_...slug_-BwJVkXKj.mjs')
+    component: () => import('./_...slug_-BpGpUIKP.mjs')
   },
   {
     name: "user-plugins-slug___zh___default",
     path: "/user/plugins/:slug(.*)*",
-    component: () => import('./_...slug_-BwJVkXKj.mjs')
+    component: () => import('./_...slug_-BpGpUIKP.mjs')
   },
   {
     name: "user-plugins-slug___zh",
     path: "/zh/user/plugins/:slug(.*)*",
-    component: () => import('./_...slug_-BwJVkXKj.mjs')
+    component: () => import('./_...slug_-BpGpUIKP.mjs')
   },
   {
     name: "user-plugins-slug___zh-HK___default",
     path: "/user/plugins/:slug(.*)*",
-    component: () => import('./_...slug_-BwJVkXKj.mjs')
+    component: () => import('./_...slug_-BpGpUIKP.mjs')
   },
   {
     name: "user-plugins-slug___zh-HK",
     path: "/zh-HK/user/plugins/:slug(.*)*",
-    component: () => import('./_...slug_-BwJVkXKj.mjs')
+    component: () => import('./_...slug_-BpGpUIKP.mjs')
   },
   {
     name: "user-plugins-slug___ru___default",
     path: "/user/plugins/:slug(.*)*",
-    component: () => import('./_...slug_-BwJVkXKj.mjs')
+    component: () => import('./_...slug_-BpGpUIKP.mjs')
   },
   {
     name: "user-plugins-slug___ru",
     path: "/ru/user/plugins/:slug(.*)*",
-    component: () => import('./_...slug_-BwJVkXKj.mjs')
+    component: () => import('./_...slug_-BpGpUIKP.mjs')
   },
   {
     name: "admin-cards",
     path: "/admin/cards",
-    component: () => import('./cards-CHs5DQHB.mjs')
+    component: () => import('./cards-DwtoKD2G.mjs')
   },
   {
     name: "admin-comments",
     path: "/admin/comments",
     meta: __nuxt_page_meta$i || {},
-    component: () => import('./comments-CY3ZWWNJ.mjs')
+    component: () => import('./comments-BnkvoLU8.mjs')
   },
   {
     name: "admin-customers",
     path: "/admin/customers",
     meta: __nuxt_page_meta$h || {},
-    component: () => import('./customers-3MEUvv8B.mjs')
+    component: () => import('./customers-CZvQBgdy.mjs')
   },
   {
     name: "admin-dashboard",
     path: "/admin/dashboard",
     meta: __nuxt_page_meta$g || {},
-    component: () => import('./dashboard-DAZa1yUG.mjs')
+    component: () => import('./dashboard-CWD1Zehv.mjs')
   },
   {
     name: "admin-login",
     path: "/admin/login",
     meta: __nuxt_page_meta$f || {},
-    component: () => import('./login-D5FoxB97.mjs')
+    component: () => import('./login-Bvm1O1dR.mjs')
   },
   {
     name: "admin-logs",
     path: "/admin/logs",
     meta: __nuxt_page_meta$e || {},
-    component: () => import('./logs-BWkla0HM.mjs')
+    component: () => import('./logs-VItxBjl-.mjs')
   },
   {
     name: "admin-newsletter",
     path: "/admin/newsletter",
     meta: __nuxt_page_meta$d || {},
-    component: () => import('./newsletter-CSRalg8F.mjs')
+    component: () => import('./newsletter-BMyV117z.mjs')
   },
   {
     name: "admin-orders",
     path: "/admin/orders",
     meta: __nuxt_page_meta$c || {},
-    component: () => import('./orders-DjFH9yYa.mjs')
+    component: () => import('./orders-BNLZozmA.mjs')
   },
   {
     name: "admin-payments",
     path: "/admin/payments",
     meta: __nuxt_page_meta$b || {},
-    component: () => import('./payments-BOkOu6GM.mjs')
+    component: () => import('./payments-7JG2WaCS.mjs')
   },
   {
     name: "admin-posts",
     path: "/admin/posts",
     meta: __nuxt_page_meta$a || {},
-    component: () => import('./index-B5OFd3Qv.mjs')
+    component: () => import('./index-Dxt-71O4.mjs')
   },
   {
     name: "admin-products",
     path: "/admin/products",
     meta: __nuxt_page_meta$9 || {},
-    component: () => import('./index-DEI_5LqO.mjs')
+    component: () => import('./index-Co5pn8GP.mjs')
   },
   {
     name: "admin-profile",
     path: "/admin/profile",
     meta: __nuxt_page_meta$8 || {},
-    component: () => import('./profile-BrSPG7Wv.mjs')
+    component: () => import('./profile-FaWgz3fc.mjs')
   },
   {
     name: "admin-promo",
     path: "/admin/promo",
     meta: __nuxt_page_meta$7 || {},
-    component: () => import('./promo-suhsMMIt.mjs')
+    component: () => import('./promo-CvPI4qml.mjs')
   },
   {
     name: "admin-releases",
     path: "/admin/releases",
     meta: __nuxt_page_meta$6 || {},
-    component: () => import('./releases-DoIcG0gC.mjs')
+    component: () => import('./releases-CBY7o5Dx.mjs')
   },
   {
     name: "admin-settings",
     path: "/admin/settings",
     meta: __nuxt_page_meta$5 || {},
-    component: () => import('./index-CAE-YVtO.mjs')
+    component: () => import('./index-CTIv-yqg.mjs')
   },
   {
     name: "admin-setup",
     path: "/admin/setup",
     meta: __nuxt_page_meta$4 || {},
-    component: () => import('./setup-CoIEA2h3.mjs')
+    component: () => import('./setup-CzFoB53I.mjs')
   },
   {
     name: "admin-stats",
     path: "/admin/stats",
     meta: __nuxt_page_meta$3 || {},
-    component: () => import('./stats-Ch-nFqbL.mjs')
+    component: () => import('./stats-iW0gH3ZS.mjs')
   },
   {
     name: "admin-subscriptions",
     path: "/admin/subscriptions",
-    component: () => import('./subscriptions-DwOO5a4-.mjs')
+    component: () => import('./subscriptions-Lrs9-vll.mjs')
   },
   {
     name: "admin-tickets",
     path: "/admin/tickets",
     meta: __nuxt_page_meta$2 || {},
-    component: () => import('./tickets-C6Kllar9.mjs')
+    component: () => import('./tickets-_log7bZs.mjs')
   },
   {
     name: "admin-topups",
     path: "/admin/topups",
-    component: () => import('./topups-BID6NFJ-.mjs')
+    component: () => import('./topups-ChlK_BmH.mjs')
   },
   {
     name: "admin-visitors",
     path: "/admin/stats/visitors",
     meta: __nuxt_page_meta$1 || {},
     alias: ["/admin/visitors"],
-    component: () => import('./visitors-BHB0ZYNK.mjs')
+    component: () => import('./visitors-C0DsVCs4.mjs')
   },
   {
     name: "admin",
     path: "/admin",
     meta: __nuxt_page_meta || {},
-    component: () => import('./index-Da4lvA10.mjs')
+    component: () => import('./index-JCAbgN53.mjs')
   },
   {
     name: "slug___en",
     path: "/:slug(.*)*",
-    component: () => import('./_...slug_-YX0fu4b0.mjs')
+    component: () => import('./_...slug_-BazwDPIj.mjs')
   },
   {
     name: "slug___zh___default",
     path: "/:slug(.*)*",
-    component: () => import('./_...slug_-YX0fu4b0.mjs')
+    component: () => import('./_...slug_-BazwDPIj.mjs')
   },
   {
     name: "slug___zh",
     path: "/zh/:slug(.*)*",
-    component: () => import('./_...slug_-YX0fu4b0.mjs')
+    component: () => import('./_...slug_-BazwDPIj.mjs')
   },
   {
     name: "slug___zh-HK___default",
     path: "/:slug(.*)*",
-    component: () => import('./_...slug_-YX0fu4b0.mjs')
+    component: () => import('./_...slug_-BazwDPIj.mjs')
   },
   {
     name: "slug___zh-HK",
     path: "/zh-HK/:slug(.*)*",
-    component: () => import('./_...slug_-YX0fu4b0.mjs')
+    component: () => import('./_...slug_-BazwDPIj.mjs')
   },
   {
     name: "slug___ru___default",
     path: "/:slug(.*)*",
-    component: () => import('./_...slug_-YX0fu4b0.mjs')
+    component: () => import('./_...slug_-BazwDPIj.mjs')
   },
   {
     name: "slug___ru",
     path: "/ru/:slug(.*)*",
-    component: () => import('./_...slug_-YX0fu4b0.mjs')
+    component: () => import('./_...slug_-BazwDPIj.mjs')
   }
 ];
 const _wrapInTransition = (props, children) => {
@@ -5653,7 +5653,7 @@ const cfg0 = defineAppConfig({
   }
 });
 const inlineConfig = {
-  "appVersion": "1.2.43",
+  "appVersion": "1.2.44",
   "nuxt": {},
   "ui": {
     "colors": {
@@ -14652,72 +14652,72 @@ const localeCodes = [
 const localeLoaders = {
   en: [
     {
-      key: "locale_common_46json_2b4eb55b",
+      key: "locale_common_46json_fb750246",
       load: () => import(
         './common-CwWEomJY.mjs'
-        /* webpackChunkName: "locale_common_46json_2b4eb55b" */
+        /* webpackChunkName: "locale_common_46json_fb750246" */
       ),
       cache: true
     },
     {
-      key: "locale_site_46json_de3fce49",
+      key: "locale_site_46json_4892ef3d",
       load: () => import(
         './site-CotAxWow.mjs'
-        /* webpackChunkName: "locale_site_46json_de3fce49" */
+        /* webpackChunkName: "locale_site_46json_4892ef3d" */
       ),
       cache: true
     }
   ],
   zh: [
     {
-      key: "locale_common_46json_75bdd941",
+      key: "locale_common_46json_f01c0e3e",
       load: () => import(
         './common-BJmwMvwu.mjs'
-        /* webpackChunkName: "locale_common_46json_75bdd941" */
+        /* webpackChunkName: "locale_common_46json_f01c0e3e" */
       ),
       cache: true
     },
     {
-      key: "locale_site_46json_22d023cb",
+      key: "locale_site_46json_99598061",
       load: () => import(
         './site-sEvoiAml.mjs'
-        /* webpackChunkName: "locale_site_46json_22d023cb" */
+        /* webpackChunkName: "locale_site_46json_99598061" */
       ),
       cache: true
     }
   ],
   "zh-HK": [
     {
-      key: "locale_common_46json_725f9fde",
+      key: "locale_common_46json_ca74fa71",
       load: () => import(
         './common-C_WujmcQ.mjs'
-        /* webpackChunkName: "locale_common_46json_725f9fde" */
+        /* webpackChunkName: "locale_common_46json_ca74fa71" */
       ),
       cache: true
     },
     {
-      key: "locale_site_46json_bdb125db",
+      key: "locale_site_46json_38d982ed",
       load: () => import(
         './site-DmHw1A-e.mjs'
-        /* webpackChunkName: "locale_site_46json_bdb125db" */
+        /* webpackChunkName: "locale_site_46json_38d982ed" */
       ),
       cache: true
     }
   ],
   ru: [
     {
-      key: "locale_common_46json_7982f917",
+      key: "locale_common_46json_0503eae5",
       load: () => import(
         './common-pIje6pUq.mjs'
-        /* webpackChunkName: "locale_common_46json_7982f917" */
+        /* webpackChunkName: "locale_common_46json_0503eae5" */
       ),
       cache: true
     },
     {
-      key: "locale_site_46json_a5f9d6e7",
+      key: "locale_site_46json_68ecebe6",
       load: () => import(
         './site-BqcLZsE4.mjs'
-        /* webpackChunkName: "locale_site_46json_a5f9d6e7" */
+        /* webpackChunkName: "locale_site_46json_68ecebe6" */
       ),
       cache: true
     }
@@ -14730,11 +14730,11 @@ const normalizedLocales = [
     iso: "en-US",
     files: [
       {
-        path: "/private/var/folders/13/5t054pmd2bn5dkgqvfk2vct80000gn/T/opencode/saas-apay-ssr-20261114/locales/en/common.json",
+        path: "/private/var/folders/13/5t054pmd2bn5dkgqvfk2vct80000gn/T/opencode/shopark-site-1.2.44-apay/locales/en/common.json",
         cache: void 0
       },
       {
-        path: "/private/var/folders/13/5t054pmd2bn5dkgqvfk2vct80000gn/T/opencode/saas-apay-ssr-20261114/locales/en/site.json",
+        path: "/private/var/folders/13/5t054pmd2bn5dkgqvfk2vct80000gn/T/opencode/shopark-site-1.2.44-apay/locales/en/site.json",
         cache: void 0
       }
     ],
@@ -14753,11 +14753,11 @@ const normalizedLocales = [
     iso: "zh-CN",
     files: [
       {
-        path: "/private/var/folders/13/5t054pmd2bn5dkgqvfk2vct80000gn/T/opencode/saas-apay-ssr-20261114/locales/zh/common.json",
+        path: "/private/var/folders/13/5t054pmd2bn5dkgqvfk2vct80000gn/T/opencode/shopark-site-1.2.44-apay/locales/zh/common.json",
         cache: void 0
       },
       {
-        path: "/private/var/folders/13/5t054pmd2bn5dkgqvfk2vct80000gn/T/opencode/saas-apay-ssr-20261114/locales/zh/site.json",
+        path: "/private/var/folders/13/5t054pmd2bn5dkgqvfk2vct80000gn/T/opencode/shopark-site-1.2.44-apay/locales/zh/site.json",
         cache: void 0
       }
     ],
@@ -14776,11 +14776,11 @@ const normalizedLocales = [
     iso: "zh-HK",
     files: [
       {
-        path: "/private/var/folders/13/5t054pmd2bn5dkgqvfk2vct80000gn/T/opencode/saas-apay-ssr-20261114/locales/zh-HK/common.json",
+        path: "/private/var/folders/13/5t054pmd2bn5dkgqvfk2vct80000gn/T/opencode/shopark-site-1.2.44-apay/locales/zh-HK/common.json",
         cache: void 0
       },
       {
-        path: "/private/var/folders/13/5t054pmd2bn5dkgqvfk2vct80000gn/T/opencode/saas-apay-ssr-20261114/locales/zh-HK/site.json",
+        path: "/private/var/folders/13/5t054pmd2bn5dkgqvfk2vct80000gn/T/opencode/shopark-site-1.2.44-apay/locales/zh-HK/site.json",
         cache: void 0
       }
     ],
@@ -14797,11 +14797,11 @@ const normalizedLocales = [
     iso: "ru-RU",
     files: [
       {
-        path: "/private/var/folders/13/5t054pmd2bn5dkgqvfk2vct80000gn/T/opencode/saas-apay-ssr-20261114/locales/ru/common.json",
+        path: "/private/var/folders/13/5t054pmd2bn5dkgqvfk2vct80000gn/T/opencode/shopark-site-1.2.44-apay/locales/ru/common.json",
         cache: void 0
       },
       {
-        path: "/private/var/folders/13/5t054pmd2bn5dkgqvfk2vct80000gn/T/opencode/saas-apay-ssr-20261114/locales/ru/site.json",
+        path: "/private/var/folders/13/5t054pmd2bn5dkgqvfk2vct80000gn/T/opencode/shopark-site-1.2.44-apay/locales/ru/site.json",
         cache: void 0
       }
     ],
@@ -17526,7 +17526,7 @@ const _sfc_main$Q = /* @__PURE__ */ defineComponent({
       {
         key: "homepage-products"
       },
-      "$Fibvaa7yl1"
+      "$afAk6w4aYs"
       /* nuxt-injected */
     )), __temp = await __temp, __restore(), __temp);
     const products = computed(() => {
@@ -18964,7 +18964,7 @@ const _sfc_main$M = /* @__PURE__ */ defineComponent({
         lazy: true,
         query: { orderId }
       },
-      "$hS7YI3Wxyx"
+      "$GZ0xr599sN"
       /* nuxt-injected */
     )), __temp = await __temp, __restore(), __temp);
     const pending = computed(() => status.value === "pending");
@@ -19789,7 +19789,7 @@ const _sfc_main$L = /* @__PURE__ */ defineComponent({
       {
         query: { limit: 100 }
       },
-      "$MrvZR1Tq_Y"
+      "$0XrJ1P61eG"
       /* nuxt-injected */
     )), __temp = await __temp, __restore(), __temp);
     const plans = computed(() => {
@@ -21997,7 +21997,7 @@ const _sfc_main$E = /* @__PURE__ */ defineComponent({
           return data;
         }
       },
-      "$jHfg2tqCUs"
+      "$IO1nM_CSQH"
       /* nuxt-injected */
     )), __temp = await __temp, __restore(), __temp);
     const { pending, requestFailed } = usePageResourceState(productData, status, error);
@@ -22398,7 +22398,7 @@ const _sfc_main$D = /* @__PURE__ */ defineComponent({
     const { getLocalizedProduct } = useLocalizedProduct();
     const { data: productsData, status } = ([__temp, __restore] = withAsyncContext(() => useFetch(
       "/api/products",
-      "$7XYrdQeeKC"
+      "$HyDyTV6dHc"
       /* nuxt-injected */
     )), __temp = await __temp, __restore(), __temp);
     const pending = computed(() => status.value === "pending");
@@ -22553,7 +22553,7 @@ const _sfc_main$C = /* @__PURE__ */ defineComponent({
       {
         query: inspectQuery
       },
-      "$rj1mnLciv0"
+      "$zE82EsJ8ES"
       /* nuxt-injected */
     )), __temp = await __temp, __restore(), __temp);
     const errorMessage = computed(() => {
@@ -22812,7 +22812,7 @@ const _sfc_main$B = /* @__PURE__ */ defineComponent({
           }
         }
       },
-      "$yE80yVBy0V"
+      "$JEiwHUC28P"
       /* nuxt-injected */
     )), __temp = await __temp, __restore(), __temp);
     const pending = computed(() => status.value === "pending");
@@ -23802,7 +23802,7 @@ const _sfc_main$z = /* @__PURE__ */ defineComponent({
           }
         }
       },
-      "$kpf9cXphFX"
+      "$74NGyTFv2V"
       /* nuxt-injected */
     )), __temp = await __temp, __restore(), __temp);
     const orders = computed(() => ordersData.value?.data || []);
@@ -26501,7 +26501,7 @@ const _sfc_main$v = /* @__PURE__ */ defineComponent({
           }
         }
       },
-      "$mXNvYt44jq"
+      "$9rMr6Y5ePj"
       /* nuxt-injected */
     )), __temp = await __temp, __restore(), __temp);
     const tokens = computed(() => tokensData.value?.data || []);
@@ -27245,7 +27245,7 @@ const corePageModules = Object.fromEntries(Object.entries(/* @__PURE__ */ Object
   "/core/pages/user/tokens/index.vue": __vite_glob_0_11
 })).map(([file, module]) => [file.replace("/", "../"), module]));
 const themePageModules = {
-  ...Object.fromEntries(Object.entries(/* @__PURE__ */ Object.assign({ "/themes/shopark/pages/about.vue": () => import('./about-CKuTAcRN.mjs'), "/themes/shopark/pages/apps/[slug].vue": () => import('./_slug_-D7ocCmti.mjs'), "/themes/shopark/pages/apps/index.vue": () => import('./index-C0nBI2jQ.mjs'), "/themes/shopark/pages/auth/forgot-password.vue": () => import('./forgot-password-u-4owuoK.mjs'), "/themes/shopark/pages/auth/login.vue": () => import('./login-BV3xs9yg.mjs'), "/themes/shopark/pages/auth/register.vue": () => import('./register-Cg36VXnH.mjs'), "/themes/shopark/pages/auth/reset-password.vue": () => import('./reset-password-wginjlig.mjs'), "/themes/shopark/pages/blog/[slug].vue": () => import('./_slug_-D9m6ijKL.mjs'), "/themes/shopark/pages/blog/index.vue": () => import('./index-CWjGOTR9.mjs'), "/themes/shopark/pages/cases/[slug].vue": () => import('./_slug_-BISxzf92.mjs'), "/themes/shopark/pages/cases/index.vue": () => import('./index-B2SClLgE.mjs'), "/themes/shopark/pages/changelog.vue": () => import('./changelog-22YR-4pc.mjs'), "/themes/shopark/pages/index.vue": () => import('./index-2e5WyRns.mjs'), "/themes/shopark/pages/page/about.vue": () => import('./about-C_HG94qt.mjs'), "/themes/shopark/pages/page/amazon-store.vue": () => import('./amazon-store-9GJBAOkx.mjs'), "/themes/shopark/pages/page/b2b-website.vue": () => import('./b2b-website-CGUSok6d.mjs'), "/themes/shopark/pages/page/b2c-store.vue": () => import('./b2c-store-B868rOEA.mjs'), "/themes/shopark/pages/page/cookies.vue": () => import('./cookies-Bm3PpReQ.mjs'), "/themes/shopark/pages/page/custom.vue": () => import('./custom-K73wB9kQ.mjs'), "/themes/shopark/pages/page/install.vue": () => import('./install-SL4EZp7s.mjs'), "/themes/shopark/pages/page/migration.vue": () => import('./migration-Dd_BTgBF.mjs'), "/themes/shopark/pages/page/pricing.vue": () => import('./pricing-Yaum_1jB.mjs'), "/themes/shopark/pages/page/privacy.vue": () => import('./privacy-Cgjf2U3d.mjs'), "/themes/shopark/pages/page/solutions.vue": () => import('./solutions-AtuTjEwU.mjs'), "/themes/shopark/pages/page/store-design.vue": () => import('./store-design-j8elJnAl.mjs'), "/themes/shopark/pages/page/terms.vue": () => import('./terms-Dh4TweeJ.mjs'), "/themes/shopark/pages/page/weidian.vue": () => import('./weidian-CF5meb_s.mjs'), "/themes/shopark/pages/page/wholesale.vue": () => import('./wholesale-DUqeSvxS.mjs'), "/themes/shopark/pages/pricing.vue": () => import('./pricing-BqrmQZoN.mjs'), "/themes/shopark/pages/solutions/[slug].vue": () => import('./_slug_-6YuheaQG.mjs'), "/themes/shopark/pages/solutions/index.vue": () => import('./index-gM2Tznd-.mjs'), "/themes/shopark/pages/themes/[slug].vue": () => import('./_slug_-dMWUMLoc.mjs'), "/themes/shopark/pages/themes/detail/[slug].vue": () => import('./_slug_-jf_CcNri.mjs'), "/themes/shopark/pages/themes/index.vue": () => import('./index-BIpJwXmC.mjs'), "/themes/shopark/pages/user/account.vue": () => import('./account-BJ7s6bw0.mjs'), "/themes/shopark/pages/user/assistant/components/AssistantPanel.vue": () => import('./AssistantPanel-n8H_qt5v.mjs'), "/themes/shopark/pages/user/assistant/index.vue": () => import('./index-x6JQnv7t.mjs'), "/themes/shopark/pages/user/dashboard.vue": () => import('./dashboard-DCagkSu7.mjs'), "/themes/shopark/pages/user/index.vue": () => import('./index-zlmUbVqh.mjs'), "/themes/shopark/pages/user/invoice/[order_id].vue": () => import('./_order_id_-DBtMbQVU.mjs'), "/themes/shopark/pages/user/layout.vue": () => import('./layout-DYczIzZe.mjs'), "/themes/shopark/pages/user/notifications.vue": () => import('./notifications-d8xeR9q5.mjs'), "/themes/shopark/pages/user/orders/[order_id].vue": () => import('./_order_id_-C-CnwjHV.mjs'), "/themes/shopark/pages/user/orders/index.vue": () => import('./index-CxAC6Ssg.mjs'), "/themes/shopark/pages/user/stores/index.vue": () => import('./index-bzq8WIt2.mjs'), "/themes/shopark/pages/user/subscription.vue": () => import('./subscription-CAkt26S2.mjs'), "/themes/shopark/pages/user/tickets.vue": () => import('./tickets-BvjXcdLB.mjs') })).map(([file, module]) => [file.replace("/", "../"), module]))
+  ...Object.fromEntries(Object.entries(/* @__PURE__ */ Object.assign({ "/themes/shopark/pages/about.vue": () => import('./about-ClYPL4aj.mjs'), "/themes/shopark/pages/apps/[slug].vue": () => import('./_slug_-DqH99ska.mjs'), "/themes/shopark/pages/apps/index.vue": () => import('./index-I2qwlta4.mjs'), "/themes/shopark/pages/auth/forgot-password.vue": () => import('./forgot-password-DOzP_FHf.mjs'), "/themes/shopark/pages/auth/login.vue": () => import('./login-CEPqrjy8.mjs'), "/themes/shopark/pages/auth/register.vue": () => import('./register-DtNxiOvq.mjs'), "/themes/shopark/pages/auth/reset-password.vue": () => import('./reset-password-CjQTLXRg.mjs'), "/themes/shopark/pages/blog/[slug].vue": () => import('./_slug_-EX1V2zpe.mjs'), "/themes/shopark/pages/blog/index.vue": () => import('./index-BTuzVVnK.mjs'), "/themes/shopark/pages/cases/[slug].vue": () => import('./_slug_-CDTP4GoG.mjs'), "/themes/shopark/pages/cases/index.vue": () => import('./index-gc8FjQ1W.mjs'), "/themes/shopark/pages/changelog.vue": () => import('./changelog-DkCVbj_q.mjs'), "/themes/shopark/pages/index.vue": () => import('./index-doFMWKsg.mjs'), "/themes/shopark/pages/page/about.vue": () => import('./about-BmyOZyt4.mjs'), "/themes/shopark/pages/page/amazon-store.vue": () => import('./amazon-store-CKWrrLJp.mjs'), "/themes/shopark/pages/page/b2b-website.vue": () => import('./b2b-website-Bmr97SZe.mjs'), "/themes/shopark/pages/page/b2c-store.vue": () => import('./b2c-store-cqP7Y1w7.mjs'), "/themes/shopark/pages/page/cookies.vue": () => import('./cookies-B9WotZX3.mjs'), "/themes/shopark/pages/page/custom.vue": () => import('./custom-BlCkiKhs.mjs'), "/themes/shopark/pages/page/install.vue": () => import('./install-DEg-BpJ-.mjs'), "/themes/shopark/pages/page/migration.vue": () => import('./migration-GGkqU0Xg.mjs'), "/themes/shopark/pages/page/pricing.vue": () => import('./pricing-CeAgjvas.mjs'), "/themes/shopark/pages/page/privacy.vue": () => import('./privacy-Bk6QcxH8.mjs'), "/themes/shopark/pages/page/solutions.vue": () => import('./solutions-CInmu4gR.mjs'), "/themes/shopark/pages/page/store-design.vue": () => import('./store-design-B1JspDwd.mjs'), "/themes/shopark/pages/page/terms.vue": () => import('./terms-C9zfepyQ.mjs'), "/themes/shopark/pages/page/weidian.vue": () => import('./weidian-Ctffaf4O.mjs'), "/themes/shopark/pages/page/wholesale.vue": () => import('./wholesale-CQDjgAvb.mjs'), "/themes/shopark/pages/pricing.vue": () => import('./pricing-Bs-z0v4j.mjs'), "/themes/shopark/pages/solutions/[slug].vue": () => import('./_slug_-OHxrkbuL.mjs'), "/themes/shopark/pages/solutions/index.vue": () => import('./index-CH39TOJE.mjs'), "/themes/shopark/pages/themes/[slug].vue": () => import('./_slug_-DudfUqiv.mjs'), "/themes/shopark/pages/themes/detail/[slug].vue": () => import('./_slug_-DEEoaGnJ.mjs'), "/themes/shopark/pages/themes/index.vue": () => import('./index-D5fS1e0Q.mjs'), "/themes/shopark/pages/user/account.vue": () => import('./account-CG_PbdDJ.mjs'), "/themes/shopark/pages/user/assistant/components/AssistantPanel.vue": () => import('./AssistantPanel-BAqAtvii.mjs'), "/themes/shopark/pages/user/assistant/index.vue": () => import('./index-D1l0vr8I.mjs'), "/themes/shopark/pages/user/dashboard.vue": () => import('./dashboard-BEOGfFBO.mjs'), "/themes/shopark/pages/user/index.vue": () => import('./index-BH5UdBie.mjs'), "/themes/shopark/pages/user/invoice/[order_id].vue": () => import('./_order_id_-CsVQJ8I4.mjs'), "/themes/shopark/pages/user/layout.vue": () => import('./layout-CzsYchJC.mjs'), "/themes/shopark/pages/user/notifications.vue": () => import('./notifications-3qtmsjof.mjs'), "/themes/shopark/pages/user/orders/[order_id].vue": () => import('./_order_id_-DTuNJYwn.mjs'), "/themes/shopark/pages/user/orders/index.vue": () => import('./index-ZPTO_L9k.mjs'), "/themes/shopark/pages/user/stores/index.vue": () => import('./index-B0h7et5n.mjs'), "/themes/shopark/pages/user/subscription.vue": () => import('./subscription-BAhucsnC.mjs'), "/themes/shopark/pages/user/tickets.vue": () => import('./tickets-Byn57dZD.mjs') })).map(([file, module]) => [file.replace("/", "../"), module]))
 };
 const themeAdminManifestModules = {
   ...Object.fromEntries(Object.entries(/* @__PURE__ */ Object.assign({
@@ -27253,7 +27253,7 @@ const themeAdminManifestModules = {
   })).map(([file, module]) => [file.replace("/", "../"), module]))
 };
 const themeAdminPageModules = {
-  ...Object.fromEntries(Object.entries(/* @__PURE__ */ Object.assign({ "/themes/shopark/admin/pages/cases.vue": () => import('./cases-DLvW1UUK.mjs') })).map(([file, module]) => [file.replace("/", "../"), module]))
+  ...Object.fromEntries(Object.entries(/* @__PURE__ */ Object.assign({ "/themes/shopark/admin/pages/cases.vue": () => import('./cases-C4H3JPbY.mjs') })).map(([file, module]) => [file.replace("/", "../"), module]))
 };
 const themeAdminLocaleEnModules = {
   ...Object.fromEntries(Object.entries(/* @__PURE__ */ Object.assign({})).map(([file, module]) => [file.replace("/", "../"), module]))
@@ -27262,7 +27262,7 @@ const themeAdminLocaleZhModules = {
   ...Object.fromEntries(Object.entries(/* @__PURE__ */ Object.assign({})).map(([file, module]) => [file.replace("/", "../"), module]))
 };
 const themeLayoutLoaders = {
-  "shopark": () => import('./default-nAu-ORmC.mjs')
+  "shopark": () => import('./default-B-EuX5TM.mjs')
 };
 const pageLayoutMeta = { "../core/pages/payment/[order_id].vue": { "layout": false }, "../core/pages/user/mcp-authorize/index.vue": { "directoryLayout": false } };
 const useActiveTheme = (options = {}) => {
@@ -28826,7 +28826,7 @@ const _sfc_main$s = /* @__PURE__ */ defineComponent({
   __ssrInlineRender: true,
   async setup(__props) {
     let __temp, __restore;
-    const RichEditor = defineAsyncComponent(() => import('./RichEditor-DwUw0XmI.mjs'));
+    const RichEditor = defineAsyncComponent(() => import('./RichEditor-BrWib8iy.mjs'));
     const copyItem = (item) => ({
       id: item?.id || "",
       name: item?.name || "",
@@ -29059,7 +29059,7 @@ const _sfc_main$s = /* @__PURE__ */ defineComponent({
         query: { page, pageSize: pageSize2, keyword, status },
         watch: [page]
       },
-      "$WS6BTJPZ43"
+      "$vUHXwuLAs7"
       /* nuxt-injected */
     )), __temp = await __temp, __restore(), __temp);
     const rows = computed(() => data.value?.data || []);
@@ -31796,7 +31796,7 @@ const _sfc_main$p = /* @__PURE__ */ defineComponent({
           errorMsg.value = "";
         }
       },
-      "$0PoZeXCdqh"
+      "$9io3-roZQ-"
       /* nuxt-injected */
     )), __temp = await __temp, __restore(), __temp);
     const apps = computed(() => telemetry.value?.apps || []);
@@ -32975,7 +32975,7 @@ const _sfc_main$k = /* @__PURE__ */ defineComponent({
     const canEdit = computed(() => hasPerm(`plugin:shopark:${props.kind}:edit`));
     const { data: response, pending, error, refresh } = ([__temp, __restore] = withAsyncContext(() => useFetch(
       `/api/admin/plugins/shopark/${props.kind}/list`,
-      "$GdusQj2b0s"
+      "$Adb88RB-QG"
       /* nuxt-injected */
     )), __temp = await __temp, __restore(), __temp);
     const keyword = ref("");
@@ -34033,13 +34033,13 @@ const _sfc_main$i = /* @__PURE__ */ defineComponent({
     const settingUpScheduler = ref(false);
     const { data: connectionRes, pending, error, refresh } = ([__temp, __restore] = withAsyncContext(() => useFetch(
       "/api/admin/plugins/shopark/connection/status",
-      "$l8ELWbyDyb"
+      "$VgUAhJwn7b"
       /* nuxt-injected */
     )), __temp = await __temp, __restore(), __temp);
     const connection = computed(() => connectionRes.value?.data);
     const { data: readinessRes, pending: readinessPending, error: readinessError, refresh: refreshReadiness } = ([__temp, __restore] = withAsyncContext(() => useFetch(
       "/api/admin/plugins/shopark/readiness/status",
-      "$pfr1RU_AE4"
+      "$EgSheMdAUw"
       /* nuxt-injected */
     )), __temp = await __temp, __restore(), __temp);
     const readiness = computed(() => readinessRes.value?.data);
@@ -36912,7 +36912,7 @@ const _sfc_main$f = /* @__PURE__ */ defineComponent({
           filter: customerFilter.value
         }))
       },
-      "$tM5ObxUnrI"
+      "$5Apsn1CyJR"
       /* nuxt-injected */
     )), __temp = await __temp, __restore(), __temp);
     const customerRows = computed(() => customersRes.value?.data?.list || []);
@@ -36946,7 +36946,7 @@ const _sfc_main$f = /* @__PURE__ */ defineComponent({
           status: selectedStatus.value === "all" ? "" : selectedStatus.value
         }))
       },
-      "$SVXwu4oP-D"
+      "$0VlBQHQdP1"
       /* nuxt-injected */
     )), __temp = await __temp, __restore(), __temp);
     const rows = computed(() => res.value?.data?.list || []);
@@ -39344,7 +39344,7 @@ const _sfc_main$e = /* @__PURE__ */ defineComponent({
     const canEdit = computed(() => hasPerm("plugin:shopark:settings:edit"));
     const { data: response, pending, error, refresh } = ([__temp, __restore] = withAsyncContext(() => useFetch(
       "/api/admin/plugins/shopark/settings/status",
-      "$iCLwDK5y2p"
+      "$u2EoBIp4Jg"
       /* nuxt-injected */
     )), __temp = await __temp, __restore(), __temp);
     const defaultTheme = ref("");
@@ -39903,7 +39903,7 @@ const _sfc_main$d = /* @__PURE__ */ defineComponent({
           currency: selectedCurrency.value === "all" ? void 0 : selectedCurrency.value
         }))
       },
-      "$_JE2pgsvZG"
+      "$1tF11lqJfm"
       /* nuxt-injected */
     )), __temp = await __temp, __restore(), __temp);
     const summary = computed(() => res.value?.data?.summary || {
@@ -41161,7 +41161,7 @@ const _sfc_main$b = /* @__PURE__ */ defineComponent({
   __ssrInlineRender: true,
   async setup(__props) {
     let __temp, __restore;
-    const RichEditor = defineAsyncComponent(() => import('./RichEditor-DwUw0XmI.mjs'));
+    const RichEditor = defineAsyncComponent(() => import('./RichEditor-BrWib8iy.mjs'));
     const copyItem = (item) => ({
       id: item?.id || "",
       name: item?.name || "",
@@ -41387,7 +41387,7 @@ const _sfc_main$b = /* @__PURE__ */ defineComponent({
         query: { page, pageSize: pageSize2, keyword, status },
         watch: [page]
       },
-      "$WBi2qQNCek"
+      "$GnAPdLV6yl"
       /* nuxt-injected */
     )), __temp = await __temp, __restore(), __temp);
     const rows = computed(() => data.value?.data || []);
@@ -44521,75 +44521,75 @@ const plugin_dP_mECzKwlA_DoTJBL3bXg77A8IRE1_F4emLd_05GJk = /* @__PURE__ */ defin
   // For type portability
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
 });
-const LazyLegalPage = defineAsyncComponent(() => import('./LegalPage-BbtkUs8j.mjs').then((r) => r["default"] || r.default || r));
-const LazyMarketingPage = defineAsyncComponent(() => import('./MarketingPage-FML1S8ew.mjs').then((r) => r["default"] || r.default || r));
-const LazyMarketplaceCard = defineAsyncComponent(() => import('./MarketplaceCard-DSXtI6zr.mjs').then((r) => r["default"] || r.default || r));
-const LazyMarketplaceDetail = defineAsyncComponent(() => import('./MarketplaceDetail-D73anF8o.mjs').then((r) => r["default"] || r.default || r));
+const LazyLegalPage = defineAsyncComponent(() => import('./LegalPage-3Rd9UCUR.mjs').then((r) => r["default"] || r.default || r));
+const LazyMarketingPage = defineAsyncComponent(() => import('./MarketingPage-OHc4iG80.mjs').then((r) => r["default"] || r.default || r));
+const LazyMarketplaceCard = defineAsyncComponent(() => import('./MarketplaceCard-D96uMgS0.mjs').then((r) => r["default"] || r.default || r));
+const LazyMarketplaceDetail = defineAsyncComponent(() => import('./MarketplaceDetail-RK8zYbaw.mjs').then((r) => r["default"] || r.default || r));
 const LazyMarketplaceHero = defineAsyncComponent(() => import('./MarketplaceHero-BRZ-crkT.mjs').then((r) => r["default"] || r.default || r));
-const LazyMarketplaceList = defineAsyncComponent(() => import('./MarketplaceList-BHWQeoQC.mjs').then((r) => r["default"] || r.default || r));
+const LazyMarketplaceList = defineAsyncComponent(() => import('./MarketplaceList-CYzSexPE.mjs').then((r) => r["default"] || r.default || r));
 const LazyMarketplaceVisual = defineAsyncComponent(() => import('./MarketplaceVisual-DI-8P_MU.mjs').then((r) => r["default"] || r.default || r));
-const LazyPageCta = defineAsyncComponent(() => import('./PageCta-DWsfB55q.mjs').then((r) => r["default"] || r.default || r));
+const LazyPageCta = defineAsyncComponent(() => import('./PageCta-Dhlr1TPC.mjs').then((r) => r["default"] || r.default || r));
 const LazySectionHeading = defineAsyncComponent(() => import('./SectionHeading-BJpRVepO.mjs').then((r) => r["default"] || r.default || r));
-const LazyShoparkAuthShell = defineAsyncComponent(() => import('./ShoparkAuthShell-CVMQAPMX.mjs').then((r) => r["default"] || r.default || r));
+const LazyShoparkAuthShell = defineAsyncComponent(() => import('./ShoparkAuthShell-C0RHIByj.mjs').then((r) => r["default"] || r.default || r));
 const LazyShoparkBindDialog = defineAsyncComponent(() => import('./ShoparkBindDialog-BUE_GVeB.mjs').then((n) => n.S).then((r) => r["default"] || r.default || r));
-const LazyShoparkCheckoutModal = defineAsyncComponent(() => import('./ShoparkCheckoutModal-DunX402p.mjs').then((r) => r["default"] || r.default || r));
+const LazyShoparkCheckoutModal = defineAsyncComponent(() => import('./ShoparkCheckoutModal-DIfjcxaq.mjs').then((r) => r["default"] || r.default || r));
 const LazyShoparkConsoleHeader = defineAsyncComponent(() => import('./ShoparkConsoleHeader-D-VQHPXh.mjs').then((r) => r["default"] || r.default || r));
-const LazyShoparkConsultDialog = defineAsyncComponent(() => import('./ShoparkConsultDialog-Fttsw0im.mjs').then((r) => r["default"] || r.default || r));
-const LazyShoparkLanguageSwitcher = defineAsyncComponent(() => import('./ShoparkLanguageSwitcher-DQibFsL7.mjs').then((r) => r["default"] || r.default || r));
-const LazyShoparkLaunchChat = defineAsyncComponent(() => import('./ShoparkLaunchChat-o4eSUIVq.mjs').then((r) => r["default"] || r.default || r));
-const LazyShoparkLeadForm = defineAsyncComponent(() => import('./ShoparkLeadForm-p5NtgS2D.mjs').then((r) => r["default"] || r.default || r));
-const LazyShoparkMcpElicitationCard = defineAsyncComponent(() => import('./ShoparkMcpElicitationCard-CUqvU70M.mjs').then((r) => r["default"] || r.default || r));
-const LazyShoparkOAuthButtons = defineAsyncComponent(() => import('./ShoparkOAuthButtons-DOmNuu6l.mjs').then((r) => r["default"] || r.default || r));
-const LazyShoparkPlanCards = defineAsyncComponent(() => import('./ShoparkPlanCards-6jrT2vPi.mjs').then((r) => r["default"] || r.default || r));
-const LazyShoparkSupportWidget = defineAsyncComponent(() => import('./ShoparkSupportWidget-VFIpJP9c.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseA = defineAsyncComponent(() => import('./A-hK-e05s5.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseAccordion = defineAsyncComponent(() => import('./Accordion-CpALh6jq.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseAccordionItem = defineAsyncComponent(() => import('./AccordionItem-BDdnu3T_.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseBadge = defineAsyncComponent(() => import('./Badge-ZLUSwiGb.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseBlockquote = defineAsyncComponent(() => import('./Blockquote-DobSdZOQ.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseCallout = defineAsyncComponent(() => import('./Callout-qxL2yfC4.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseCard = defineAsyncComponent(() => import('./Card-B6WjNAJv.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseCardGroup = defineAsyncComponent(() => import('./CardGroup-Bpl6E-nc.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseCode = defineAsyncComponent(() => import('./Code-FUCgip5y.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseCodeCollapse = defineAsyncComponent(() => import('./CodeCollapse-qAjIScgF.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseCodeGroup = defineAsyncComponent(() => import('./CodeGroup-D3oNStlI.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseCodeIcon = defineAsyncComponent(() => import('./CodeIcon-QeiEX6Au.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseCodePreview = defineAsyncComponent(() => import('./CodePreview-DmTHTB6L.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseCodeTree = defineAsyncComponent(() => import('./CodeTree-BA3ocNe_.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseCollapsible = defineAsyncComponent(() => import('./Collapsible-DBKTZIZ9.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseEm = defineAsyncComponent(() => import('./Em-CrqvK_Rj.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseField = defineAsyncComponent(() => import('./Field-D147VQXs.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseFieldGroup = defineAsyncComponent(() => import('./FieldGroup-njriK6TH.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseH1 = defineAsyncComponent(() => import('./H1-D7xPkLw4.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseH2 = defineAsyncComponent(() => import('./H2-CkMh7EEv.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseH3 = defineAsyncComponent(() => import('./H3-CcW4n1-7.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseH4 = defineAsyncComponent(() => import('./H4-D1TXx3Bu.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseHr = defineAsyncComponent(() => import('./Hr-BaR2pcec.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseIcon = defineAsyncComponent(() => import('./Icon-D6kWfXRd.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseImg = defineAsyncComponent(() => import('./Img-DZExyOoO.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseKbd = defineAsyncComponent(() => import('./Kbd-8EQsiuOh.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseLi = defineAsyncComponent(() => import('./Li-BVa6G04L.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseOl = defineAsyncComponent(() => import('./Ol-7ZjdV4Sy.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseP = defineAsyncComponent(() => import('./P-DUfBwa4E.mjs').then((r) => r["default"] || r.default || r));
-const LazyProsePre = defineAsyncComponent(() => import('./Pre-BdJS1Rj3.mjs').then((r) => r["default"] || r.default || r));
+const LazyShoparkConsultDialog = defineAsyncComponent(() => import('./ShoparkConsultDialog-CmJof9pq.mjs').then((r) => r["default"] || r.default || r));
+const LazyShoparkLanguageSwitcher = defineAsyncComponent(() => import('./ShoparkLanguageSwitcher-B5GQ0gZg.mjs').then((r) => r["default"] || r.default || r));
+const LazyShoparkLaunchChat = defineAsyncComponent(() => import('./ShoparkLaunchChat-vI43jyzU.mjs').then((r) => r["default"] || r.default || r));
+const LazyShoparkLeadForm = defineAsyncComponent(() => import('./ShoparkLeadForm-BuV34c6p.mjs').then((r) => r["default"] || r.default || r));
+const LazyShoparkMcpElicitationCard = defineAsyncComponent(() => import('./ShoparkMcpElicitationCard-DDhd78hC.mjs').then((r) => r["default"] || r.default || r));
+const LazyShoparkOAuthButtons = defineAsyncComponent(() => import('./ShoparkOAuthButtons-CyP_XCr2.mjs').then((r) => r["default"] || r.default || r));
+const LazyShoparkPlanCards = defineAsyncComponent(() => import('./ShoparkPlanCards-DKXiDKfm.mjs').then((r) => r["default"] || r.default || r));
+const LazyShoparkSupportWidget = defineAsyncComponent(() => import('./ShoparkSupportWidget-BwNe8ROZ.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseA = defineAsyncComponent(() => import('./A-DAqZt0wg.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseAccordion = defineAsyncComponent(() => import('./Accordion-BNpMiZxl.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseAccordionItem = defineAsyncComponent(() => import('./AccordionItem-D5ShLv_L.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseBadge = defineAsyncComponent(() => import('./Badge-BHJ5w80Y.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseBlockquote = defineAsyncComponent(() => import('./Blockquote-uNw2_0Iz.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseCallout = defineAsyncComponent(() => import('./Callout-DO7Ku5zw.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseCard = defineAsyncComponent(() => import('./Card-05pTF9uV.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseCardGroup = defineAsyncComponent(() => import('./CardGroup-rHu4PDaj.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseCode = defineAsyncComponent(() => import('./Code-DfMi6wM4.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseCodeCollapse = defineAsyncComponent(() => import('./CodeCollapse-5AgAcb0W.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseCodeGroup = defineAsyncComponent(() => import('./CodeGroup-Ck38JeD4.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseCodeIcon = defineAsyncComponent(() => import('./CodeIcon-pQAH2XEn.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseCodePreview = defineAsyncComponent(() => import('./CodePreview-Ea-c2dQz.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseCodeTree = defineAsyncComponent(() => import('./CodeTree-DhLwpSG6.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseCollapsible = defineAsyncComponent(() => import('./Collapsible-BSFRVlhY.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseEm = defineAsyncComponent(() => import('./Em-DrNpp7GL.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseField = defineAsyncComponent(() => import('./Field-C1Ywq-uS.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseFieldGroup = defineAsyncComponent(() => import('./FieldGroup-9N9lBYjn.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseH1 = defineAsyncComponent(() => import('./H1-DQ4ASxps.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseH2 = defineAsyncComponent(() => import('./H2-VfnEejJk.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseH3 = defineAsyncComponent(() => import('./H3-vkodzp1L.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseH4 = defineAsyncComponent(() => import('./H4-DZlQ05BY.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseHr = defineAsyncComponent(() => import('./Hr-D5jaTz6X.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseIcon = defineAsyncComponent(() => import('./Icon-BUlHOgdI.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseImg = defineAsyncComponent(() => import('./Img-Bd6qop0C.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseKbd = defineAsyncComponent(() => import('./Kbd-DHyY29db.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseLi = defineAsyncComponent(() => import('./Li-DuRrZXXq.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseOl = defineAsyncComponent(() => import('./Ol-BZFGMS6Q.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseP = defineAsyncComponent(() => import('./P-BhlT3gBT.mjs').then((r) => r["default"] || r.default || r));
+const LazyProsePre = defineAsyncComponent(() => import('./Pre-Covyih9B.mjs').then((r) => r["default"] || r.default || r));
 const LazyProseScript = defineAsyncComponent(() => import('./Script-Ci8HkPzG.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseSteps = defineAsyncComponent(() => import('./Steps-Uqaqxzh2.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseStrong = defineAsyncComponent(() => import('./Strong-CKXZYRj7.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseTable = defineAsyncComponent(() => import('./Table-BIB16SdN.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseTabs = defineAsyncComponent(() => import('./Tabs-Dp0iZuan.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseTabsItem = defineAsyncComponent(() => import('./TabsItem-D7uw84g8.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseTbody = defineAsyncComponent(() => import('./Tbody-CxpGsyQC.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseTd = defineAsyncComponent(() => import('./Td-D7CmzjAK.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseTh = defineAsyncComponent(() => import('./Th-KmbjZqGV.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseThead = defineAsyncComponent(() => import('./Thead-BQH7JFbq.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseTr = defineAsyncComponent(() => import('./Tr-CG7yCRNc.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseUl = defineAsyncComponent(() => import('./Ul-COjgHTZc.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseCaution = defineAsyncComponent(() => import('./Caution-Dfsp4vF3.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseNote = defineAsyncComponent(() => import('./Note-BJY0V4lz.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseTip = defineAsyncComponent(() => import('./Tip-Ik53GOoI.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseWarning = defineAsyncComponent(() => import('./Warning-Bz9VObmq.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseH5 = defineAsyncComponent(() => import('./ProseH5-DmVttXbO.mjs').then((r) => r["default"] || r.default || r));
-const LazyProseH6 = defineAsyncComponent(() => import('./ProseH6-BsSjpnY2.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseSteps = defineAsyncComponent(() => import('./Steps-CQqVU4Zr.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseStrong = defineAsyncComponent(() => import('./Strong-BZSw4POV.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseTable = defineAsyncComponent(() => import('./Table-B0NgQcAs.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseTabs = defineAsyncComponent(() => import('./Tabs-BVx0-mCo.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseTabsItem = defineAsyncComponent(() => import('./TabsItem-BcL3UJqo.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseTbody = defineAsyncComponent(() => import('./Tbody-NCUdBhTs.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseTd = defineAsyncComponent(() => import('./Td-BA8rdS4b.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseTh = defineAsyncComponent(() => import('./Th-B7Jn_SW-.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseThead = defineAsyncComponent(() => import('./Thead-JculTGiN.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseTr = defineAsyncComponent(() => import('./Tr-CVkFnlk_.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseUl = defineAsyncComponent(() => import('./Ul-EOS236sd.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseCaution = defineAsyncComponent(() => import('./Caution-DOS_f3OY.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseNote = defineAsyncComponent(() => import('./Note-Je2zE9qY.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseTip = defineAsyncComponent(() => import('./Tip-Dsrzq8q2.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseWarning = defineAsyncComponent(() => import('./Warning-C3AFIJ2h.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseH5 = defineAsyncComponent(() => import('./ProseH5-BuYrQK_a.mjs').then((r) => r["default"] || r.default || r));
+const LazyProseH6 = defineAsyncComponent(() => import('./ProseH6-mOR6GzWv.mjs').then((r) => r["default"] || r.default || r));
 const LazyIcon = defineAsyncComponent(() => Promise.resolve().then(() => index).then((r) => r["default"] || r.default || r));
 const lazyGlobalComponents = [
   ["LegalPage", LazyLegalPage],
@@ -48395,9 +48395,9 @@ const __nuxt_component_1 = defineComponent({
   }
 });
 const layouts = {
-  admin: defineAsyncComponent(() => import('./admin-CJT9v5B3.mjs').then((m) => m.default || m)),
-  default: defineAsyncComponent(() => import('./default-oHmekXiT.mjs').then((m) => m.default || m)),
-  empty: defineAsyncComponent(() => import('./empty-BxcA5-2k.mjs').then((m) => m.default || m))
+  admin: defineAsyncComponent(() => import('./admin-CC21aqS4.mjs').then((m) => m.default || m)),
+  default: defineAsyncComponent(() => import('./default-CeosK4z0.mjs').then((m) => m.default || m)),
+  empty: defineAsyncComponent(() => import('./empty-BQ_yTspb.mjs').then((m) => m.default || m))
 };
 const routeRulesMatcher = _routeRulesMatcher;
 const LayoutLoader = defineComponent({
