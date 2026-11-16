@@ -1,11 +1,10 @@
 import { eq } from 'drizzle-orm';
-import { bL as loadSchedulerJobs, bK as saveSchedulerJobs, b as db, q as products, fV as readShoparkPlanMeta, fW as pushShoparkLicense } from '../nitro/nitro.mjs';
+import { bU as loadSchedulerJobs, bT as saveSchedulerJobs, b as db, q as products, gn as readShoparkPlanMeta, go as pushShoparkLicense } from '../nitro/nitro.mjs';
 import 'node:crypto';
+import 'node:http2';
+import 'node:fs';
 import 'zod';
 import 'crypto';
-import 'fs';
-import 'path';
-import 'node:fs';
 import 'node:path';
 import '@nuxthub/blob';
 import 'node:http';
@@ -25,6 +24,8 @@ import 'drizzle-orm/mysql-core';
 import 'maxmind';
 import 'node:os';
 import 'node:fs/promises';
+import 'fs';
+import 'path';
 import 'node:url';
 import '@iconify/utils';
 import 'consola';
@@ -147,9 +148,9 @@ function userIdOf(input) {
 }
 async function registerThemeMcpTools() {
   const [{ registerMcpTool }, { getShoparkMcpTools }, { createDefaultAssistantDeps, executeAssistantTool }] = await Promise.all([
-    import('../nitro/nitro.mjs').then(function (n) { return n.gw; }),
-    import('../nitro/nitro.mjs').then(function (n) { return n.gy; }),
-    import('../nitro/nitro.mjs').then(function (n) { return n.gx; })
+    import('../nitro/nitro.mjs').then(function (n) { return n.g$; }),
+    import('../nitro/nitro.mjs').then(function (n) { return n.h1; }),
+    import('../nitro/nitro.mjs').then(function (n) { return n.h0; })
   ]);
   const deps = createDefaultAssistantDeps();
   for (const tool of getShoparkMcpTools()) {

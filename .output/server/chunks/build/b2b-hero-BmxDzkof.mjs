@@ -1,4 +1,4 @@
-import { fM as buildAssetsURL } from '../nitro/nitro.mjs';
+import { ge as buildAssetsURL } from '../nitro/nitro.mjs';
 
 const heroImg = "" + buildAssetsURL("b2b-hero.CmTPWUM3.png");
 

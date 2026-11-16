@@ -1,11 +1,10 @@
-import { d as defineEventHandler, aL as requireTrustedRequestOrigin, c as getRequestLocale, dL as requireUserSession, e as createError, b as db, v as users, dT as getEmailVerifySendCooldown, d5 as revokeEmailVerifyTokens, dU as issueEmailVerification, dV as EMAIL_VERIFY_SEND_COOLDOWN_SECONDS } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, aU as requireTrustedRequestOrigin, c as getRequestLocale, e7 as requireUserSession, e as createError, b as db, w as users, dM as isUserStatusActive, dN as createAccountUnavailableError, eg as getEmailVerifySendCooldown, dp as revokeEmailVerifyTokens, eh as issueEmailVerification, ei as EMAIL_VERIFY_SEND_COOLDOWN_SECONDS } from '../../../nitro/nitro.mjs';
 import { eq } from 'drizzle-orm';
 import 'node:crypto';
+import 'node:http2';
+import 'node:fs';
 import 'zod';
 import 'crypto';
-import 'fs';
-import 'path';
-import 'node:fs';
 import 'node:path';
 import '@nuxthub/blob';
 import 'node:http';
@@ -25,6 +24,8 @@ import 'drizzle-orm/mysql-core';
 import 'maxmind';
 import 'node:os';
 import 'node:fs/promises';
+import 'fs';
+import 'path';
 import 'node:url';
 import '@iconify/utils';
 import 'consola';
@@ -66,6 +67,9 @@ const resendVerification_post = defineEventHandler(async (event) => {
       statusCode: 404,
       message: messages.userNotFound
     });
+  }
+  if (!isUserStatusActive(userRecord.status)) {
+    throw createAccountUnavailableError(userRecord.status, locale, 403);
   }
   if (userRecord.emailVerifiedAt) {
     return {

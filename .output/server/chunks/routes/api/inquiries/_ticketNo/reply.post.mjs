@@ -1,11 +1,10 @@
-import { d as defineEventHandler, aj as resolveClientIp, ak as checkIpRateLimit, e as createError, f as getRouterParam, r as readBody, g as getQuery, y as normalizeTicketAttachments, b8 as getUserSession, b as db, u as tickets, x as ticketMessages } from '../../../../nitro/nitro.mjs';
+import { d as defineEventHandler, an as resolveClientIp, ao as checkIpRateLimit, e as createError, f as getRouterParam, r as readBody, g as getQuery, z as normalizeTicketAttachments, aP as getUserSession, b as db, v as tickets, y as ticketMessages, es as notifyCustomerMessage } from '../../../../nitro/nitro.mjs';
 import crypto from 'node:crypto';
 import { eq } from 'drizzle-orm';
+import 'node:http2';
+import 'node:fs';
 import 'zod';
 import 'crypto';
-import 'fs';
-import 'path';
-import 'node:fs';
 import 'node:path';
 import '@nuxthub/blob';
 import 'node:http';
@@ -25,6 +24,8 @@ import 'drizzle-orm/mysql-core';
 import 'maxmind';
 import 'node:os';
 import 'node:fs/promises';
+import 'fs';
+import 'path';
 import 'node:url';
 import '@iconify/utils';
 import 'consola';
@@ -103,6 +104,7 @@ const reply_post = defineEventHandler(async (event) => {
     lastRepliedBy: "user",
     updatedAt: /* @__PURE__ */ new Date()
   }).where(eq(tickets.id, ticket.id));
+  await notifyCustomerMessage(ticket.id, createdMessage.id);
   return {
     code: 200,
     message: "\u56DE\u590D\u6210\u529F",

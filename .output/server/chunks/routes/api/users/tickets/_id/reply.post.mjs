@@ -1,11 +1,10 @@
-import { d as defineEventHandler, b8 as getUserSession, e as createError, f as getRouterParam, u as tickets, b as db, r as readBody, y as normalizeTicketAttachments, x as ticketMessages } from '../../../../../nitro/nitro.mjs';
+import { d as defineEventHandler, aP as getUserSession, e as createError, f as getRouterParam, v as tickets, b as db, r as readBody, z as normalizeTicketAttachments, y as ticketMessages, es as notifyCustomerMessage } from '../../../../../nitro/nitro.mjs';
 import { or, eq, and } from 'drizzle-orm';
 import 'node:crypto';
+import 'node:http2';
+import 'node:fs';
 import 'zod';
 import 'crypto';
-import 'fs';
-import 'path';
-import 'node:fs';
 import 'node:path';
 import '@nuxthub/blob';
 import 'node:http';
@@ -25,6 +24,8 @@ import 'drizzle-orm/mysql-core';
 import 'maxmind';
 import 'node:os';
 import 'node:fs/promises';
+import 'fs';
+import 'path';
 import 'node:url';
 import '@iconify/utils';
 import 'consola';
@@ -77,6 +78,7 @@ const reply_post = defineEventHandler(async (event) => {
     lastRepliedBy: "user",
     updatedAt: /* @__PURE__ */ new Date()
   }).where(eq(tickets.id, ticketId));
+  await notifyCustomerMessage(ticketId, createdMessage.id);
   return {
     code: 200,
     message: "\u56DE\u590D\u6210\u529F",

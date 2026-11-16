@@ -1,11 +1,10 @@
-import { d as defineEventHandler, b8 as getUserSession, e as createError, g as getQuery, u as tickets, b as db } from '../../../nitro/nitro.mjs';
-import { or, eq, and, count, desc } from 'drizzle-orm';
+import { d as defineEventHandler, c as getRequestLocale, aP as getUserSession, b as db, q as products, U as subscriptions } from '../../../nitro/nitro.mjs';
+import { eq, and, or, isNull, gt, desc } from 'drizzle-orm';
 import 'node:crypto';
+import 'node:http2';
+import 'node:fs';
 import 'zod';
 import 'crypto';
-import 'fs';
-import 'path';
-import 'node:fs';
 import 'node:path';
 import '@nuxthub/blob';
 import 'node:http';
@@ -25,6 +24,8 @@ import 'drizzle-orm/mysql-core';
 import 'maxmind';
 import 'node:os';
 import 'node:fs/promises';
+import 'fs';
+import 'path';
 import 'node:url';
 import '@iconify/utils';
 import 'consola';
@@ -32,43 +33,59 @@ import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
 
 const index_get = defineEventHandler(async (event) => {
-  var _a;
+  const locale = getRequestLocale(event);
   const session = await getUserSession(event).catch(() => null);
-  const user = session == null ? void 0 : session.user;
-  const userId = user == null ? void 0 : user.id;
-  const userEmail = (user == null ? void 0 : user.email) ? String(user.email).trim().toLowerCase() : "";
-  if (!userId) {
-    throw createError({ statusCode: 401, statusMessage: "Unauthorized" });
+  if (!(session == null ? void 0 : session.user)) {
+    return { data: null };
   }
-  const query = getQuery(event);
-  const page = Math.max(parseInt(query.page) || 1, 1);
-  const pageSize = Math.min(Math.max(parseInt(query.pageSize) || 15, 1), 50);
-  const offset = (page - 1) * pageSize;
-  const status = typeof query.status === "string" && query.status.trim() ? query.status.trim() : "";
-  const category = typeof query.category === "string" && query.category.trim() ? query.category.trim() : "";
-  const ownerCondition = userEmail ? or(eq(tickets.userId, userId), eq(tickets.contactEmail, userEmail)) : eq(tickets.userId, userId);
-  const conditions = [ownerCondition];
-  if (status) {
-    conditions.push(eq(tickets.status, status));
+  const userId = session.user.id;
+  const subRows = await db.select({
+    id: subscriptions.id,
+    status: subscriptions.status,
+    interval: subscriptions.interval,
+    intervalCount: subscriptions.intervalCount,
+    amount: subscriptions.amount,
+    currency: subscriptions.currency,
+    currentPeriodStart: subscriptions.currentPeriodStart,
+    currentPeriodEnd: subscriptions.currentPeriodEnd,
+    cancelAtPeriodEnd: subscriptions.cancelAtPeriodEnd,
+    createdAt: subscriptions.createdAt,
+    productId: products.id,
+    productName: products.name,
+    productSlug: products.slug,
+    productType: products.type,
+    productMetaData: products.metaData
+  }).from(subscriptions).leftJoin(products, eq(subscriptions.productId, products.id)).where(and(
+    eq(subscriptions.userId, userId),
+    eq(subscriptions.status, "active"),
+    or(isNull(subscriptions.currentPeriodEnd), gt(subscriptions.currentPeriodEnd, /* @__PURE__ */ new Date()))
+  )).orderBy(desc(subscriptions.currentPeriodEnd)).limit(1);
+  if (!subRows.length) {
+    return { data: null };
   }
-  if (category) {
-    conditions.push(eq(tickets.category, category));
+  const sub = subRows[0];
+  let productMeta = {};
+  if (sub.productMetaData) {
+    try {
+      productMeta = typeof sub.productMetaData === "string" ? JSON.parse(sub.productMetaData) : sub.productMetaData;
+    } catch {
+    }
   }
-  const whereClause = and(...conditions);
-  const [totalResult, list] = await Promise.all([
-    db.select({ total: count() }).from(tickets).where(whereClause),
-    db.select().from(tickets).where(whereClause).orderBy(desc(tickets.lastRepliedAt)).limit(pageSize).offset(offset)
-  ]);
-  const total = Number(((_a = totalResult[0]) == null ? void 0 : _a.total) || 0);
-  const safeList = list.map(({ accessToken: _omit, ...item }) => item);
   return {
-    code: 200,
-    data: safeList,
-    pagination: {
-      page,
-      pageSize,
-      total,
-      totalPages: Math.ceil(total / pageSize)
+    data: {
+      id: sub.id,
+      status: sub.status,
+      tier: productMeta.level || 0,
+      grantAmount: productMeta.grant_amount || 0,
+      planName: sub.productName || (locale === "zh" ? "\u672A\u77E5\u5957\u9910" : "Unknown"),
+      interval: sub.interval,
+      intervalCount: sub.intervalCount,
+      amount: sub.amount,
+      currency: sub.currency,
+      currentPeriodStart: sub.currentPeriodStart,
+      currentPeriodEnd: sub.currentPeriodEnd,
+      cancelAtPeriodEnd: sub.cancelAtPeriodEnd,
+      createdAt: sub.createdAt
     }
   };
 });

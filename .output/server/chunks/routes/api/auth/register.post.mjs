@@ -1,11 +1,10 @@
-import { d as defineEventHandler, dE as validateLoginAuthorization, aL as requireTrustedRequestOrigin, c as getRequestLocale, aj as resolveClientIp, ak as checkIpRateLimit, e as createError, r as readBody, dN as mergePromoTracking, dO as capturePromoTracking, dP as readPromoTracking, d2 as PASSWORD_MIN_LENGTH, d3 as validateEmail, b as db, v as users, l as hashPassword, aM as ensurePromoMember, dQ as bindInviteRelation, dR as requestPromoAgentJoin, aD as emitEvent, dS as promoAgentRelations, T as promoInviteRelations, b9 as promoMembers, dH as issueLoginSession, df as trackVisitorEvent, dI as ensureVisitorId, d0 as userTokens, d6 as EMAIL_VERIFY_TOKEN_NAME, ag as getLocalizedSettingValue, B as sendEmail } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, e0 as validateLoginAuthorization, aU as requireTrustedRequestOrigin, c as getRequestLocale, an as resolveClientIp, ao as checkIpRateLimit, e as createError, r as readBody, e9 as mergePromoTracking, ea as capturePromoTracking, eb as readPromoTracking, dk as PASSWORD_MIN_LENGTH, dm as validateEmail, b as db, w as users, dl as isUserStatusArchived, l as hashPassword, aV as ensurePromoMember, ec as bindInviteRelation, ed as requestPromoAgentJoin, aK as emitEvent, ee as promoAgentRelations, X as promoInviteRelations, bi as promoMembers, e3 as issueLoginSession, dC as trackVisitorEvent, e4 as ensureVisitorId, dg as userTokens, dq as EMAIL_VERIFY_TOKEN_NAME, ak as getLocalizedSettingValue, F as sendEmail, ef as ACCOUNT_ARCHIVED_CODE } from '../../../nitro/nitro.mjs';
 import { eq } from 'drizzle-orm';
 import 'node:crypto';
+import 'node:http2';
+import 'node:fs';
 import 'zod';
 import 'crypto';
-import 'fs';
-import 'path';
-import 'node:fs';
 import 'node:path';
 import '@nuxthub/blob';
 import 'node:http';
@@ -25,6 +24,8 @@ import 'drizzle-orm/mysql-core';
 import 'maxmind';
 import 'node:os';
 import 'node:fs/promises';
+import 'fs';
+import 'path';
 import 'node:url';
 import '@iconify/utils';
 import 'consola';
@@ -87,6 +88,14 @@ const register_post = defineEventHandler(async (event) => {
   const email = emailValidation.normalizedEmail;
   const existingUser = await db.select().from(users).where(eq(users.email, email)).limit(1);
   if (existingUser.length > 0) {
+    if (isUserStatusArchived(existingUser[0].status)) {
+      throw createError({
+        statusCode: 403,
+        statusMessage: ACCOUNT_ARCHIVED_CODE,
+        message: locale === "zh" ? "\u8BE5\u90AE\u7BB1\u5173\u8054\u7684\u8D26\u53F7\u5DF2\u6CE8\u9500\u5C01\u5B58\uFF0C\u4E0D\u53EF\u91CD\u65B0\u6CE8\u518C" : "This email belongs to a permanently archived account and cannot be re-registered",
+        data: { code: ACCOUNT_ARCHIVED_CODE }
+      });
+    }
     throw createError({
       statusCode: 409,
       message: messages.userExists

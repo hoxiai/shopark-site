@@ -1,11 +1,10 @@
-import { d as defineEventHandler, g as getQuery, A as getRequestURL, dy as sendRedirect, eh as normalizeMcpScopes, e as createError, ei as resolveAndValidateMcpClient, ej as isValidPkceCodeChallenge, b8 as getUserSession, ek as MCP_DEFAULT_SCOPES, el as MCP_SCOPE_DEFINITIONS, dL as requireUserSession, r as readBody, b as db, d0 as userTokens, d7 as MCP_OAUTH_CODE_TOKEN_NAME, em as createMcpAuthorizationCodeEnvelope, en as hashMcpOAuthSecret } from '../../../nitro/nitro.mjs';
-import { and, eq } from 'drizzle-orm';
+import { d as defineEventHandler, g as getQuery, E as getRequestURL, dW as sendRedirect, eI as normalizeMcpScopes, e as createError, eJ as resolveAndValidateMcpClient, eK as isValidPkceCodeChallenge, aP as getUserSession, eL as MCP_DEFAULT_SCOPES, eM as MCP_SCOPE_DEFINITIONS, e7 as requireUserSession, b as db, w as users, r as readBody, dg as userTokens, dr as MCP_OAUTH_CODE_TOKEN_NAME, eN as createMcpAuthorizationCodeEnvelope, eO as hashMcpOAuthSecret } from '../../../nitro/nitro.mjs';
+import { eq, and } from 'drizzle-orm';
 import 'node:crypto';
+import 'node:http2';
+import 'node:fs';
 import 'zod';
 import 'crypto';
-import 'fs';
-import 'path';
-import 'node:fs';
 import 'node:path';
 import '@nuxthub/blob';
 import 'node:http';
@@ -25,6 +24,8 @@ import 'drizzle-orm/mysql-core';
 import 'maxmind';
 import 'node:os';
 import 'node:fs/promises';
+import 'fs';
+import 'path';
 import 'node:url';
 import '@iconify/utils';
 import 'consola';
@@ -32,6 +33,7 @@ import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
 
 const authorize = defineEventHandler(async (event) => {
+  var _a;
   if (event.method === "GET") {
     const query = getQuery(event);
     const mode = String(query.mode || "").trim();
@@ -90,6 +92,13 @@ const authorize = defineEventHandler(async (event) => {
       throw createError({
         statusCode: 403,
         message: "Please use an owner web browser session to approve MCP authorization"
+      });
+    }
+    const userRows = await db.select({ status: users.status }).from(users).where(eq(users.id, userId)).limit(1);
+    if (!userRows[0] || Number((_a = userRows[0].status) != null ? _a : 1) !== 1) {
+      throw createError({
+        statusCode: 403,
+        message: "User account is unavailable"
       });
     }
     const body = await readBody(event).catch(() => ({}));

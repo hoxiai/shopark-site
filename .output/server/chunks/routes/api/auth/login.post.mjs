@@ -1,11 +1,10 @@
-import { d as defineEventHandler, c as getRequestLocale, dE as validateLoginAuthorization, aj as resolveClientIp, ak as checkIpRateLimit, e as createError, r as readBody, dF as getUserLoginSecurityState, am as consumeCaptchaTicket, b as db, v as users, an as verifyPassword, dG as clearUserLoginFailure, dH as issueLoginSession, df as trackVisitorEvent, dI as ensureVisitorId, dJ as recordUserLoginFailure } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, c as getRequestLocale, e0 as validateLoginAuthorization, an as resolveClientIp, ao as checkIpRateLimit, e as createError, r as readBody, e1 as getUserLoginSecurityState, aq as consumeCaptchaTicket, b as db, w as users, dM as isUserStatusActive, dN as createAccountUnavailableError, ar as verifyPassword, e2 as clearUserLoginFailure, e3 as issueLoginSession, dC as trackVisitorEvent, e4 as ensureVisitorId, e5 as recordUserLoginFailure } from '../../../nitro/nitro.mjs';
 import { eq } from 'drizzle-orm';
 import 'node:crypto';
+import 'node:http2';
+import 'node:fs';
 import 'zod';
 import 'crypto';
-import 'fs';
-import 'path';
-import 'node:fs';
 import 'node:path';
 import '@nuxthub/blob';
 import 'node:http';
@@ -25,6 +24,8 @@ import 'drizzle-orm/mysql-core';
 import 'maxmind';
 import 'node:os';
 import 'node:fs/promises';
+import 'fs';
+import 'path';
 import 'node:url';
 import '@iconify/utils';
 import 'consola';
@@ -112,6 +113,9 @@ const login_post = defineEventHandler(async (event) => {
   }
   const user = existingUsers[0];
   if (!user.passwordHash) {
+    if (!isUserStatusActive(user.status)) {
+      throw createAccountUnavailableError(user.status, locale, 403);
+    }
     throw createError({
       statusCode: 401,
       message: messages.thirdPartyLogin
@@ -120,6 +124,9 @@ const login_post = defineEventHandler(async (event) => {
   const isValid = await verifyPassword(user.passwordHash, password);
   if (!isValid) {
     handleAuthFailure(messages.invalidCredentials);
+  }
+  if (!isUserStatusActive(user.status)) {
+    throw createAccountUnavailableError(user.status, locale, 403);
   }
   clearUserLoginFailure(ip, email);
   const loginResult = await issueLoginSession(event, user, "password");

@@ -1,11 +1,10 @@
-import { d as defineEventHandler, c as getRequestLocale, f as getRouterParam, e as createError, b as db, cM as userWallets, v as users, q as products, I as orders, Q as subscriptions, c$ as oauthAccounts, d0 as userTokens, d1 as apiTokenScope, K as visitorProfiles, b9 as promoMembers, V as emailLogs, J as aggregateOrderAccountingTotals } from '../../../../nitro/nitro.mjs';
+import { d as defineEventHandler, c as getRequestLocale, f as getRouterParam, e as createError, b as db, cV as userWallets, w as users, q as products, M as orders, U as subscriptions, df as oauthAccounts, dg as userTokens, dh as apiTokenScope, O as visitorProfiles, bi as promoMembers, Z as emailLogs, di as accountDeletionRequests, N as aggregateOrderAccountingTotals, dj as formatDeletionRequestRow } from '../../../../nitro/nitro.mjs';
 import { sql, eq, desc } from 'drizzle-orm';
 import 'node:crypto';
+import 'node:http2';
+import 'node:fs';
 import 'zod';
 import 'crypto';
-import 'fs';
-import 'path';
-import 'node:fs';
 import 'node:path';
 import '@nuxthub/blob';
 import 'node:http';
@@ -25,6 +24,8 @@ import 'drizzle-orm/mysql-core';
 import 'maxmind';
 import 'node:os';
 import 'node:fs/promises';
+import 'fs';
+import 'path';
 import 'node:url';
 import '@iconify/utils';
 import 'consola';
@@ -70,7 +71,7 @@ const _id__get = defineEventHandler(async (event) => {
     }
     const BALANCE_SCALE = 1e8;
     const toDisplayBalance = (v) => Number(v || 0) / BALANCE_SCALE;
-    const [orderRows, subscriptionRows, oauthRows, tokenRows, profileRows, promoRows, emailLogRows] = await Promise.all([
+    const [orderRows, subscriptionRows, oauthRows, tokenRows, profileRows, promoRows, emailLogRows, deletionRequestRows] = await Promise.all([
       db.select({
         id: orders.id,
         amount: orders.amount,
@@ -125,7 +126,8 @@ const _id__get = defineEventHandler(async (event) => {
         agentCode: promoMembers.agentCode,
         joinedAt: promoMembers.joinedAt
       }).from(promoMembers).where(eq(promoMembers.userId, userId)).limit(1),
-      db.select().from(emailLogs).where(eq(emailLogs.to, user.email)).orderBy(desc(emailLogs.createdAt)).limit(30)
+      db.select().from(emailLogs).where(eq(emailLogs.to, user.email)).orderBy(desc(emailLogs.createdAt)).limit(30),
+      db.select().from(accountDeletionRequests).where(eq(accountDeletionRequests.userId, userId)).orderBy(desc(accountDeletionRequests.createdAt), desc(accountDeletionRequests.id)).limit(20).catch(() => [])
     ]);
     const typedOrderRows = orderRows;
     const totalSpentByCurrency = aggregateOrderAccountingTotals(
@@ -151,7 +153,8 @@ const _id__get = defineEventHandler(async (event) => {
       tokens: tokenRows,
       profile: profileRows[0] || null,
       promoMember: promoRows[0] || null,
-      emailLogs: emailLogRows || []
+      emailLogs: emailLogRows || [],
+      deletionRequests: (deletionRequestRows || []).map((row) => formatDeletionRequestRow(row)).filter(Boolean)
     };
   } catch (error) {
     throw createError({
