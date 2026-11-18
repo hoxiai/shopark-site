@@ -1,0 +1,1 @@
+import{c as a}from"./BVl4KGDd.js";import{x as l,a as e}from"./DYtdeWQg.js";const f=()=>{const{getSetting:r}=a(),t=e(()=>String(r("shopark_consult_url","mailto:support@shopark.ai"))),s=e(()=>/^https?:\/\//i.test(t.value)),o=l(!1),n=()=>{o.value=!0};return{consultUrl:t,isExternal:s,isOpen:o,open:n,onConsultClick:u=>{s.value||(u.preventDefault(),n())}}};export{f as u};
