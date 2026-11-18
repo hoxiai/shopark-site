@@ -1,4 +1,4 @@
-import { d as defineEventHandler, c as getRequestLocale, aP as getUserSession, b as db, q as products, U as subscriptions } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, c as getRequestLocale, aP as getUserSession, b as db, q as products, T as subscriptions } from '../../../nitro/nitro.mjs';
 import { eq, and, or, isNull, gt, desc } from 'drizzle-orm';
 import 'node:crypto';
 import 'node:http2';
@@ -33,10 +33,11 @@ import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
 
 const index_get = defineEventHandler(async (event) => {
+  var _a;
   const locale = getRequestLocale(event);
   const session = await getUserSession(event).catch(() => null);
   if (!(session == null ? void 0 : session.user)) {
-    return { data: null };
+    return { data: null, list: [] };
   }
   const userId = session.user.id;
   const subRows = await db.select({
@@ -50,6 +51,7 @@ const index_get = defineEventHandler(async (event) => {
     currentPeriodEnd: subscriptions.currentPeriodEnd,
     cancelAtPeriodEnd: subscriptions.cancelAtPeriodEnd,
     createdAt: subscriptions.createdAt,
+    metaData: subscriptions.metaData,
     productId: products.id,
     productName: products.name,
     productSlug: products.slug,
@@ -59,22 +61,29 @@ const index_get = defineEventHandler(async (event) => {
     eq(subscriptions.userId, userId),
     eq(subscriptions.status, "active"),
     or(isNull(subscriptions.currentPeriodEnd), gt(subscriptions.currentPeriodEnd, /* @__PURE__ */ new Date()))
-  )).orderBy(desc(subscriptions.currentPeriodEnd)).limit(1);
+  )).orderBy(desc(subscriptions.currentPeriodEnd)).limit(100);
   if (!subRows.length) {
-    return { data: null };
+    return { data: null, list: [] };
   }
-  const sub = subRows[0];
-  let productMeta = {};
-  if (sub.productMetaData) {
-    try {
-      productMeta = typeof sub.productMetaData === "string" ? JSON.parse(sub.productMetaData) : sub.productMetaData;
-    } catch {
+  const list = subRows.map((sub) => {
+    let productMeta = {};
+    if (sub.productMetaData) {
+      try {
+        productMeta = typeof sub.productMetaData === "string" ? JSON.parse(sub.productMetaData) : sub.productMetaData;
+      } catch {
+      }
     }
-  }
-  return {
-    data: {
+    let subMeta = {};
+    if (sub.metaData) {
+      try {
+        subMeta = typeof sub.metaData === "string" ? JSON.parse(sub.metaData) : sub.metaData;
+      } catch {
+      }
+    }
+    return {
       id: sub.id,
       status: sub.status,
+      productId: sub.productId,
       tier: productMeta.level || 0,
       grantAmount: productMeta.grant_amount || 0,
       planName: sub.productName || (locale === "zh" ? "\u672A\u77E5\u5957\u9910" : "Unknown"),
@@ -85,8 +94,13 @@ const index_get = defineEventHandler(async (event) => {
       currentPeriodStart: sub.currentPeriodStart,
       currentPeriodEnd: sub.currentPeriodEnd,
       cancelAtPeriodEnd: sub.cancelAtPeriodEnd,
-      createdAt: sub.createdAt
-    }
+      createdAt: sub.createdAt,
+      metaData: subMeta
+    };
+  });
+  return {
+    data: (_a = list[0]) != null ? _a : null,
+    list
   };
 });
 

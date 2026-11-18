@@ -1,4 +1,4 @@
-import { c as useSettings, u as useI18n, a as useToast, b as useAdminPermissions, I as useRoute, bb as runtimeExtensionSettingPrefixes, bc as runtimeExtensionSettingKeys, j as _sfc_main$10, d as _sfc_main$X, g as _sfc_main$D, k as _sfc_main$F, h as _sfc_main$E, C as _sfc_main$m, l as useFormatTime, _ as _sfc_main$R, p as _sfc_main$u, y as useFetch, f as _sfc_main$L, P as __nuxt_component_3$5, $ as useAppConfig, a0 as useComponentUI, ae as useForwardProps, a2 as reactivePick, a4 as tv, au as _sfc_main$_, X as Primitive } from './server.mjs';
+import { c as useSettings, u as useI18n, a as useToast, b as useAdminPermissions, I as useRoute, bb as runtimeExtensionSettingPrefixes, bc as runtimeExtensionSettingKeys, j as _sfc_main$10, d as _sfc_main$X, g as _sfc_main$D, k as _sfc_main$F, h as _sfc_main$E, C as _sfc_main$m, l as useFormatTime, _ as _sfc_main$R, p as _sfc_main$u, y as useFetch, f as _sfc_main$L, P as __nuxt_component_3$4, $ as useAppConfig, a0 as useComponentUI, ae as useForwardProps, a2 as reactivePick, a4 as tv, au as _sfc_main$_, X as Primitive } from './server.mjs';
 import { _ as __nuxt_component_2, i as isSettingsTabId } from './Nav-YmjC0jAx.mjs';
 import { _ as _sfc_main$c } from './Switch-ETpgSsyM.mjs';
 import { defineComponent, ref, watch, mergeProps, unref, withCtx, createTextVNode, toDisplayString, createVNode, computed, openBlock, createBlock, Fragment, renderList, withModifiers, createCommentVNode, reactive, watchEffect, isRef, useSlots, renderSlot, normalizeProps, guardReactiveProps, useSSRContext } from 'vue';
@@ -6,7 +6,7 @@ import { ssrRenderAttrs, ssrRenderComponent, ssrInterpolate, ssrRenderAttr, ssrR
 import { _ as _sfc_main$d } from './SelectMenu-BVPjZ0tH.mjs';
 import { useSortable } from '@vueuse/integrations/useSortable';
 import { _ as __nuxt_component_8$1 } from './FullScreenModal-DvBFPCeo.mjs';
-import { c5 as runtimeThemeSettingPrefixes, c7 as runtimeThemeSettingKeys } from '../nitro/nitro.mjs';
+import { c7 as runtimeThemeSettingPrefixes, c9 as runtimeThemeSettingKeys } from '../nitro/nitro.mjs';
 import 'vue-router';
 import '@iconify/vue';
 import '@iconify/utils/lib/css/icon';
@@ -5672,7 +5672,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
       const _component_UButton = _sfc_main$X;
       const _component_UIcon = _sfc_main$10;
       const _component_USwitch = _sfc_main$c;
-      const _component_NuxtLink = __nuxt_component_3$5;
+      const _component_NuxtLink = __nuxt_component_3$4;
       const _component_UModal = _sfc_main$L;
       const _component_UInput = _sfc_main$D;
       const _component_USelect = _sfc_main$u;

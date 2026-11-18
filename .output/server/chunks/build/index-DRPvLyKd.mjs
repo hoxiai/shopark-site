@@ -1,4 +1,4 @@
-import { u as useI18n, I as useRoute, r as useRouter, aN as useRequestURL, a as useToast, i as useConfirm, b as useAdminPermissions, G as useCurrencyFormat, c as useSettings, x as usePagination, y as useFetch, _ as _sfc_main$R, j as _sfc_main$10, d as _sfc_main$X, p as _sfc_main$u, g as _sfc_main$D, e as _sfc_main$s, P as __nuxt_component_3$5, z as _sfc_main$w, l as useFormatTime, f as _sfc_main$L, H as _sfc_main$q, h as _sfc_main$E, N as useExtensions } from './server.mjs';
+import { u as useI18n, I as useRoute, r as useRouter, aN as useRequestURL, a as useToast, i as useConfirm, b as useAdminPermissions, G as useCurrencyFormat, c as useSettings, x as usePagination, y as useFetch, _ as _sfc_main$R, j as _sfc_main$10, d as _sfc_main$X, p as _sfc_main$u, g as _sfc_main$D, e as _sfc_main$s, P as __nuxt_component_3$4, z as _sfc_main$w, l as useFormatTime, f as _sfc_main$L, H as _sfc_main$q, h as _sfc_main$E, N as useExtensions } from './server.mjs';
 import { _ as _sfc_main$3 } from './Tooltip-yfurJgpI.mjs';
 import { defineComponent, withAsyncContext, computed, ref, watch, mergeProps, withCtx, createTextVNode, toDisplayString, unref, createSlots, createVNode, openBlock, createBlock, createCommentVNode, withModifiers, isRef, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrInterpolate, ssrRenderComponent, ssrRenderList, ssrRenderClass, ssrRenderAttr } from 'vue/server-renderer';
@@ -705,7 +705,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
       const _component_UInput = _sfc_main$D;
       const _component_UButton = _sfc_main$X;
       const _component_UTable = _sfc_main$s;
-      const _component_NuxtLink = __nuxt_component_3$5;
+      const _component_NuxtLink = __nuxt_component_3$4;
       const _component_UBadge = _sfc_main$R;
       const _component_UPagination = _sfc_main$w;
       _push(`<div${ssrRenderAttrs(mergeProps({ class: "flex min-h-0 flex-1 flex-col" }, _attrs))}><div class="bg-white dark:bg-[#121214] border border-gray-200/70 dark:border-gray-800/60 rounded-2xl shadow-sm overflow-hidden flex flex-col flex-1 min-h-0"><div class="px-4 py-2.5 border-b border-gray-200/70 dark:border-gray-800/60 bg-gray-50/50 dark:bg-[#18181b]/30 flex flex-wrap items-center justify-between gap-2.5 shrink-0"><div class="flex items-center gap-2">`);
@@ -1400,7 +1400,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       const _component_UInput = _sfc_main$D;
       const _component_UTable = _sfc_main$s;
       const _component_UTooltip = _sfc_main$3;
-      const _component_NuxtLink = __nuxt_component_3$5;
+      const _component_NuxtLink = __nuxt_component_3$4;
       const _component_UPagination = _sfc_main$w;
       _push(`<div${ssrRenderAttrs(mergeProps({ class: "h-[calc(100vh-6.25rem)] flex flex-col gap-3" }, _attrs))}><div class="flex flex-wrap items-center justify-between gap-3 shrink-0"><div class="flex items-center gap-2.5 min-w-0"><h1 class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white tracking-tight truncate">${ssrInterpolate(activeTab.value === "cards" ? _ctx.$t("admin.cards.title", "\u5361\u5BC6\u5E93\u5B58") : activeTab.value === "subscriptions" ? _ctx.$t("admin.subscriptions.title", "\u8BA2\u9605\u7BA1\u7406") : _ctx.$t("admin.products.title", "\u4EA7\u54C1\u7BA1\u7406"))}</h1>`);
       if (activeTab.value === "products") {

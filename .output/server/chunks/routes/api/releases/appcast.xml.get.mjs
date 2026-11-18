@@ -1,4 +1,4 @@
-import { d as defineEventHandler, g as getQuery, bz as normalizeAppKey, bA as normalizeReleaseChannel, fv as normalizeReleaseLang, bK as getBundledReleasesForApp, fw as listReleases, bH as listReleaseApps, c9 as resolveServerSeoContext, E as getRequestURL, fx as buildSparkleAppcastXml, aO as setHeader } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, g as getQuery, bB as normalizeAppKey, bC as normalizeReleaseChannel, fC as normalizeReleaseLang, bM as getBundledReleasesForApp, fD as listReleases, bJ as listReleaseApps, cb as resolveServerSeoContext, E as getRequestURL, fE as buildSparkleAppcastXml, aO as setHeader } from '../../../nitro/nitro.mjs';
 import 'drizzle-orm';
 import 'node:crypto';
 import 'node:http2';

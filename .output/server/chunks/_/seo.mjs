@@ -1,4 +1,4 @@
-import { gp as defaultShoparkCases } from '../nitro/nitro.mjs';
+import { gx as defaultShoparkCases } from '../nitro/nitro.mjs';
 import 'drizzle-orm';
 import 'node:crypto';
 import 'node:http2';

@@ -1,4 +1,4 @@
-import { d as defineEventHandler, f as getRouterParam, dD as getPublishedAppBySlug, e as createError } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, f as getRouterParam, dH as getPublishedAppBySlug, e as createError } from '../../../nitro/nitro.mjs';
 import 'drizzle-orm';
 import 'node:crypto';
 import 'node:http2';

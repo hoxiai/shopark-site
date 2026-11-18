@@ -1,4 +1,4 @@
-import { u as useI18n, E as useLocaleRouter, l as useFormatTime, y as useFetch, bN as usePageResourceState, bO as useBlogPostingJsonLd, bq as useJsonLd, bm as useSeoMeta, P as __nuxt_component_3$5, j as _sfc_main$10, T as PageRequestError, bP as __nuxt_component_3$3 } from './server.mjs';
+import { u as useI18n, E as useLocaleRouter, l as useFormatTime, y as useFetch, bN as usePageResourceState, bO as useBlogPostingJsonLd, bq as useJsonLd, bm as useSeoMeta, P as __nuxt_component_3$4, j as _sfc_main$10, T as PageRequestError, bP as __nuxt_component_3$3 } from './server.mjs';
 import { defineComponent, withAsyncContext, computed, mergeProps, unref, withCtx, createVNode, createTextVNode, toDisplayString, toValue, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent, ssrInterpolate, ssrRenderList, ssrRenderAttr } from 'vue/server-renderer';
 import { useRoute } from 'vue-router';
@@ -199,7 +199,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     });
     return (_ctx, _push, _parent, _attrs) => {
       var _a;
-      const _component_NuxtLink = __nuxt_component_3$5;
+      const _component_NuxtLink = __nuxt_component_3$4;
       const _component_UIcon = _sfc_main$10;
       const _component_PageRequestError = PageRequestError;
       const _component_LikeButton = __nuxt_component_3$3;

@@ -1,4 +1,4 @@
-import { d as defineEventHandler, c$ as requireTicketReadAccess, f as getRouterParam, r as readBody, d0 as advanceTicketRead } from '../../../../../nitro/nitro.mjs';
+import { d as defineEventHandler, d2 as requireTicketReadAccess, f as getRouterParam, r as readBody, d3 as advanceTicketRead } from '../../../../../nitro/nitro.mjs';
 import 'drizzle-orm';
 import 'node:crypto';
 import 'node:http2';

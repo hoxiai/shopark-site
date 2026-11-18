@@ -1,4 +1,4 @@
-import { d as defineEventHandler, r as readBody, b as db, x as settings, s as setAuditMeta, bu as invalidatePublicSettingsCache } from '../../../../nitro/nitro.mjs';
+import { d as defineEventHandler, r as readBody, b as db, x as settings, s as setAuditMeta, bw as invalidatePublicSettingsCache } from '../../../../nitro/nitro.mjs';
 import { eq } from 'drizzle-orm';
 import 'node:crypto';
 import 'node:http2';

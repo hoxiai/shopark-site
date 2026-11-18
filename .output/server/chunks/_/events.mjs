@@ -1,5 +1,5 @@
 import { eq } from 'drizzle-orm';
-import { bU as loadSchedulerJobs, bT as saveSchedulerJobs, b as db, q as products, gn as readShoparkPlanMeta, go as pushShoparkLicense } from '../nitro/nitro.mjs';
+import { b as db, q as products, gu as readShoparkPlanMeta, gv as pushShoparkLicense, gw as ensureBlogSchedulerJob } from '../nitro/nitro.mjs';
 import 'node:crypto';
 import 'node:http2';
 import 'node:fs';
@@ -31,50 +31,6 @@ import '@iconify/utils';
 import 'consola';
 import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
-
-const BLOG_PLAN_PATH = "/api/shopark/cron/blog-plan";
-const BLOG_PUBLISH_PATH = "/api/shopark/cron/blog-publish";
-let registered = false;
-async function ensureBlogSchedulerJob() {
-  if (process.env.APAY_MIGRATE_ONLY === "1") return;
-  if (registered) return;
-  registered = true;
-  try {
-    const jobs = await loadSchedulerJobs();
-    let changed = false;
-    const ensure = (path, defaults) => {
-      const idx = jobs.findIndex((job) => job.path.split("?")[0] === path);
-      if (idx >= 0) {
-        const current = jobs[idx];
-        if (current.path !== path || current.method !== defaults.method) {
-          jobs[idx] = { ...current, path, method: defaults.method };
-          changed = true;
-        }
-        return;
-      }
-      jobs.push(defaults);
-      changed = true;
-    };
-    ensure(BLOG_PLAN_PATH, {
-      name: "shopark-blog-plan",
-      path: BLOG_PLAN_PATH,
-      method: "POST",
-      schedule: "daily",
-      enabled: true,
-      useCronSecret: true
-    });
-    ensure(BLOG_PUBLISH_PATH, {
-      name: "shopark-blog-publish",
-      path: BLOG_PUBLISH_PATH,
-      method: "POST",
-      schedule: "daily",
-      enabled: true,
-      useCronSecret: true
-    });
-    if (changed) await saveSchedulerJobs(jobs);
-  } catch {
-  }
-}
 
 function getThemeEventRules() {
   return [
@@ -148,9 +104,9 @@ function userIdOf(input) {
 }
 async function registerThemeMcpTools() {
   const [{ registerMcpTool }, { getShoparkMcpTools }, { createDefaultAssistantDeps, executeAssistantTool }] = await Promise.all([
-    import('../nitro/nitro.mjs').then(function (n) { return n.g$; }),
-    import('../nitro/nitro.mjs').then(function (n) { return n.h1; }),
-    import('../nitro/nitro.mjs').then(function (n) { return n.h0; })
+    import('../nitro/nitro.mjs').then(function (n) { return n.h7; }),
+    import('../nitro/nitro.mjs').then(function (n) { return n.h9; }),
+    import('../nitro/nitro.mjs').then(function (n) { return n.h8; })
   ]);
   const deps = createDefaultAssistantDeps();
   for (const tool of getShoparkMcpTools()) {

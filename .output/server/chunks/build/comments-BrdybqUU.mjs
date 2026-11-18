@@ -1,4 +1,4 @@
-import { a as useToast, i as useConfirm, b as useAdminPermissions, _ as _sfc_main$R, d as _sfc_main$X, j as _sfc_main$10, g as _sfc_main$D, p as _sfc_main$u, P as __nuxt_component_3$5, z as _sfc_main$w, f as _sfc_main$L, h as _sfc_main$E, C as _sfc_main$m } from './server.mjs';
+import { a as useToast, i as useConfirm, b as useAdminPermissions, _ as _sfc_main$R, d as _sfc_main$X, j as _sfc_main$10, g as _sfc_main$D, p as _sfc_main$u, P as __nuxt_component_3$4, z as _sfc_main$w, f as _sfc_main$L, h as _sfc_main$E, C as _sfc_main$m } from './server.mjs';
 import { _ as _sfc_main$1 } from './Switch-ETpgSsyM.mjs';
 import { defineComponent, ref, computed, mergeProps, withCtx, createTextVNode, toDisplayString, unref, openBlock, createBlock, createCommentVNode, createVNode, withDirectives, vModelRadio, Fragment, renderList, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent, ssrInterpolate, ssrRenderList, ssrRenderClass, ssrRenderAttr, ssrIncludeBooleanAttr, ssrLooseEqual } from 'vue/server-renderer';
@@ -556,7 +556,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       const _component_UIcon = _sfc_main$10;
       const _component_UInput = _sfc_main$D;
       const _component_USelect = _sfc_main$u;
-      const _component_NuxtLink = __nuxt_component_3$5;
+      const _component_NuxtLink = __nuxt_component_3$4;
       const _component_UPagination = _sfc_main$w;
       const _component_UModal = _sfc_main$L;
       const _component_USwitch = _sfc_main$1;

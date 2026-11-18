@@ -1,4 +1,4 @@
-import { d as defineEventHandler, g as getQuery, em as getRequestHeader, e as createError, ez as setResponseHeader, eG as resubscribeByToken, eH as unsubscribeByToken } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, g as getQuery, eq as getRequestHeader, e as createError, eD as setResponseHeader, eK as resubscribeByToken, eL as unsubscribeByToken } from '../../../nitro/nitro.mjs';
 import 'drizzle-orm';
 import 'node:crypto';
 import 'node:http2';

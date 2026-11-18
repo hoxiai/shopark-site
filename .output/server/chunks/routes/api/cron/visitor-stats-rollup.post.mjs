@@ -1,4 +1,4 @@
-import { d as defineEventHandler, c as getRequestLocale, d$ as useRuntimeConfig, cY as getHeader, dQ as logger, e as createError, P as getConfiguredTimezone, a9 as resolveRollupSiteHost, a7 as getRequestHost, eq as runVisitorRollupMaintenance } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, c as getRequestLocale, e3 as useRuntimeConfig, c$ as getHeader, dU as logger, e as createError, P as getConfiguredTimezone, a9 as resolveRollupSiteHost, S as getRequestHost, eu as runVisitorRollupMaintenance } from '../../../nitro/nitro.mjs';
 import 'drizzle-orm';
 import 'node:crypto';
 import 'node:http2';

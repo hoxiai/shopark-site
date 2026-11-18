@@ -1,4 +1,4 @@
-import { r as useRouter, u as useI18n, I as useRoute, y as useFetch, i as useConfirm, b as useAdminPermissions, d as _sfc_main$X, T as PageRequestError, Q as _export_sfc, a as useToast, j as _sfc_main$10, P as __nuxt_component_3$5, _ as _sfc_main$R, g as _sfc_main$D } from './server.mjs';
+import { r as useRouter, u as useI18n, I as useRoute, y as useFetch, i as useConfirm, b as useAdminPermissions, d as _sfc_main$X, T as PageRequestError, Q as _export_sfc, a as useToast, j as _sfc_main$10, P as __nuxt_component_3$4, _ as _sfc_main$R, g as _sfc_main$D } from './server.mjs';
 import { defineComponent, computed, ref, watch, mergeProps, unref, withCtx, createTextVNode, toDisplayString, isRef, createVNode, withModifiers, openBlock, createBlock, Fragment, createCommentVNode, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrInterpolate, ssrRenderList, ssrRenderClass, ssrRenderComponent, ssrRenderAttr, ssrRenderStyle } from 'vue/server-renderer';
 import { _ as _sfc_main$5 } from './Tooltip-yfurJgpI.mjs';
@@ -627,7 +627,7 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
     return (_ctx, _push, _parent, _attrs) => {
       var _a, _b, _c, _d;
       const _component_UIcon = _sfc_main$10;
-      const _component_NuxtLink = __nuxt_component_3$5;
+      const _component_NuxtLink = __nuxt_component_3$4;
       _push(`<div${ssrRenderAttrs(mergeProps({ class: "grid grid-cols-1 xl:grid-cols-[1.55fr_1fr] gap-5 mb-6" }, _attrs))} data-v-095fb394><div class="bg-white dark:bg-[#121214] rounded-2xl border border-gray-200/60 dark:border-gray-800/50 shadow-xs p-5 flex flex-col justify-between" data-v-095fb394><div data-v-095fb394><div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4" data-v-095fb394><div data-v-095fb394><div class="flex items-center gap-2" data-v-095fb394><h2 class="text-base font-bold text-gray-900 dark:text-white" data-v-095fb394>${ssrInterpolate(unref(t)("admin.stats.trafficTrend", "\u6D41\u91CF\u4E0E\u8BBF\u95EE\u8D8B\u52BF"))}</h2>`);
       if (isHourlyMode.value) {
         _push(`<span class="px-2 py-0.5 rounded-md bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 text-[10px] font-medium" data-v-095fb394> 24h \u5206\u65F6\u89C6\u56FE </span>`);
@@ -820,7 +820,7 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
       var _a, _b;
       const _component_UBadge = _sfc_main$R;
       const _component_UIcon = _sfc_main$10;
-      const _component_NuxtLink = __nuxt_component_3$5;
+      const _component_NuxtLink = __nuxt_component_3$4;
       _push(`<div${ssrRenderAttrs(mergeProps({ class: "grid grid-cols-1 xl:grid-cols-[1.25fr_1fr] gap-5 mb-6" }, _attrs))}><div class="bg-white dark:bg-[#121214] rounded-2xl border border-gray-200/60 dark:border-gray-800/50 shadow-xs p-5 flex flex-col justify-between"><div><div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4"><div><h2 class="text-base font-bold text-gray-900 dark:text-white">${ssrInterpolate(activeSourceTabTitle.value)}</h2><p class="text-xs text-gray-400 mt-0.5">${ssrInterpolate(activeSourceTabSubtitle.value)}</p></div><div class="flex items-center bg-gray-100 dark:bg-white/5 p-0.5 rounded-lg flex-wrap"><!--[-->`);
       ssrRenderList(sourceTabs.value, (tab) => {
         _push(`<button type="button" class="${ssrRenderClass([activeSourceTab.value === tab.value ? "bg-white dark:bg-[#1a1a1e] text-gray-900 dark:text-white shadow-xs" : "text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white", "px-2.5 py-1 rounded-md text-xs font-medium transition cursor-pointer"])}">${ssrInterpolate(tab.label)}</button>`);
@@ -1063,7 +1063,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
     });
     return (_ctx, _push, _parent, _attrs) => {
       const _component_UBadge = _sfc_main$R;
-      const _component_NuxtLink = __nuxt_component_3$5;
+      const _component_NuxtLink = __nuxt_component_3$4;
       const _component_UInput = _sfc_main$D;
       const _component_UButton = _sfc_main$X;
       _push(`<div${ssrRenderAttrs(mergeProps({ class: "grid grid-cols-1 xl:grid-cols-[1.25fr_1fr] gap-5" }, _attrs))}><div class="bg-white dark:bg-[#121214] rounded-2xl border border-gray-200/60 dark:border-gray-800/50 shadow-xs p-5 flex flex-col justify-between"><div><div class="flex items-center justify-between gap-2 mb-4"><div><h2 class="text-base font-bold text-gray-900 dark:text-white">${ssrInterpolate(unref(t)("admin.stats.regions", "\u56FD\u5BB6\u4E0E\u5730\u533A\u5206\u5E03"))}</h2><p class="text-xs text-gray-400 mt-0.5">${ssrInterpolate(unref(t)("admin.stats.regionsSubtitle", "\u5404\u56FD\u5BB6/\u5730\u533A\u8BBF\u5BA2\u5360\u6BD4\u3001AI \u641C\u7D22\u83B7\u5BA2\u4E0E\u4ED8\u8D39\u8F6C\u5316"))}</p></div>`);

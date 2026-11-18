@@ -1,6 +1,6 @@
 import process from 'node:process';globalThis._importMeta_=globalThis._importMeta_||{url:"file:///_entry.js",env:process.env};import * as vue from 'vue';
 import { useSlots, useId as useId$1, useAttrs, computed, unref, mergeProps, withCtx, openBlock, createBlock, createVNode, resolveDynamicComponent, renderSlot, createTextVNode, toDisplayString as toDisplayString$1, createCommentVNode, hasInjectionContext, inject, getCurrentInstance, ref, watch, nextTick, toValue, defineComponent, h, createElementBlock, Fragment, renderList, provide, customRef, shallowRef, toRefs, watchPostEffect, watchEffect, toRef as toRef$1, camelize as camelize$1, reactive, normalizeStyle, mergeDefaults, Teleport, useModel, mergeModels, markRaw, toHandlerKey, getCurrentScope, onScopeDispose, shallowReadonly, normalizeProps, guardReactiveProps, readonly, cloneVNode, toHandlers, isRef, useTemplateRef, withKeys, withModifiers, resolveComponent, Comment, withAsyncContext, onServerPrefetch, defineAsyncComponent, createSlots, resolveDirective, createElementVNode, effectScope, withDirectives, vModelCheckbox, useSSRContext, toRaw, shallowReactive, Suspense, createApp, Text, onErrorCaptured, isReadonly, isShallow, isReactive } from 'vue';
-import { gq as serialize, gr as createPricingContext, ey as setResponseStatus$1, gs as defu, E as getRequestURL, gt as isEqual$1, e as createError$1, gu as SEO_LOCALE_LANGUAGE, cc as normalizeGeoFaqs, fm as getRequestHeaders, gv as getErrorRequestId, gw as resolveActiveTheme, gx as upperFirst, f0 as quoteProductPrice, gy as defuFn, gz as REFUND_EFFECTS_COMPLETE, gA as htmlToCleanMarkdown, gB as appendResponseHeader, gC as parse$1, em as getRequestHeader, gD as errorRecord, gE as errorData, gF as resolveLocalizedSetting, gG as sanitizeStatusCode, gH as getContext, dV as setCookie, dS as getCookie, dT as deleteCookie, cb as normalizeGeoKeySpecs, cd as normalizeGeoRelatedLinks, gI as $fetch$1, gJ as baseURL, gK as hash, gL as createHooks, gM as executeAsync, gN as normalizeSiteOrigin, gO as stripLocalePrefix$1, cg as classifySeoRoute, ch as seoRouteRegistry, gP as localePathForSeo, gQ as isMarkdownMirrorPath, gR as safeJsonLd, gS as localeDomainUrl, gT as getRequestProtocol, gU as themeHostConfigs } from '../nitro/nitro.mjs';
+import { gy as serialize, gz as createPricingContext, eC as setResponseStatus$1, gA as defu, E as getRequestURL, gB as isEqual$1, e as createError$1, gC as SEO_LOCALE_LANGUAGE, ce as normalizeGeoFaqs, ft as getRequestHeaders, gD as getErrorRequestId, gE as resolveActiveTheme, gF as upperFirst, f4 as quoteProductPrice, gG as defuFn, gH as REFUND_EFFECTS_COMPLETE, gI as htmlToCleanMarkdown, gJ as appendResponseHeader, gK as parse$1, eq as getRequestHeader, gL as errorRecord, gM as errorData, gN as resolveLocalizedSetting, gO as sanitizeStatusCode, gP as getContext, dZ as setCookie, dW as getCookie, dX as deleteCookie, cd as normalizeGeoKeySpecs, cf as normalizeGeoRelatedLinks, gQ as $fetch$1, gR as baseURL, gS as hash, gT as createHooks, gU as executeAsync, gV as normalizeSiteOrigin, gW as stripLocalePrefix$1, ci as classifySeoRoute, cj as seoRouteRegistry, gX as localePathForSeo, gY as isMarkdownMirrorPath, gZ as safeJsonLd, g_ as localeDomainUrl, g$ as getRequestProtocol, h0 as themeHostConfigs } from '../nitro/nitro.mjs';
 import { useRoute as useRoute$1, useRouter as useRouter$1, RouterView, isNavigationFailure, createMemoryHistory, createRouter, START_LOCATION } from 'vue-router';
 import { Icon, getIcon, loadIcon as loadIcon$1, _api, addAPIProvider, setCustomIconsLoader } from '@iconify/vue';
 import { getIconCSS } from '@iconify/utils/lib/css/icon';
@@ -1030,7 +1030,7 @@ const _routes = [
     name: "admin-login",
     path: "/admin/login",
     meta: __nuxt_page_meta$f || {},
-    component: () => import('./login-DWG-b39u.mjs')
+    component: () => import('./login-Dt52dK7E.mjs')
   },
   {
     name: "admin-logs",
@@ -5654,7 +5654,7 @@ const cfg0 = defineAppConfig({
   }
 });
 const inlineConfig = {
-  "appVersion": "1.2.45",
+  "appVersion": "1.2.46",
   "nuxt": {},
   "ui": {
     "colors": {
@@ -13766,7 +13766,7 @@ function defineNuxtLink(options) {
     }
   });
 }
-const __nuxt_component_3$5 = /* @__PURE__ */ defineNuxtLink(nuxtLinkDefaults);
+const __nuxt_component_3$4 = /* @__PURE__ */ defineNuxtLink(nuxtLinkDefaults);
 function applyTrailingSlashBehavior(to, trailingSlash) {
   const normalizeFn = trailingSlash === "append" ? withTrailingSlash : withoutTrailingSlash;
   const hasProtocolDifferentFromHttp = hasProtocol(to) && !to.startsWith("http");
@@ -13944,7 +13944,7 @@ const _sfc_main$Y = /* @__PURE__ */ Object.assign({ inheritAttrs: false }, {
       return ui.value({ class: props.class, active, disabled: props.disabled });
     }
     return (_ctx, _push, _parent, _attrs) => {
-      const _component_NuxtLink = __nuxt_component_3$5;
+      const _component_NuxtLink = __nuxt_component_3$4;
       _push(ssrRenderComponent(_component_NuxtLink, mergeProps(unref(nuxtLinkProps), {
         to: to.value,
         custom: ""
@@ -16664,7 +16664,7 @@ _sfc_main$U.setup = (props, ctx) => {
   (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("components/ProductPrice.vue");
   return _sfc_setup$U ? _sfc_setup$U(props, ctx) : void 0;
 };
-const __nuxt_component_3$4 = Object.assign(_sfc_main$U, { __name: "ProductPrice" });
+const __nuxt_component_8 = Object.assign(_sfc_main$U, { __name: "ProductPrice" });
 const useLocalizedProduct = () => {
   const { locale } = useI18n();
   const getLocalizedProduct = (product) => {
@@ -16767,10 +16767,10 @@ const _sfc_main$T = /* @__PURE__ */ defineComponent({
     });
     return (_ctx, _push, _parent, _attrs) => {
       const _component_Icon = __nuxt_component_0$1;
-      const _component_NuxtLink = __nuxt_component_3$5;
+      const _component_NuxtLink = __nuxt_component_3$4;
       const _component_UButton = _sfc_main$X;
       const _component_UIcon = _sfc_main$10;
-      const _component_ProductPrice = __nuxt_component_3$4;
+      const _component_ProductPrice = __nuxt_component_8;
       const _directive_motion_fade_visible_once = resolveDirective("motion-fade-visible-once");
       const _directive_motion_slide_visible_once_bottom = resolveDirective("motion-slide-visible-once-bottom");
       _push(`<div${ssrRenderAttrs(mergeProps({ class: "bg-[#09090b]" }, _attrs))}><div class="relative overflow-hidden pt-32 pb-20 lg:pt-48 lg:pb-32"><div class="absolute inset-0 bg-[url(&#39;https://res.cloudinary.com/djp1xxy6f/image/upload/v1711626002/grid_y6fxgw.svg&#39;)] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div><div class="relative max-w-[1400px] w-full px-6 lg:px-12 mx-auto text-center"><div${ssrRenderAttrs(mergeProps({ class: "flex flex-col items-center text-center space-y-8 mb-24" }, ssrGetDirectiveProps(_ctx, _directive_motion_fade_visible_once)))}><div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-purple-500/30 bg-purple-500/10 text-xs font-medium text-purple-300">`);
@@ -18535,7 +18535,7 @@ const _sfc_main$P = /* @__PURE__ */ defineComponent({
     );
     return (_ctx, _push, _parent, _attrs) => {
       const _component_UIcon = _sfc_main$10;
-      const _component_NuxtLink = __nuxt_component_3$5;
+      const _component_NuxtLink = __nuxt_component_3$4;
       const _component_SiteLogo = __nuxt_component_1$1;
       const _component_UButton = _sfc_main$X;
       const _component_UBadge = _sfc_main$R;
@@ -19039,7 +19039,7 @@ const _sfc_main$O = /* @__PURE__ */ defineComponent({
     return (_ctx, _push, _parent, _attrs) => {
       const _component_UIcon = _sfc_main$10;
       const _component_Icon = __nuxt_component_0$1;
-      const _component_ProductPrice = __nuxt_component_3$4;
+      const _component_ProductPrice = __nuxt_component_8;
       const _component_UButton = _sfc_main$X;
       _push(`<div${ssrRenderAttrs(mergeProps({ class: "min-h-screen bg-[#09090b]" }, _attrs))}><div class="max-w-[1440px] mx-auto w-full"><div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16 overflow-hidden"><div class="absolute inset-0 pointer-events-none"><div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-purple-600/10 rounded-full blur-[120px] opacity-50"></div></div><div class="relative z-10 text-center mb-16"><h1 class="text-4xl md:text-5xl font-sans font-bold mb-4"><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">${ssrInterpolate(_ctx.$t("site.core.pricing.title"))}</span></h1><p class="text-gray-400 text-lg max-w-2xl mx-auto mt-6">${ssrInterpolate(_ctx.$t("site.core.pricing.subtitle"))}</p></div></div><div class="max-w-[1200px] mx-auto px-6 pb-32 relative z-10">`);
       if (unref(pending)) {
@@ -21274,7 +21274,7 @@ const _sfc_main$H = /* @__PURE__ */ defineComponent({
       const _component_LikeButton = __nuxt_component_3$3;
       const _component_PaymentModal = __nuxt_component_3$2;
       const _component_UButton = _sfc_main$X;
-      const _component_NuxtLink = __nuxt_component_3$5;
+      const _component_NuxtLink = __nuxt_component_3$4;
       const _component_Icon = __nuxt_component_0$1;
       const _component_PageRequestError = PageRequestError;
       const _directive_motion_fade_visible = resolveDirective("motion-fade-visible");
@@ -21646,8 +21646,8 @@ const _sfc_main$G = /* @__PURE__ */ defineComponent({
     });
     return (_ctx, _push, _parent, _attrs) => {
       const _component_UIcon = _sfc_main$10;
-      const _component_NuxtLink = __nuxt_component_3$5;
-      const _component_ProductPrice = __nuxt_component_3$4;
+      const _component_NuxtLink = __nuxt_component_3$4;
+      const _component_ProductPrice = __nuxt_component_8;
       const _directive_motion_fade_visible_once = resolveDirective("motion-fade-visible-once");
       const _directive_motion_slide_visible_once_bottom = resolveDirective("motion-slide-visible-once-bottom");
       _push(`<div${ssrRenderAttrs(mergeProps({ class: "min-h-screen bg-gray-50 dark:bg-[#09090b] pt-24 pb-16" }, _attrs))}><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div${ssrRenderAttrs(mergeProps({ class: "text-center max-w-3xl mx-auto mb-16" }, ssrGetDirectiveProps(_ctx, _directive_motion_fade_visible_once)))}><h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-4">${ssrInterpolate(_ctx.$t("site.products.title"))} <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">${ssrInterpolate(_ctx.$t("site.products.titleHighlight"))}</span></h1><p class="text-lg text-gray-600 dark:text-gray-400">${ssrInterpolate(_ctx.$t("site.products.titleTips"))}</p></div>`);
@@ -23766,7 +23766,7 @@ const _sfc_main$B = /* @__PURE__ */ defineComponent({
     watchEffect(() => {
     });
     return (_ctx, _push, _parent, _attrs) => {
-      const _component_NuxtLink = __nuxt_component_3$5;
+      const _component_NuxtLink = __nuxt_component_3$4;
       const _component_UButton = _sfc_main$X;
       const _component_UBadge = _sfc_main$R;
       const _component_AccountDeletionPanel = __nuxt_component_3$1;
@@ -25065,7 +25065,7 @@ const _sfc_main$x = /* @__PURE__ */ defineComponent({
       });
     };
     return (_ctx, _push, _parent, _attrs) => {
-      const _component_NuxtLink = __nuxt_component_3$5;
+      const _component_NuxtLink = __nuxt_component_3$4;
       const _component_UIcon = _sfc_main$10;
       const _component_UBadge = _sfc_main$R;
       const _component_UButton = _sfc_main$X;
@@ -28042,7 +28042,7 @@ const _sfc_main$t = /* @__PURE__ */ defineComponent({
       }
     };
     return (_ctx, _push, _parent, _attrs) => {
-      const _component_NuxtLink = __nuxt_component_3$5;
+      const _component_NuxtLink = __nuxt_component_3$4;
       const _component_UButton = _sfc_main$X;
       const _component_UIcon = _sfc_main$10;
       const _component_UBadge = _sfc_main$R;
@@ -28674,7 +28674,7 @@ const __vite_glob_0_12 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.de
   default: _sfc_main$t
 }, Symbol.toStringTag, { value: "Module" }));
 const name$3 = "ShopArk SaaS 管理";
-const pages = [{ "key": "cases", "title": "客户案例", "description": "管理官网展示的行业标杆案例、成效数据、行业分类与推荐排序。", "route": "/admin/extensions/cases", "component": "cases.vue", "icon": "ph:briefcase-bold", "order": 10 }];
+const pages = [{ "key": "cases", "title": "客户案例", "description": "管理官网展示的行业标杆案例、成效数据、行业分类与推荐排序。", "component": "cases.vue", "route": "/admin/extensions/cases", "icon": "ph:briefcase-bold", "order": 10 }, { "key": "blog", "title": "自动博客管线", "description": "管理官网四语种长尾博客自动生成开关、模型回退状态、选题队列与手动试跑。", "component": "blog.vue", "route": "/admin/extensions/blog", "icon": "ph:article-ny-times-bold", "order": 20 }];
 const __vite_glob_2_0 = {
   name: name$3,
   pages
@@ -28697,7 +28697,7 @@ const corePageModules = Object.fromEntries(Object.entries(/* @__PURE__ */ Object
   "/core/pages/user/tokens/index.vue": __vite_glob_0_12
 })).map(([file, module]) => [file.replace("/", "../"), module]));
 const themePageModules = {
-  ...Object.fromEntries(Object.entries(/* @__PURE__ */ Object.assign({ "/themes/shopark/pages/about.vue": () => import('./about-3C8hy3Rv.mjs'), "/themes/shopark/pages/apps/[slug].vue": () => import('./_slug_-qvCO1mV6.mjs'), "/themes/shopark/pages/apps/index.vue": () => import('./index-B5yD2q6O.mjs'), "/themes/shopark/pages/auth/forgot-password.vue": () => import('./forgot-password-CPVq2oDX.mjs'), "/themes/shopark/pages/auth/login.vue": () => import('./login-DL19rai6.mjs'), "/themes/shopark/pages/auth/register.vue": () => import('./register-CRhea3jw.mjs'), "/themes/shopark/pages/auth/reset-password.vue": () => import('./reset-password-B8SXY6vy.mjs'), "/themes/shopark/pages/blog/[slug].vue": () => import('./_slug_-Dem_f7NL.mjs'), "/themes/shopark/pages/blog/index.vue": () => import('./index-CUmXi9hO.mjs'), "/themes/shopark/pages/cases/[slug].vue": () => import('./_slug_-D3hfPBKq.mjs'), "/themes/shopark/pages/cases/index.vue": () => import('./index-C5pUqc3P.mjs'), "/themes/shopark/pages/changelog.vue": () => import('./changelog-D4Wmby7F.mjs'), "/themes/shopark/pages/index.vue": () => import('./index-BoT8ySt9.mjs'), "/themes/shopark/pages/page/about.vue": () => import('./about-e7WdzWC-.mjs'), "/themes/shopark/pages/page/amazon-store.vue": () => import('./amazon-store-UOBQsxeB.mjs'), "/themes/shopark/pages/page/b2b-website.vue": () => import('./b2b-website-Dqc0DOzl.mjs'), "/themes/shopark/pages/page/b2c-store.vue": () => import('./b2c-store-CLc9OLCX.mjs'), "/themes/shopark/pages/page/cookies.vue": () => import('./cookies-DSx0GIE4.mjs'), "/themes/shopark/pages/page/custom.vue": () => import('./custom-DBHbJD0l.mjs'), "/themes/shopark/pages/page/install.vue": () => import('./install-Ca-EYn4j.mjs'), "/themes/shopark/pages/page/migration.vue": () => import('./migration-BFnBICrB.mjs'), "/themes/shopark/pages/page/pricing.vue": () => import('./pricing-COC5oM45.mjs'), "/themes/shopark/pages/page/privacy.vue": () => import('./privacy-DmptfCF4.mjs'), "/themes/shopark/pages/page/solutions.vue": () => import('./solutions-CBMmmW4T.mjs'), "/themes/shopark/pages/page/store-design.vue": () => import('./store-design-DgR-xeRN.mjs'), "/themes/shopark/pages/page/terms.vue": () => import('./terms-Df99meBh.mjs'), "/themes/shopark/pages/page/weidian.vue": () => import('./weidian-DTyYjVKd.mjs'), "/themes/shopark/pages/page/wholesale.vue": () => import('./wholesale-BXw06HrC.mjs'), "/themes/shopark/pages/pricing.vue": () => import('./pricing-BLluSIEj.mjs'), "/themes/shopark/pages/solutions/[slug].vue": () => import('./_slug_-DBtkTpa-.mjs'), "/themes/shopark/pages/solutions/index.vue": () => import('./index-BPbQkogN.mjs'), "/themes/shopark/pages/themes/[slug].vue": () => import('./_slug_-Bjn63ptW.mjs'), "/themes/shopark/pages/themes/detail/[slug].vue": () => import('./_slug_-CGUppFoL.mjs'), "/themes/shopark/pages/themes/index.vue": () => import('./index-DSzz-Sqz.mjs'), "/themes/shopark/pages/user/account.vue": () => import('./account-HDdbYqMM.mjs'), "/themes/shopark/pages/user/assistant/components/AssistantPanel.vue": () => import('./AssistantPanel-Diw0XXHD.mjs'), "/themes/shopark/pages/user/assistant/index.vue": () => import('./index-DpxIURvq.mjs'), "/themes/shopark/pages/user/dashboard.vue": () => import('./dashboard-D8fK93PL.mjs'), "/themes/shopark/pages/user/index.vue": () => import('./index-TxHmLTzb.mjs'), "/themes/shopark/pages/user/invoice/[order_id].vue": () => import('./_order_id_-C2_5eg2d.mjs'), "/themes/shopark/pages/user/layout.vue": () => import('./layout-BY5brWGs.mjs'), "/themes/shopark/pages/user/notifications.vue": () => import('./notifications-iQNLF7i9.mjs'), "/themes/shopark/pages/user/orders/[order_id].vue": () => import('./_order_id_-Qf7uJLZr.mjs'), "/themes/shopark/pages/user/orders/index.vue": () => import('./index-CNmdUZnf.mjs'), "/themes/shopark/pages/user/stores/index.vue": () => import('./index-D448_QTD.mjs'), "/themes/shopark/pages/user/subscription.vue": () => import('./subscription-TWJ7COQ9.mjs'), "/themes/shopark/pages/user/tickets.vue": () => import('./tickets-LwgcDent.mjs') })).map(([file, module]) => [file.replace("/", "../"), module]))
+  ...Object.fromEntries(Object.entries(/* @__PURE__ */ Object.assign({ "/themes/shopark/pages/about.vue": () => import('./about-3C8hy3Rv.mjs'), "/themes/shopark/pages/apps/[slug].vue": () => import('./_slug_-qvCO1mV6.mjs'), "/themes/shopark/pages/apps/index.vue": () => import('./index-B5yD2q6O.mjs'), "/themes/shopark/pages/auth/forgot-password.vue": () => import('./forgot-password-br5tpKi-.mjs'), "/themes/shopark/pages/auth/login.vue": () => import('./login-C_SeuodM.mjs'), "/themes/shopark/pages/auth/register.vue": () => import('./register-BAN-6uy-.mjs'), "/themes/shopark/pages/auth/reset-password.vue": () => import('./reset-password-DQNNIEq6.mjs'), "/themes/shopark/pages/blog/[slug].vue": () => import('./_slug_-Dem_f7NL.mjs'), "/themes/shopark/pages/blog/index.vue": () => import('./index-CUmXi9hO.mjs'), "/themes/shopark/pages/cases/[slug].vue": () => import('./_slug_-Bom1jkTi.mjs'), "/themes/shopark/pages/cases/index.vue": () => import('./index-ClUW5YY0.mjs'), "/themes/shopark/pages/changelog.vue": () => import('./changelog-D4Wmby7F.mjs'), "/themes/shopark/pages/index.vue": () => import('./index-Cxn_vC4j.mjs'), "/themes/shopark/pages/page/about.vue": () => import('./about-4r71YyCb.mjs'), "/themes/shopark/pages/page/amazon-store.vue": () => import('./amazon-store-CfV5HRPK.mjs'), "/themes/shopark/pages/page/b2b-website.vue": () => import('./b2b-website-doeVby3Q.mjs'), "/themes/shopark/pages/page/b2c-store.vue": () => import('./b2c-store-DFdmwAR2.mjs'), "/themes/shopark/pages/page/cookies.vue": () => import('./cookies-DSx0GIE4.mjs'), "/themes/shopark/pages/page/custom.vue": () => import('./custom-D16yqeFI.mjs'), "/themes/shopark/pages/page/install.vue": () => import('./install-DMcdLVih.mjs'), "/themes/shopark/pages/page/migration.vue": () => import('./migration-BFxObeuD.mjs'), "/themes/shopark/pages/page/pricing.vue": () => import('./pricing-BqVspv55.mjs'), "/themes/shopark/pages/page/privacy.vue": () => import('./privacy-DmptfCF4.mjs'), "/themes/shopark/pages/page/solutions.vue": () => import('./solutions-CBMmmW4T.mjs'), "/themes/shopark/pages/page/store-design.vue": () => import('./store-design-CzYtDKHE.mjs'), "/themes/shopark/pages/page/terms.vue": () => import('./terms-Df99meBh.mjs'), "/themes/shopark/pages/page/weidian.vue": () => import('./weidian-DD5tkUHe.mjs'), "/themes/shopark/pages/page/wholesale.vue": () => import('./wholesale-CGOr0kn_.mjs'), "/themes/shopark/pages/pricing.vue": () => import('./pricing-BLluSIEj.mjs'), "/themes/shopark/pages/solutions/[slug].vue": () => import('./_slug_-DBtkTpa-.mjs'), "/themes/shopark/pages/solutions/index.vue": () => import('./index-r9nNSd2O.mjs'), "/themes/shopark/pages/themes/[slug].vue": () => import('./_slug_-Bjn63ptW.mjs'), "/themes/shopark/pages/themes/detail/[slug].vue": () => import('./_slug_-CGUppFoL.mjs'), "/themes/shopark/pages/themes/index.vue": () => import('./index-DSzz-Sqz.mjs'), "/themes/shopark/pages/user/account.vue": () => import('./account-9PwY6We8.mjs'), "/themes/shopark/pages/user/assistant/components/AssistantPanel.vue": () => import('./AssistantPanel-Diw0XXHD.mjs'), "/themes/shopark/pages/user/assistant/index.vue": () => import('./index-DpxIURvq.mjs'), "/themes/shopark/pages/user/dashboard.vue": () => import('./dashboard-BiZwAsUb.mjs'), "/themes/shopark/pages/user/index.vue": () => import('./index-TxHmLTzb.mjs'), "/themes/shopark/pages/user/invoice/[order_id].vue": () => import('./_order_id_-Dc-kVBXQ.mjs'), "/themes/shopark/pages/user/layout.vue": () => import('./layout-RB2dK9kI.mjs'), "/themes/shopark/pages/user/notifications.vue": () => import('./notifications-DKz8c6bA.mjs'), "/themes/shopark/pages/user/orders/[order_id].vue": () => import('./_order_id_-D6y9_la3.mjs'), "/themes/shopark/pages/user/orders/index.vue": () => import('./index-DZ3wyQ53.mjs'), "/themes/shopark/pages/user/stores/index.vue": () => import('./index-B-L6quNJ.mjs'), "/themes/shopark/pages/user/subscription.vue": () => import('./subscription-Knn7Fsy9.mjs'), "/themes/shopark/pages/user/tickets.vue": () => import('./tickets-DFfMQJ8i.mjs') })).map(([file, module]) => [file.replace("/", "../"), module]))
 };
 const themeAdminManifestModules = {
   ...Object.fromEntries(Object.entries(/* @__PURE__ */ Object.assign({
@@ -28705,7 +28705,7 @@ const themeAdminManifestModules = {
   })).map(([file, module]) => [file.replace("/", "../"), module]))
 };
 const themeAdminPageModules = {
-  ...Object.fromEntries(Object.entries(/* @__PURE__ */ Object.assign({ "/themes/shopark/admin/pages/cases.vue": () => import('./cases-CZk_EsEp.mjs') })).map(([file, module]) => [file.replace("/", "../"), module]))
+  ...Object.fromEntries(Object.entries(/* @__PURE__ */ Object.assign({ "/themes/shopark/admin/pages/blog.vue": () => import('./blog-C2VjjuGG.mjs'), "/themes/shopark/admin/pages/cases.vue": () => import('./cases-CZk_EsEp.mjs') })).map(([file, module]) => [file.replace("/", "../"), module]))
 };
 const themeAdminLocaleEnModules = {
   ...Object.fromEntries(Object.entries(/* @__PURE__ */ Object.assign({})).map(([file, module]) => [file.replace("/", "../"), module]))
@@ -28714,7 +28714,7 @@ const themeAdminLocaleZhModules = {
   ...Object.fromEntries(Object.entries(/* @__PURE__ */ Object.assign({})).map(([file, module]) => [file.replace("/", "../"), module]))
 };
 const themeLayoutLoaders = {
-  "shopark": () => import('./default-BZIeCW58.mjs')
+  "shopark": () => import('./default-CoHVLXPd.mjs')
 };
 const pageLayoutMeta = { "../core/pages/payment/[order_id].vue": { "layout": false }, "../core/pages/user/mcp-authorize/index.vue": { "directoryLayout": false } };
 const useActiveTheme = (options = {}) => {
@@ -34523,6 +34523,7 @@ const _sfc_main$i = /* @__PURE__ */ defineComponent({
         partner: { zh: "合作方接口连接", en: "Partner Connection" },
         cron: { zh: "权益补推定时任务", en: "Reconcile Scheduler" },
         expiry_cron: { zh: "到期提醒定时任务 (7天/1天邮件)", en: "Expiry Reminder Scheduler (7d/1d Email)" },
+        blog_cron: { zh: "官网四语种自动博客管线", en: "Multilingual Blog Auto-Publish Pipeline" },
         leads: { zh: "官网咨询线索配置", en: "Website Leads Inbox" },
         plans: { zh: "Shopark 定价套餐配置", en: "Pricing Plans Metadata" }
       };
@@ -34534,6 +34535,15 @@ const _sfc_main$i = /* @__PURE__ */ defineComponent({
       }
       if (check.reason === "job_missing") {
         return isZh.value ? "尚未配置定时任务（可点击右上角一键配置）" : "Cron job not configured (click Auto-Setup Cron Jobs above)";
+      }
+      if (check.reason === "job_host_missing") {
+        return isZh.value ? "多域名站点下定时任务缺少 Host 头，点击右上角「一键配置定时任务」即可自动补齐" : "Missing domain Host header for multi-domain scheduler; click Auto-Setup Cron Jobs to fix";
+      }
+      if (check.reason === "blog_ai_missing") {
+        return isZh.value ? "未检测到 AI 网关或密钥，请配置全局 AI 设置或前往「自动博客管线」填写" : "No AI credentials found; configure Global AI settings or Blog Pipeline settings";
+      }
+      if (check.reason === "last_run_failed") {
+        return isZh.value ? "最近一次定时调度执行失败，请检查下方 lastResult 详情" : "Last scheduled run failed; check lastResult details below";
       }
       if (check.reason === "ready") {
         return isZh.value ? "已就绪，等待下次调度触发" : "Configured and ready for next scheduled run";
@@ -35049,7 +35059,7 @@ const _sfc_main$h = /* @__PURE__ */ defineComponent({
       const _component_UBadge = _sfc_main$R;
       const _component_UInput = _sfc_main$D;
       const _component_USelect = _sfc_main$u;
-      const _component_NuxtLink = __nuxt_component_3$5;
+      const _component_NuxtLink = __nuxt_component_3$4;
       const _component_UIcon = _sfc_main$10;
       const _component_UModal = _sfc_main$L;
       const _component_UFormField = _sfc_main$F;
@@ -37100,7 +37110,7 @@ const _sfc_main$f = /* @__PURE__ */ defineComponent({
     const isZh = computed(() => String(locale.value || "").startsWith("zh"));
     const text2 = computed(() => isZh.value ? {
       title: "客户与订阅权益管理",
-      subtitle: "以客户为中心管理 Shopark 订阅套餐、人工开通/续期/取消、大客户开店配额覆写、7天到期预警与权益实时同步。",
+      subtitle: "以客户为中心管理 Shopark 订阅套餐、一店一订阅多席位开通/续期/取消、大客户开店配额覆写、7天到期预警与权益实时同步。",
       storesDashboard: "店铺与经营大盘",
       leadsDashboard: "官网咨询线索",
       connectionSettings: "服务连接与自检",
@@ -37138,6 +37148,7 @@ const _sfc_main$f = /* @__PURE__ */ defineComponent({
       userDisabled: "禁用",
       manualBadge: "人工开通",
       manualGranted: "后台人工授权",
+      seatsCountBadge: "{n} 个生效席位",
       customQuotaBadge: "自定义配额: {n} 店",
       customShort: "自定义",
       noShoparkMeta: "无 Shopark 套餐声明",
@@ -37152,7 +37163,7 @@ const _sfc_main$f = /* @__PURE__ */ defineComponent({
       expires: "到期",
       unpaidFallback: "未付费 (Free)",
       grantPlan: "手动开通",
-      renewOrReplacePlan: "续期 / 更换",
+      renewOrReplacePlan: "新增席位 / 续期",
       cancelNow: "立即取消",
       syncToShopark: "同步到 Shopark",
       customerDetail: "客户详情",
@@ -37181,31 +37192,34 @@ const _sfc_main$f = /* @__PURE__ */ defineComponent({
       validDaysLabel: "增加有效天数",
       daysUnit: "天",
       customStoreLimitLabel: "自定义可开店上限",
-      customStoreLimitDesc: "大客户专享配额（留空则按套餐默认店数）",
-      customStoreLimitModalHelp: "选填（1-10000）：为大客户单独指定可开店上限；留空则沿用套餐默认可开店数。",
-      defaultQuotaPlaceholder: "默认按套餐额度",
+      customStoreLimitDesc: "大客户专享配额（留空则按生效席位累加店数）",
+      customStoreLimitModalHelp: "选填（1-10000）：为大客户单独指定可开店上限；留空则按生效套餐席位自动累加可开店数。",
+      defaultQuotaPlaceholder: "默认按席位累加",
       saveQuotaBtn: "保存配额",
       resetQuotaBtn: "恢复默认",
       quotaSavedToast: "客户开店配额已更新并同步至 Shopark",
       reasonLabel: "操作原因",
-      reasonPlaceholder: "必填（2-500字），如：线下年度合同开通、活动赠送、客诉延期补偿...",
-      activePlanExtendHint: "客户当前持有「{plan}」（有效期至 {date}）。新开通或更换套餐将在现有未到期时间基础上自动顺延累加，不会吞掉剩余天数。",
+      reasonPlaceholder: "必填（2-500字），如：线下多店合同开通、活动赠送、客诉延期补偿...",
+      modeAddSeatLabel: "新增独立店铺席位（不覆盖已有订阅）",
+      modeReplaceLabel: "顺延 / 替换当前订阅",
+      addSeatHint: "一店一订阅模式：将为该客户新增 1 个独立生效的店铺套餐席位，原有生效订阅保持不变，可开店配额自动累加。",
+      activePlanExtendHint: "顺延替换模式：将在「{plan}」（有效期至 {date}）基础上顺延累加有效天数，并替换该条订阅。",
       cancelBtn: "取消",
       confirmPlanBtn: "确认开通并同步 Shopark",
-      cancelModalTitle: "立即取消客户当前套餐",
-      cancelWarningHint: "确定立即终止「{plan}」吗？取消后客户权益将立即回落为未付费状态并同步至名下所有 Shopark 店铺。",
+      cancelModalTitle: "立即取消指定套餐订阅",
+      cancelWarningHint: "确定立即终止「{plan}」吗？取消后仅收回该条订阅席位，其他仍在有效期内的独立订阅不受影响。",
       cancelReasonLabel: "取消原因",
       cancelReasonPlaceholder: "必填（2-500字），如：线下退款收回、违规处置、误操作回滚...",
       confirmCancelBtn: "确认立即取消",
       planSuccessToast: "套餐已更新并触发 Shopark 权益同步",
-      cancelSuccessToast: "已立即取消套餐并同步收回 Shopark 权益",
+      cancelSuccessToast: "已立即取消该条套餐并同步 Shopark 权益",
       remindExpiryBtn: "催续费邮件",
       batchRemindBtn: "群发到期提醒",
       remindSentToast: "续费提醒邮件已发送至 {email}",
       batchRemindSentToast: "已扫描 {checked} 条即将到期订阅，新发送 {sent} 封提醒邮件（去重跳过 {skipped} 条）"
     } : {
       title: "Customers & Subscription Entitlements",
-      subtitle: "Customer-centric Shopark plan management, manual grant/renewal/cancellation, custom store quota overrides, 7-day expiry alerts, and live sync.",
+      subtitle: "Customer-centric Shopark plan management, per-store multi-seat grants/renewals/cancellations, custom store quota overrides, 7-day expiry alerts, and live sync.",
       storesDashboard: "Stores & Operations",
       leadsDashboard: "Consulting Leads",
       connectionSettings: "Connection & Diagnostics",
@@ -37243,6 +37257,7 @@ const _sfc_main$f = /* @__PURE__ */ defineComponent({
       userDisabled: "Disabled",
       manualBadge: "Manual Grant",
       manualGranted: "Admin Manual Grant",
+      seatsCountBadge: "{n} active seats",
       customQuotaBadge: "Custom Quota: {n} stores",
       customShort: "Custom",
       noShoparkMeta: "No Shopark Plan Metadata",
@@ -37257,7 +37272,7 @@ const _sfc_main$f = /* @__PURE__ */ defineComponent({
       expires: "Expires",
       unpaidFallback: "Unpaid (Free)",
       grantPlan: "Grant Plan",
-      renewOrReplacePlan: "Renew / Switch",
+      renewOrReplacePlan: "Add Seat / Renew",
       cancelNow: "Cancel Now",
       syncToShopark: "Sync to Shopark",
       customerDetail: "Details",
@@ -37287,23 +37302,26 @@ const _sfc_main$f = /* @__PURE__ */ defineComponent({
       daysUnit: "days",
       customStoreLimitLabel: "Custom Store Quota Override",
       customStoreLimitDesc: "Dedicated store limit for enterprise/VIP accounts",
-      customStoreLimitModalHelp: "Optional (1-10000): override maximum stores for this customer; leave blank to use plan default.",
-      defaultQuotaPlaceholder: "Plan default",
+      customStoreLimitModalHelp: "Optional (1-10000): override maximum stores for this customer; leave blank to sum active seats automatically.",
+      defaultQuotaPlaceholder: "Sum of active seats",
       saveQuotaBtn: "Save Quota",
       resetQuotaBtn: "Reset",
       quotaSavedToast: "Custom store quota saved and synced to Shopark",
       reasonLabel: "Operation Reason",
       reasonPlaceholder: "Required (2-500 chars), e.g., offline enterprise contract, promotional extension...",
-      activePlanExtendHint: 'Customer currently holds "{plan}" (valid until {date}). New days will extend from the existing expiry date without losing remaining days.',
+      modeAddSeatLabel: "Add independent store seat (keep existing)",
+      modeReplaceLabel: "Extend / replace current subscription",
+      addSeatHint: "Per-store mode: adds 1 independent active plan seat without canceling existing active subscriptions.",
+      activePlanExtendHint: 'Extend/replace mode: extends from "{plan}" (valid until {date}) and replaces that subscription.',
       cancelBtn: "Cancel",
       confirmPlanBtn: "Confirm & Sync to Shopark",
-      cancelModalTitle: "Immediately Cancel Active Plan",
-      cancelWarningHint: 'Immediately terminate "{plan}"? The customer entitlement will revert to unpaid (free) and sync to all their Shopark stores right away.',
+      cancelModalTitle: "Immediately Cancel Subscription Seat",
+      cancelWarningHint: 'Immediately terminate "{plan}"? Only this subscription seat will be canceled; other active seats remain unaffected.',
       cancelReasonLabel: "Cancellation Reason",
       cancelReasonPlaceholder: "Required (2-500 chars), e.g., offline refund revocation, policy violation...",
       confirmCancelBtn: "Confirm Immediate Cancel",
       planSuccessToast: "Plan updated and synced to Shopark",
-      cancelSuccessToast: "Plan canceled and revoked on Shopark",
+      cancelSuccessToast: "Subscription seat canceled and synced to Shopark",
       remindExpiryBtn: "Remind Renewal",
       batchRemindBtn: "Batch Remind Expiring",
       remindSentToast: "Renewal reminder email sent to {email}",
@@ -37469,6 +37487,7 @@ const _sfc_main$f = /* @__PURE__ */ defineComponent({
     const planModalTarget = ref(null);
     const planForm = reactive({
       operationId: "",
+      mode: "add_seat",
       productId: 0,
       days: 30,
       customStoreLimit: "",
@@ -37493,6 +37512,7 @@ const _sfc_main$f = /* @__PURE__ */ defineComponent({
     function openPlanModal(customer) {
       planModalTarget.value = customer;
       planForm.operationId = createUuidV4();
+      planForm.mode = "add_seat";
       planForm.productId = customer.subscription?.productId || adminPlans.value[0]?.id || 0;
       planForm.days = 30;
       planForm.customStoreLimit = customer.customStoreLimit !== null && customer.customStoreLimit !== void 0 ? String(customer.customStoreLimit) : "";
@@ -37515,6 +37535,7 @@ const _sfc_main$f = /* @__PURE__ */ defineComponent({
       try {
         const rawLimit = String(planForm.customStoreLimit ?? "").trim();
         const customStoreLimit = rawLimit === "" ? null : Number(rawLimit);
+        const isReplace = planModalTarget.value.subscriptionStatus === "active" && planForm.mode === "replace";
         const response = await $fetch("/api/admin/plugins/shopark/licenses/plan", {
           method: "POST",
           body: {
@@ -37523,6 +37544,8 @@ const _sfc_main$f = /* @__PURE__ */ defineComponent({
             userId: planModalTarget.value.id,
             productId: Number(planForm.productId),
             days: Number(planForm.days),
+            mode: isReplace ? "replace" : "add_seat",
+            targetSubscriptionId: isReplace ? planModalTarget.value.subscription?.id || null : null,
             customStoreLimit,
             reason: planForm.reason.trim()
           }
@@ -37557,6 +37580,13 @@ const _sfc_main$f = /* @__PURE__ */ defineComponent({
       cancelModalTarget.value = customer;
       cancelForm.reason = "";
       cancelModalOpen.value = true;
+    }
+    function openCancelModalForSub(customer, sub) {
+      openCancelModal({
+        id: customer.id,
+        email: customer.email,
+        subscription: sub
+      });
     }
     function openCancelModalFromDrawer() {
       if (!drawerDetail.value?.customer || !drawerDetail.value?.activeSubscription) return;
@@ -38092,6 +38122,26 @@ const _sfc_main$f = /* @__PURE__ */ defineComponent({
               }),
               _: 2
             }, _parent));
+            if ((customer.entitlement?.subscriptions?.length ?? 0) > 1) {
+              _push(ssrRenderComponent(_component_UBadge, {
+                color: "info",
+                variant: "soft",
+                size: "xs"
+              }, {
+                default: withCtx((_, _push2, _parent2, _scopeId) => {
+                  if (_push2) {
+                    _push2(`${ssrInterpolate(text2.value.seatsCountBadge.replace("{n}", String(customer.entitlement.subscriptions.length)))}`);
+                  } else {
+                    return [
+                      createTextVNode(toDisplayString$1(text2.value.seatsCountBadge.replace("{n}", String(customer.entitlement.subscriptions.length))), 1)
+                    ];
+                  }
+                }),
+                _: 2
+              }, _parent));
+            } else {
+              _push(`<!---->`);
+            }
             if (customer.subscription?.isManual) {
               _push(ssrRenderComponent(_component_UBadge, {
                 color: "primary",
@@ -38384,6 +38434,26 @@ const _sfc_main$f = /* @__PURE__ */ defineComponent({
                 _: 2
               }, _parent));
             }
+            if (item.storeId) {
+              _push(ssrRenderComponent(_component_UBadge, {
+                color: "info",
+                variant: "subtle",
+                size: "xs"
+              }, {
+                default: withCtx((_, _push2, _parent2, _scopeId) => {
+                  if (_push2) {
+                    _push2(` Store #${ssrInterpolate(item.storeId)}`);
+                  } else {
+                    return [
+                      createTextVNode(" Store #" + toDisplayString$1(item.storeId), 1)
+                    ];
+                  }
+                }),
+                _: 2
+              }, _parent));
+            } else {
+              _push(`<!---->`);
+            }
             if (item.isManual) {
               _push(ssrRenderComponent(_component_UBadge, {
                 color: "primary",
@@ -38487,6 +38557,26 @@ const _sfc_main$f = /* @__PURE__ */ defineComponent({
                 }),
                 _: 1
               }, _parent2, _scopeId));
+              if ((drawerDetail.value.entitlement?.subscriptions?.length ?? 0) > 1) {
+                _push2(ssrRenderComponent(_component_UBadge, {
+                  color: "info",
+                  variant: "soft",
+                  size: "xs"
+                }, {
+                  default: withCtx((_2, _push3, _parent3, _scopeId2) => {
+                    if (_push3) {
+                      _push3(`${ssrInterpolate(text2.value.seatsCountBadge.replace("{n}", String(drawerDetail.value.entitlement.subscriptions.length)))}`);
+                    } else {
+                      return [
+                        createTextVNode(toDisplayString$1(text2.value.seatsCountBadge.replace("{n}", String(drawerDetail.value.entitlement.subscriptions.length))), 1)
+                      ];
+                    }
+                  }),
+                  _: 1
+                }, _parent2, _scopeId));
+              } else {
+                _push2(`<!---->`);
+              }
               if (drawerDetail.value.activeSubscription?.isManual) {
                 _push2(ssrRenderComponent(_component_UBadge, {
                   color: "primary",
@@ -38746,6 +38836,26 @@ const _sfc_main$f = /* @__PURE__ */ defineComponent({
                     }),
                     _: 2
                   }, _parent2, _scopeId));
+                  if (sub.storeId) {
+                    _push2(ssrRenderComponent(_component_UBadge, {
+                      color: "info",
+                      variant: "subtle",
+                      size: "xs"
+                    }, {
+                      default: withCtx((_2, _push3, _parent3, _scopeId2) => {
+                        if (_push3) {
+                          _push3(`Store #${ssrInterpolate(sub.storeId)}`);
+                        } else {
+                          return [
+                            createTextVNode("Store #" + toDisplayString$1(sub.storeId), 1)
+                          ];
+                        }
+                      }),
+                      _: 2
+                    }, _parent2, _scopeId));
+                  } else {
+                    _push2(`<!---->`);
+                  }
                   if (sub.isManual) {
                     _push2(ssrRenderComponent(_component_UBadge, {
                       color: "primary",
@@ -38766,7 +38876,30 @@ const _sfc_main$f = /* @__PURE__ */ defineComponent({
                   } else {
                     _push2(`<!---->`);
                   }
-                  _push2(`</div><span class="font-mono text-[11px] text-gray-400"${_scopeId}>${ssrInterpolate(sub.id.slice(0, 14))}</span></div><p class="mt-1.5 text-[11px] text-gray-500"${_scopeId}><span${_scopeId}>${ssrInterpolate(sub.isManual ? text2.value.manualGranted : `${sub.amount} ${sub.currency} (${sub.payMethod || "online"})`)}</span><span class="mx-1.5"${_scopeId}>·</span><span${_scopeId}>${ssrInterpolate(formatTime(sub.currentPeriodStart))} → ${ssrInterpolate(formatTime(sub.currentPeriodEnd))}</span></p>`);
+                  _push2(`</div><div class="flex items-center gap-2"${_scopeId}>`);
+                  if (sub.status === "active" && !sub.isExpired) {
+                    _push2(ssrRenderComponent(_component_UButton, {
+                      size: "xs",
+                      color: "error",
+                      variant: "ghost",
+                      icon: "ph:x-circle",
+                      onClick: ($event) => openCancelModalForSub(drawerDetail.value.customer, sub)
+                    }, {
+                      default: withCtx((_2, _push3, _parent3, _scopeId2) => {
+                        if (_push3) {
+                          _push3(`${ssrInterpolate(text2.value.cancelNow)}`);
+                        } else {
+                          return [
+                            createTextVNode(toDisplayString$1(text2.value.cancelNow), 1)
+                          ];
+                        }
+                      }),
+                      _: 2
+                    }, _parent2, _scopeId));
+                  } else {
+                    _push2(`<!---->`);
+                  }
+                  _push2(`<span class="font-mono text-[11px] text-gray-400"${_scopeId}>${ssrInterpolate(sub.id.slice(0, 14))}</span></div></div><p class="mt-1.5 text-[11px] text-gray-500"${_scopeId}><span${_scopeId}>${ssrInterpolate(sub.isManual ? text2.value.manualGranted : `${sub.amount} ${sub.currency} (${sub.payMethod || "online"})`)}</span><span class="mx-1.5"${_scopeId}>·</span><span${_scopeId}>${ssrInterpolate(formatTime(sub.currentPeriodStart))} → ${ssrInterpolate(formatTime(sub.currentPeriodEnd))}</span></p>`);
                   if (sub.manualReason || sub.cancelReason) {
                     _push2(`<p class="mt-1 text-[11px] text-gray-400"${_scopeId}>`);
                     if (sub.manualReason) {
@@ -38913,8 +39046,19 @@ const _sfc_main$f = /* @__PURE__ */ defineComponent({
                           ]),
                           _: 1
                         }, 8, ["color"]),
-                        drawerDetail.value.activeSubscription?.isManual ? (openBlock(), createBlock(_component_UBadge, {
+                        (drawerDetail.value.entitlement?.subscriptions?.length ?? 0) > 1 ? (openBlock(), createBlock(_component_UBadge, {
                           key: 0,
+                          color: "info",
+                          variant: "soft",
+                          size: "xs"
+                        }, {
+                          default: withCtx(() => [
+                            createTextVNode(toDisplayString$1(text2.value.seatsCountBadge.replace("{n}", String(drawerDetail.value.entitlement.subscriptions.length))), 1)
+                          ]),
+                          _: 1
+                        })) : createCommentVNode("", true),
+                        drawerDetail.value.activeSubscription?.isManual ? (openBlock(), createBlock(_component_UBadge, {
+                          key: 1,
                           color: "primary",
                           variant: "soft",
                           size: "xs"
@@ -38925,7 +39069,7 @@ const _sfc_main$f = /* @__PURE__ */ defineComponent({
                           _: 1
                         })) : createCommentVNode("", true),
                         drawerDetail.value.customStoreLimit !== null && drawerDetail.value.customStoreLimit !== void 0 ? (openBlock(), createBlock(_component_UBadge, {
-                          key: 1,
+                          key: 2,
                           color: "info",
                           variant: "subtle",
                           size: "xs"
@@ -39166,8 +39310,19 @@ const _sfc_main$f = /* @__PURE__ */ defineComponent({
                               ]),
                               _: 2
                             }, 1032, ["color"]),
-                            sub.isManual ? (openBlock(), createBlock(_component_UBadge, {
+                            sub.storeId ? (openBlock(), createBlock(_component_UBadge, {
                               key: 0,
+                              color: "info",
+                              variant: "subtle",
+                              size: "xs"
+                            }, {
+                              default: withCtx(() => [
+                                createTextVNode("Store #" + toDisplayString$1(sub.storeId), 1)
+                              ]),
+                              _: 2
+                            }, 1024)) : createCommentVNode("", true),
+                            sub.isManual ? (openBlock(), createBlock(_component_UBadge, {
+                              key: 1,
                               color: "primary",
                               variant: "soft",
                               size: "xs"
@@ -39178,7 +39333,22 @@ const _sfc_main$f = /* @__PURE__ */ defineComponent({
                               _: 1
                             })) : createCommentVNode("", true)
                           ]),
-                          createVNode("span", { class: "font-mono text-[11px] text-gray-400" }, toDisplayString$1(sub.id.slice(0, 14)), 1)
+                          createVNode("div", { class: "flex items-center gap-2" }, [
+                            sub.status === "active" && !sub.isExpired ? (openBlock(), createBlock(_component_UButton, {
+                              key: 0,
+                              size: "xs",
+                              color: "error",
+                              variant: "ghost",
+                              icon: "ph:x-circle",
+                              onClick: ($event) => openCancelModalForSub(drawerDetail.value.customer, sub)
+                            }, {
+                              default: withCtx(() => [
+                                createTextVNode(toDisplayString$1(text2.value.cancelNow), 1)
+                              ]),
+                              _: 1
+                            }, 8, ["onClick"])) : createCommentVNode("", true),
+                            createVNode("span", { class: "font-mono text-[11px] text-gray-400" }, toDisplayString$1(sub.id.slice(0, 14)), 1)
+                          ])
                         ]),
                         createVNode("p", { class: "mt-1.5 text-[11px] text-gray-500" }, [
                           createVNode("span", null, toDisplayString$1(sub.isManual ? text2.value.manualGranted : `${sub.amount} ${sub.currency} (${sub.payMethod || "online"})`), 1),
@@ -39314,7 +39484,44 @@ const _sfc_main$f = /* @__PURE__ */ defineComponent({
           if (_push2) {
             _push2(`<div class="space-y-4 p-4"${_scopeId}>`);
             if (planModalTarget.value?.subscription && planModalTarget.value.subscriptionStatus === "active") {
-              _push2(`<div class="rounded-xl border border-blue-200 bg-blue-50/70 p-3 text-xs text-blue-800 dark:border-blue-800/40 dark:bg-blue-950/20 dark:text-blue-300"${_scopeId}>${ssrInterpolate(text2.value.activePlanExtendHint.replace("{plan}", planModalTarget.value.subscription.productName).replace("{date}", formatTime(planModalTarget.value.subscription.currentPeriodEnd)))}</div>`);
+              _push2(`<div class="space-y-2.5 rounded-xl border border-blue-200 bg-blue-50/70 p-3 text-xs text-blue-800 dark:border-blue-800/40 dark:bg-blue-950/20 dark:text-blue-300"${_scopeId}><div class="flex flex-wrap gap-1.5"${_scopeId}>`);
+              _push2(ssrRenderComponent(_component_UButton, {
+                size: "xs",
+                color: planForm.mode === "add_seat" ? "primary" : "neutral",
+                variant: planForm.mode === "add_seat" ? "solid" : "outline",
+                icon: "ph:plus-circle",
+                onClick: ($event) => planForm.mode = "add_seat"
+              }, {
+                default: withCtx((_2, _push3, _parent3, _scopeId2) => {
+                  if (_push3) {
+                    _push3(`${ssrInterpolate(text2.value.modeAddSeatLabel)}`);
+                  } else {
+                    return [
+                      createTextVNode(toDisplayString$1(text2.value.modeAddSeatLabel), 1)
+                    ];
+                  }
+                }),
+                _: 1
+              }, _parent2, _scopeId));
+              _push2(ssrRenderComponent(_component_UButton, {
+                size: "xs",
+                color: planForm.mode === "replace" ? "primary" : "neutral",
+                variant: planForm.mode === "replace" ? "solid" : "outline",
+                icon: "ph:arrows-clockwise",
+                onClick: ($event) => planForm.mode = "replace"
+              }, {
+                default: withCtx((_2, _push3, _parent3, _scopeId2) => {
+                  if (_push3) {
+                    _push3(`${ssrInterpolate(text2.value.modeReplaceLabel)}`);
+                  } else {
+                    return [
+                      createTextVNode(toDisplayString$1(text2.value.modeReplaceLabel), 1)
+                    ];
+                  }
+                }),
+                _: 1
+              }, _parent2, _scopeId));
+              _push2(`</div><p${_scopeId}>${ssrInterpolate(planForm.mode === "add_seat" ? text2.value.addSeatHint : text2.value.activePlanExtendHint.replace("{plan}", planModalTarget.value.subscription.productName).replace("{date}", formatTime(planModalTarget.value.subscription.currentPeriodEnd)))}</p></div>`);
             } else {
               _push2(`<!---->`);
             }
@@ -39479,8 +39686,36 @@ const _sfc_main$f = /* @__PURE__ */ defineComponent({
               createVNode("div", { class: "space-y-4 p-4" }, [
                 planModalTarget.value?.subscription && planModalTarget.value.subscriptionStatus === "active" ? (openBlock(), createBlock("div", {
                   key: 0,
-                  class: "rounded-xl border border-blue-200 bg-blue-50/70 p-3 text-xs text-blue-800 dark:border-blue-800/40 dark:bg-blue-950/20 dark:text-blue-300"
-                }, toDisplayString$1(text2.value.activePlanExtendHint.replace("{plan}", planModalTarget.value.subscription.productName).replace("{date}", formatTime(planModalTarget.value.subscription.currentPeriodEnd))), 1)) : createCommentVNode("", true),
+                  class: "space-y-2.5 rounded-xl border border-blue-200 bg-blue-50/70 p-3 text-xs text-blue-800 dark:border-blue-800/40 dark:bg-blue-950/20 dark:text-blue-300"
+                }, [
+                  createVNode("div", { class: "flex flex-wrap gap-1.5" }, [
+                    createVNode(_component_UButton, {
+                      size: "xs",
+                      color: planForm.mode === "add_seat" ? "primary" : "neutral",
+                      variant: planForm.mode === "add_seat" ? "solid" : "outline",
+                      icon: "ph:plus-circle",
+                      onClick: ($event) => planForm.mode = "add_seat"
+                    }, {
+                      default: withCtx(() => [
+                        createTextVNode(toDisplayString$1(text2.value.modeAddSeatLabel), 1)
+                      ]),
+                      _: 1
+                    }, 8, ["color", "variant", "onClick"]),
+                    createVNode(_component_UButton, {
+                      size: "xs",
+                      color: planForm.mode === "replace" ? "primary" : "neutral",
+                      variant: planForm.mode === "replace" ? "solid" : "outline",
+                      icon: "ph:arrows-clockwise",
+                      onClick: ($event) => planForm.mode = "replace"
+                    }, {
+                      default: withCtx(() => [
+                        createTextVNode(toDisplayString$1(text2.value.modeReplaceLabel), 1)
+                      ]),
+                      _: 1
+                    }, 8, ["color", "variant", "onClick"])
+                  ]),
+                  createVNode("p", null, toDisplayString$1(planForm.mode === "add_seat" ? text2.value.addSeatHint : text2.value.activePlanExtendHint.replace("{plan}", planModalTarget.value.subscription.productName).replace("{date}", formatTime(planModalTarget.value.subscription.currentPeriodEnd))), 1)
+                ])) : createCommentVNode("", true),
                 createVNode(_component_UFormField, {
                   label: text2.value.selectPlanLabel,
                   required: ""
@@ -40543,7 +40778,7 @@ const _sfc_main$d = /* @__PURE__ */ defineComponent({
       const _component_USelect = _sfc_main$u;
       const _component_USkeleton = _sfc_main$o;
       const _component_UBadge = _sfc_main$R;
-      const _component_NuxtLink = __nuxt_component_3$5;
+      const _component_NuxtLink = __nuxt_component_3$4;
       const _component_UPagination = _sfc_main$w;
       _push(ssrRenderComponent(_sfc_main$l, mergeProps({
         title: text2.value.title,
@@ -44960,7 +45195,7 @@ const plugin_MeUvTuoKUi51yb_kBguab6hdcExVXeTtZtTg9TZZBB8 = /* @__PURE__ */ defin
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
 });
 const LazyLegalPage = defineAsyncComponent(() => import('./LegalPage-Cdk7gdbS.mjs').then((r) => r["default"] || r.default || r));
-const LazyMarketingPage = defineAsyncComponent(() => import('./MarketingPage-BIPvSCyy.mjs').then((r) => r["default"] || r.default || r));
+const LazyMarketingPage = defineAsyncComponent(() => import('./MarketingPage-B0lhaN2-.mjs').then((r) => r["default"] || r.default || r));
 const LazyMarketplaceCard = defineAsyncComponent(() => import('./MarketplaceCard-CB5ARi7k.mjs').then((r) => r["default"] || r.default || r));
 const LazyMarketplaceDetail = defineAsyncComponent(() => import('./MarketplaceDetail-C-RjbcOp.mjs').then((r) => r["default"] || r.default || r));
 const LazyMarketplaceHero = defineAsyncComponent(() => import('./MarketplaceHero-BRZ-crkT.mjs').then((r) => r["default"] || r.default || r));
@@ -44968,17 +45203,17 @@ const LazyMarketplaceList = defineAsyncComponent(() => import('./MarketplaceList
 const LazyMarketplaceVisual = defineAsyncComponent(() => import('./MarketplaceVisual-DI-8P_MU.mjs').then((r) => r["default"] || r.default || r));
 const LazyPageCta = defineAsyncComponent(() => import('./PageCta-BFEgFSpP.mjs').then((r) => r["default"] || r.default || r));
 const LazySectionHeading = defineAsyncComponent(() => import('./SectionHeading-BJpRVepO.mjs').then((r) => r["default"] || r.default || r));
-const LazyShoparkAuthShell = defineAsyncComponent(() => import('./ShoparkAuthShell-B11rO8Qm.mjs').then((r) => r["default"] || r.default || r));
-const LazyShoparkBindDialog = defineAsyncComponent(() => import('./ShoparkBindDialog-ClvV3ekh.mjs').then((n) => n.S).then((r) => r["default"] || r.default || r));
-const LazyShoparkCheckoutModal = defineAsyncComponent(() => import('./ShoparkCheckoutModal-B8CIVyy2.mjs').then((r) => r["default"] || r.default || r));
+const LazyShoparkAuthShell = defineAsyncComponent(() => import('./ShoparkAuthShell-CpSY95nq.mjs').then((r) => r["default"] || r.default || r));
+const LazyShoparkBindDialog = defineAsyncComponent(() => import('./ShoparkBindDialog-Dy0IjbGf.mjs').then((n) => n.S).then((r) => r["default"] || r.default || r));
+const LazyShoparkCheckoutModal = defineAsyncComponent(() => import('./ShoparkCheckoutModal-Cd5sbzvq.mjs').then((r) => r["default"] || r.default || r));
 const LazyShoparkConsoleHeader = defineAsyncComponent(() => import('./ShoparkConsoleHeader-D-VQHPXh.mjs').then((r) => r["default"] || r.default || r));
-const LazyShoparkConsultDialog = defineAsyncComponent(() => import('./ShoparkConsultDialog-DYJ1_1D7.mjs').then((r) => r["default"] || r.default || r));
+const LazyShoparkConsultDialog = defineAsyncComponent(() => import('./ShoparkConsultDialog-BwgFR3qq.mjs').then((r) => r["default"] || r.default || r));
 const LazyShoparkLanguageSwitcher = defineAsyncComponent(() => import('./ShoparkLanguageSwitcher-8PErnceq.mjs').then((r) => r["default"] || r.default || r));
-const LazyShoparkLaunchChat = defineAsyncComponent(() => import('./ShoparkLaunchChat-DsUcYQJj.mjs').then((r) => r["default"] || r.default || r));
-const LazyShoparkLeadForm = defineAsyncComponent(() => import('./ShoparkLeadForm--9WUCR0q.mjs').then((r) => r["default"] || r.default || r));
+const LazyShoparkLaunchChat = defineAsyncComponent(() => import('./ShoparkLaunchChat-DRS-dgHg.mjs').then((r) => r["default"] || r.default || r));
+const LazyShoparkLeadForm = defineAsyncComponent(() => import('./ShoparkLeadForm-dDqqWAjZ.mjs').then((r) => r["default"] || r.default || r));
 const LazyShoparkMcpElicitationCard = defineAsyncComponent(() => import('./ShoparkMcpElicitationCard-kymvPv-v.mjs').then((r) => r["default"] || r.default || r));
 const LazyShoparkOAuthButtons = defineAsyncComponent(() => import('./ShoparkOAuthButtons-DnFDo9RC.mjs').then((r) => r["default"] || r.default || r));
-const LazyShoparkPlanCards = defineAsyncComponent(() => import('./ShoparkPlanCards-D1ApI8rA.mjs').then((r) => r["default"] || r.default || r));
+const LazyShoparkPlanCards = defineAsyncComponent(() => import('./ShoparkPlanCards-BUjkEkl5.mjs').then((r) => r["default"] || r.default || r));
 const LazyShoparkSupportWidget = defineAsyncComponent(() => import('./ShoparkSupportWidget-B3sZduA2.mjs').then((r) => r["default"] || r.default || r));
 const LazyProseA = defineAsyncComponent(() => import('./A-CK6r5kN7.mjs').then((r) => r["default"] || r.default || r));
 const LazyProseAccordion = defineAsyncComponent(() => import('./Accordion-8f3b9LWZ.mjs').then((r) => r["default"] || r.default || r));
@@ -48833,7 +49068,7 @@ const __nuxt_component_1 = defineComponent({
   }
 });
 const layouts = {
-  admin: defineAsyncComponent(() => import('./admin-BOrxRmmN.mjs').then((m) => m.default || m)),
+  admin: defineAsyncComponent(() => import('./admin-CabZNxjY.mjs').then((m) => m.default || m)),
   default: defineAsyncComponent(() => import('./default-DCrA-G_W.mjs').then((m) => m.default || m)),
   empty: defineAsyncComponent(() => import('./empty-LXGN-TMV.mjs').then((m) => m.default || m))
 };
@@ -49956,5 +50191,5 @@ let entry;
 }
 const entry_default = ((ssrContext) => entry(ssrContext));
 
-export { useAppConfig as $, ADMIN_PERMISSIONS as A, hasAllPermissions as B, _sfc_main$m as C, publishedOptionalThemes as D, useLocaleRouter as E, useProductPricing as F, useCurrencyFormat as G, _sfc_main$q as H, useRoute as I, stripLocalePrefix as J, themeAdminLocaleEnModules as K, themeAdminLocaleZhModules as L, useHead as M, useExtensions as N, setResponseStatus as O, __nuxt_component_3$5 as P, _export_sfc as Q, useAdminSession as R, firstAllowedAdminRoute as S, PageRequestError as T, useVModel as U, useForwardExpose as V, useFormControl as W, Primitive as X, VisuallyHiddenInput_default as Y, createContext as Z, _sfc_main$R as _, useToast as a, reactiveOmit as a$, useComponentUI as a0, useForwardPropsEmits as a1, reactivePick as a2, useFormField as a3, tv as a4, Label_default as a5, usePrimitiveElement as a6, useDirection as a7, PopperRoot_default as a8, createEventHook as a9, getFocusIntent as aA, refAutoReset as aB, handleAndDispatchCustomEvent$1 as aC, useParentElement as aD, MAP_KEY_TO_FOCUS_INTENT as aE, getActiveElement as aF, getNextMatch as aG, useResizeObserver as aH, RovingFocusGroup_default as aI, RovingFocusItem_default as aJ, useNuxtApp as aK, useRefundLabels as aL, __nuxt_component_4$1 as aM, useRequestURL as aN, useLocaleCurrency as aO, createSharedComposable as aP, getOpenState as aQ, PopperContentPropsDefaultValue as aR, isPointerInGraceArea as aS, isMouseEvent as aT, FIRST_LAST_KEYS as aU, LAST_KEYS as aV, focusFirst$1 as aW, SELECTION_KEYS$1 as aX, ITEM_SELECT as aY, isIndeterminate$1 as aZ, getCheckedState as a_, PopperAnchor_default as aa, useBodyScrollLock as ab, useFocusGuards as ac, useHideOthers as ad, useForwardProps as ae, FocusScope_default as af, DismissableLayer_default as ag, PopperContent_default as ah, PopperArrow_default as ai, useId as aj, Presence_default as ak, Teleport_default as al, useLocale as am, usePortal as an, useFieldGroup as ao, useComponentIcons as ap, createReusableTemplate as aq, isArrayOfArray as ar, compare as as, get as at, _sfc_main$_ as au, _sfc_main$$ as av, looseToNumber as aw, getDisplayValue as ax, useCollection as ay, useTypeahead as az, useAdminPermissions as b, createError as b$, SUB_CLOSE_KEYS as b0, SUB_OPEN_KEYS as b1, useEmitAsProps as b2, _sfc_main$Y as b3, pickLinkProps as b4, _sfc_main$Z as b5, omit as b6, tryOnScopeDispose$1 as b7, injectTooltipProviderContext as b8, useTimeoutFn as b9, ImageComponent as bA, DialogRoot_default as bB, DialogTrigger_default as bC, DialogPortal_default as bD, useClipboard as bE, useCollectionPageJsonLd as bF, formBusInjectionKey as bG, formStateInjectionKey as bH, formErrorsInjectionKey as bI, formInputsInjectionKey as bJ, formLoadingInjectionKey as bK, formOptionsInjectionKey as bL, useEventBus as bM, usePageResourceState as bN, useBlogPostingJsonLd as bO, __nuxt_component_3$3 as bP, useRequestHeaders as bQ, useUserSession as bR, refThrottled as bS, useDebounceFn as bT, useActiveElement as bU, __nuxt_component_2$2 as bV, _sfc_main$o as bW, __nuxt_component_1$1 as bX, useCookie as bY, _sfc_main$g as bZ, themeLayoutLoaders as b_, VisuallyHidden_default as ba, runtimeExtensionSettingPrefixes as bb, runtimeExtensionSettingKeys as bc, __nuxt_component_0$1 as bd, usePageFailureLog as be, useRequestEvent as bf, useActiveTheme as bg, __nuxt_component_4$2 as bh, isPathLocaleAllowed as bi, themePageModules as bj, corePageModules as bk, pageLayoutMeta as bl, useSeoMeta as bm, useLocalizedSettings as bn, useCustomerAuth as bo, publishedOptionalThemeSet as bp, useJsonLd as bq, useCheckout as br, __nuxt_component_2$1 as bs, useState as bt, __nuxt_component_3$4 as bu, isValueEqualOrExist as bv, transformUI as bw, useEventListener$1 as bx, useRuntimeConfig as by, resolveBaseURL as bz, useSettings as c, useSupportChat as c0, _sfc_main$X as d, entry_default as default, _sfc_main$s as e, _sfc_main$L as f, _sfc_main$D as g, _sfc_main$E as h, useConfirm as i, _sfc_main$10 as j, _sfc_main$F as k, useFormatTime as l, useAdminExtensions as m, moduleViewCode as n, moduleEditCode as o, _sfc_main$u as p, navigateTo as q, useRouter as r, useRequestFetch as s, useAsyncData as t, useI18n as u, _sfc_main$z as v, themeExtensionPermissionCode as w, usePagination as x, useFetch as y, _sfc_main$w as z };
+export { useAppConfig as $, ADMIN_PERMISSIONS as A, hasAllPermissions as B, _sfc_main$m as C, publishedOptionalThemes as D, useLocaleRouter as E, useProductPricing as F, useCurrencyFormat as G, _sfc_main$q as H, useRoute as I, stripLocalePrefix as J, themeAdminLocaleEnModules as K, themeAdminLocaleZhModules as L, useHead as M, useExtensions as N, setResponseStatus as O, __nuxt_component_3$4 as P, _export_sfc as Q, useAdminSession as R, firstAllowedAdminRoute as S, PageRequestError as T, useVModel as U, useForwardExpose as V, useFormControl as W, Primitive as X, VisuallyHiddenInput_default as Y, createContext as Z, _sfc_main$R as _, useToast as a, reactiveOmit as a$, useComponentUI as a0, useForwardPropsEmits as a1, reactivePick as a2, useFormField as a3, tv as a4, Label_default as a5, usePrimitiveElement as a6, useDirection as a7, PopperRoot_default as a8, createEventHook as a9, getFocusIntent as aA, refAutoReset as aB, handleAndDispatchCustomEvent$1 as aC, useParentElement as aD, MAP_KEY_TO_FOCUS_INTENT as aE, getActiveElement as aF, getNextMatch as aG, useResizeObserver as aH, RovingFocusGroup_default as aI, RovingFocusItem_default as aJ, useNuxtApp as aK, useRefundLabels as aL, __nuxt_component_4$1 as aM, useRequestURL as aN, useLocaleCurrency as aO, createSharedComposable as aP, getOpenState as aQ, PopperContentPropsDefaultValue as aR, isPointerInGraceArea as aS, isMouseEvent as aT, FIRST_LAST_KEYS as aU, LAST_KEYS as aV, focusFirst$1 as aW, SELECTION_KEYS$1 as aX, ITEM_SELECT as aY, isIndeterminate$1 as aZ, getCheckedState as a_, PopperAnchor_default as aa, useBodyScrollLock as ab, useFocusGuards as ac, useHideOthers as ad, useForwardProps as ae, FocusScope_default as af, DismissableLayer_default as ag, PopperContent_default as ah, PopperArrow_default as ai, useId as aj, Presence_default as ak, Teleport_default as al, useLocale as am, usePortal as an, useFieldGroup as ao, useComponentIcons as ap, createReusableTemplate as aq, isArrayOfArray as ar, compare as as, get as at, _sfc_main$_ as au, _sfc_main$$ as av, looseToNumber as aw, getDisplayValue as ax, useCollection as ay, useTypeahead as az, useAdminPermissions as b, createError as b$, SUB_CLOSE_KEYS as b0, SUB_OPEN_KEYS as b1, useEmitAsProps as b2, _sfc_main$Y as b3, pickLinkProps as b4, _sfc_main$Z as b5, omit as b6, tryOnScopeDispose$1 as b7, injectTooltipProviderContext as b8, useTimeoutFn as b9, ImageComponent as bA, DialogRoot_default as bB, DialogTrigger_default as bC, DialogPortal_default as bD, useClipboard as bE, useCollectionPageJsonLd as bF, formBusInjectionKey as bG, formStateInjectionKey as bH, formErrorsInjectionKey as bI, formInputsInjectionKey as bJ, formLoadingInjectionKey as bK, formOptionsInjectionKey as bL, useEventBus as bM, usePageResourceState as bN, useBlogPostingJsonLd as bO, __nuxt_component_3$3 as bP, useRequestHeaders as bQ, useUserSession as bR, refThrottled as bS, useDebounceFn as bT, useActiveElement as bU, __nuxt_component_2$2 as bV, _sfc_main$o as bW, __nuxt_component_1$1 as bX, useCookie as bY, _sfc_main$g as bZ, themeLayoutLoaders as b_, VisuallyHidden_default as ba, runtimeExtensionSettingPrefixes as bb, runtimeExtensionSettingKeys as bc, __nuxt_component_0$1 as bd, usePageFailureLog as be, useRequestEvent as bf, useActiveTheme as bg, __nuxt_component_4$2 as bh, isPathLocaleAllowed as bi, themePageModules as bj, corePageModules as bk, pageLayoutMeta as bl, useSeoMeta as bm, useLocalizedSettings as bn, useCustomerAuth as bo, publishedOptionalThemeSet as bp, useJsonLd as bq, useCheckout as br, __nuxt_component_2$1 as bs, __nuxt_component_8 as bt, useState as bu, isValueEqualOrExist as bv, transformUI as bw, useEventListener$1 as bx, useRuntimeConfig as by, resolveBaseURL as bz, useSettings as c, useSupportChat as c0, _sfc_main$X as d, entry_default as default, _sfc_main$s as e, _sfc_main$L as f, _sfc_main$D as g, _sfc_main$E as h, useConfirm as i, _sfc_main$10 as j, _sfc_main$F as k, useFormatTime as l, useAdminExtensions as m, moduleViewCode as n, moduleEditCode as o, _sfc_main$u as p, navigateTo as q, useRouter as r, useRequestFetch as s, useAsyncData as t, useI18n as u, _sfc_main$z as v, themeExtensionPermissionCode as w, usePagination as x, useFetch as y, _sfc_main$w as z };
 //# sourceMappingURL=server.mjs.map

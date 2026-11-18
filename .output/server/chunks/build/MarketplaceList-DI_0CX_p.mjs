@@ -1,4 +1,4 @@
-import { E as useLocaleRouter, aO as useLocaleCurrency, j as _sfc_main$10, P as __nuxt_component_3$5 } from './server.mjs';
+import { E as useLocaleRouter, aO as useLocaleCurrency, j as _sfc_main$10, P as __nuxt_component_3$4 } from './server.mjs';
 import { defineComponent, ref, computed, watch, unref, withCtx, createVNode, toDisplayString, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent, ssrRenderList, ssrRenderClass, ssrInterpolate, ssrIncludeBooleanAttr, ssrRenderAttr } from 'vue/server-renderer';
 import MarketplaceHero from './MarketplaceHero-BRZ-crkT.mjs';
@@ -114,7 +114,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     });
     return (_ctx, _push, _parent, _attrs) => {
       const _component_UIcon = _sfc_main$10;
-      const _component_NuxtLink = __nuxt_component_3$5;
+      const _component_NuxtLink = __nuxt_component_3$4;
       _push(`<main${ssrRenderAttrs(_attrs)}>`);
       _push(ssrRenderComponent(MarketplaceHero, {
         modelValue: keyword.value,

@@ -1,4 +1,4 @@
-import { d as defineEventHandler, ew as applyMcpPublicCors, e as createError, an as resolveClientIp, ao as checkIpRateLimit, r as readBody, eP as registerDynamicMcpClient, ey as setResponseStatus } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, eA as applyMcpPublicCors, e as createError, an as resolveClientIp, ao as checkIpRateLimit, r as readBody, eT as registerDynamicMcpClient, eC as setResponseStatus } from '../../../nitro/nitro.mjs';
 import 'drizzle-orm';
 import 'node:crypto';
 import 'node:http2';

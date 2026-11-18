@@ -1,4 +1,4 @@
-import { d as defineEventHandler, f as getRouterParam, r as readBody, bt as updatePromoAgentRelation } from '../../../../../nitro/nitro.mjs';
+import { d as defineEventHandler, f as getRouterParam, r as readBody, bv as updatePromoAgentRelation } from '../../../../../nitro/nitro.mjs';
 import 'drizzle-orm';
 import 'node:crypto';
 import 'node:http2';

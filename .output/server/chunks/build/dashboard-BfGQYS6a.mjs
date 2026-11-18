@@ -1,4 +1,4 @@
-import { r as useRouter, y as useFetch, d as _sfc_main$X, Q as _export_sfc, u as useI18n, G as useCurrencyFormat, P as __nuxt_component_3$5, j as _sfc_main$10, l as useFormatTime, _ as _sfc_main$R } from './server.mjs';
+import { r as useRouter, y as useFetch, d as _sfc_main$X, Q as _export_sfc, u as useI18n, G as useCurrencyFormat, P as __nuxt_component_3$4, j as _sfc_main$10, l as useFormatTime, _ as _sfc_main$R } from './server.mjs';
 import { defineComponent, ref, computed, mergeProps, unref, withCtx, createVNode, toDisplayString, createTextVNode, withModifiers, openBlock, createBlock, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrInterpolate, ssrRenderList, ssrRenderClass, ssrRenderComponent, ssrRenderAttr, ssrRenderStyle } from 'vue/server-renderer';
 import '../nitro/nitro.mjs';
@@ -92,7 +92,7 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
       return ((ai == null ? void 0 : ai.failedEmails24h) || 0) + ((ai == null ? void 0 : ai.errorLogs24h) || 0) + ((ai == null ? void 0 : ai.paymentFailures24h) || 0);
     });
     return (_ctx, _push, _parent, _attrs) => {
-      const _component_NuxtLink = __nuxt_component_3$5;
+      const _component_NuxtLink = __nuxt_component_3$4;
       const _component_UIcon = _sfc_main$10;
       _push(`<div${ssrRenderAttrs(mergeProps({ class: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4" }, _attrs))}>`);
       _push(ssrRenderComponent(_component_NuxtLink, {
@@ -811,7 +811,7 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
     return (_ctx, _push, _parent, _attrs) => {
       var _a, _b, _c, _d;
       const _component_UIcon = _sfc_main$10;
-      const _component_NuxtLink = __nuxt_component_3$5;
+      const _component_NuxtLink = __nuxt_component_3$4;
       _push(`<div${ssrRenderAttrs(mergeProps({ class: "bg-white dark:bg-[#121214] p-5 rounded-2xl border border-gray-200/60 dark:border-gray-800/50 shadow-xs flex flex-col justify-between" }, _attrs))}><div><div class="flex items-center justify-between gap-2 mb-3"><h2 class="text-base font-bold text-gray-900 dark:text-white">${ssrInterpolate(effectiveInsightTab.value === "sources" ? "\u6D41\u91CF\u6765\u6E90\u6E20\u9053" : effectiveInsightTab.value === "pages" ? "\u70ED\u95E8\u53D7\u8BBF\u9875\u9762" : "\u4E1A\u52A1\u54C1\u7C7B\u6784\u6210")}</h2><div class="flex items-center bg-gray-100 dark:bg-white/5 p-0.5 rounded-lg"><button type="button" class="${ssrRenderClass([effectiveInsightTab.value === "sources" ? "bg-white dark:bg-[#1a1a1e] text-gray-900 dark:text-white shadow-xs" : "text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white", "px-2 py-1 rounded-md text-[11px] font-medium transition cursor-pointer"])}"> \u6D41\u91CF\u6765\u6E90 </button><button type="button" class="${ssrRenderClass([effectiveInsightTab.value === "pages" ? "bg-white dark:bg-[#1a1a1e] text-gray-900 dark:text-white shadow-xs" : "text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white", "px-2 py-1 rounded-md text-[11px] font-medium transition cursor-pointer"])}"> \u70ED\u95E8\u9875\u9762 </button><button type="button" class="${ssrRenderClass([effectiveInsightTab.value === "categories" ? "bg-white dark:bg-[#1a1a1e] text-gray-900 dark:text-white shadow-xs" : "text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white", "px-2 py-1 rounded-md text-[11px] font-medium transition cursor-pointer"])}"> \u54C1\u7C7B\u6784\u6210 </button></div></div>`);
       if (effectiveInsightTab.value === "sources") {
         _push(`<div class="space-y-3"><p class="text-xs text-gray-400 mb-2">${ssrInterpolate(__props.selectedRangeLabel)}\u5404\u83B7\u5BA2\u6E20\u9053\u72EC\u7ACB\u8BBF\u5BA2\u5360\u6BD4</p><!--[-->`);
@@ -1148,7 +1148,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
       var _a;
       const _component_UIcon = _sfc_main$10;
       const _component_UBadge = _sfc_main$R;
-      const _component_NuxtLink = __nuxt_component_3$5;
+      const _component_NuxtLink = __nuxt_component_3$4;
       _push(`<div${ssrRenderAttrs(mergeProps({ class: "grid grid-cols-1 xl:grid-cols-[1fr_1.6fr] gap-5" }, _attrs))}><div class="bg-white dark:bg-[#121214] p-5 rounded-2xl border border-gray-200/60 dark:border-gray-800/50 shadow-xs flex flex-col justify-between"><div><div class="flex items-center justify-between mb-1.5"><h2 class="text-base font-bold text-gray-900 dark:text-white flex items-center gap-2">`);
       _push(ssrRenderComponent(_component_UIcon, {
         name: "ph:bell-ringing-bold",

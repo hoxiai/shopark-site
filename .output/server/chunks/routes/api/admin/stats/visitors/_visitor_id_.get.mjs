@@ -1,4 +1,4 @@
-import { d as defineEventHandler, c as getRequestLocale, f as getRouterParam, e as createError, b as db, O as visitorProfiles, w as users, M as orders, cC as visitorEvents, q as products, t as toIsoTimestamp } from '../../../../../nitro/nitro.mjs';
+import { d as defineEventHandler, c as getRequestLocale, f as getRouterParam, e as createError, b as db, O as visitorProfiles, w as users, M as orders, cF as visitorEvents, q as products, t as toIsoTimestamp } from '../../../../../nitro/nitro.mjs';
 import { eq, or, count, and, gt, desc } from 'drizzle-orm';
 import 'node:crypto';
 import 'node:http2';

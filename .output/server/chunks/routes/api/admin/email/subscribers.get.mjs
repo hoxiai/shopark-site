@@ -1,4 +1,4 @@
-import { d as defineEventHandler, g as getQuery, W as newsletterSubscribers, ai as buildNewsletterTopicCondition, b as db } from '../../../../nitro/nitro.mjs';
+import { d as defineEventHandler, g as getQuery, V as newsletterSubscribers, ai as buildNewsletterTopicCondition, b as db } from '../../../../nitro/nitro.mjs';
 import { eq, like, and, desc, sql } from 'drizzle-orm';
 import 'node:crypto';
 import 'node:http2';

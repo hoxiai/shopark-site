@@ -1,6 +1,6 @@
 import { computed, mergeProps, useSSRContext } from 'vue';
 import { ssrRenderComponent } from 'vue/server-renderer';
-import { gs as defu } from '../nitro/nitro.mjs';
+import { gA as defu } from '../nitro/nitro.mjs';
 import { $ as useAppConfig, j as _sfc_main$10 } from './server.mjs';
 import 'drizzle-orm';
 import 'node:crypto';

@@ -1,4 +1,4 @@
-import { d as defineEventHandler, r as readBody, aj as subscribeNewsletter, e as createError, b as db, W as newsletterSubscribers } from '../../../../nitro/nitro.mjs';
+import { d as defineEventHandler, r as readBody, aj as subscribeNewsletter, e as createError, b as db, V as newsletterSubscribers } from '../../../../nitro/nitro.mjs';
 import { eq } from 'drizzle-orm';
 import 'node:crypto';
 import 'node:http2';

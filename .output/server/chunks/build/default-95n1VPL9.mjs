@@ -1,5 +1,5 @@
 import { _ as __nuxt_component_0 } from './EmailVerificationBanner-qT3VbFAn.mjs';
-import { c as useSettings, bn as useLocalizedSettings, c0 as useSupportChat, P as __nuxt_component_3$5, bX as __nuxt_component_1$1, bd as __nuxt_component_0$1, d as _sfc_main$X, bZ as _sfc_main$g } from './server.mjs';
+import { c as useSettings, bn as useLocalizedSettings, c0 as useSupportChat, P as __nuxt_component_3$4, bX as __nuxt_component_1$1, bd as __nuxt_component_0$1, d as _sfc_main$X, bZ as _sfc_main$g } from './server.mjs';
 import { defineComponent, ref, mergeProps, withCtx, unref, openBlock, createBlock, createVNode, createCommentVNode, toDisplayString, createTextVNode, computed, isRef, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent, ssrRenderSlot, ssrInterpolate } from 'vue/server-renderer';
 import './interval-BBg9qvAV.mjs';
@@ -67,7 +67,7 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
     const { getLocalizedSetting } = useLocalizedSettings();
     const { hasUnread } = useSupportChat();
     return (_ctx, _push, _parent, _attrs) => {
-      const _component_NuxtLink = __nuxt_component_3$5;
+      const _component_NuxtLink = __nuxt_component_3$4;
       const _component_SiteLogo = __nuxt_component_1$1;
       const _component_Icon = __nuxt_component_0$1;
       const _component_UButton = _sfc_main$X;
@@ -283,7 +283,7 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
       const _component_USlideover = _sfc_main$g;
       const _component_SiteLogo = __nuxt_component_1$1;
       const _component_UButton = _sfc_main$X;
-      const _component_NuxtLink = __nuxt_component_3$5;
+      const _component_NuxtLink = __nuxt_component_3$4;
       const _component_Icon = __nuxt_component_0$1;
       _push(ssrRenderComponent(_component_USlideover, mergeProps({
         open: unref(innerOpen),

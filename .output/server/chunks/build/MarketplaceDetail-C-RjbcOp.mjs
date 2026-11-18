@@ -1,10 +1,10 @@
-import { E as useLocaleRouter, aO as useLocaleCurrency, I as useRoute, u as useI18n, bq as useJsonLd, P as __nuxt_component_3$5, j as _sfc_main$10 } from './server.mjs';
+import { E as useLocaleRouter, aO as useLocaleCurrency, I as useRoute, u as useI18n, bq as useJsonLd, P as __nuxt_component_3$4, j as _sfc_main$10 } from './server.mjs';
 import { defineComponent, computed, ref, mergeProps, unref, withCtx, createTextVNode, toDisplayString, createVNode, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent, ssrInterpolate, ssrRenderList, ssrRenderClass, ssrRenderAttr } from 'vue/server-renderer';
 import MarketplaceVisual from './MarketplaceVisual-DI-8P_MU.mjs';
 import { i as isMarkdownContent, m as markdownToHtml } from './markdown-CTbgD6Gu.mjs';
 import { s as sanitizeRichHtml } from './sanitize-html-6xfxlt13.mjs';
-import { gu as SEO_LOCALE_LANGUAGE } from '../nitro/nitro.mjs';
+import { gC as SEO_LOCALE_LANGUAGE } from '../nitro/nitro.mjs';
 import 'vue-router';
 import '@iconify/vue';
 import '@iconify/utils/lib/css/icon';
@@ -159,7 +159,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     }));
     return (_ctx, _push, _parent, _attrs) => {
       var _a;
-      const _component_NuxtLink = __nuxt_component_3$5;
+      const _component_NuxtLink = __nuxt_component_3$4;
       const _component_UIcon = _sfc_main$10;
       if (__props.entry) {
         _push(`<div${ssrRenderAttrs(mergeProps({ class: "px-5 pb-20 pt-8 sm:px-8 sm:pt-12 lg:px-12" }, _attrs))}><div class="mx-auto max-w-6xl">`);
