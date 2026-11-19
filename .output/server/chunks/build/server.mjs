@@ -1,6 +1,6 @@
 import process from 'node:process';globalThis._importMeta_=globalThis._importMeta_||{url:"file:///_entry.js",env:process.env};import * as vue from 'vue';
 import { useSlots, useId as useId$1, useAttrs, computed, unref, mergeProps, withCtx, openBlock, createBlock, createVNode, resolveDynamicComponent, renderSlot, createTextVNode, toDisplayString as toDisplayString$1, createCommentVNode, hasInjectionContext, inject, getCurrentInstance, ref, watch, nextTick, toValue, defineComponent, h, createElementBlock, Fragment, renderList, provide, customRef, shallowRef, toRefs, watchPostEffect, watchEffect, toRef as toRef$1, camelize as camelize$1, reactive, normalizeStyle, mergeDefaults, Teleport, useModel, mergeModels, markRaw, toHandlerKey, getCurrentScope, onScopeDispose, shallowReadonly, normalizeProps, guardReactiveProps, readonly, cloneVNode, toHandlers, isRef, useTemplateRef, withKeys, withModifiers, resolveComponent, Comment, withAsyncContext, onServerPrefetch, defineAsyncComponent, createSlots, resolveDirective, createElementVNode, effectScope, withDirectives, vModelCheckbox, useSSRContext, toRaw, shallowReactive, Suspense, createApp, Text, onErrorCaptured, isReadonly, isShallow, isReactive } from 'vue';
-import { gy as serialize, gz as createPricingContext, eC as setResponseStatus$1, gA as defu, E as getRequestURL, gB as isEqual$1, e as createError$1, gC as SEO_LOCALE_LANGUAGE, ce as normalizeGeoFaqs, ft as getRequestHeaders, gD as getErrorRequestId, gE as resolveActiveTheme, gF as upperFirst, f4 as quoteProductPrice, gG as defuFn, gH as REFUND_EFFECTS_COMPLETE, gI as htmlToCleanMarkdown, gJ as appendResponseHeader, gK as parse$1, eq as getRequestHeader, gL as errorRecord, gM as errorData, gN as resolveLocalizedSetting, gO as sanitizeStatusCode, gP as getContext, dZ as setCookie, dW as getCookie, dX as deleteCookie, cd as normalizeGeoKeySpecs, cf as normalizeGeoRelatedLinks, gQ as $fetch$1, gR as baseURL, gS as hash, gT as createHooks, gU as executeAsync, gV as normalizeSiteOrigin, gW as stripLocalePrefix$1, ci as classifySeoRoute, cj as seoRouteRegistry, gX as localePathForSeo, gY as isMarkdownMirrorPath, gZ as safeJsonLd, g_ as localeDomainUrl, g$ as getRequestProtocol, h0 as themeHostConfigs } from '../nitro/nitro.mjs';
+import { gy as serialize, gz as createPricingContext, eC as setResponseStatus$1, gA as defu, E as getRequestURL, gB as isEqual$1, e as createError$1, gC as SEO_LOCALE_LANGUAGE, ce as normalizeGeoFaqs, ft as getRequestHeaders, gD as getErrorRequestId, gE as resolveActiveTheme, gF as upperFirst, f4 as quoteProductPrice, gG as defuFn, gH as REFUND_EFFECTS_COMPLETE, gI as htmlToCleanMarkdown, gJ as appendResponseHeader, gK as parse$1, eq as getRequestHeader, gL as errorRecord, gM as errorData, gN as resolveLocalizedSetting, gO as sanitizeStatusCode, gP as getContext, dZ as setCookie, dW as getCookie, dX as deleteCookie, cd as normalizeGeoKeySpecs, cf as normalizeGeoRelatedLinks, gQ as $fetch$1, gR as baseURL, gS as hash, gT as createHooks, gU as executeAsync, gV as normalizeSiteOrigin, gW as filterSeoLocales, gX as stripLocalePrefix$1, ci as classifySeoRoute, cj as seoRouteRegistry, gY as localePathForSeo, gZ as isMarkdownMirrorPath, g_ as safeJsonLd, g$ as localeDomainUrl, h0 as getRequestProtocol, h1 as themeHostConfigs } from '../nitro/nitro.mjs';
 import { useRoute as useRoute$1, useRouter as useRouter$1, RouterView, isNavigationFailure, createMemoryHistory, createRouter, START_LOCATION } from 'vue-router';
 import { Icon, getIcon, loadIcon as loadIcon$1, _api, addAPIProvider, setCustomIconsLoader } from '@iconify/vue';
 import { getIconCSS } from '@iconify/utils/lib/css/icon';
@@ -1136,37 +1136,37 @@ const _routes = [
   {
     name: "slug___en",
     path: "/:slug(.*)*",
-    component: () => import('./_...slug_-BED1Oodx.mjs')
+    component: () => import('./_...slug_-AZX0Fnfm.mjs')
   },
   {
     name: "slug___zh___default",
     path: "/:slug(.*)*",
-    component: () => import('./_...slug_-BED1Oodx.mjs')
+    component: () => import('./_...slug_-AZX0Fnfm.mjs')
   },
   {
     name: "slug___zh",
     path: "/zh/:slug(.*)*",
-    component: () => import('./_...slug_-BED1Oodx.mjs')
+    component: () => import('./_...slug_-AZX0Fnfm.mjs')
   },
   {
     name: "slug___zh-HK___default",
     path: "/:slug(.*)*",
-    component: () => import('./_...slug_-BED1Oodx.mjs')
+    component: () => import('./_...slug_-AZX0Fnfm.mjs')
   },
   {
     name: "slug___zh-HK",
     path: "/zh-HK/:slug(.*)*",
-    component: () => import('./_...slug_-BED1Oodx.mjs')
+    component: () => import('./_...slug_-AZX0Fnfm.mjs')
   },
   {
     name: "slug___ru___default",
     path: "/:slug(.*)*",
-    component: () => import('./_...slug_-BED1Oodx.mjs')
+    component: () => import('./_...slug_-AZX0Fnfm.mjs')
   },
   {
     name: "slug___ru",
     path: "/ru/:slug(.*)*",
-    component: () => import('./_...slug_-BED1Oodx.mjs')
+    component: () => import('./_...slug_-AZX0Fnfm.mjs')
   }
 ];
 const _wrapInTransition = (props, children) => {
@@ -5654,7 +5654,7 @@ const cfg0 = defineAppConfig({
   }
 });
 const inlineConfig = {
-  "appVersion": "1.2.48",
+  "appVersion": "1.2.49",
   "nuxt": {},
   "ui": {
     "colors": {
@@ -44559,12 +44559,15 @@ function extractLocalePrefix(path) {
   return match ? match[1].toLowerCase() : null;
 }
 function isPathLocaleAllowed(options) {
-  const { path, supportedLocalesSetting, registeredLocales } = options;
+  const { path, supportedLocalesSetting, i18nEnabledSetting, registeredLocales } = options;
   const requested = extractLocalePrefix(path);
   if (!requested) return true;
   if (registeredLocales && registeredLocales.length > 0) {
     const isRegistered = registeredLocales.some((loc) => loc.toLowerCase() === requested);
     if (!isRegistered) return true;
+  }
+  if (i18nEnabledSetting === false || String(i18nEnabledSetting ?? "").trim().toLowerCase() === "false") {
+    return false;
   }
   if (!supportedLocalesSetting || !supportedLocalesSetting.trim()) {
     return true;
@@ -44590,6 +44593,7 @@ const locale_45guard_45global = /* @__PURE__ */ defineNuxtRouteMiddleware(async 
   const allowed = isPathLocaleAllowed({
     path: to.path,
     supportedLocalesSetting: getSetting("supported_locales"),
+    i18nEnabledSetting: getSetting("i18n_enabled"),
     registeredLocales
   });
   if (!allowed) {
@@ -47222,6 +47226,12 @@ const i18n_seo_im8SQ1ePLoUivIUo65pX2ilaAPZtc0aGSNATIOvFBFY = /* @__PURE__ */ def
       return normalizeSiteOrigin(getSetting("site_url"));
     });
     const localeEntries = computed(() => (locales.value || []).map((item) => typeof item === "string" ? { code: item, language: item } : item));
+    const resolvedDefaultLocale = computed(() => Object.keys(owners).length ? String(config.public.apayDefaultLocale || "") : mappings[host.value] || String(config.public.apayDefaultLocale || ""));
+    const enabledLocaleEntries = computed(() => filterSeoLocales(localeEntries.value, {
+      supportedLocalesSetting: getSetting("supported_locales"),
+      i18nEnabledSetting: getSetting("i18n_enabled"),
+      defaultLocale: resolvedDefaultLocale.value
+    }));
     const absoluteUrl = (path) => {
       const candidate = new URL(path || "/", origin.value);
       const url = new URL(candidate.pathname, origin.value);
@@ -47251,7 +47261,7 @@ const i18n_seo_im8SQ1ePLoUivIUo65pX2ilaAPZtc0aGSNATIOvFBFY = /* @__PURE__ */ def
     useHead(() => {
       if (!isIndexable.value) return {};
       const current = localeEntries.value.find((item) => item.code === locale.value);
-      const links = localeEntries.value.flatMap((item) => {
+      const links = enabledLocaleEntries.value.flatMap((item) => {
         const path = Object.keys(owners).length ? routePath.value : localePath2(item.code);
         return path ? [{
           key: `apay-domain-locale-${item.code}`,
@@ -47260,14 +47270,15 @@ const i18n_seo_im8SQ1ePLoUivIUo65pX2ilaAPZtc0aGSNATIOvFBFY = /* @__PURE__ */ def
           href: pageUrl(path, item.code)
         }] : [];
       });
-      const defaultLocale = Object.keys(owners).length ? String(config.public.apayDefaultLocale) : mappings[host.value] || String(config.public.apayDefaultLocale || "");
-      const defaultPath = Object.keys(owners).length ? routePath.value : defaultLocale ? localePath2(defaultLocale) : "";
-      if (defaultPath) {
+      const defaultLocale = resolvedDefaultLocale.value;
+      const xDefaultLocale = enabledLocaleEntries.value.find((item) => item.code === defaultLocale)?.code || enabledLocaleEntries.value.find((item) => item.code === "en")?.code || enabledLocaleEntries.value[0]?.code || "";
+      const defaultPath = Object.keys(owners).length ? routePath.value : xDefaultLocale ? localePath2(xDefaultLocale) : "";
+      if (defaultPath && xDefaultLocale) {
         links.unshift({
           key: "apay-domain-locale-x-default",
           rel: "alternate",
           hreflang: "x-default",
-          href: pageUrl(Object.keys(owners).length ? routePath.value : defaultPath, defaultLocale)
+          href: pageUrl(Object.keys(owners).length ? routePath.value : defaultPath, xDefaultLocale)
         });
       }
       const siteName = getLocalizedSetting("site_name", "APay");

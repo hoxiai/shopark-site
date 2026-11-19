@@ -104,9 +104,9 @@ function userIdOf(input) {
 }
 async function registerThemeMcpTools() {
   const [{ registerMcpTool }, { getShoparkMcpTools }, { createDefaultAssistantDeps, executeAssistantTool }] = await Promise.all([
-    import('../nitro/nitro.mjs').then(function (n) { return n.h7; }),
-    import('../nitro/nitro.mjs').then(function (n) { return n.h9; }),
-    import('../nitro/nitro.mjs').then(function (n) { return n.h8; })
+    import('../nitro/nitro.mjs').then(function (n) { return n.h8; }),
+    import('../nitro/nitro.mjs').then(function (n) { return n.ha; }),
+    import('../nitro/nitro.mjs').then(function (n) { return n.h9; })
   ]);
   const deps = createDefaultAssistantDeps();
   for (const tool of getShoparkMcpTools()) {

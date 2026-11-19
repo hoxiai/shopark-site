@@ -11,7 +11,7 @@ import { u as useShoparkConsoleCopy } from './useShoparkConsole-DzX_-4La.mjs';
 import { u as useShoparkSiteName } from './useShoparkSiteName-2jqDlf8u.mjs';
 import { u as useShoparkLogo } from './useShoparkLogo-CWqcFbLY.mjs';
 import { u as useShoparkLaunch } from './useShoparkLaunch-BDfOzOn-.mjs';
-import { g_ as localeDomainUrl } from '../nitro/nitro.mjs';
+import { g$ as localeDomainUrl } from '../nitro/nitro.mjs';
 import './interval-BBg9qvAV.mjs';
 import '@iconify/vue';
 import '@iconify/utils/lib/css/icon';

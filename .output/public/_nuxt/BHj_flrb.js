@@ -1,1 +1,0 @@
-import{q as r}from"./CuYzYZdz.js";import{m as s,aK as e}from"./DYtdeWQg.js";import"./CRR0MVlV.js";import"./23PGUyfr.js";import"./CfYFMnge.js";const c=s({__name:"subscriptions",async setup(a){let t,o;return[t,o]=e(()=>r("/admin/products?tab=subscriptions",{replace:!0})),await t,o(),()=>{}}});export{c as default};
