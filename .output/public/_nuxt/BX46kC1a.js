@@ -1,0 +1,1 @@
+import{q as r}from"./BtJJja8p.js";import{m as e,aK as o}from"./DYtdeWQg.js";import"./CRR0MVlV.js";import"./23PGUyfr.js";import"./CfYFMnge.js";const c=e({__name:"cards",async setup(s){let t,a;return[t,a]=o(()=>r("/admin/products?tab=cards",{replace:!0})),await t,a(),()=>{}}});export{c as default};

@@ -1,6 +1,6 @@
 import process from 'node:process';globalThis._importMeta_=globalThis._importMeta_||{url:"file:///_entry.js",env:process.env};import * as vue from 'vue';
 import { useSlots, useId as useId$1, useAttrs, computed, unref, mergeProps, withCtx, openBlock, createBlock, createVNode, resolveDynamicComponent, renderSlot, createTextVNode, toDisplayString as toDisplayString$1, createCommentVNode, hasInjectionContext, inject, getCurrentInstance, ref, watch, nextTick, toValue, defineComponent, h, createElementBlock, Fragment, renderList, provide, customRef, shallowRef, toRefs, watchPostEffect, watchEffect, toRef as toRef$1, camelize as camelize$1, reactive, normalizeStyle, mergeDefaults, Teleport, useModel, mergeModels, markRaw, toHandlerKey, getCurrentScope, onScopeDispose, shallowReadonly, normalizeProps, guardReactiveProps, readonly, cloneVNode, toHandlers, isRef, useTemplateRef, withKeys, withModifiers, resolveComponent, Comment, withAsyncContext, onServerPrefetch, defineAsyncComponent, createSlots, resolveDirective, createElementVNode, effectScope, withDirectives, vModelCheckbox, useSSRContext, toRaw, shallowReactive, Suspense, createApp, Text, onErrorCaptured, isReadonly, isShallow, isReactive } from 'vue';
-import { gy as serialize, gz as createPricingContext, eC as setResponseStatus$1, gA as defu, E as getRequestURL, gB as isEqual$1, e as createError$1, gC as SEO_LOCALE_LANGUAGE, ce as normalizeGeoFaqs, ft as getRequestHeaders, gD as getErrorRequestId, gE as resolveActiveTheme, gF as upperFirst, f4 as quoteProductPrice, gG as defuFn, gH as REFUND_EFFECTS_COMPLETE, gI as htmlToCleanMarkdown, gJ as appendResponseHeader, gK as parse$1, eq as getRequestHeader, gL as errorRecord, gM as errorData, gN as resolveLocalizedSetting, gO as sanitizeStatusCode, gP as getContext, dZ as setCookie, dW as getCookie, dX as deleteCookie, cd as normalizeGeoKeySpecs, cf as normalizeGeoRelatedLinks, gQ as $fetch$1, gR as baseURL, gS as hash, gT as createHooks, gU as executeAsync, gV as normalizeSiteOrigin, gW as filterSeoLocales, gX as stripLocalePrefix$1, ci as classifySeoRoute, cj as seoRouteRegistry, gY as localePathForSeo, gZ as isMarkdownMirrorPath, g_ as safeJsonLd, g$ as localeDomainUrl, h0 as getRequestProtocol, h1 as themeHostConfigs } from '../nitro/nitro.mjs';
+import { gu as serialize, gv as createPricingContext, eA as setResponseStatus$1, gw as defu, E as getRequestURL, gx as isEqual$1, e as createError$1, gy as SEO_LOCALE_LANGUAGE, ce as normalizeGeoFaqs, fr as getRequestHeaders, gz as getErrorRequestId, gA as resolveActiveTheme, gB as upperFirst, f2 as quoteProductPrice, gC as defuFn, gD as REFUND_EFFECTS_COMPLETE, gE as htmlToCleanMarkdown, gF as appendResponseHeader, gG as parse$1, eo as getRequestHeader, gH as errorRecord, gI as errorData, gJ as resolveLocalizedSetting, gK as sanitizeStatusCode, gL as getContext, dX as setCookie, dU as getCookie, dV as deleteCookie, cd as normalizeGeoKeySpecs, cf as normalizeGeoRelatedLinks, gM as $fetch$1, gN as baseURL, gO as hash, gP as createHooks, gQ as executeAsync, gR as normalizeSiteOrigin, gS as filterSeoLocales, gT as stripLocalePrefix$1, ci as classifySeoRoute, cj as seoRouteRegistry, gU as localePathForSeo, gV as isMarkdownMirrorPath, gW as safeJsonLd, gX as localeDomainUrl, gY as getRequestProtocol, gZ as themeHostConfigs } from '../nitro/nitro.mjs';
 import { useRoute as useRoute$1, useRouter as useRouter$1, RouterView, isNavigationFailure, createMemoryHistory, createRouter, START_LOCATION } from 'vue-router';
 import { Icon, getIcon, loadIcon as loadIcon$1, _api, addAPIProvider, setCustomIconsLoader } from '@iconify/vue';
 import { getIconCSS } from '@iconify/utils/lib/css/icon';
@@ -924,7 +924,7 @@ const _routes = [
     name: "admin-settings-manages",
     path: "/admin/settings/manages",
     meta: __nuxt_page_meta$q || {},
-    component: () => import('./manages-1_kfdSpI.mjs')
+    component: () => import('./manages-C5UCGKSl.mjs')
   },
   {
     name: "admin-settings-product-presets",
@@ -1012,13 +1012,13 @@ const _routes = [
     name: "admin-comments",
     path: "/admin/comments",
     meta: __nuxt_page_meta$i || {},
-    component: () => import('./comments-BrdybqUU.mjs')
+    component: () => import('./comments-hCumYT2T.mjs')
   },
   {
     name: "admin-customers",
     path: "/admin/customers",
     meta: __nuxt_page_meta$h || {},
-    component: () => import('./customers-DpV6olTV.mjs')
+    component: () => import('./customers-DQFb69j6.mjs')
   },
   {
     name: "admin-dashboard",
@@ -1030,13 +1030,13 @@ const _routes = [
     name: "admin-login",
     path: "/admin/login",
     meta: __nuxt_page_meta$f || {},
-    component: () => import('./login-Dt52dK7E.mjs')
+    component: () => import('./login-DnDq18Zo.mjs')
   },
   {
     name: "admin-logs",
     path: "/admin/logs",
     meta: __nuxt_page_meta$e || {},
-    component: () => import('./logs-Xl88mNee.mjs')
+    component: () => import('./logs-C3mBvRGY.mjs')
   },
   {
     name: "admin-newsletter",
@@ -1048,7 +1048,7 @@ const _routes = [
     name: "admin-orders",
     path: "/admin/orders",
     meta: __nuxt_page_meta$c || {},
-    component: () => import('./orders-Dt2degSG.mjs')
+    component: () => import('./orders-De3WoJLj.mjs')
   },
   {
     name: "admin-payments",
@@ -1060,13 +1060,13 @@ const _routes = [
     name: "admin-posts",
     path: "/admin/posts",
     meta: __nuxt_page_meta$a || {},
-    component: () => import('./index-BZ4hY_VN.mjs')
+    component: () => import('./index-Bjf8ZRUU.mjs')
   },
   {
     name: "admin-products",
     path: "/admin/products",
     meta: __nuxt_page_meta$9 || {},
-    component: () => import('./index-DRPvLyKd.mjs')
+    component: () => import('./index-CoK7v3mI.mjs')
   },
   {
     name: "admin-profile",
@@ -1125,7 +1125,7 @@ const _routes = [
     path: "/admin/stats/visitors",
     meta: __nuxt_page_meta$1 || {},
     alias: ["/admin/visitors"],
-    component: () => import('./visitors-00CoSJld.mjs')
+    component: () => import('./visitors-16BlJgXQ.mjs')
   },
   {
     name: "admin",
@@ -5654,7 +5654,7 @@ const cfg0 = defineAppConfig({
   }
 });
 const inlineConfig = {
-  "appVersion": "1.2.50",
+  "appVersion": "1.2.51",
   "nuxt": {},
   "ui": {
     "colors": {
@@ -18856,39 +18856,70 @@ const useProductJsonLd = (key, product) => {
     if (!item?.name) return null;
     const slug = String(item.slug || route.params.slug || "");
     const path = localePath2(`/products/${slug}`);
-    const images = [item.imageUrl, ...Array.isArray(item.images) ? item.images : [], ...Array.isArray(item.imageUrls) ? item.imageUrls : []].map((value) => String(value || "").trim()).filter(Boolean);
+    const fallbackImage = String(getLocalizedSetting("site_logo") || "").trim();
+    const images = [
+      item.imageUrl,
+      ...Array.isArray(item.images) ? item.images : [],
+      ...Array.isArray(item.imageUrls) ? item.imageUrls : [],
+      ...fallbackImage ? [fallbackImage] : []
+    ].map((value) => String(value || "").trim()).filter(Boolean);
+    const uniqueImages = [...new Set(images)];
     const name2 = String(item.name);
     const quote = productQuote({ price: item.price, metaData: item.metaData });
+    const availability = item.isActive === false ? "https://schema.org/OutOfStock" : "https://schema.org/InStock";
     const inLanguage = SEO_LOCALE_LANGUAGE[locale.value] || locale.value;
     const meta = resolveEntityMeta(item.metaData, locale.value);
     const keySpecs = normalizeGeoKeySpecs(meta.keySpecs);
     const faqs = normalizeGeoFaqs(meta.faqs);
+    const description2 = String(meta.tldr || item.description || item.content || "").replace(/<[^>]+>/g, " ").trim() || void 0;
+    const isSoftware = meta.schemaType === "SoftwareApplication" || ["subscription", "saas", "software"].includes(String(item.type || "").toLowerCase());
+    const siteName = getLocalizedSetting("site_name", "APay");
+    const primaryNode = isSoftware ? {
+      "@type": "SoftwareApplication",
+      "@id": `${path}#software`,
+      url: path,
+      name: name2,
+      description: description2,
+      applicationCategory: cleanPlainText(meta.applicationCategory) || "BusinessApplication",
+      operatingSystem: cleanPlainText(meta.operatingSystem) || "Web",
+      image: uniqueImages.length ? uniqueImages : void 0,
+      inLanguage,
+      offers: {
+        "@type": "Offer",
+        url: path,
+        price: quote.amount,
+        priceCurrency: quote.currency,
+        availability
+      }
+    } : {
+      "@type": "Product",
+      "@id": `${path}#product`,
+      name: name2,
+      description: description2,
+      image: uniqueImages.length ? uniqueImages : void 0,
+      brand: { "@type": "Brand", name: siteName },
+      inLanguage,
+      ...keySpecs.length ? {
+        additionalProperty: keySpecs.map((spec) => ({
+          "@type": "PropertyValue",
+          name: spec.label,
+          value: spec.value
+        }))
+      } : {},
+      offers: {
+        "@type": "Offer",
+        url: path,
+        price: quote.amount,
+        priceCurrency: quote.currency,
+        availability
+      }
+    };
     const nodes = [
-      {
-        "@type": "Product",
-        "@id": `${path}#product`,
-        name: name2,
-        description: String(meta.tldr || item.description || item.content || "").replace(/<[^>]+>/g, " ").trim() || void 0,
-        image: [...new Set(images)].length ? [...new Set(images)] : void 0,
-        inLanguage,
-        ...keySpecs.length ? {
-          additionalProperty: keySpecs.map((spec) => ({
-            "@type": "PropertyValue",
-            name: spec.label,
-            value: spec.value
-          }))
-        } : {},
-        offers: {
-          "@type": "Offer",
-          url: path,
-          price: quote.amount,
-          priceCurrency: quote.currency
-        }
-      },
+      primaryNode,
       {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: getLocalizedSetting("site_name", "APay"), item: localePath2("/") },
+          { "@type": "ListItem", position: 1, name: siteName, item: localePath2("/") },
           { "@type": "ListItem", position: 2, name: name2, item: path }
         ]
       }
@@ -26270,8 +26301,7 @@ const _sfc_main$v = /* @__PURE__ */ defineComponent({
       if (totalPages.value > 1) {
         _push(`<div class="mt-10 flex justify-center">`);
         _push(ssrRenderComponent(_component_UPagination, {
-          modelValue: unref(page),
-          "onUpdate:modelValue": ($event) => isRef(page) ? page.value = $event : null,
+          page: unref(page),
           "items-per-page": unref(pageSize2),
           total: totalItems.value,
           "onUpdate:page": (val) => unref(onPageChange)(val, () => unref(refresh)())
@@ -28697,7 +28727,7 @@ const corePageModules = Object.fromEntries(Object.entries(/* @__PURE__ */ Object
   "/core/pages/user/tokens/index.vue": __vite_glob_0_12
 })).map(([file, module]) => [file.replace("/", "../"), module]));
 const themePageModules = {
-  ...Object.fromEntries(Object.entries(/* @__PURE__ */ Object.assign({ "/themes/shopark/pages/about.vue": () => import('./about-3C8hy3Rv.mjs'), "/themes/shopark/pages/apps/[slug].vue": () => import('./_slug_-qvCO1mV6.mjs'), "/themes/shopark/pages/apps/index.vue": () => import('./index-B5yD2q6O.mjs'), "/themes/shopark/pages/auth/forgot-password.vue": () => import('./forgot-password-DvP7IWgq.mjs'), "/themes/shopark/pages/auth/login.vue": () => import('./login-C-WD2UhA.mjs'), "/themes/shopark/pages/auth/register.vue": () => import('./register-CMOt23AS.mjs'), "/themes/shopark/pages/auth/reset-password.vue": () => import('./reset-password-B_U5h8Ds.mjs'), "/themes/shopark/pages/blog/[slug].vue": () => import('./_slug_-Dem_f7NL.mjs'), "/themes/shopark/pages/blog/index.vue": () => import('./index-CUmXi9hO.mjs'), "/themes/shopark/pages/cases/[slug].vue": () => import('./_slug_-Bom1jkTi.mjs'), "/themes/shopark/pages/cases/index.vue": () => import('./index-ClUW5YY0.mjs'), "/themes/shopark/pages/changelog.vue": () => import('./changelog-D4Wmby7F.mjs'), "/themes/shopark/pages/index.vue": () => import('./index-Cxn_vC4j.mjs'), "/themes/shopark/pages/page/about.vue": () => import('./about-4r71YyCb.mjs'), "/themes/shopark/pages/page/amazon-store.vue": () => import('./amazon-store-CfV5HRPK.mjs'), "/themes/shopark/pages/page/b2b-website.vue": () => import('./b2b-website-doeVby3Q.mjs'), "/themes/shopark/pages/page/b2c-store.vue": () => import('./b2c-store-DFdmwAR2.mjs'), "/themes/shopark/pages/page/cookies.vue": () => import('./cookies-DSx0GIE4.mjs'), "/themes/shopark/pages/page/custom.vue": () => import('./custom-D16yqeFI.mjs'), "/themes/shopark/pages/page/install.vue": () => import('./install-DMcdLVih.mjs'), "/themes/shopark/pages/page/migration.vue": () => import('./migration-BFxObeuD.mjs'), "/themes/shopark/pages/page/pricing.vue": () => import('./pricing-isWT06Uo.mjs'), "/themes/shopark/pages/page/privacy.vue": () => import('./privacy-DmptfCF4.mjs'), "/themes/shopark/pages/page/solutions.vue": () => import('./solutions-CBMmmW4T.mjs'), "/themes/shopark/pages/page/store-design.vue": () => import('./store-design-CzYtDKHE.mjs'), "/themes/shopark/pages/page/terms.vue": () => import('./terms-Df99meBh.mjs'), "/themes/shopark/pages/page/weidian.vue": () => import('./weidian-DD5tkUHe.mjs'), "/themes/shopark/pages/page/wholesale.vue": () => import('./wholesale-CGOr0kn_.mjs'), "/themes/shopark/pages/pricing.vue": () => import('./pricing-BLluSIEj.mjs'), "/themes/shopark/pages/solutions/[slug].vue": () => import('./_slug_-DBtkTpa-.mjs'), "/themes/shopark/pages/solutions/index.vue": () => import('./index-r9nNSd2O.mjs'), "/themes/shopark/pages/themes/[slug].vue": () => import('./_slug_-Bjn63ptW.mjs'), "/themes/shopark/pages/themes/detail/[slug].vue": () => import('./_slug_-CGUppFoL.mjs'), "/themes/shopark/pages/themes/index.vue": () => import('./index-DSzz-Sqz.mjs'), "/themes/shopark/pages/user/account.vue": () => import('./account-B2AHb7oI.mjs'), "/themes/shopark/pages/user/assistant/components/AssistantPanel.vue": () => import('./AssistantPanel-Diw0XXHD.mjs'), "/themes/shopark/pages/user/assistant/index.vue": () => import('./index-DpxIURvq.mjs'), "/themes/shopark/pages/user/dashboard.vue": () => import('./dashboard-pU_0AUjg.mjs'), "/themes/shopark/pages/user/index.vue": () => import('./index-TxHmLTzb.mjs'), "/themes/shopark/pages/user/invoice/[order_id].vue": () => import('./_order_id_-BGYEMGjU.mjs'), "/themes/shopark/pages/user/layout.vue": () => import('./layout-hihhnLhk.mjs'), "/themes/shopark/pages/user/notifications.vue": () => import('./notifications-DlKCirDq.mjs'), "/themes/shopark/pages/user/orders/[order_id].vue": () => import('./_order_id_-C3MznsNO.mjs'), "/themes/shopark/pages/user/orders/index.vue": () => import('./index-CoEZxZMN.mjs'), "/themes/shopark/pages/user/stores/index.vue": () => import('./index-DhdBYarY.mjs'), "/themes/shopark/pages/user/subscription.vue": () => import('./subscription-UWYMQMD7.mjs'), "/themes/shopark/pages/user/tickets.vue": () => import('./tickets-SZ5iD-ej.mjs') })).map(([file, module]) => [file.replace("/", "../"), module]))
+  ...Object.fromEntries(Object.entries(/* @__PURE__ */ Object.assign({ "/themes/shopark/pages/about.vue": () => import('./about-3C8hy3Rv.mjs'), "/themes/shopark/pages/apps/[slug].vue": () => import('./_slug_-qvCO1mV6.mjs'), "/themes/shopark/pages/apps/index.vue": () => import('./index-B5yD2q6O.mjs'), "/themes/shopark/pages/auth/forgot-password.vue": () => import('./forgot-password-CEyPWlGC.mjs'), "/themes/shopark/pages/auth/login.vue": () => import('./login-Cu8W7wgS.mjs'), "/themes/shopark/pages/auth/register.vue": () => import('./register-BiPU9ivR.mjs'), "/themes/shopark/pages/auth/reset-password.vue": () => import('./reset-password-dJ3uCwmx.mjs'), "/themes/shopark/pages/blog/[slug].vue": () => import('./_slug_-Dem_f7NL.mjs'), "/themes/shopark/pages/blog/index.vue": () => import('./index-CUmXi9hO.mjs'), "/themes/shopark/pages/cases/[slug].vue": () => import('./_slug_-B2AaSZ3_.mjs'), "/themes/shopark/pages/cases/index.vue": () => import('./index-Bn0SLl12.mjs'), "/themes/shopark/pages/changelog.vue": () => import('./changelog-BnguK12f.mjs'), "/themes/shopark/pages/index.vue": () => import('./index-DePhNR6u.mjs'), "/themes/shopark/pages/page/about.vue": () => import('./about-D_1IE_iC.mjs'), "/themes/shopark/pages/page/amazon-store.vue": () => import('./amazon-store-CilmURZN.mjs'), "/themes/shopark/pages/page/b2b-website.vue": () => import('./b2b-website-BYxf4Tk1.mjs'), "/themes/shopark/pages/page/b2c-store.vue": () => import('./b2c-store-BrPRClaC.mjs'), "/themes/shopark/pages/page/cookies.vue": () => import('./cookies-DSx0GIE4.mjs'), "/themes/shopark/pages/page/custom.vue": () => import('./custom-E04X9poS.mjs'), "/themes/shopark/pages/page/install.vue": () => import('./install-BggE0zar.mjs'), "/themes/shopark/pages/page/migration.vue": () => import('./migration-eVktI5LH.mjs'), "/themes/shopark/pages/page/pricing.vue": () => import('./pricing-C7ll0wxO.mjs'), "/themes/shopark/pages/page/privacy.vue": () => import('./privacy-DmptfCF4.mjs'), "/themes/shopark/pages/page/solutions.vue": () => import('./solutions-CBMmmW4T.mjs'), "/themes/shopark/pages/page/store-design.vue": () => import('./store-design-CzYtDKHE.mjs'), "/themes/shopark/pages/page/terms.vue": () => import('./terms-Df99meBh.mjs'), "/themes/shopark/pages/page/weidian.vue": () => import('./weidian-C8RK3yg4.mjs'), "/themes/shopark/pages/page/wholesale.vue": () => import('./wholesale-oHqZ9CDB.mjs'), "/themes/shopark/pages/pricing.vue": () => import('./pricing-BLluSIEj.mjs'), "/themes/shopark/pages/solutions/[slug].vue": () => import('./_slug_-DBtkTpa-.mjs'), "/themes/shopark/pages/solutions/index.vue": () => import('./index-BsVCu7DV.mjs'), "/themes/shopark/pages/themes/[slug].vue": () => import('./_slug_-Bjn63ptW.mjs'), "/themes/shopark/pages/themes/detail/[slug].vue": () => import('./_slug_-CGUppFoL.mjs'), "/themes/shopark/pages/themes/index.vue": () => import('./index-DSzz-Sqz.mjs'), "/themes/shopark/pages/user/account.vue": () => import('./account-GVEMGcTd.mjs'), "/themes/shopark/pages/user/assistant/components/AssistantPanel.vue": () => import('./AssistantPanel-BCPEHMAw.mjs'), "/themes/shopark/pages/user/assistant/index.vue": () => import('./index-DZE23ttW.mjs'), "/themes/shopark/pages/user/dashboard.vue": () => import('./dashboard-Cm-K729o.mjs'), "/themes/shopark/pages/user/index.vue": () => import('./index-TxHmLTzb.mjs'), "/themes/shopark/pages/user/invoice/[order_id].vue": () => import('./_order_id_-CDOjqLFZ.mjs'), "/themes/shopark/pages/user/layout.vue": () => import('./layout-Bt9Gf7qQ.mjs'), "/themes/shopark/pages/user/notifications.vue": () => import('./notifications-DoN00IF0.mjs'), "/themes/shopark/pages/user/orders/[order_id].vue": () => import('./_order_id_-Cl6dHTyg.mjs'), "/themes/shopark/pages/user/orders/index.vue": () => import('./index-D6qMhjBU.mjs'), "/themes/shopark/pages/user/stores/index.vue": () => import('./index-BpXcJ2EU.mjs'), "/themes/shopark/pages/user/subscription.vue": () => import('./subscription-F1nIAHq4.mjs'), "/themes/shopark/pages/user/tickets.vue": () => import('./tickets-CRbIhVBR.mjs') })).map(([file, module]) => [file.replace("/", "../"), module]))
 };
 const themeAdminManifestModules = {
   ...Object.fromEntries(Object.entries(/* @__PURE__ */ Object.assign({
@@ -28714,7 +28744,7 @@ const themeAdminLocaleZhModules = {
   ...Object.fromEntries(Object.entries(/* @__PURE__ */ Object.assign({})).map(([file, module]) => [file.replace("/", "../"), module]))
 };
 const themeLayoutLoaders = {
-  "shopark": () => import('./default-DU9kwLS4.mjs')
+  "shopark": () => import('./default-B9ywJnXP.mjs')
 };
 const pageLayoutMeta = { "../core/pages/payment/[order_id].vue": { "layout": false }, "../core/pages/user/mcp-authorize/index.vue": { "directoryLayout": false } };
 const useActiveTheme = (options = {}) => {
@@ -37763,16 +37793,16 @@ const _sfc_main$f = /* @__PURE__ */ defineComponent({
           const csvLines = [
             headers.map(escapeCsvCell).join(","),
             ...items.map((r) => [
-              r.id,
+              r.subscriptionId || r.id || "",
               r.userId,
               r.userEmail || "",
               r.userNickname || "",
               r.productName || "",
-              r.planCode || "",
+              r.shoparkPlanCode || r.planCode || "",
               r.status || "",
               r.amount ?? 0,
               r.currency || "CNY",
-              `${r.intervalCount || 1} ${r.interval || ""}`.trim(),
+              r.interval ? `${r.intervalCount || 1} ${r.interval}`.trim() : "",
               r.isManual ? "yes" : "no",
               r.manualReason || "",
               r.currentPeriodEnd || "",
@@ -45199,7 +45229,7 @@ const plugin_MeUvTuoKUi51yb_kBguab6hdcExVXeTtZtTg9TZZBB8 = /* @__PURE__ */ defin
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
 });
 const LazyLegalPage = defineAsyncComponent(() => import('./LegalPage-Cdk7gdbS.mjs').then((r) => r["default"] || r.default || r));
-const LazyMarketingPage = defineAsyncComponent(() => import('./MarketingPage-B0lhaN2-.mjs').then((r) => r["default"] || r.default || r));
+const LazyMarketingPage = defineAsyncComponent(() => import('./MarketingPage-D8V79hbM.mjs').then((r) => r["default"] || r.default || r));
 const LazyMarketplaceCard = defineAsyncComponent(() => import('./MarketplaceCard-CB5ARi7k.mjs').then((r) => r["default"] || r.default || r));
 const LazyMarketplaceDetail = defineAsyncComponent(() => import('./MarketplaceDetail-C-RjbcOp.mjs').then((r) => r["default"] || r.default || r));
 const LazyMarketplaceHero = defineAsyncComponent(() => import('./MarketplaceHero-BRZ-crkT.mjs').then((r) => r["default"] || r.default || r));
@@ -45207,18 +45237,18 @@ const LazyMarketplaceList = defineAsyncComponent(() => import('./MarketplaceList
 const LazyMarketplaceVisual = defineAsyncComponent(() => import('./MarketplaceVisual-DI-8P_MU.mjs').then((r) => r["default"] || r.default || r));
 const LazyPageCta = defineAsyncComponent(() => import('./PageCta-BFEgFSpP.mjs').then((r) => r["default"] || r.default || r));
 const LazySectionHeading = defineAsyncComponent(() => import('./SectionHeading-BJpRVepO.mjs').then((r) => r["default"] || r.default || r));
-const LazyShoparkAuthShell = defineAsyncComponent(() => import('./ShoparkAuthShell-BB8JKg3f.mjs').then((r) => r["default"] || r.default || r));
-const LazyShoparkBindDialog = defineAsyncComponent(() => import('./ShoparkBindDialog-DqDMboJJ.mjs').then((n) => n.S).then((r) => r["default"] || r.default || r));
-const LazyShoparkCheckoutModal = defineAsyncComponent(() => import('./ShoparkCheckoutModal-DioNwxHu.mjs').then((r) => r["default"] || r.default || r));
+const LazyShoparkAuthShell = defineAsyncComponent(() => import('./ShoparkAuthShell-fmD1Y8YZ.mjs').then((r) => r["default"] || r.default || r));
+const LazyShoparkBindDialog = defineAsyncComponent(() => import('./ShoparkBindDialog-BZEYFDy5.mjs').then((n) => n.S).then((r) => r["default"] || r.default || r));
+const LazyShoparkCheckoutModal = defineAsyncComponent(() => import('./ShoparkCheckoutModal-H1UYKdAq.mjs').then((r) => r["default"] || r.default || r));
 const LazyShoparkConsoleHeader = defineAsyncComponent(() => import('./ShoparkConsoleHeader-D-VQHPXh.mjs').then((r) => r["default"] || r.default || r));
-const LazyShoparkConsultDialog = defineAsyncComponent(() => import('./ShoparkConsultDialog-BwgFR3qq.mjs').then((r) => r["default"] || r.default || r));
+const LazyShoparkConsultDialog = defineAsyncComponent(() => import('./ShoparkConsultDialog-9v2EaMgv.mjs').then((r) => r["default"] || r.default || r));
 const LazyShoparkLanguageSwitcher = defineAsyncComponent(() => import('./ShoparkLanguageSwitcher-8PErnceq.mjs').then((r) => r["default"] || r.default || r));
-const LazyShoparkLaunchChat = defineAsyncComponent(() => import('./ShoparkLaunchChat-D652lt39.mjs').then((r) => r["default"] || r.default || r));
-const LazyShoparkLeadForm = defineAsyncComponent(() => import('./ShoparkLeadForm-dDqqWAjZ.mjs').then((r) => r["default"] || r.default || r));
-const LazyShoparkMcpElicitationCard = defineAsyncComponent(() => import('./ShoparkMcpElicitationCard-kymvPv-v.mjs').then((r) => r["default"] || r.default || r));
+const LazyShoparkLaunchChat = defineAsyncComponent(() => import('./ShoparkLaunchChat-JHKCMBa4.mjs').then((r) => r["default"] || r.default || r));
+const LazyShoparkLeadForm = defineAsyncComponent(() => import('./ShoparkLeadForm-sRMQGGn6.mjs').then((r) => r["default"] || r.default || r));
+const LazyShoparkMcpElicitationCard = defineAsyncComponent(() => import('./ShoparkMcpElicitationCard-Bbx-umpC.mjs').then((r) => r["default"] || r.default || r));
 const LazyShoparkOAuthButtons = defineAsyncComponent(() => import('./ShoparkOAuthButtons-DnFDo9RC.mjs').then((r) => r["default"] || r.default || r));
-const LazyShoparkPlanCards = defineAsyncComponent(() => import('./ShoparkPlanCards-BFvI_i1h.mjs').then((r) => r["default"] || r.default || r));
-const LazyShoparkSupportWidget = defineAsyncComponent(() => import('./ShoparkSupportWidget-B3sZduA2.mjs').then((r) => r["default"] || r.default || r));
+const LazyShoparkPlanCards = defineAsyncComponent(() => import('./ShoparkPlanCards-B0h0H4Rd.mjs').then((r) => r["default"] || r.default || r));
+const LazyShoparkSupportWidget = defineAsyncComponent(() => import('./ShoparkSupportWidget-DVZ2V5AH.mjs').then((r) => r["default"] || r.default || r));
 const LazyProseA = defineAsyncComponent(() => import('./A-CK6r5kN7.mjs').then((r) => r["default"] || r.default || r));
 const LazyProseAccordion = defineAsyncComponent(() => import('./Accordion-8f3b9LWZ.mjs').then((r) => r["default"] || r.default || r));
 const LazyProseAccordionItem = defineAsyncComponent(() => import('./AccordionItem-tg7BEcax.mjs').then((r) => r["default"] || r.default || r));
@@ -47476,8 +47506,6 @@ const site_favicon_p91YUrwwpKbpdoP959K8cxK8lht5CSKY8bby3FeBwmg = /* @__PURE__ */
   }));
 });
 const visitor_bzYqoTgfgdiFBpsUB9FnVMsOmhbiNiZgAlaB_Te76l4 = /* @__PURE__ */ defineNuxtPlugin((nuxtApp) => {
-  const visitorId = useCookie("visitor_id", { maxAge: 31536e3, path: "/", sameSite: "lax" });
-  if (!visitorId.value) visitorId.value = crypto.randomUUID();
   return;
 });
 const prerender_server_sqIxOBipVr4FbVMA9kqWL0wT8FPop6sKAXLVfifsJzk = /* @__PURE__ */ defineNuxtPlugin(async () => {

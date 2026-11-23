@@ -1,4 +1,4 @@
-import { d as defineEventHandler, f as getRouterParam, dH as getPublishedAppBySlug, e as createError } from '../../../nitro/nitro.mjs';
+import { d as defineEventHandler, f as getRouterParam, e as createError, bY as extensionManifests } from '../../../nitro/nitro.mjs';
 import 'drizzle-orm';
 import 'node:crypto';
 import 'node:http2';
@@ -32,13 +32,25 @@ import 'consola';
 import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
 
+const hasAppsExtension = () => extensionManifests.some((m) => m.id === "apps");
 const _slug__get = defineEventHandler(async (event) => {
   const slug = getRouterParam(event, "slug") || "";
-  const item = await getPublishedAppBySlug(slug);
-  if (!item) {
+  if (!slug || !hasAppsExtension()) {
     throw createError({ statusCode: 404, statusMessage: "App not found" });
   }
-  return item;
+  try {
+    const modPath = ["..", "..", "..", "app", "extensions", "apps", "server", "marketplace"].join("/");
+    const mod = await import(
+      /* @vite-ignore */
+      modPath
+    );
+    if (typeof (mod == null ? void 0 : mod.getPublishedAppBySlug) === "function") {
+      const item = await mod.getPublishedAppBySlug(slug);
+      if (item) return item;
+    }
+  } catch {
+  }
+  throw createError({ statusCode: 404, statusMessage: "App not found" });
 });
 
 export { _slug__get as default };

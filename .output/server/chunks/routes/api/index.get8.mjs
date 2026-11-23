@@ -1,4 +1,4 @@
-import { d as defineEventHandler, g as getQuery, fM as queryPublishedThemes } from '../../nitro/nitro.mjs';
+import { d as defineEventHandler, g as getQuery, bY as extensionManifests } from '../../nitro/nitro.mjs';
 import 'drizzle-orm';
 import 'node:crypto';
 import 'node:http2';
@@ -32,15 +32,31 @@ import 'consola';
 import '@adonisjs/hash';
 import '@adonisjs/hash/drivers/scrypt';
 
+const hasThemesExtension = () => extensionManifests.some((m) => m.id === "themes");
 const index_get = defineEventHandler(async (event) => {
   const query = getQuery(event);
-  const result = await queryPublishedThemes({
-    page: Number(query.page || 1),
-    pageSize: Number(query.pageSize || query.limit || 20),
-    keyword: typeof query.keyword === "string" ? query.keyword : "",
-    category: typeof query.category === "string" ? query.category : ""
-  });
-  return result;
+  const page = Math.max(1, Number(query.page || 1));
+  const pageSize = Math.max(1, Number(query.pageSize || query.limit || 20));
+  if (!hasThemesExtension()) {
+    return { items: [], total: 0, page, pageSize };
+  }
+  try {
+    const modPath = ["..", "..", "..", "app", "extensions", "themes", "server", "marketplace"].join("/");
+    const mod = await import(
+      /* @vite-ignore */
+      modPath
+    );
+    if (typeof (mod == null ? void 0 : mod.queryPublishedThemes) === "function") {
+      return await mod.queryPublishedThemes({
+        page,
+        pageSize,
+        keyword: typeof query.keyword === "string" ? query.keyword : "",
+        category: typeof query.category === "string" ? query.category : ""
+      });
+    }
+  } catch {
+  }
+  return { items: [], total: 0, page, pageSize };
 });
 
 export { index_get as default };

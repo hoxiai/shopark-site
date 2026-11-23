@@ -1,5 +1,5 @@
 import { eq } from 'drizzle-orm';
-import { b as db, q as products, gu as readShoparkPlanMeta, gv as pushShoparkLicense, gw as ensureBlogSchedulerJob } from '../nitro/nitro.mjs';
+import { b as db, q as products, gq as readShoparkPlanMeta, gr as pushShoparkLicense, gs as ensureBlogSchedulerJob } from '../nitro/nitro.mjs';
 import 'node:crypto';
 import 'node:http2';
 import 'node:fs';
@@ -104,9 +104,9 @@ function userIdOf(input) {
 }
 async function registerThemeMcpTools() {
   const [{ registerMcpTool }, { getShoparkMcpTools }, { createDefaultAssistantDeps, executeAssistantTool }] = await Promise.all([
-    import('../nitro/nitro.mjs').then(function (n) { return n.h8; }),
-    import('../nitro/nitro.mjs').then(function (n) { return n.ha; }),
-    import('../nitro/nitro.mjs').then(function (n) { return n.h9; })
+    import('../nitro/nitro.mjs').then(function (n) { return n.h4; }),
+    import('../nitro/nitro.mjs').then(function (n) { return n.h6; }),
+    import('../nitro/nitro.mjs').then(function (n) { return n.h5; })
   ]);
   const deps = createDefaultAssistantDeps();
   for (const tool of getShoparkMcpTools()) {
