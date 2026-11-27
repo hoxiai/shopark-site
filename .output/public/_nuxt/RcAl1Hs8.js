@@ -1,0 +1,1 @@
+import{G as o,q as r}from"./CzLswzDt.js";import{m as s,aJ as n,c,o as m}from"./DM6MiXdV.js";import"./C_R2zXpo.js";import"./BOn9krQt.js";import"./CfYFMnge.js";const x=s({__name:"index",async setup(p){let e,t;const{localePath:a}=o();return[e,t]=n(()=>r(a("/user/dashboard"),{replace:!0})),await e,t(),(i,_)=>(m(),c("div"))}});export{x as default};
